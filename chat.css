@@ -1,0 +1,11 @@
+/************************************************************************************
+CHAT RU
+*************************************************************************************/
+.createGameOnChat{/*margin-right:-25px*//*margin-bottom:25px*/}
+.chatViews {width: 650px;background: transparent url("") no-repeat 0 0;margin-left: 15px;float:left}
+.chatSend {background: transparent url("") no-repeat bottom left;height: 63px}
+.adsBottomChat .fl, .adsBottomChat .fr{width:320px;}
+#chatText {width: 431px;}
+.chat {width: 406px;}
+
+

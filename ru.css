@@ -1,0 +1,19 @@
+a.bigButtonBuyPrem{background: url("") transparent no-repeat center top;}
+a.bigButtonCreateGame, .bigButtonCreateGame{background: url("") transparent no-repeat center top;}
+
+a.play {background: url("") no-repeat;}
+a.prem {background: url("") no-repeat;}
+a.see {background: url("") no-repeat;}
+
+.quickStart a {background: transparent url("") no-repeat 0 0;}
+.quickStart a:hover {background: transparent url("") no-repeat 0 -49px;}
+
+.footer .footerEmail {position: absolute;right: 130px;top: -25px;}
+
+
+/* site logo */
+header hgroup {position: absolute;top: 125px;left: 22px;width: 205px;height: 85px;}
+header.inside hgroup {position: absolute;top: 38px;left: 22px;width: 205px;height: 85px;}
+#logo {display: block;background: url("logobn.png") no-repeat center bottom;height: 85px;width: 205px;text-indent: -9999px;}
+
+.globalStatItem div {color: #4fc601;}

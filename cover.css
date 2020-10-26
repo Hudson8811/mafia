@@ -1,0 +1,116 @@
+/************************************************************************************
+COVER STYLING
+*************************************************************************************/
+section.cover {display: table;height: 100%;padding: 0;width: 100%;}
+
+.day section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+.night section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+.day.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+.night.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+
+@media all and (max-device-height: 900px) {
+	section.cover header{height:150px}
+	.day section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.night section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.day.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.night.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+}
+
+/************************************************************************************
+COVER CHAT STYLING
+*************************************************************************************/
+section.cover .chatViews{width:900px;background: url("") no-repeat 0 0;margin-left:15px}
+section.cover .chatSend{background:transparent url("") no-repeat bottom left;height:63px}
+section.cover .chatBanner, 
+section.cover .adsBottomChat{display:none}
+section.cover #chatText {width:680px;}
+section.cover .chat{width:655px;}
+
+section.cover #foulTable{top:20px}
+section.cover #foulTable::after, #foulTable.foul::before{top:118px}
+
+section.cover .coverChatContainer {
+	height: -webkit-calc(100% - 445px);
+	height: -moz-calc(100% - 445px);
+	height: calc(100% - 445px);
+}
+
+section.cover .coverChatContainer{bottom: 75px;position: absolute;width:100%}
+section.cover .coverChat{margin: 0 auto;width:900px;padding:0 50px;overflow:hidden}
+section.cover #authorization{bottom: 0;height: 55px;position: absolute;text-align: center;width: 100%;}
+section.cover #authorization.static {height: 55px;width: 100%;position:fixed;top:0;z-index:110}
+
+section.cover .coverChat,
+section.cover .chatContainer,
+section.cover .chatViews{height:100%}
+section.cover #chatText{
+	height: -webkit-calc(100% - 91px);
+	height: -moz-calc(100% - 91px);
+	height: calc(100% - 91px);
+}
+
+section.cover .shareHead, .shareHead{position:absolute;right:50px;bottom:20px;}
+section.cover hgroup.logoUp ~ .shareHead{bottom:50px;}
+
+@media all and (max-device-height: 900px) {
+	section.cover header hgroup{top:38px}
+	section.cover header hgroup.logoUp{top:18px}
+
+	section.cover .coverChatContainer {
+	height: -webkit-calc(100% - 245px);
+	height: -moz-calc(100% - 245px);
+	height: calc(100% - 245px);
+	}
+}
+
+/* retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape),
+only screen and (   min--moz-device-pixel-ratio: 2) and (orientation: landscape),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (orientation: landscape),
+only screen and (        min-device-pixel-ratio: 2) and (orientation: landscape),
+only screen and (                min-resolution: 192dpi) and (orientation: landscape),
+only screen and (                min-resolution: 2dppx) and (orientation: landscape) { 
+
+  /* Large screen, retina, stuff to override above media query */
+
+    section.cover header{height:150px}
+	.day section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.night section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.day.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.night.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	
+	section.cover header hgroup{top:38px}
+	section.cover header hgroup.logoUp{top:18px}
+	
+	section.cover .coverChatContainer {
+	height: -webkit-calc(100% - 245px);
+	height: -moz-calc(100% - 245px);
+	height: calc(100% - 245px);
+	}
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait),
+only screen and (   min--moz-device-pixel-ratio: 2) and (orientation: portrait),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (orientation: portrait),
+only screen and (        min-device-pixel-ratio: 2) and (orientation: portrait),
+only screen and (                min-resolution: 192dpi) and (orientation: portrait),
+only screen and (                min-resolution: 2dppx) and (orientation: portrait) { 
+
+  /* Large screen, retina, stuff to override above media query */
+	section.cover .chatViews{width:900px;background: url("") no-repeat 0 0, url("") no-repeat 0 100%;margin-left:15px}
+    section.cover header{height:350px}
+	.day section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.night section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.day.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	.night.winter section.cover{background: #0c0c0c url("") no-repeat scroll center 39px;}
+	
+	section.cover header hgroup,
+	section.cover header hgroup.logoUp{top:125px}
+	
+	section.cover .coverChatContainer {
+	height: -webkit-calc(100% - 445px);
+	height: -moz-calc(100% - 445px);
+	height: calc(100% - 445px);
+	}
+}

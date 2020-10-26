@@ -1,0 +1,203 @@
+﻿@charset "utf-8";
+/*
+	styles for select
+*/
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+    background: url("") no-repeat;
+}
+
+.cusel {
+    /* общий вид селекта включая стрелку справа */
+    height: /*56px;*/ 40px;
+    background-position: 0 top;
+    display: inline-block;
+    position: relative;
+    margin-left: 0;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.cuselFrameRight {
+    /* левая чсть селект. обыно скругление и левая граница */
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 34px;
+    background-position: -366px top;
+}
+
+.cuselText {
+    /* контейнер для отображенного текста селект */
+    height: 20px;
+    padding: 1px 0 0 10px; /* подбираем отступы и высоту для видимого текста в селекте */
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    /*font: 14px Tahoma,Arial,Verdana,sans-serif;*/
+    /* шрифты */
+    color: #6f6f6f;
+    position: absolute;
+    top: 7px;
+    left: 2px;
+}
+
+* html .cuselText {
+    /* высота блока для текста для ие6 */
+    height: 22px;
+}
+
+.cusel span {
+    /* оформление оптиона */
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 2px 5px 2px 15px; /* паддинг справа - это отступ текста от ползунка */
+    zoom: 1;
+}
+
+.cusel span {
+    /* не выбранный оптион */
+    /*background: #E2D8CC;*/
+    background: transparent url("") no-repeat -390px -99px;
+    color: #6f6f6f;
+    font-weight: normal;
+}
+
+.cusel span:hover,
+.cusel .cuselOptHover {
+    /* реакция оптиона на наведение */
+    background: #6f6f6f;
+    color: #fff;
+    font-weight: normal;
+}
+
+.cusel .cuselActive {
+    /* оформление активного оптиона в списке */
+    background: #3f3f3f;
+    color: #fff;
+    cursor: default;
+    font-weight: normal;
+}
+
+/*
+	styles for focus and hover
+*/
+/*.cusel:hover,
+.cusel:hover .cuselFrameRight,
+.cusel:focus,
+.cusel:focus .cuselFrameRight,
+.cuselFocus,
+.cuselFocus .cuselFrameRight {
+	background-image: url(../img/selects-focus.png);
+}*/
+
+.cuselOpen {
+    z-index: 999;
+}
+
+/*
+	styles for disabled select
+*/
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+    background-image: url("") !important;
+    cursor: default;
+    color: #ccc;
+}
+
+.classDisCusel .cuselText {
+    cursor: default;
+}
+
+/*
+	styles for scrollbar
+*/
+.cusel .cusel-scroll-wrap {
+    /* контейнер для блока с прокруткой */
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: /*100%;*/ 34px;
+    background: #1f1f1f; /* фон выпадающего списка */
+    min-width: 100%;
+    width: auto;
+    border-radius: 10px; /* границы выпадающего спиcка */
+}
+.cusel .cusel-scroll-pane{/*padding-right:7px*/}
+
+.cusel .jScrollPaneContainer {
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    border: 1px solid #313131;
+    border-radius: 8px; /* границы вложенного спиcка */
+}
+
+.cusel .jScrollPaneTrack {
+    /* трек для ползунка прокрутки */
+    height: 100%;
+    width: 4px !important; /*6*/
+    background: #373737;
+    position: absolute;
+    top: 0;
+    right: 6px /*4px*/;
+}
+
+.cusel .jScrollPaneDrag {
+    /* ползунок */
+    position: absolute;
+    background-position: -40px -66px;
+    cursor: pointer;
+    width: 15px !important;
+    height: 15px !important;
+    right: -5px /*-4px*/;
+
+}
+
+.cusel .jScrollPaneDragTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.cusel .jScrollPaneDragBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.cusel .jScrollArrowUp {
+    /* стрелка вверх */
+    position: absolute;
+    top: 0;
+    right: 3px;
+    width: 26px;
+    height: 12px;
+    cursor: pointer;
+    background-position: -2px -66px;
+    overflow: hidden;
+}
+
+.cusel .jScrollArrowDown {
+    /* стрелка вниз */
+    width: 25px;
+    height: 12px;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 3px;
+    cursor: pointer;
+    background-position: -21px -66px;
+    overflow: hidden;
+}

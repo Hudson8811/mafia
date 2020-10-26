@@ -1,0 +1,27 @@
+/************************************************************************************
+NEXT GAME
+*************************************************************************************/
+
+#nextGame {/*background: #0c0c0c;*/width: 656px;/*margin-right: 238px;*/min-height: 820px/*300px*/}
+#nextGame .items{background: rgba(12,12,12,.7);}
+
+.nextGame {background: transparent url("") no-repeat left bottom;}
+
+.nextGameDescription {width: 280px;padding: 50px 0 10px 4px;}
+.nextGameDescription .title {width: 210px;overflow-x: hidden;white-space: nowrap;font-size: 17px;padding-left: 12px}
+.nextGameDescription .autor {width: 212px;color: #6f6f6f;font-size: 13px;padding: 5px 0 0 12px}
+.nextGameDescription .bet {width: 212px;color: #6f6f6f;font-size: 13px;padding: 5px 0 4px 12px; font-weight: bold;}
+.nextGameDescription .type {width: 110px;color: #5E544E;font-size: 13px;padding: 5px 0 0 15px}
+.nextGameTime {width: 155px;padding: 20px 6px 10px 9px;text-align: center}
+.nextGameUser {width: 192px;padding: 5px 0 0 0}
+.nextGameButton {width: 182px;padding: 10px 0 0 10px;position: relative}
+
+.managementGames {width: 656px;/*margin-right: 154px;*/padding-bottom: 10px}
+.sortingGames{position:relative;}
+.sortingMenu > div.noGameSorting{position:absolute;top:-5px;right:2px;}
+.noGameSorting a.noSorting, 
+.noGameSorting a.noSorting:visited {width: auto;height: auto;padding:0 22px 0 0;background: transparent url("icons_sprite.png") no-repeat 100% -574px;text-decoration: none;text-align:right;font-size:15px;color: #6f6f6f}
+.noGameSorting a.noSorting:hover, 
+.noGameSorting a.noSorting.active {background: transparent url("icons_sprite.png") no-repeat 100% -396px;color:#8f8f8f}
+
+
