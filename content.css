@@ -21,14 +21,14 @@ CONTENT WELCOME
 
 .map ul li.gameFriend {height: 60px;left: 20px;top: 265px;width: 155px;color: red;font-family: Georgia, "Century Schoolbook L", Serif;font-style: italic;}
 
-.map h2 a {text-decoration: none;color: #F1F1F1}
+.map h2 a {text-decoration: none;color: #000}
 .map h2 a:hover {text-decoration: underline;}
 
-.globalStatistics {height: 120px;text-align: center;background: url("global_ststistics.png") no-repeat center bottom / 100% auto;}
+.globalStatistics {height: 120px;text-align: center;background: url("global_ststistics.png") no-repeat center bottom / 101% 101%;}
 
 .globalStatItem {width: 25%;display: inline-block;margin-top: 20px}
 .globalStatItem div {font-size: 43px;font-weight: bold;}
-.globalStatItem span {color: #6f6f6f;font-size: 21px}
+.globalStatItem span {color: #000;font-size: 21px}
 
 /************************************************************************************
 STEP REGISTRATION
@@ -138,7 +138,7 @@ input.cont:hover {
 /* STEP THREE */
 
 /* game list in reg page */
-.regGamesContainer{min-height:200px;overflow:hidden;padding:0 40px 20px;background: #0d0d0d url("welcome_bg.jpg") repeat-x;}
+.regGamesContainer{min-height:200px;overflow:hidden;padding:0 40px 20px;}
 .regGamesContainer h2{padding-bottom:20px}
 
 /************************************************************************************
@@ -1028,7 +1028,8 @@ tournament
     height: 370px;
     padding: 15px 0;
     position: relative;
-    background: transparent url("tournament_bg.jpg") no-repeat;
+    border:1px solid #ccc;
+    border-radius: 15px;
     font-family: MyriadPro, "Arial Narrow", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
 }
 
@@ -1040,7 +1041,7 @@ tournament
     font-size: 22px;}
 
 .tournamentTop {
-    color: #cecece;
+    color: #000;
     text-align: center;
 }
 
@@ -1076,14 +1077,15 @@ tournament
 a.tournamentGo {
     display: block;
     text-decoration: none;
-    background: transparent url("tournament_button.jpg") no-repeat;
+    border:1px solid #ccc;
     text-transform: uppercase;
+    border-radius: 15px;
 }
 
 a.tournamentGo div {
     width: 196px;
     height: 45px;
-    color: #cecece;
+    color: #ccc;
     font-size: 22px;
     font-family: MyriadProBoldCondensed, "Arial Narrow", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; /*line-height: 20px;*/
 }
@@ -1139,13 +1141,13 @@ a.tournamentGo div {
     position: absolute;
     bottom: 200px;
     left: 22px;
-    color: #cecece;
+    color: #000;
     font-size: 20px;
     text-align: left
 }
 
 .tournamentUsers span {
-    color: #cecece;
+    color: #000;
     font-size: 15px;
     font-weight: bold;
     padding: 3px 0 0 30px;
@@ -1155,7 +1157,7 @@ a.tournamentGo div {
 .tournamentTime {
     padding: 10px 0 0;/*10px 0 0 24px*/
     font-size: 13px;
-    color: #cecece;
+    color: #000;
 	text-align:center;
 }
 
@@ -4217,8 +4219,8 @@ RULES
 .rulesItem p {margin-left: 110px}
 .resume {background: #0e0e0e url("important.png") no-repeat 0% 50%;padding: 5px 40px 15px 70px;margin-top: 30px}
 .regRulesContainer {height: 300px;overflow-y: scroll;}
-.regBorderRules {border: 1px solid #313131;padding: 10px 10px 10px 20px;border-radius: 10px;background: #121212}
-.regBorder{border: 1px solid #313131;padding: 10px 10px 10px 20px;margin-top:10px;border-radius: 10px;background: rgba(13,13,13,1)}
+.regBorderRules {border: 1px solid #ccc;padding: 10px 10px 10px 20px;border-radius: 10px;}
+.regBorder{border: 1px solid #ccc;padding: 10px 10px 10px 20px;margin-top:10px;border-radius: 10px;}
 
 /************************************************************************************
 BOTTOM INFO

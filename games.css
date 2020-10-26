@@ -2,8 +2,8 @@
 NEXT GAME
 *************************************************************************************/
 
-#nextGame {/*background: #0c0c0c;*/width: 656px;/*margin-right: 238px;*/min-height: 820px/*300px*/}
-#nextGame .items{background: rgba(12,12,12,.7);}
+#nextGame {/*background: #0c0c0c;*/width: 656px;/*margin-right: 238px;*/min-height: 880px/*300px*/}
+#nextGame .items{}
 
 .nextGame {background: transparent url("") no-repeat left bottom;}
 

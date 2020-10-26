@@ -133,7 +133,7 @@ FONTS
 GENERAL STYLING
 *************************************************************************************/
 html {/*overflow-y: scroll;*/font-size: 100.01%;}
-body {background: #0e0e0e;font-family: Ubuntu, Tahoma, "Geneva CY", sans-serif;font-size: 15px;}
+body {background: #fff;font-family: Ubuntu, Tahoma, "Geneva CY", sans-serif;font-size: 15px;}
 html, body {height: 100%;/*min-width: 1036px;*/}
 
 /***** heder background *****/
@@ -170,7 +170,7 @@ html, body {height: 100%;/*min-width: 1036px;*/}
 .winter.night #g_pagewrapInside.smallHeader .second	{background: #1c1c1c url("") no-repeat scroll top center / 100% auto;}
 
 /***** for guest main page background *****/
-.day #g_pagewrap.bigHeader .second		{background: #1c1c1c url("second_bg2.jpg") no-repeat scroll top center / 100% auto;}
+.day #g_pagewrap.bigHeader .second		{}
 .night #g_pagewrap.bigHeader .second	{background: #1c1c1c url("second_bg2.jpg") no-repeat scroll top center / 100% auto;}
 
 .winter.day #g_pagewrap.bigHeader .second	{background: #1c1c1c url("second_bg2.jpg") no-repeat scroll top center / 100% auto;}
@@ -188,18 +188,18 @@ html, body {height: 100%;/*min-width: 1036px;*/}
 .winter.night #g_pagewrap.smallHeader .second	{background: #1c1c1c url("") no-repeat scroll top center / 100% auto;}
 
 /***** tipografy *****/
-a, a:visited {color: #cecece;}
+a, a:visited {color: #000;}
 a:hover {text-decoration: none}
 a:focus, a:active {text-decoration: none}
 
-p {color: #c4c4c4;padding: 15px 0 5px 0;}
+p {color: #000;padding: 15px 0 5px 0;}
 
 /* headings */
-h1, h2, h3, h4 {color: #fff;}
+h1, h2, h3, h4 {color: #000;}
 h5, h6{}
 
 h1 {font-size: 40px;line-height: 30px;font-family: MyriadProBold, "Arial Narrow", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;}
-h2 {font-size: 32px;line-height: 36px;font-weight: normal;font-family: Georgia, "Century Schoolbook L", Serif;}
+h2 {font-size: 32px;line-height: 36px;font-weight: normal;font-family: arial;}
 h3 {font-size: 28px;line-height: 30px;font-family: MyriadProBold, "Arial Narrow", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;}
 h4 {font-size: 18px;}
 h5 {}
@@ -224,7 +224,7 @@ MAIN STRUCTURE
 NAVIGATION & HEADER & LOGO
 *************************************************************************************/
 /*nav {height: 39px;background: #0e0e0e url(../img/top_menu.png) no-repeat center top;text-align: center}*/
-nav {height: 39px;background: #0e0e0e url("top_menu_bg.jpg") repeat-x center top;text-align: center}
+nav {height: 39px;text-align: center; border-bottom: 1px solid #ccc;}
 nav ul {}
 nav ul li {list-style: none;display: inline-block;margin-left: -4px;position:relative}
 /*nav ul li:first-child{background: url(../img/top_menu_separator.png) 0 0 no-repeat;}*//* активировать, если убрать завитки */
@@ -276,7 +276,7 @@ header.inside {height: 150px;}
 MAIN AUTHORIZATION & MAIN LOGIN
 *************************************************************************************/
 /*#authorization, .zaglushka {height: 55px;width: 1010px;margin: 0 auto;position: relative}*/
-#authorization{background: url("auth_bg.jpg") repeat-x;}
+#authorization{border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
 #authorization, .zaglushka {height: 55px;width: 100%;min-width:1000px;position: relative}
 .zaglushka{display:none}
 /*#authorization.static {height: 55px;width: 1010px;position:fixed;top:0;left:50%;margin-left:-505px;z-index:110}*/
@@ -312,7 +312,7 @@ MAIN AUTHORIZATION & MAIN LOGIN
     background: transparent;
     font-size: 15px;
     text-align: center;
-    color: #979797;
+    color: #000;
 }
 
 .login-form::-webkit-input-placeholder {color: #979797;}
@@ -328,7 +328,8 @@ MAIN AUTHORIZATION & MAIN LOGIN
     margin: 6px 6px 0 6px;
     width: 206px;
     height: 40px;
-    background: url("logpasfon.png") no-repeat;
+    border: 1px solid #ccc;
+    border-radius: 15px;
     text-align: center;
 }
 
@@ -530,7 +531,7 @@ CONTENT
 
 
 #g_pagewrapInside.bigHeader #content {margin: 0 auto;width: 1000px;padding: 20px 0 40px;min-height: 396px;background-color:rgba(12,12,12,0);}
-#content {margin: 0 auto;width: 1000px;padding: 20px 0 40px;min-height: 396px;background-color:rgba(12,12,12,0.7);}
+#content {margin: 0 auto;width: 1000px;padding: 20px 0 40px;min-height: 396px;}
 #content2 {margin: 0 auto;width: 1000px;padding: 20px 0;min-height: 396px;/*background-color:rgba(14,14,14,0.3);*/}
 #content:after, #content2:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0}
 
@@ -539,13 +540,13 @@ CONTENT
 FOOTER
 *************************************************************************************/
 /*#footer {clear: both;margin: 0 auto;min-height: 38px;width: 992px;background: #0c0c0c url(../img/footer_bg.png) no-repeat center bottom;text-align: center;}*/
-footer{background: transparent url("bottom_info_bg.jpg") repeat-x;border-top: 1px solid #3f3f3f;min-width:1000px;}
+footer{border-top: 1px solid #ccc;min-width:1000px;}
 #footer {clear: both;margin: 0 auto;min-height: 38px;width: 1000px;/*background: #0c0c0c url(../img/footer_bg.png) no-repeat center bottom;*/text-align: center;}
 
-#footer p {padding-top: 15px;color: #c4c4c4;font-size: 12px;}
+#footer p {padding-top: 15px;color: #000;font-size: 12px;}
 
-#footer a, .footer a {color: #c4c4c4}
-#footer a:visited, .footer a:visited {color: #c4c4c4}
+#footer a, .footer a {color: #000}
+#footer a:visited, .footer a:visited {color: #000}
 
 .footer {clear: both;margin: 0 auto;width: 992px;/*background: transparent url(../img/footer_bg.png) no-repeat center bottom;*/text-align: center;position: relative}
 
@@ -563,3 +564,16 @@ sup {vertical-align: top}
 .administrator:before{content:"★";display:inline-block;/*color:#d60000;*/margin:0 2px 0 0;}
 .supermoderator:before{content:"✫";display:inline-block;/*color:#FF9900;*/margin:0 2px 0 0;} 
 .moderator:before{content:"✫";display:inline-block;margin:0 2px 0 0;} 
+
+
+
+
+
+
+
+.border-all{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow:         0px 3px 10px 0px rgba(50, 50, 50, 0.3);
+}
