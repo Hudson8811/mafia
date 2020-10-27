@@ -78,7 +78,7 @@ header hgroup {
 }
 
 .day #g_pagewrap.bigHeader .second {
-  background-image: none;
+  background: none;
 }
 
 #pageTop nav {
@@ -258,6 +258,7 @@ input.enter-exit:focus {
   width: 100%;
   margin-bottom: 20px;
 }
+
 .regGamesContainer {
   width: 100%;
   padding: 0;
@@ -277,6 +278,13 @@ input.enter-exit:focus {
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
+}
+
+#nextGame .items {
+  background: none;
+}
+#nextGame .items .nextGame {
+  background: none;
 }
 
 .stikyBns {
@@ -436,6 +444,7 @@ ul.auth-services a.auth-link {
   padding-bottom: 44px;*/
   border: none;
   background-color: #ffffff;
+  background-image: none;
 }
 
 #footer {
@@ -445,6 +454,7 @@ ul.auth-services a.auth-link {
   padding-top: 44px;
   padding-bottom: 44px;
   font-size: 14px;
+  background-image: none;
 }
 
 #footer > * {
