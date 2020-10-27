@@ -183,13 +183,13 @@ header hgroup {
 }
 
 .login-form {
+  color: var(--color-dark2);
   width: 235px;
   height: auto;
   margin: 0;
   padding: 12px 16px;
   font-size: 16px;
   text-align: left;
-  color: var(--color-main);
   border-radius: 10px;
   border: solid 1px #d6dee5;
   background-color: #ffffff;
@@ -197,7 +197,7 @@ header hgroup {
 
 .login-form:hover,
 .login-form:focus {
-  border-color: var(--color-dark2);
+  border-color: var(--color-main);
 }
 
 .login-form::placeholder {
@@ -222,7 +222,7 @@ input.enter-exit {
 
 input.enter-exit:hover,
 input.enter-exit:focus {
-  opacity: 0.7;
+  background-color:  #00b25e;
 }
 
 #main-login a.txt {
@@ -324,22 +324,27 @@ input.enter-exit:focus {
   background: none;
 }
 
-#nextGame .items .nextGame > * {
-  align-self: center;
-}
-
 #nextGame .items .nextGame .nextGameUser {
   position: relative;
   width: calc(100% - 445px);
+  padding-bottom: 20px;
 }
 
-#nextGame .items .nextGame .nextGameButton {
-  position: absolute;
-  /*top: 50%;*/
-  right: 0;
-  bottom: 0;
-  width: auto;
-  padding: 0;
+@media all and (min-width: 1180px){
+  #nextGame .items .nextGame .nextGameButton {
+    position: absolute;
+    /*top: 50%;*/
+    right: 0;
+    bottom: 0;
+    width: auto;
+    padding: 0;
+  }
+  #nextGame .items .nextGame .nextGameUser {
+    padding-bottom: 0;
+  }
+  #nextGame .items .nextGame > * {
+    align-self: center;
+  }
 }
 
 .nextGameUser .viewers {
@@ -368,6 +373,25 @@ input.enter-exit:focus {
   background-color: #e9eff2;
 }
 
+.promptL:hover em, .promptR:hover em{
+  color: var(--color-main);
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  -moz-box-shadow:    0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  box-shadow:         0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  border-color: #eaedef;
+}
+
+.promptL:hover em i, .promptR:hover em i{
+  width: 8px;
+  height: 8px;
+  border-top:1px solid #eaedef;
+  border-right: 1px solid #eaedef;
+  transform: rotate(135deg);
+  background: #fff;
+  bottom: -4px;
+}
+
 .stikyBns {
   position: static;
   order: 1;
@@ -386,13 +410,13 @@ a.tournamentGo {
   padding: 12px 8px;
   background-image: none;
   border-radius: 10px;
-  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  border:0;
   background-color: #00d17a;
 }
 
 a.tournamentGo:hover,
 a.tournamentGo:focus {
-  opacity: 0.7;
+  background-color:  #00b25e;
 }
 
 a.tournamentGo div {
@@ -503,7 +527,7 @@ div.registration dt input.cont {
 
 div.registration dt input.cont:hover,
 div.registration dt input.cont:focus {
-  opacity: 0.7;
+  background-color:  #00b25e;
 }
 
 .registration-field-bg {
@@ -531,7 +555,7 @@ input.reg-first {
 
 input.reg-first:hover,
 input.reg-first:focus {
-  border-color: var(--color-dark2);
+  border: 1px solid var(--color-main);
 }
 
 input.reg-first::placeholder {
@@ -570,10 +594,13 @@ ul.auth-services li a .auth-title {
 
 ul.auth-services a.auth-link {
   background-color: transparent;
+  width: 34px;
 }
 
 .auth-icon {
   background-position: 0 0 !important;
+  width: 34px;
+  height: 26px;
 }
 
 .auth-icon.vkontakte {
@@ -637,6 +664,10 @@ ul.auth-services a.auth-link {
   color: var(--color-main);
 }
 
+#footer a:visited, .footer a:visited{
+  color: var(--color-main);
+}
+
 #footer::before {
   content: "";
   display: block;
@@ -652,4 +683,13 @@ ul.auth-services a.auth-link {
   font-size: 64px;
   font-weight: 700;
   color: rgba(113, 139, 163, 0.25);
+}
+
+.who_gamers em{
+  color: var(--color-main);
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+    box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+    border-color: #eaedef;
 }
