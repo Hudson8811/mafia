@@ -254,6 +254,22 @@ input.enter-exit:focus {
   margin-bottom: 20px;
 }
 
+.map h2 a{
+  color: var(--color-dark);
+}
+
+.tournamentTop{
+  color: var(--color-dark);
+}
+
+.tournamentUsers{
+  color: var(--color-dark);
+}
+
+.tournamentFound{
+  color: var(--color-dark);
+}
+
 .globalStatistics {
   width: 100%;
   margin-bottom: 20px;
@@ -500,6 +516,11 @@ input.reg-first {
   border-radius: 10px;
   border: solid 1px #d6dee5;
   background-color: #ffffff;
+}
+
+.rulesItem{
+  float: none;
+  width: auto;
 }
 
 input.reg-first:hover,
