@@ -28,6 +28,16 @@
   display: none;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: var(--main-font);
   background-color: #f6f9fb;
@@ -155,4 +165,111 @@ input.enter-exit {
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
   background-color: var(--color-green);
   background-image: none;
+}
+
+#main-login a.txt {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#content .txt,
+#content .map {
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+#content .txt {
+  width: calc(100% - 530px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 36px 50px;
+}
+
+#content .map {
+  margin-bottom: 20px;
+}
+
+.globalStatistics {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.regGamesContainer {
+  width: 100%;
+  padding: 0;
+}
+
+.nextGameContainer {
+  display: flex;
+  padding: 0;
+}
+
+.nextGameContainer #nextGame {
+  width: calc(100% - 260px);
+  margin-right: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.stikyBns {
+  position: static;
+  order: 1;
+}
+
+.stikyBns .tournament {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+#js-step-registration {
+  width: 100%;
+  margin-top: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+#js-step-registration .step-1 {
+  padding: 0;
+}
+
+.seoTextBottom {
+  margin-top: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.seoTextBottom h1 {
+  font-family: var(--main-font);
+}
+
+.seoTextBottom .seoText {
+  font-size: 16px;
+}
+
+#g_footer {
+  margin-top: 20px; /*
+  padding-top: 44px;
+  padding-bottom: 44px;*/
+  border: none;
+  background-color: #ffffff;
+}
+
+#footer {
+  width: 100%;
+  max-width: 1150px;
 }
