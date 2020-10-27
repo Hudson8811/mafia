@@ -567,6 +567,11 @@ input.reg-first {
 .rulesItem{
   float: none;
   width: auto;
+  clear: both;
+}
+
+.rulesItem + div[style="clear:both"]{
+  display: none;
 }
 
 input.reg-first:hover,
