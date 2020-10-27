@@ -137,7 +137,7 @@ body {background: #fff;font-family: Ubuntu, Tahoma, "Geneva CY", sans-serif;font
 html, body {height: 100%;/*min-width: 1036px;*/}
 
 /***** heder background *****/
-.day #g_pagewrap.bigHeader{background: url("page_bg_day.png") no-repeat center 39px}
+.day #g_pagewrap.bigHeader{background: url("https://mafii.net/themes/bootstrap/static/img/page_bg_day.png") no-repeat center 39px}
 .day #g_pagewrapInside.bigHeader {/*background: url(../img/page_bg_day.png?2) no-repeat center 39px*/}
 .night #g_pagewrap.bigHeader{background: url("") no-repeat center 39px} 
 .night #g_pagewrapInside.bigHeader {/*background: url(../img/page_bg_night.png?2) no-repeat center 39px*/}
