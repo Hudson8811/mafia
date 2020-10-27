@@ -259,6 +259,10 @@ input.enter-exit:focus {
   margin-bottom: 20px;
 }
 
+.globalStatItem span {
+  color: #000000;
+}
+
 .regGamesContainer {
   width: 100%;
   padding: 0;
@@ -283,8 +287,61 @@ input.enter-exit:focus {
 #nextGame .items {
   background: none;
 }
-#nextGame .items .nextGame {
+
+#nextGame .items .dottedLine {
+  width: 100%;
   background: none;
+  height: auto;
+  border-bottom: solid 1px #eff3f7;
+}
+
+#nextGame .items .nextGame {
+  display: flex;
+  flex-wrap: wrap;
+  background: none;
+}
+
+#nextGame .items .nextGame > * {
+  align-self: center;
+}
+
+#nextGame .items .nextGame .nextGameUser {
+  position: relative;
+  width: calc(100% - 445px);
+}
+
+#nextGame .items .nextGame .nextGameButton {
+  position: absolute;
+  /*top: 50%;*/
+  right: 0;
+  bottom: 0;
+  width: auto;
+  padding: 0;
+}
+
+.nextGameUser .viewers {
+  padding-left: 12px;
+}
+
+.nextGameButton a {
+  display: block;
+  width: 100px;
+  height: auto;
+  padding: 10px 5px;
+  font-size: 12px;
+  line-height: 1;
+  color: #718ba3;
+  text-align: center;
+  text-indent: 0;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  border: solid 1px #eff3f7;
+  background-color: #f6f9fb;
+}
+
+.nextGameButton a:hover {
+  background-color: #e9eff2;
 }
 
 .stikyBns {
@@ -298,6 +355,27 @@ input.enter-exit:focus {
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
   background-image: none;
+}
+
+a.tournamentGo {
+  height: auto;
+  padding: 12px 8px;
+  background-image: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: #00d17a;
+}
+
+a.tournamentGo:hover,
+a.tournamentGo:focus {
+  opacity: 0.7;
+}
+
+a.tournamentGo div {
+  height: auto;
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: capitalize;
 }
 
 #js-step-registration {
@@ -350,6 +428,17 @@ form div.registration .message {
   font-size: 16px;
 }
 
+div.registration dt input.cont {
+  height: auto;
+  margin-left: 0;
+  padding: 12px 8px;
+  background-image: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: #00d17a;
+  background-image: none;
+}
+
 .registration-field-bg {
   height: auto;
   background-image: none;
@@ -380,6 +469,10 @@ input.reg-first::placeholder {
 
 .regBorderRules {
   background-color: transparent;
+}
+
+.regBorderRules .resume {
+  background: none;
 }
 
 .center.regBorder {
