@@ -268,6 +268,7 @@ input.enter-exit:focus {
   padding: 0;
   background-color: transparent;
   background-image: none;
+  overflow: visible;
 }
 
 .nextGameContainer {
