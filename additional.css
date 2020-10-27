@@ -338,6 +338,7 @@ input.enter-exit:focus {
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
   border: solid 1px #eff3f7;
   background-color: #f6f9fb;
+  background-image: none;
 }
 
 .nextGameButton a:hover {
