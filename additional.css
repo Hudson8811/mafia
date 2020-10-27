@@ -77,7 +77,7 @@ header hgroup {
   background-position: 50% 76px;
 }
 
-.day #g_pagewrap.bigHeader .second {
+.day #g_pagewrap.bigHeader .second , .night #g_pagewrap.bigHeader .second{
   background: none;
 }
 
