@@ -20,6 +20,9 @@
 
 :root {
   --color-green: #00d17a;
+  --color-main: #718ba3;
+  --color-dark: #001f35;
+  --color-dark2: #0c021b;
   --main-font: "Calibri", "Arial", sans-serif;
 }
 
@@ -40,7 +43,22 @@ html {
 
 body {
   font-family: var(--main-font);
+  color: var(--color-main);
   background-color: #f6f9fb;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--main-font);
+  color: var(--color-dark);
+  font-weight: 700;
+}
+p,
+a,
+a:visited {
+  color: var(--color-main);
 }
 
 #content,
@@ -60,21 +78,13 @@ header hgroup {
 }
 
 #pageTop nav {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: auto;
-  padding: 13px 60px 14px;
+  padding: 29px 60px;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.15);
   background-color: #ffffff;
-}
-
-#pageTop nav::before {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 48px;
-  background-size: cover;
-  background-image: url("logobn.png");
 }
 
 #pageTop nav ul {
@@ -84,6 +94,7 @@ header hgroup {
 }
 
 #pageTop nav li {
+  position: static;
   margin: 0 16px;
 }
 
@@ -91,7 +102,20 @@ header hgroup {
   padding: 0;
   font-size: 18px;
   line-height: 1;
-  color: #718ba3;
+  color: var(--color-main);
+}
+
+#pageTop nav li:first-child a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  display: block;
+  width: 150px;
+  height: 48px;
+  background-size: cover;
+  background-image: url("logobn.png");
 }
 
 #pageTop nav a:hover,
@@ -158,15 +182,20 @@ header hgroup {
   padding: 12px 16px;
   font-size: 16px;
   text-align: left;
-  color: #718ba3;
+  color: var(--color-main);
   border-radius: 10px;
   border: solid 1px #d6dee5;
   background-color: #ffffff;
 }
 
+.login-form:hover,
+.login-form:focus {
+  border-color: var(--color-dark2);
+}
+
 .login-form::placeholder {
   opacity: 1;
-  color: #718ba3;
+  color: var(--color-main);
 }
 
 input.enter-exit {
@@ -182,6 +211,11 @@ input.enter-exit {
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
   background-color: var(--color-green);
   background-image: none;
+}
+
+input.enter-exit:hover,
+input.enter-exit:focus {
+  opacity: 0.7;
 }
 
 #main-login a.txt {
@@ -264,13 +298,64 @@ input.enter-exit {
 #js-step-registration .step-1 > div p {
   font-size: 18px;
   font-weight: 700;
+  color: var(--color-dark);
+}
+
+form div.registration {
+  margin-top: 20px;
+}
+
+form div.registration dl {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 form div.registration dt {
   width: 355px;
-  margin: 0;
+  margin: 0 60px 24px 0;
   padding: 0;
   float: none;
+  align-self: center;
+}
+
+form div.registration dd {
+  width: calc(100% - 415px);
+  margin-bottom: 24px;
+  padding: 0;
+  align-self: center;
+}
+form div.registration .message {
+  color: var(--color-main);
+  font-size: 16px;
+}
+
+.registration-field-bg {
+  height: auto;
+  background-image: none;
+}
+
+input.reg-first {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 16px;
+  text-align: left;
+  color: var(--color-dark2);
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+}
+
+input.reg-first:hover,
+input.reg-first:focus {
+  border-color: var(--color-dark2);
+}
+
+input.reg-first::placeholder {
+  color: var(--color-main);
+  opacity: 1;
 }
 
 .center.regBorder {
@@ -286,6 +371,10 @@ ul.auth-services {
 
 ul.auth-services li {
   margin: 0 20px 0 0;
+}
+
+ul.auth-services li a .auth-title {
+  display: none;
 }
 
 ul.auth-services a.auth-link {
@@ -347,12 +436,12 @@ ul.auth-services a.auth-link {
 
 #footer p {
   padding: 0;
-  color: #718ba3;
+  color: var(--color-main);
 }
 
 #footer a {
   padding: 0;
-  color: #718ba3;
+  color: var(--color-main);
 }
 
 #footer::before {
