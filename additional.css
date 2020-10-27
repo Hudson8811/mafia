@@ -582,6 +582,7 @@ input.reg-first::placeholder {
 
 .regBorderRules {
   background-color: transparent;
+  border-color: #d6dee5;
 }
 
 .regBorderRules .resume {
