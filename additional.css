@@ -264,6 +264,7 @@ input.enter-exit:focus {
 
 .tournamentUsers{
   color: var(--color-dark);
+  margin-top: 20px;
 }
 
 .tournamentFound{
