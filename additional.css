@@ -50,20 +50,37 @@ header {
   max-width: 1150px;
 }
 
+header hgroup {
+  /*прячем лого из баннера*/
+  display: none;
+}
+
 .day #g_pagewrap.bigHeader {
   background-position: 50% 76px;
 }
 
 #pageTop nav {
+  display: flex;
+  justify-content: space-between;
   height: auto;
-  padding: 28px 0;
+  padding: 13px 60px 14px;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.15);
   background-color: #ffffff;
+}
+
+#pageTop nav::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 48px;
+  background-size: cover;
+  background-image: url("logobn.png");
 }
 
 #pageTop nav ul {
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 #pageTop nav li {
@@ -244,6 +261,18 @@ input.enter-exit {
   padding: 0;
 }
 
+#js-step-registration .step-1 > div p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+form div.registration dt {
+  width: 355px;
+  margin: 0;
+  padding: 0;
+  float: none;
+}
+
 .center.regBorder {
   border: none;
   padding: 20px 0 0 0;
@@ -295,6 +324,7 @@ ul.auth-services a.auth-link {
 }
 
 #g_footer {
+  height: auto;
   margin-top: 20px; /*
   padding-top: 44px;
   padding-bottom: 44px;*/
@@ -303,6 +333,41 @@ ul.auth-services a.auth-link {
 }
 
 #footer {
+  display: flex;
   width: 100%;
   max-width: 1150px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  font-size: 14px;
+}
+
+#footer > * {
+  align-self: center;
+}
+
+#footer p {
+  padding: 0;
+  color: #718ba3;
+}
+
+#footer a {
+  padding: 0;
+  color: #718ba3;
+}
+
+#footer::before {
+  content: "";
+  display: block;
+  width: 205px;
+  height: 85px;
+  margin-right: 36px;
+  background-image: url("logobn.png");
+}
+
+#footer::after {
+  content: "16+";
+  margin-left: auto;
+  font-size: 64px;
+  font-weight: 700;
+  color: rgba(113, 139, 163, 0.25);
 }
