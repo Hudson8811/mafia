@@ -224,7 +224,7 @@ MAIN STRUCTURE
 NAVIGATION & HEADER & LOGO
 *************************************************************************************/
 /*nav {height: 39px;background: #0e0e0e url(../img/top_menu.png) no-repeat center top;text-align: center}*/
-nav {height: 39px;text-align: center; border-bottom: 1px solid #ccc;}
+nav {height: 39px;text-align: center; background: #ffffff;-webkit-box-shadow: 0px 2px 3px 0px rgba(44, 57, 65, 0.15);-moz-box-shadow:    0px 2px 3px 0px rgba(44, 57, 65, 0.15);box-shadow:         0px 2px 3px 0px rgba(44, 57, 65, 0.15);}
 nav ul {}
 nav ul li {list-style: none;display: inline-block;margin-left: -4px;position:relative}
 /*nav ul li:first-child{background: url(../img/top_menu_separator.png) 0 0 no-repeat;}*//* активировать, если убрать завитки */
