@@ -267,6 +267,10 @@ input.enter-exit:focus {
   bottom: 180px;
 }
 
+.tournamentTime, .tournamentUsers span{
+  color: var(--color-main);
+}
+
 .tournamentFound{
   color: var(--color-dark);
   bottom: 90px;
@@ -533,6 +537,7 @@ input.reg-first:focus {
 input.reg-first::placeholder {
   color: var(--color-main);
   opacity: 1;
+  border-color: #d6dee5;
 }
 
 .regBorderRules {
