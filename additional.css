@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Calibri";
+  src: local("Calibri Regular"), local("Calibri-Regular"),
+    url("../fonts/Calibri.woff2") format("woff2"),
+    url("../fonts/Calibri.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: local("Calibri Bold"), local("Calibri-Bold"),
+    url("../fonts/Calibri-Bold.woff2") format("woff2"),
+    url("../fonts/Calibri-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+#amsb {
+  display: none;
+}
+
+body {
+  font-family: "Calibri", "Arial", sans-serif;
+  background-color: #f6f9fb;
+}
+
+#content,
+.auth-center,
+header {
+  width: 100%;
+  max-width: 1150px;
+}
+
+.day #g_pagewrap.bigHeader {
+  background-position: 50% 76px;
+}
+
+#pageTop nav {
+  height: auto;
+  padding: 28px 0;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.15);
+  background-color: #ffffff;
+}
+
+#pageTop nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+#pageTop nav li {
+  margin: 0 16px;
+}
+
+#pageTop nav a {
+  padding: 0;
+  font-size: 18px;
+  line-height: 1;
+  color: #718ba3;
+}
+
+#pageTop nav a:hover {
+  /*font-weight: 700;*/
+  color: #001f35;
+  background-color: transparent;
+}
+
+#pageTop nav a:hover .bloodyPrint {
+  display: none;
+}
