@@ -77,6 +77,10 @@ header hgroup {
   background-position: 50% 76px;
 }
 
+.day #g_pagewrap.bigHeader .second {
+  background-image: none;
+}
+
 #pageTop nav {
   position: relative;
   display: flex;
@@ -85,6 +89,7 @@ header hgroup {
   padding: 29px 60px;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.15);
   background-color: #ffffff;
+  background-image: none;
 }
 
 #pageTop nav ul {
@@ -130,11 +135,13 @@ header hgroup {
   display: none;
 }
 
-#authorization {
+#authorization,
+#authorization.static {
   height: auto;
   padding: 28px 0;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.15);
   background-color: #ffffff;
+  background-image: none;
   border: none;
 }
 
@@ -226,6 +233,7 @@ input.enter-exit:focus {
 #content {
   display: flex;
   flex-wrap: wrap;
+  background-color: transparent;
 }
 
 #content .txt,
@@ -253,6 +261,8 @@ input.enter-exit:focus {
 .regGamesContainer {
   width: 100%;
   padding: 0;
+  background-color: transparent;
+  background-image: none;
 }
 
 .nextGameContainer {
@@ -279,6 +289,7 @@ input.enter-exit:focus {
   border: none;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
+  background-image: none;
 }
 
 #js-step-registration {
@@ -325,6 +336,7 @@ form div.registration dd {
   padding: 0;
   align-self: center;
 }
+
 form div.registration .message {
   color: var(--color-main);
   font-size: 16px;
@@ -358,11 +370,16 @@ input.reg-first::placeholder {
   opacity: 1;
 }
 
+.regBorderRules {
+  background-color: transparent;
+}
+
 .center.regBorder {
   border: none;
   padding: 20px 0 0 0;
   margin-top: 0;
   border-radius: 0;
+  background-color: #fff;
 }
 
 ul.auth-services {
