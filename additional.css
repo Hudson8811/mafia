@@ -441,6 +441,11 @@ div.registration dt input.cont {
   background-image: none;
 }
 
+div.registration dt input.cont:hover,
+div.registration dt input.cont:focus {
+  opacity: 0.7;
+}
+
 .registration-field-bg {
   height: auto;
   background-image: none;
