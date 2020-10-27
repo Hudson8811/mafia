@@ -405,7 +405,7 @@ input.enter-exit:focus {
   border-right: 1px solid #eaedef;
   transform: rotate(135deg);
   background: #fff;
-  bottom: -4px;
+  bottom: -5px;
 }
 
 .stikyBns {
@@ -712,4 +712,19 @@ ul.auth-services a.auth-link:hover {
     -moz-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
     box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
     border-color: #eaedef;
+}
+
+.who_gamers em:before{
+  width: 8px;
+    height: 8px;
+    border-top: 1px solid #eaedef;
+    border-right: 1px solid #eaedef;
+    transform: rotate(135deg);
+    background: #fff;
+    bottom: -5px;
+    border-bottom: 0;
+    border-left: 0;
+}
+.who_gamers em:after{
+  display: none;
 }
