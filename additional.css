@@ -40,6 +40,7 @@
 
 :root {
   --color-green: #00d17a;
+  --color-green-hover: #00b25e;
   --color-main: #718ba3;
   --color-dark: #001f35;
   --color-dark2: #0c021b;
@@ -880,15 +881,21 @@ ul.auth-services a.auth-link:hover {
   height: auto;
   margin: 32px 0 0 0 !important;
   padding-bottom: 32px;
+  padding-right: 220px;
   border-bottom: solid 1px #eff3f7;
 }
 
 .clanContainer .clanCard > * {
-  align-self: center;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .clanContainer .clanCard:first-child {
   margin-top: 0 !important;
+}
+
+.clanContainer .clanCard:last-child {
+  border-bottom: none;
 }
 
 .clanContainer .clanCard:hover {
@@ -918,6 +925,8 @@ ul.auth-services a.auth-link:hover {
 }
 
 .clanContainer .clanCard .clanData {
+  width: 310px;
+  margin-right: 24px;
   padding: 0;
 }
 
@@ -938,16 +947,25 @@ ul.auth-services a.auth-link:hover {
   color: var(--color-main);
 }
 
+.clanContainer .clanCard .clanName a:hover::before,
+.clanContainer .clanCard .clanName a:focus::before {
+  background-color: var(--color-green-hover);
+}
+
 .clanContainer .clanCard .clanName a::before {
   content: "Вступить в клан";
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
-  transform: translateY(-50%);
-}
-.clanContainer .clanCard .clanName a {
-}
-.clanContainer .clanCard .clanName a {
+  width: 193px;
+  padding: 14px 12px;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--color-green);
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
 }
 
 .clanContainer .clanCard .clanFather {
@@ -964,5 +982,89 @@ ul.auth-services a.auth-link:hover {
 }
 
 .clanContainer .clanCard .descClanCard {
-  max-width: 300px;
+  max-width: 360px;
+  margin: 0;
+  padding: 0;
+}
+
+.clanContainer .clanCard .descClanCard p {
+  margin: 0;
+  padding: 0;
+}
+
+.clanContainer .clanCard .descClanCard p + p {
+  margin-top: 16px;
+}
+
+/* Пагинация */
+.yiiPager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /*background-color: #333;*/
+}
+
+.yiiPager li {
+  min-width: 27px;
+  height: 30px;
+  margin: 0 6px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.yiiPager li::before,
+.yiiPager li::after {
+  display: none;
+}
+
+.yiiPager li.selected {
+  color: #ffffff;
+  background-color: #00b2ff;
+}
+
+.yiiPager li.selected a {
+  color: #ffffff;
+  pointer-events: none;
+  cursor: text;
+}
+
+.yiiPager li.next {
+  margin-left: 14px;
+}
+
+.yiiPager li.previous {
+  margin-right: 14px;
+}
+
+.yiiPager li.next a,
+.yiiPager li.previous a {
+  background-size: 10px 10px;
+  background-position: 50% 50%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 492.004 492.004'%3e%3cpath fill='%23718ba3' d='M382.678 226.804L163.73 7.86C158.666 2.792 151.906 0 144.698 0s-13.968 2.792-19.032 7.86l-16.124 16.12c-10.492 10.504-10.492 27.576 0 38.064L293.398 245.9l-184.06 184.06c-5.064 5.068-7.86 11.824-7.86 19.028 0 7.212 2.796 13.968 7.86 19.04l16.124 16.116c5.068 5.068 11.824 7.86 19.032 7.86s13.968-2.792 19.032-7.86L382.678 265c5.076-5.084 7.864-11.872 7.848-19.088.016-7.244-2.772-14.028-7.848-19.108z'/%3e%3c/svg%3e");
+}
+
+.yiiPager li.last a,
+.yiiPager li.first a {
+  background-size: 10px 10px;
+  background-position: 50% 50%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 612.02 612.02'%3e%3cpath fill='%23718ba3' d='M596.96 269.674L342.381 15.094c-20.079-20.079-52.644-20.079-72.723 0s-20.079 52.644 0 72.723L487.852 306.01 269.658 524.202c-20.079 20.079-20.079 52.644 0 72.723s52.644 20.079 72.723 0L596.96 342.346c20.079-20.029 20.079-52.593 0-72.672zm-306.102-15.416L88.744 41.238c-20.309-21.378-53.204-21.378-73.513 0s-20.309 56.058 0 77.462l165.371 174.289L15.231 467.278c-20.309 21.379-20.309 56.083 0 77.462s53.204 21.379 73.513 0l202.114-213.02c20.309-21.378 20.309-56.058 0-77.462z'/%3e%3c/svg%3e");
+}
+
+.yiiPager li.first a,
+.yiiPager li.previous a {
+  transform: scale(-1, 1);
+}
+
+.yiiPager li a {
+  display: block;
+  height: auto;
+  padding: 0 2px;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--color-main);
 }
