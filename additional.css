@@ -1038,7 +1038,12 @@ ul.auth-services a.auth-link:hover {
 .clanContainer .clanCard .descClanCard {
   max-width: 360px;
   margin: 0;
+  height: 73px;
   padding: 0;
+}
+.clanAction span.actionError {
+  color: var(--color-dark2);
+  font-weight: bold;
 }
 
 .clanContainer .clanCard .descClanCard p {
@@ -1163,9 +1168,60 @@ ul.auth-services a.auth-link:hover {
   margin-top: 0;
 }
 
+.newsContainer .items h2 {
+  font-family: var(--main-font);
+  font-size: 21px;
+  line-height: 1.71;
+  font-weight: 700;
+}
+
+.newsContainer .items h2 a {
+  color: var(--color-dark);
+}
+
 .newsContainer .items p {
   font-family: var(--secondary-font);
   font-size: 16px;
   color: var(--color-main);
   text-indent: 0;
+}
+
+.newsContainer .items div.newsLink {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 0;
+  padding-bottom: 32px;
+  border-top: none;
+  border-bottom: solid 1px #eff3f7;
+}
+
+.newsContainer .items div.newsLink > * {
+  align-self: center;
+}
+
+.newsContainer .items div.newsLink + .clr {
+  padding: 0;
+}
+
+.newsContainer .newsLink a.fullStory {
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+  margin-left: 0;
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-main);
+  border-radius: 10px;
+  border: solid 1px #eff3f7;
+  background-color: #f6f9fb;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+}
+
+.newsContainer .newsLink a.fullStory:hover,
+.newsContainer .newsLink a.fullStory:focus {
+  border: solid 1px #cdd5de;
+  background-color: #e9eff2;
 }
