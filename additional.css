@@ -99,16 +99,17 @@ header hgroup {
   background-position: 50% 76px;
 }
 
-.day #g_pagewrapInside.smallHeader {
-  background: url("../img/inside_page_bg_day.png?2") no-repeat center 76px;
-}
-
 .day #g_pagewrap.bigHeader .second,
 .day #g_pagewrapInside.smallHeader .second,
-.night #g_pagewrap.bigHeader .second {
+.night #g_pagewrap.bigHeader .second,
+.night #g_pagewrapInside.bigHeader .second {
   background: none;
 }
 
+.day #g_pagewrapInside.smallHeader,
+.night #g_pagewrapInside.smallHeader {
+  background: url(../img/inside_page_bg_day.png?2) no-repeat center 76px;
+}
 /*#pageTop */
 nav {
   position: relative;
