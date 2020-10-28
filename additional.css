@@ -829,6 +829,23 @@ ul.auth-services a.auth-link:hover {
   background-color: #ffffff;
 }
 
+.helpContainer .helpMenu + div p {
+  text-indent: 0;
+  font-family: var(--secondary-font);
+}
+
+.helpContainer .helpMenu + div p:not([class]) {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.helpContainer .helpMenu + div ol li,
+.helpContainer .helpMenu + div ul li {
+  font-family: var(--secondary-font);
+  color: var(--color-main);
+  font-weight: 700;
+}
+
 .helpMenu div.helpMenuItem {
   padding: 8px 5px;
   border-bottom-color: #f6f9fb;
@@ -845,6 +862,15 @@ ul.auth-services a.auth-link:hover {
 
 .helpMenu div.helpMenuItem.active a {
   color: #00b2ff;
+  pointer-events: none;
+  cursor: text;
+}
+
+.helpMenu div.helpMenuItem a:hover,
+.helpMenu div.helpMenuItem a:focus {
+  color: #001f35;
+  background-color: transparent;
+  text-shadow: 0px 0px 1px #001f35;
 }
 
 /* Страница Кланы мафии */
