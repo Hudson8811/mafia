@@ -191,6 +191,26 @@ nav ul li a:hover .bloodyPrint {
   align-self: center;
 }
 
+a.enter-exit {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 11px 21px;
+  font-family: var(--main-font);
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: var(--color-green);
+  background-image: none;
+}
+
+a.enter-exit:hover,
+a.enter-exit:focus {
+  background-color: #00b25e;
+}
+
 .auth-center {
   height: auto;
 }
@@ -1051,6 +1071,11 @@ ul.auth-services a.auth-link:hover {
 
 .yiiPager li::before,
 .yiiPager li::after {
+  display: none;
+}
+
+.yiiPager li a::before,
+.yiiPager li a::after {
   display: none;
 }
 
