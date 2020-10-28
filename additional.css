@@ -99,6 +99,10 @@ header hgroup {
   background-position: 50% 76px;
 }
 
+.day #g_pagewrapInside.smallHeader {
+  background: url("../img/inside_page_bg_day.png?2") no-repeat center 76px;
+}
+
 .day #g_pagewrap.bigHeader .second,
 .day #g_pagewrapInside.smallHeader .second,
 .night #g_pagewrap.bigHeader .second {
@@ -511,6 +515,10 @@ a.tournamentGo div {
   height: auto;
   margin-bottom: 30px;
   background-image: none;
+}
+
+#js-step-registration .confirm {
+  padding-left: 0;
 }
 
 .step-img ul {
@@ -1093,4 +1101,46 @@ ul.auth-services a.auth-link:hover {
   line-height: 30px;
   text-align: center;
   color: var(--color-main);
+  background-image: none;
+}
+
+.yiiPager li a:hover,
+.yiiPager li a:focus {
+  text-shadow: 0px 0px 1px #001f35;
+}
+
+/* Подтверждение регистрации */
+.confirmSuccess {
+  width: 100%;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+/*Новости*/
+.newsContainer {
+  padding: 0;
+}
+
+.newsContainer h2 {
+  margin-bottom: 30px;
+}
+
+.newsContainer .list-view {
+  width: 100%;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.newsContainer .items {
+  margin-top: 0;
+}
+
+.newsContainer .items p {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  color: var(--color-main);
+  text-indent: 0;
 }
