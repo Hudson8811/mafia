@@ -102,7 +102,8 @@ header hgroup {
 .day #g_pagewrap.bigHeader .second,
 .day #g_pagewrapInside.smallHeader .second,
 .night #g_pagewrap.bigHeader .second,
-.night #g_pagewrapInside.bigHeader .second {
+.night #g_pagewrapInside.bigHeader .second,
+.night #g_pagewrapInside.smallHeader .second {
   background: none;
 }
 
@@ -1151,6 +1152,7 @@ ul.auth-services a.auth-link:hover {
 /*Новости*/
 .newsContainer {
   padding: 0;
+  background: none;
 }
 
 .newsContainer h2 {
