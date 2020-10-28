@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="language" content="ru">
+
+  <link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css">
+  <link rel="stylesheet" type="text/css" href="cusel.css">
+  <link rel="stylesheet" type="text/css" href="/assets/de1a45d/listview/styles.css">
+  <link rel="stylesheet" type="text/css" href="cover.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="content.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="ru.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="main.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="chat.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="additional.css" media="screen, projection">
+  <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jui/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.jscrollpane.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initScrollpane.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/cusel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initCusel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.placeholder.min.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initPlaceholder.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/radioChange.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initRadio.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/niceCheck.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jquery.ba-bbq.min.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jquery.yiiactiveform.js"></script>
+  <script type="text/javascript" src="/client/js/vendor/socket.io-client/dist/socket.io.js"></script>
+  <script type="text/javascript" src="/assets/66afb96c/userChannel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/global.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/soundmanager2-nodebug-jsmin.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/music.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/panelAttach.js"></script>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    var language = 'ru';
+    var user = { 'name': 'solo_83', 'id': '438647', 'rating': '0', 'moderator': false };
+    var websocketData = { host: 'https://ws.mafii.net/' };
+    var wsToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9tYWZpaS5uZXQiLCJhdWQiOiJodHRwOlwvXC9tYWZpaS5uZXQiLCJpYXQiOjE2MDM4NzA3MjQsIm5iZiI6MTYwMzg3MDcyNCwiZXhwIjoxNjAzODg4NzU0LCJzYnQiOiJpZF9iMjU5NDBiYWYzOThmIn0.4m5o98OdEiwM38eCdY4p6BfwTPtVH\x2Dvy0sxut4wutf4';
+    var userChannelId = 'id_b25940baf398f';
+    var pathTheme = '\x2Fthemes\x2Fbootstrap';
+    $.ajaxSetup({
+      data: { 'YII_CSRF_TOKEN': 'SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg\x3D\x3D' },
+    });
+    var notifyList = [];
+    $(function () {
+      setTimeout(function () {
+        $.each(notifyList, function (i, e) {
+          notify.add(e);
+        });
+      }, 0);
+    });
+/*]]>*/
+  </script>
+  <title>
+    Мафия → Правила поведения </title>
+  <meta name="Description" content="Мафия   онлайн  - бесплатная карточная видео игра">
+  <meta name="keywords" content="Мафия   онлайн  - бесплатная карточная видео игра">
+  <meta property="og:image" content="/themes/bootstrap/static/img/share/logo1.png">
+  <meta property="og:description"
+    content="Проект «Mafii.net - Дело ночи» - это уникальная возможность не только играть в популярную и любимую игру с любыми соперниками со всего мира, но и видеть и слышать всех других игроков в режиме онлайн, как если бы вы играли за одним столом!">
+
+  <!-- html5.js for IE less than 9 -->
+  <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  <!--[if lte IE 6]>
+	<link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
+  <script type="text/javascript" async="" src="https://media.reformal.ru/widgets/v3/reformal.js"></script>
+  <style type="text/css" media="screen">
+    #reformal_tab {
+      display: block;
+      font-size: 0;
+      background-color: #0C0706 !important;
+      line-height: 0;
+      cursor: pointer;
+      z-index: 100001;
+      left: 0;
+      margin-top: -113.5px;
+      position: fixed;
+      top: 50%;
+      border: 2px solid #452921;
+      padding: 10px 4px 10px 4px;
+      border-left: 0;
+      background: #0C0706 url(https://media.reformal.ru/widgets/v3/gl.png) 0 0 repeat-y;
+      -webkit-border-radius: 0 10px 10px 0;
+      -moz-border-radius: 0 10px 10px 0;
+      border-radius: 0 10px 10px 0;
+      -moz-box-shadow: 1px 0 2px #170E0C;
+      -webkit-box-shadow: 1px 0 2px #170E0C;
+      box-shadow: 1px 0 2px #170E0C;
+    }
+
+    #reformal_tab:hover {
+      padding-left: 6px;
+    }
+
+    #reformal_tab img {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <style>
+    ._3emE9--dark-theme .-S-tR--ff-downloader {
+      background: rgba(30, 30, 30, .93);
+      border: 1px solid rgba(82, 82, 82, .54);
+      box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+      color: #fff
+    }
+
+    ._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn {
+      background: #3d4b52
+    }
+
+    ._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover {
+      background: #131415
+    }
+
+    ._3emE9--dark-theme .-S-tR--ff-downloader ._10vpG--footer {
+      background: rgba(30, 30, 30, .93)
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader {
+      background: #fff;
+      border: 1px solid rgba(82, 82, 82, .54);
+      box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+      color: #314c75
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader ._6_Mtt--header {
+      font-weight: 700
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice {
+      border: 0;
+      color: rgba(0, 0, 0, .88)
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader ._10vpG--footer {
+      background: #fff
+    }
+
+    .-S-tR--ff-downloader {
+      display: block;
+      overflow: hidden;
+      position: fixed;
+      bottom: 20px;
+      right: 7.1%;
+      width: 330px;
+      height: 180px;
+      background: rgba(30, 30, 30, .93);
+      border-radius: 2px;
+      color: #fff;
+      z-index: 99999999;
+      border: 1px solid rgba(82, 82, 82, .54);
+      box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+      transition: .5s
+    }
+
+    .-S-tR--ff-downloader._3M7UQ--minimize {
+      height: 62px
+    }
+
+    .-S-tR--ff-downloader._3M7UQ--minimize .nxuu4--file-info,
+    .-S-tR--ff-downloader._3M7UQ--minimize ._6_Mtt--header {
+      display: none
+    }
+
+    .-S-tR--ff-downloader ._6_Mtt--header {
+      padding: 10px;
+      font-size: 17px;
+      font-family: sans-serif
+    }
+
+    .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn {
+      float: right;
+      background: #f1ecec;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      padding: 2px;
+      margin-top: -10px;
+      cursor: pointer
+    }
+
+    .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover {
+      background: #e2dede
+    }
+
+    .-S-tR--ff-downloader ._13XQ2--error {
+      color: red;
+      padding: 10px;
+      font-size: 12px;
+      line-height: 19px
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container {
+      position: relative;
+      height: 100%
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info {
+      padding: 6px 15px 0;
+      font-family: sans-serif
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info div {
+      margin-bottom: 5px;
+      width: 100%;
+      overflow: hidden
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice {
+      margin-top: 21px;
+      font-size: 11px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      font-weight: 700
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2V73d--loader {
+      -webkit-animation: n0BD1--rotation 3.5s linear forwards;
+      animation: n0BD1--rotation 3.5s linear forwards;
+      position: absolute;
+      top: -120px;
+      left: calc(50% - 35px);
+      border-radius: 50%;
+      border: 5px solid #fff;
+      border-top-color: #a29bfe;
+      height: 70px;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar {
+      width: 100%;
+      height: 18px;
+      background: #dfe6e9;
+      border-radius: 5px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar ._1FVu9--progress-bar {
+      height: 100%;
+      background: #8bc34a;
+      border-radius: 5px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status {
+      margin-top: 10px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1XilH--state {
+      float: left;
+      font-size: .9em;
+      letter-spacing: 1pt;
+      text-transform: uppercase;
+      width: 100px;
+      height: 20px;
+      position: relative
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1jiaj--percentage {
+      float: right
+    }
+  </style>
+</head>
+
+<body class="bodyClass day" style=""><a id="reformal_tab" href="http://mafiinet.reformal.ru"
+    onclick="Reformal.widgetOpen();return false;" onmouseover="Reformal.widgetPreload();"
+    onmouseout="Reformal.widgetAbortPreload();"><img
+      src="https://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/4bfb34d91c8d7fb481972ca3c84aec38/left/0/tab.png"
+      alt=""></a>
+  <script type="text/javascript" src="/assets/66afb96c/websocket.js"></script>
+
+
+  <!-- header & panel authorization -->
+  <!-- /header & panel authorization -->
+
+
+  <div id="g_pagewrapInside" class="smallHeader">
+    <!-- Шапка для всех внутренних страниц -->
+    <div id="pageTopInside">
+      <nav>
+        <!-- Меню главное, для пользователей -->
+        <ul>
+          <!--<li class="zavitok-l"><span>&nbsp;</span></li>-->
+          <li><a href="/">Главная <div class="bloodyPrint"></div>
+            </a></li>
+          <li>
+            <a href="/help/about">Как играть? <div class="bloodyPrint"></div>
+            </a></li>
+          <li><a href="/site/rules">Правила поведения <div class="bloodyPrint"></div>
+            </a></li>
+          <li><a href="/user/market/all">Чёрный рынок <div class="bloodyPrint"></div>
+            </a></li>
+          <li><a href="/site/clans">Кланы мафии <div class="bloodyPrint"></div>
+            </a></li>
+          <li>
+            <a href="/news">Новости игры <span class="point">●</span>
+              <div class="bloodyPrint"></div>
+            </a></li>
+          <!--<li class="zavitok-r"><span>&nbsp;</span></li>-->
+        </ul>
+        <!-- /Меню главное, для пользователей -->
+      </nav>
+      <header class="inside">
+        <hgroup>
+          <span><a id="logo" href="/" title="Мафия онлайн - видеоверсия популярной игры">Мафия онлайн - видеоверсия
+              популярной игры</a></span>
+          <span><a id="description" href="/">Салонная командная психологическая пошаговая ролевая игра.</a></span>
+        </hgroup>
+
+        <!-- Реклама -->
+        <!--<a class="ungaInner" target="_blank"-->
+        <!--	href="http://www.unga.ru/20.html"-->
+        <!--	title="-->
+        <!--">-->
+        <!--	-->
+        <!--	<img src="-->
+        <!--">-->
+        <!--	-->
+        <!--	<img src="-->
+        <!--">-->
+        <!--	-->
+        <!--</a>-->
+
+        <!-- /Реклама -->
+
+      </header>
+    </div>
+    <!-- /Шапка для всех внутренних страниц -->
+
+    <!-- Панель авторизации -->
+    <!--<div class="introBottom">-->
+    <div id="authorization" class="">
+      <!-- ban message -->
+
+
+
+      <!-- /ban message -->
+      <!--	<div class="auth-bg-left"></div>-->
+      <!--	<div class="auth-bg-right"></div>-->
+      <div class="auth-center">
+        <!-- Личная навигация  -->
+        <ul id="authorize-nav" class="clearfix">
+          <li><a class="youMoney gold" href="/user/things/purse">0 </a></li>
+          <!--					<li><a class="youMoney silver" href="/user/things/purse">0						</a></li>-->
+          <li><a class="txt kabinet" href="/user/profile/profile">Личный кабинет</a></li>
+          <li>
+            Доброе утро, <a class="txt username" href="/user/profile/profile">
+              solo_83 </a>!
+          </li>
+          <!-- Блок уведомлений -->
+          <li class="jsNotify">
+            <a href="#" class="jsNotifyHref">
+              Ваши уведомления<span class="notifyMore jsNotifyCount">0</span>
+            </a>
+            <div class="openNotify bottom up">
+              <div data-update-href="/notify/get" data-del-href="/notify/delete" class="jsNotifyList ovflY"
+                style="overflow: hidden; padding: 0px; width: 0px;">
+                <div class="jspContainer" style="width: 0px; height: 0px;">
+                  <div class="jspPane" style="padding: 0px; top: 0px; left: 0px; width: 0px;"></div>
+                </div>
+              </div>
+              <p>[ <a href="/notify/clear" class="jsNotifyClear">Удалить все</a> ]</p>
+            </div>
+          </li>
+          <!-- /Блок уведомлений -->
+          <li>
+            <a class="jsComplain jaloba" href="">Отправить жалобу<br>на администрацию</a>
+          </li>
+          <li>
+            <a href="/user/actions/logout" class="enter-exit">Выход </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="zaglushka" style="display: none;"></div>
+    <!--</div>-->
+    <!-- /Панель авторизации -->
+
+    <!-- #content -->
+    <section class="second">
+      <div id="content">
+
+        <div class="rulesContainer">
+          <h2>Правила поведения</h2>
+          <div class="spacer20"></div>
+          <h4>
+            Общие положения </h4>
+          <p>
+            Модерируемые игры делятся на два вида:<br>
+            1. Закрытые игры - пароль от участия, или просмотра которой, создатель игры раздает игрокам по личному
+            желанию.
+            В такой игре не действуют пункты правил: п.1, п.4, по договоренности с игроками.
+            Создатель игры имеет право, в случае жестких нарушений, переходящих его моральные устои,
+            написать отдельную жалобу администратору проекта на игрока, нарушающего правила.
+            В случае, если пароль от игры, с согласия создателя, или им самим, размещается в общем чате,
+            игра может быть приравнена к открытой, и может модерироваться по всем правилам. <br>
+            2. Открытые игры - игры без пароля на любое количество человек, модерируются администраторами, согласно всех
+            пунктов правил проекта. </p>
+          <p>
+            Уважаемые друзья! Участие в онлайн игре Mafii.net предполагает соблюдение нескольких несложных правил
+            поведения.
+            <br>
+            Во время общения на портале игры, в общем чате и непосредственно во время проведения игр, участникам <span
+              class="red">запрещается</span>: </p>
+
+          <div class="clearfix">
+
+            <div id="yw0" class="list-view">
+              <ul class="items">
+                <div id="1" class="fl rulesItem">
+                  <img src="/uploads/rules/07May2013_23-48-41offend_png.png">
+
+                  <h2><span class="red">1.</span>Оскорбления</h2>
+                  <p>Оскорбления, нецензурная лексика, междометия, которые принято считать непозволительными в
+                    цивилизованном обществе, а так же умышленное унижение чести и достоинства личности, выраженное в
+                    любой форме, а так же религиозных и политических принадлежностей объекта оскорбления.<br>
+                    Запрещены высказывания (словесно, письменно) или действия (плевок, неприличный жест) публично в
+                    присутствии или отсутствии объекта оскорбления, заключающиеся в негативной оценке личности либо
+                    внешности человека, его качеств, поведения в форме, противоречащей установленным нормам и правилам
+                    поведения и требованиям общечеловеческой морали.
+                  </p>
+                  <p>Нарушение данного пункта в открытой игре, карается баном на 24 часа. При нарушении данного пункта в
+                    игре игрок будет получать фолы. По одному фолу за каждое оскорбление или мат. При получении четырех
+                    фолов игрок автоматически удалится из игры. При систематическом или грубом нарушении правила
+                    администратор имеет право выдать предупреждение или бан.</p>
+                </div>
+                <div id="2" class="fl rulesItem">
+                  <img src="/uploads/rules/07May2013_23-49-49ads_png.png">
+
+                  <h2><span class="red">2.</span>Реклама</h2>
+                  <p>Размещать в любом виде рекламу любых услуг или сайтов, в том числе конкурентных ресурсов.</p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="3" class="fl rulesItem">
+                  <img src="/uploads/rules/07May2013_23-50-57porno_png.png">
+
+                  <h2><span class="red">3.</span>Порнография</h2>
+                  <p>Демонстрировать видеоролики или изображения порнографического или аморального содержания.</p>
+                </div>
+                <div id="4" class="fl rulesItem">
+                  <img src="/uploads/rules/07May2013_23-51-40nude_png.png">
+
+                  <h2><span class="red">4.</span>Обнажённый вид</h2>
+                  <p>Играть в обнажённом виде, в том числе и оголив торс.</p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="5" class="fl rulesItem">
+                  <img src="/uploads/rules/07May2013_23-52-40discus_png.png">
+
+                  <h2><span class="red">5.</span>Обсуждение конфликтов</h2>
+                  <p>Вступать в дискуссии по поводу конфликта в игре и общем чате, обсуждать действия модераторов и
+                    администраторов, оскорблять любыми способами модераторский и административный состав в играх и чате.
+                  </p>
+                </div>
+                <div id="6" class="fl rulesItem">
+                  <img src="/uploads/rules/07May2013_23-53-28show_role_png.png">
+
+                  <h2><span class="red">6.</span>Раскрытие роли</h2>
+                  <p>До завершения текущей игры раскрывать свою или чужую роль посредством игрового чата и личных
+                    сообщений, а так же обсуждать текущий игровой процесс, используя любые средства связи, помимо аудио
+                    и видео потока игры, демонстрировать в камеру любые средства (бумажки, экраны телефонов и др.), а
+                    так же использование программ, позволяющих делать надписи, иные изображения на экране своего
+                    видеопотока, помогающие раскрыть роль, а так же любые подсказки и обращения, адресованные игрокам.
+                  </p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="7" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-08-19flood_png.png">
+
+                  <h2><span class="red">7.</span>Нарушение правил чата</h2>
+                  <p>Нецензурная лексика, флуд: публиковать в общем чате несколько однотипных сообщений за раз . Также
+                    запрещены сообщения написанные верхним регистром. Так же, запрещается чрезмерное использование
+                    смайлов, знаков препинания и т.д. </p>
+                </div>
+                <div id="8" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-08-54disruption_png.png">
+
+                  <h2><span class="red">8.</span>Срыв обсуждения</h2>
+                  <p>Целенаправленно срывать обсуждения криками, музыкой и другим посторонним шумом.</p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="9" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-09-27lang_png.png">
+
+                  <h2><span class="red">9.</span>Другой язык</h2>
+                  <p>Общаться на языке отличном от русского (основного языка принятого на сайте).</p>
+                </div>
+                <div id="10" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-10-01hide_face_png.png">
+
+                  <h2><span class="red">10.</span>Сокрытие лица</h2>
+                  <p>Любыми способами скрывать лицо. Запрещено использование в игре ManyCam.
+                  </p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="11" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-10-33clone_png.png">
+
+                  <h2><span class="red">11.</span>Клоны</h2>
+                  <p>
+                    Регистрировать более одного, либо играть с чужого аккаунта.
+                    <br>
+                    Так же нельзя давать в пользование свой аккаунт.
+                  </p>
+                </div>
+                <div id="12" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-11-05nickname_png.png">
+
+                  <h2><span class="red">12.</span>Некорректные никнеймы</h2>
+                  <p>Регистрировать никнеймы, прописывать ранги, которые напоминают или содержат нецензурные слова,
+                    используются в качестве пропаганды чего либо, а так же ники с оскорблением другого пользователя, а
+                    так же, никнеймы которые противоречат технической составляющей сайта, т.е. перевернутый текст,
+                    специальные символы и т.д. (Наказывается пожизненным баном с правом одной бесплатной смены никнейма
+                    через администраторов) Некорректный ранг сбрасывается на первоначальный и наказывается баном сроком
+                    на 1 час.</p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="13" class="fl rulesItem">
+                  <img src="/uploads/rules/08May2013_00-11-53no_devices_png.png">
+
+                  <h2><span class="red">13.</span>Нет камеры\микрофона</h2>
+                  <p>Играть без веб камеры и микрофона.</p>
+                </div>
+                <div id="14" class="fl rulesItem">
+                  <img src="/uploads/rules/19Jan2015_15-43-55gang_png.png">
+
+                  <h2><span class="red">14.</span>Пропаганда наркотиков</h2>
+                  <p>Агитация, реклама, обсуждение и употребление в играх, игровом чате и любых других разделах проекта,
+                    наркотических средств и курительных смесей, запрещенных законодательством Российской Федерации. А
+                    так же, нахождение во время игры в явном опьянении, любыми психотропными веществами, мешающем
+                    остальным пользователям проекта.</p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="15" class="fl rulesItem">
+                  <img src="/uploads/rules/19Jan2015_16-00-04mams_4_png.png">
+
+                  <h2><span class="red">15.</span>Запрещённые приемы</h2>
+                  <p>Запрещается давать обещания, заключать пари с целью убеждения игроков, использовать выражения,
+                    содержащие слова "отвечаю", "клянусь" и прочие, похожие по смыслу.При нарушении данного пункта в
+                    игре игрок будет получать фолы. При получении четырех фолов игрок автоматически удалится из игры.
+                    При систематическом или грубом нарушении правила администратор имеет право выдать предупреждение или
+                    бан.<span></span><span></span></p>
+                </div>
+                <div id="16" class="fl rulesItem">
+                  <img src="/uploads/rules/07Apr2016_11-49-23pirat2_png.png">
+
+                  <h2><span class="red">16.</span>Нарушение авторских прав</h2>
+                  <p>Запрещается размещать на данном ресурсе элементы дизайна, рисунки, изображения, фотографии, тексты,
+                    описания,звуковые и видеофайлы являющиеся объектами интеллектуальной собственности.</p>
+                </div>
+                <div style="clear:both"></div>
+                <div id="17" class="fl rulesItem">
+                  <img src="/uploads/rules/16Apr2020_22-17-2007may2013_23-53-28show_role_png_png.png">
+
+                  <h2><span class="red">17.</span>Нарушение правил ведения игры</h2>
+                  <p>1. Ведущий в открытых играх должен соблюдать правила проекта и следить за соблюдением правил
+                    игроками за столом. Если игра не модерируется, ведущий выполняет функции администратора. </p>
+                  <p>2. За самовольное удаление игрока из-за стола, за неправомерное начисление, а так же снятие фолов и
+                    игнорирование нарушений за столом ведущий получает предупреждение от администрации проекта. За
+                    повторное нарушение ведущий получает бан на усмотрение администратора.</p>
+                  <p>3. За многочисленные нарушения со стороны ведущего, игроков, слом игрового процесса, на усмотрение
+                    администрации игра может быть закрыта, а ведущий наказан.</p>
+                </div>
+              </ul>
+              <div class="keys" style="display:none" title="/site/rules">
+                <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>23</span><span>24</span>
+              </div>
+            </div>
+          </div>
+          <div class="clr resume">
+            <p>За нарушения этих несложных правил предусмотрено наказание в виде бана игрока на время или навсегда.
+              Принять решение о бане игрока могут модераторы игры Mafii.net. Модераторы обладают правом снимать бан с
+              игроков.</p>
+
+            <p><em>Просим вас соблюдать эти несложные правила поведения и помнить, что сообщество игроков Mafii.net, это
+                люди высокого интеллекта, порядочности и культуры.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /#content -->
+
+    <!--<div class=" contentBorder"></div>-->
+  </div>
+
+
+  <!-- footer -->
+
+  <!-- /g_pagewrap2 -->
+  <!-- footer2 (такой футер используется только для зарегистрированных) -->
+  <footer id="g_footer2">
+    <!--	<div class="contentBorder">-->
+    <div class="bottomInfo">
+      <div class="fl bottomMenu">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/help/about">Как играть?</a></li>
+          <li><a href="/site/rules">Правила поведения</a></li>
+          <li><a href="/user/market/all">Чёрный рынок</a></li>
+          <li><a href="/site/clans">Кланы мафии</a>
+          </li>
+          <li><a href="/news">Новости игры</a>
+          </li>
+          <!--<li><a href="/page/confidentiality">Конфиденциальность</a>
+					</li>-->
+        </ul>
+      </div>
+      <div class="fl bottomNews">
+        <ul>
+          <li><a href="/page/contract_offer">Договор-оферта</a>
+          </li>
+          <li><a href="/page/confidentiality">Конфиденциальность</a>
+          </li>
+        </ul>
+      </div>
+      <div class="fr bottomSeo">
+        <p>
+          Проект «Mafii.net - Дело ночи» - это уникальная возможность не только играть в популярную и любимую игру с
+          любыми соперниками со всего мира, но и видеть и слышать всех других игроков в режиме онлайн, как если бы вы
+          играли за одним столом! </p>
+      </div>
+      <!-- copyright -->
+      <div class="footer">
+        <p>Mafii.net <a href="/page/info" ajax="true">ООО «ЭМИНИ»</a> © 2012 - 2020</p>
+        <div class="footer16plus"></div>
+      </div>
+    </div>
+    <!--	</div>-->
+    <div style="display:none">
+      <!--LiveInternet logo-->
+      <a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?26.5"
+          title="LiveInternet: показано число посетителей за сегодня" alt="" border="0" width="88" height="15"></a>
+      <!--/LiveInternet-->
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!-- Всплывающее окошко приглашения в игру -->
+  <div id="parent_popup" class="jsGameInvite" style="display:none;">
+    <div class="table">
+      <div class="cell">
+        <div class="popupGameInvite block">
+          <div class="xPopUp">
+            <div class="xButton jsInviteGameCancel"></div>
+          </div>
+          <h3>Приглашение в игру</h3>
+
+          <p>Пользователь <a class="bold jsInviteUser" href="#">username</a> приглашает вас в игру № <span
+              class="red jsInviteGameId">0</span></p>
+
+          <p>
+            <a class="gButtonLiteBrown jsInviteGameEnter" href="#">Присоединиться к игре</a><a
+              class="cancel jsInviteGameCancel" href="#">Отклонить приглашение</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Всплывающее информационное окно с блокировкой контента -->
+  <div id="parent_popup" class="complainPopup">
+    <!-- Блокировка доступа к контенту страницы -->
+    <div class="table">
+      <div class="cell">
+        <div class="popupMarketActivity block jsComplainActivity">
+          <div class="xPopUp">
+            <div class="xButton jsComplainCancel"></div>
+            <div id="complainContent" style="display:none">
+              <h3>Пожаловаться на администрацию</h3>
+              <p>Изложите кратко суть проблемы</p>
+
+              <form id="admin-complain" action="site/adminComplain" method="post">
+                <input type="hidden"
+                  value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg=="
+                  name="YII_CSRF_TOKEN">
+                <div class="errorMessage" id="AdminComplaints_message_em_" style="display:none"></div>
+                <div class="textareaField">
+                  <textarea name="AdminComplaints[message]" id="AdminComplaints_message"></textarea> </div>
+
+                <div class="buttonLiteGreen">
+                  <div>
+                    <input type="submit" name="yt0" value="Отправить" id="yt0"> <span></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="complainSuccess" style="display:none">
+              <h3>Ваша жалоба принята</h3>
+              <p>Мы рассмотрим жалобу в ближайшее время</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script async="">
+    window.addEventListener("load", function (event) {
+      //live internet
+      new Image().src = "//counter.yadro.ru/hit?r" +
+        escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+          ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+            screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+        ";" + Math.random();
+
+      //google analitycs
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-34589781-1', 'auto');
+      ga('send', 'pageview');
+
+			< !--reformal code-- >
+        window.reformalOptions = {
+        project_id: 88037,
+          project_host: "mafiinet.reformal.ru",
+            tab_orientation: "left",
+              tab_indent: "50%",
+                tab_bg_color: "#0C0706",
+                  tab_border_color: "#452921",
+                    tab_shadow_color: "#170E0C",
+                      tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/4bfb34d91c8d7fb481972ca3c84aec38/left/0/tab.png",
+                        tab_is_custom: false, /* Controls which css-styles will be used for tab.*/
+                          tab_border_width: 2,
+                            tab_border_radius: 10
+      };
+
+      (function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      })();
+
+      //yandex metrica
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter18994912 = new Ya.Metrika({
+              id: 18994912,
+              webvisor: true,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true
+            });
+          } catch (e) {
+          }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "yandex_metrika_callbacks");
+    });
+  </script>
+
+  <!-- reformal code -->
+  <noscript>
+    <a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a
+      href="http://mafiinet.reformal.ru">Oтзывы и предложения для mafii.net</a>
+  </noscript>
+
+  <!-- Yandex.Metrika counter -->
+  <noscript>
+    <div><img src="//mc.yandex.ru/watch/18994912" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+
+  <!-- Заметили ошибку? -->
+  <!-- <form style="display:no0ne" id="portal-notify-form" class="portal-notify-form" action="">
+	<img src="/themes/bootstrap/static/img/tab_error.png" class="fl" />
+	<p>Введите ваше сообщение:</p>
+	<div class="errReport fl">
+		<div class="textareaField">
+			<textarea name="Wall[text]" id="jsWallTextArea" placeholder="Введите текст вашей записи..."></textarea>
+		</div>
+		<div class="fr">
+			<div class="buttonLiteBrown">
+				<div>
+					<input type="submit" value="Отправить" name="yt0">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</form> -->
+  <!-- /Заметили ошибку? -->
+  <script type="text/javascript" src="/assets/de1a45d/listview/jquery.yiilistview.js"></script>
+  <script type="text/javascript" src="/assets/ec3aeb70/notify.js"></script>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    jQuery(function ($) {
+      jQuery('#yw0').yiiListView({ 'ajaxUpdate': ['yw0'], 'ajaxVar': 'ajax', 'pagerClass': 'pager', 'loadingClass': 'list\x2Dview\x2Dloading', 'sorterClass': 'sorter', 'enableHistory': false });
+
+
+      var $complainContent = $("#complainContent");
+      var $successContent = $("#complainSuccess");
+
+      var $form = $complainContent.find("#admin-complain");
+      var $block = $("#parent_popup.complainPopup");
+
+      $form.on("success", function () {
+        $complainContent.hide();
+        $successContent.show();
+      });
+
+      $(document).on("click", ".jsComplainCancel, html", function () {
+
+        $block.hide();
+        $complainContent.hide();
+        $successContent.hide();
+      });
+
+      $(document).on("click", ".jsComplainActivity", function (e) {
+        e.stopPropagation();
+      });
+
+      $(".jsComplain").on("click", function () {
+        $block.find(".xPopUp").append($complainContent);
+        $block.show();
+        $complainContent.show();
+        $form.find("textarea").focus();
+        return false;
+      });
+      jQuery('body').on('click', '#yt0', function () {
+        jQuery.ajax({
+          'dataType': 'json', 'success': function (data) {
+            var $form = $("#admin-complain");
+            if (data.result) {
+              $form.trigger("reset");
+              $form.trigger("success");
+            } else {
+              var settings = $.fn.yiiactiveform.getSettings($form);
+              $.each(settings.attributes, function () {
+                $.fn.yiiactiveform.updateInput(this, data, $form);
+              });
+            }
+          }, 'type': 'POST', 'url': 'site\x2FadminComplain', 'cache': false, 'data': jQuery(this).parents("form").serialize()
+        }); return false;
+      });
+      jQuery('#admin-complain').yiiactiveform({
+        'attributes': [{
+          'id': 'AdminComplaints_message', 'inputID': 'AdminComplaints_message', 'errorID': 'AdminComplaints_message_em_', 'model': 'AdminComplaints', 'name': 'message', 'enableAjaxValidation': false, 'clientValidation': function (value, messages, attribute) {
+
+            if (jQuery.trim(value) == '') {
+              messages.push("\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435");
+            }
+
+
+            if (value.length > 255) {
+              messages.push("Message \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+            }
+
+          }
+        }], 'errorCss': 'error'
+      });
+    });
+/*]]>*/
+  </script>
+
+
+</body>
+
+</html>

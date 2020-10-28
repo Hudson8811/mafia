@@ -18,12 +18,33 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "ArialMT";
+  src: local("ArialMT Regular"), local("ArialMT-Regular"),
+    url("../fonts/ArialMT.woff2") format("woff2"),
+    url("../fonts/ArialMT.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ArialMT";
+  src: local("ArialMT Bold"), local("ArialMT-Bold"),
+    url("../fonts/ArialMT-Bold.woff2") format("woff2"),
+    url("../fonts/ArialMT-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-green: #00d17a;
   --color-main: #718ba3;
   --color-dark: #001f35;
   --color-dark2: #0c021b;
   --main-font: "Calibri", "Arial", sans-serif;
+  --secondary-font: "ArialMT", "Arial", sans-serif;
 }
 
 #amsb {
@@ -77,11 +98,14 @@ header hgroup {
   background-position: 50% 76px;
 }
 
-.day #g_pagewrap.bigHeader .second , .night #g_pagewrap.bigHeader .second{
+.day #g_pagewrap.bigHeader .second,
+.day #g_pagewrapInside.smallHeader .second,
+.night #g_pagewrap.bigHeader .second {
   background: none;
 }
 
-#pageTop nav {
+/*#pageTop */
+nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -92,25 +116,29 @@ header hgroup {
   background-image: none;
 }
 
-#pageTop nav ul {
+/*#pageTop */
+nav ul {
   display: flex;
   justify-content: center;
   align-self: center;
 }
 
-#pageTop nav li {
+/*#pageTop */
+nav ul li {
   position: static;
   margin: 0 16px;
 }
 
-#pageTop nav a {
+/*#pageTop */
+nav ul li a {
   padding: 0;
   font-size: 18px;
   line-height: 1;
   color: var(--color-main);
 }
 
-#pageTop nav li:first-child a::before {
+/*#pageTop */
+nav ul li:first-child a::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -123,15 +151,18 @@ header hgroup {
   background-image: url("logobn.png");
 }
 
-#pageTop nav a:hover,
-#pageTop nav a:focus {
+/*#pageTop */
+nav ul li a:hover,
+/*#pageTop */
+nav ul li a:focus {
   /*font-weight: 700;*/
   color: #001f35;
   background-color: transparent;
   text-shadow: 0px 0px 1px #001f35;
 }
 
-#pageTop nav a:hover .bloodyPrint {
+/*#pageTop */
+nav ul li a:hover .bloodyPrint {
   display: none;
 }
 
@@ -143,6 +174,16 @@ header hgroup {
   background-color: #ffffff;
   background-image: none;
   border: none;
+}
+
+#authorize-nav {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#authorize-nav li {
+  align-self: center;
 }
 
 .auth-center {
@@ -177,7 +218,7 @@ header hgroup {
   opacity: 0.8;
 }
 
-.openIdicon.imgvkontakte{
+.openIdicon.imgvkontakte {
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23718ba3' d='M19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739V5.949c0-.656-.187-.949-.74-.949H9.161c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001H.9c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553C6.318 17.343 9.374 19 12.154 19c1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667C19.114 18.217 19.407 19 20.405 19h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z'/%3e%3c/svg%3e");
   background-position: center !important;
@@ -238,7 +279,7 @@ input.enter-exit {
 
 input.enter-exit:hover,
 input.enter-exit:focus {
-  background-color:  #00b25e;
+  background-color: #00b25e;
 }
 
 #main-login a.txt {
@@ -270,24 +311,25 @@ input.enter-exit:focus {
   margin-bottom: 20px;
 }
 
-.map h2 a{
+.map h2 a {
   color: var(--color-dark);
 }
 
-.tournamentTop{
+.tournamentTop {
   color: var(--color-dark);
 }
 
-.tournamentUsers{
+.tournamentUsers {
   color: var(--color-dark);
   bottom: 180px;
 }
 
-.tournamentTime, .tournamentUsers span{
+.tournamentTime,
+.tournamentUsers span {
   color: var(--color-main);
 }
 
-.tournamentFound{
+.tournamentFound {
   color: var(--color-dark);
   bottom: 90px;
 }
@@ -346,7 +388,7 @@ input.enter-exit:focus {
   padding-bottom: 20px;
 }
 
-@media all and (min-width: 1180px){
+@media all and (min-width: 1180px) {
   #nextGame .items .nextGame .nextGameButton {
     position: absolute;
     /*top: 50%;*/
@@ -389,19 +431,21 @@ input.enter-exit:focus {
   background-color: #e9eff2;
 }
 
-.promptL:hover em, .promptR:hover em{
+.promptL:hover em,
+.promptR:hover em {
   color: var(--color-main);
   background: #fff;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
-  -moz-box-shadow:    0px 2px 5px 0px rgba(44, 57, 65, 0.15);
-  box-shadow:         0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
   border-color: #eaedef;
 }
 
-.promptL:hover em i, .promptR:hover em i{
+.promptL:hover em i,
+.promptR:hover em i {
   width: 8px;
   height: 8px;
-  border-top:1px solid #eaedef;
+  border-top: 1px solid #eaedef;
   border-right: 1px solid #eaedef;
   transform: rotate(135deg);
   background: #fff;
@@ -426,13 +470,13 @@ a.tournamentGo {
   padding: 12px 8px;
   background-image: none;
   border-radius: 10px;
-  border:0;
+  border: 0;
   background-color: #00d17a;
 }
 
 a.tournamentGo:hover,
 a.tournamentGo:focus {
-  background-color:  #00b25e;
+  background-color: #00b25e;
 }
 
 a.tournamentGo div {
@@ -543,7 +587,7 @@ div.registration dt input.cont {
 
 div.registration dt input.cont:hover,
 div.registration dt input.cont:focus {
-  background-color:  #00b25e;
+  background-color: #00b25e;
 }
 
 .registration-field-bg {
@@ -564,13 +608,13 @@ input.reg-first {
   background-color: #ffffff;
 }
 
-.rulesItem{
+.rulesItem {
   float: none;
   width: auto;
   clear: both;
 }
 
-.rulesItem + div[style="clear:both"]{
+.rulesItem + div[style="clear:both"] {
   display: none;
 }
 
@@ -656,7 +700,8 @@ ul.auth-services a.auth-link:hover {
   font-size: 16px;
 }
 
-#g_footer {
+#g_footer,
+#g_footer2 {
   height: auto;
   margin-top: 20px; /*
   padding-top: 44px;
@@ -666,6 +711,13 @@ ul.auth-services a.auth-link:hover {
   background-image: none;
 }
 
+#g_footer2 .bottomInfo {
+  width: 100%;
+  max-width: 1150px;
+  padding-top: 44px;
+}
+
+#g_footer2 .bottomInfo .footer,
 #footer {
   display: flex;
   width: 100%;
@@ -676,24 +728,29 @@ ul.auth-services a.auth-link:hover {
   background-image: none;
 }
 
+#g_footer2 .bottomInfo .footer > *,
 #footer > * {
   align-self: center;
 }
 
+#g_footer2 .bottomInfo .footer p,
 #footer p {
   padding: 0;
   color: var(--color-main);
 }
 
+#g_footer2 .bottomInfo .footer a,
 #footer a {
   padding: 0;
   color: var(--color-main);
 }
 
-#footer a:visited, .footer a:visited{
+#footer a:visited,
+.footer a:visited {
   color: var(--color-main);
 }
 
+#g_footer2 .bottomInfo .footer::before,
 #footer::before {
   content: "";
   display: block;
@@ -703,6 +760,7 @@ ul.auth-services a.auth-link:hover {
   background-image: url("logobn.png");
 }
 
+#g_footer2 .bottomInfo .footer::after,
 #footer::after {
   content: "16+";
   margin-left: auto;
@@ -711,26 +769,200 @@ ul.auth-services a.auth-link:hover {
   color: rgba(113, 139, 163, 0.25);
 }
 
-.who_gamers em{
-  color: var(--color-main);
-    background: #fff;
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
-    box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
-    border-color: #eaedef;
+#g_footer2 .bottomInfo .footer {
+  padding-top: 44px;
 }
 
-.who_gamers em:before{
-  width: 8px;
-    height: 8px;
-    border-top: 1px solid #eaedef;
-    border-right: 1px solid #eaedef;
-    transform: rotate(135deg);
-    background: #fff;
-    bottom: -5px;
-    border-bottom: 0;
-    border-left: 0;
+.who_gamers em {
+  color: var(--color-main);
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  box-shadow: 0px 2px 5px 0px rgba(44, 57, 65, 0.15);
+  border-color: #eaedef;
 }
-.who_gamers em:after{
+
+.who_gamers em::before {
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #eaedef;
+  border-right: 1px solid #eaedef;
+  transform: rotate(135deg);
+  background: #fff;
+  bottom: -5px;
+  border-bottom: 0;
+  border-left: 0;
+}
+.who_gamers em::after {
   display: none;
+}
+
+/* Страница Как играть */
+.helpContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  overflow: visible;
+}
+
+.helpContainer .portal_spacer,
+.helpContainer h2 {
+  width: 100%;
+}
+
+.helpContainer .helpMenu {
+  width: 300px;
+  margin-right: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.helpContainer .helpMenu + div {
+  width: calc(100% - 320px) !important;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.helpMenu div.helpMenuItem {
+  padding: 8px 5px;
+  border-bottom-color: #f6f9fb;
+}
+
+.helpMenu div.helpMenuItem:first-child {
+  border-top-color: #f6f9fb;
+}
+
+.helpMenu div.helpMenuItem.active {
+  background-color: transparent;
+  border-bottom-color: #f6f9fb;
+}
+
+.helpMenu div.helpMenuItem.active a {
+  color: #00b2ff;
+}
+
+/* Страница Кланы мафии */
+.clanContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  overflow: visible;
+}
+
+.clanContainer h2 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.clanContainer .list-view {
+  width: 100%;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.clanContainer .list-view .items {
+  display: flex;
+  flex-direction: column;
+}
+
+.clanContainer .clanCard {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 32px 0 0 0 !important;
+  padding-bottom: 32px;
+  border-bottom: solid 1px #eff3f7;
+}
+
+.clanContainer .clanCard > * {
+  align-self: center;
+}
+
+.clanContainer .clanCard:first-child {
+  margin-top: 0 !important;
+}
+
+.clanContainer .clanCard:hover {
+  background-color: transparent;
+}
+
+.clanContainer .clanCard .clanAvatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 36px 0 0;
+}
+
+.clanContainer .clanCard .clanAvatar a {
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.clanContainer .clanCard .clanAvatar img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.clanContainer .clanCard .clanData {
+  padding: 0;
+}
+
+.clanContainer .clanCard .clanName {
+  margin: 0 0 10px;
+}
+
+.clanContainer .clanCard .clanName a {
+  font-family: var(--secondary-font);
+  font-size: 29px;
+  line-height: 1;
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.clanContainer .clanCard .clanName a:hover,
+.clanContainer .clanCard .clanName a:focus {
+  color: var(--color-main);
+}
+
+.clanContainer .clanCard .clanName a::before {
+  content: "Вступить в клан";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.clanContainer .clanCard .clanName a {
+}
+.clanContainer .clanCard .clanName a {
+}
+
+.clanContainer .clanCard .clanFather {
+  padding: 0;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-main);
+}
+
+.clanContainer .clanCard .clanFather span {
+  padding-right: 6px;
+  color: var(--color-dark2) !important;
+}
+
+.clanContainer .clanCard .descClanCard {
+  max-width: 300px;
 }
