@@ -1802,7 +1802,7 @@ p.pNote2 {
 
 .profileUserRight {
   width: 50%;
-  margin: 0 auto;
+  margin: 0;
   padding: 36px 50px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
