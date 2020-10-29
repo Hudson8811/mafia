@@ -1584,6 +1584,7 @@ ul.auth-services a.auth-link:hover {
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
+  overflow: visible;
 }
 
 .profileMenu {
