@@ -205,6 +205,9 @@ nav ul li a:hover .bloodyPrint {
   justify-content: space-between;
   width: auto;
 }
+#authorize-nav:after{
+  display: none;
+}
 
 #authorize-nav li {
   align-self: center;
