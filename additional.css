@@ -310,6 +310,7 @@ nav ul li a:hover .bloodyPrint {
   color: var(--color-dark);
   text-align: left;
   text-decoration: none;
+  background-image: none;
 }
 
 #authorization a.jaloba:hover,
