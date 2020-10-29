@@ -1978,3 +1978,6 @@ border: solid 1px #cdd5de;
 }
 a.gButtonLiteBrown:before, a.gButtonLiteBrown:after{display:none}
 
+.newsContainer a.gButtonLiteBrown{
+  background: #fff;
+}
