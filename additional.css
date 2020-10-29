@@ -1361,6 +1361,9 @@ ul.auth-services a.auth-link:hover {
   border-top: none;
   border-bottom: solid 1px #eff3f7;
 }
+.newsContainer .items div.newsLink:last-child{
+  border-bottom: 0;
+}
 
 .newsContainer .items div.newsLink > * {
   align-self: center;
