@@ -1683,9 +1683,9 @@ ul.auth-services a.auth-link:hover {
   align-self: start;
 }
 
-.property {
+/*.property {
   background-color: var(--color-yellow);
-}
+}*/
 
 .profileUserLeft .online {
   /*grid-column-start: 1;
