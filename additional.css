@@ -1377,6 +1377,13 @@ ul.auth-services a.auth-link:hover {
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
 }
 
+.thingsListing .itemMarket .gButtonLiteGreen::before,
+.thingsListing .itemMarket .gButtonLiteBrown::before,
+.thingsListing .itemMarket .gButtonLiteGreen::after,
+.thingsListing .itemMarket .gButtonLiteBrown::after {
+  display: none;
+}
+
 .thingsListing .itemMarket .gButtonLiteGreen {
   margin-right: 10px;
   background-color: var(--color-green);
