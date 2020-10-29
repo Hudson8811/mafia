@@ -1331,6 +1331,10 @@ ul.auth-services a.auth-link:hover {
   font-weight: 700;
 }
 
+.newsContainer .items h2.singlNews{
+  padding: 0;
+}
+
 .newsContainer .items h2 a {
   color: var(--color-dark);
 }
