@@ -1557,8 +1557,8 @@ ul.auth-services a.auth-link:hover {
 
 .xButton {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: -24px;
+  right: -16px;
   background-size: 27px 27px;
   background-position: 0 0;
   background-color: transparent;
@@ -1590,6 +1590,17 @@ ul.auth-services a.auth-link:hover {
   background-color: var(--color-green);
   background-image: none;
 }
+.buttonLiteGreen span {
+  display: none;
+}
+
+.buttonLiteBrown input,
+.buttonLiteGreen input {
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+  color: #ffffff;
+}
 
 .buttonLiteGreen div:hover {
   background-color: var(--color-green-hover);
@@ -1597,7 +1608,7 @@ ul.auth-services a.auth-link:hover {
 
 .popupMarketActivity {
   position: relative;
-  padding: 24px;
+  padding: 32px 24px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
@@ -1605,7 +1616,7 @@ ul.auth-services a.auth-link:hover {
 
 .popupMarketActivity h3 {
   font-family: var(--secondary-font);
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
   font-weight: 700;
   color: var(--color-dark);
@@ -1620,6 +1631,11 @@ ul.auth-services a.auth-link:hover {
   border-radius: 10px;
   border: solid 1px #d6dee5;
   background-color: #ffffff;
+}
+
+.textareaField {
+  border: none;
+  background-color: transparent;
 }
 
 .popupMarketActivity textarea:hover,
