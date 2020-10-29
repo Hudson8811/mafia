@@ -41,9 +41,12 @@
 :root {
   --color-green: #00d17a;
   --color-green-hover: #00b25e;
+  --color-yellow: #ffc600;
+  --color-yellow-hover: #ffcc33;
   --color-main: #718ba3;
   --color-dark: #001f35;
   --color-dark2: #0c021b;
+  --color-bg: #f6f9fb;
   --main-font: "Calibri", "Arial", sans-serif;
   --secondary-font: "ArialMT", "Arial", sans-serif;
 }
@@ -877,6 +880,7 @@ ul.auth-services a.auth-link:hover {
 }
 
 .helpMenu div.helpMenuItem {
+  width: 100%;
   padding: 8px 5px;
   border-bottom-color: #f6f9fb;
 }
@@ -1227,4 +1231,178 @@ ul.auth-services a.auth-link:hover {
 .newsContainer .newsLink a.fullStory:focus {
   border: solid 1px #cdd5de;
   background-color: #e9eff2;
+}
+/* Магазин */
+.marketContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.marketContainer h2,
+.marketContainer h2 + div {
+  width: 100%;
+}
+
+.marketContainer .thingsMenu {
+  width: 300px;
+  margin-right: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.marketContainer .thingsMenu + div {
+  width: calc(100% - 320px) !important;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.thingsMenu .listMarket,
+.thingsMenu div,
+.thingsMenu .purse2 {
+  width: auto;
+  padding: 8px 5px;
+  border-bottom-color: #f6f9fb;
+}
+
+.thingsMenu .purse2 {
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--color-main);
+
+  /*border-bottom: solid 1px #f6f9fb;*/
+}
+
+.thingsMenu .listMarket:first-child {
+  border-top-color: #f6f9fb;
+}
+
+.thingsMenu .listMarket.active {
+  background-color: transparent;
+  border-bottom-color: #f6f9fb;
+}
+
+.thingsMenu a {
+  padding-left: 0;
+  background: none;
+}
+
+.thingsMenu .listMarket.active a {
+  color: #00b2ff;
+  pointer-events: none;
+  cursor: text;
+}
+
+.thingsMenu .listMarket a:hover,
+.thingsMenu .listMarket a:focus,
+.thingsMenu div a:hover,
+.thingsMenu div a:focus {
+  color: #001f35;
+  background-color: transparent;
+  text-shadow: 0px 0px 1px #001f35;
+}
+
+.thingsListing .items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -24px;
+}
+
+.thingsListing .itemMarket {
+  display: flex;
+  width: calc(50% - 24px);
+  margin: 24px 0 0 24px;
+  border-bottom: solid 1px var(--color-bg);
+}
+
+.thingsListing .itemMarket .rsideM {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 85px);
+  padding: 0 0 12px;
+}
+
+.thingsListing .itemMarket .center {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.thingsListing .itemMarket .rsideM .jsThingName {
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+.thingsListing .itemMarket .rsideM .jsThingName a {
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.thingsListing .itemMarket .rsideM .jsThingName a:hover,
+.thingsListing .itemMarket .rsideM .jsThingName a:focus {
+  color: var(--color-main);
+}
+
+.thingsListing .itemMarket .rsideM p {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.thingsListing .itemMarket .gButtonLiteGreen,
+.thingsListing .itemMarket .gButtonLiteBrown {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  /*margin: 0 0 -34px;*/
+  margin: auto 0 0 0;
+  padding: 11px 21px;
+  font-family: var(--main-font);
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+  text-shadow: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+}
+
+.thingsListing .itemMarket .gButtonLiteGreen {
+  margin-right: 10px;
+  background-color: var(--color-green);
+  background-image: none;
+}
+
+.thingsListing .itemMarket .gButtonLiteBrown {
+  background-color: var(--color-yellow);
+  background-image: none;
+}
+
+.thingsListing .itemMarket .gButtonLiteBrown span {
+  display: none;
+}
+/*
+.itemMarket:hover .gButtonLiteGreen,
+.itemMarket:hover .gButtonLiteBrown {
+  display: inline-block;
+}*/
+
+.thingsListing .itemMarket .gButtonLiteGreen:hover,
+.thingsListing .itemMarket .gButtonLiteGreen:focus {
+  background-color: var(--color-green-hover);
+}
+
+.thingsListing .itemMarket .gButtonLiteBrown:hover,
+.thingsListing .itemMarket .gButtonLiteBrown:focus {
+  background-color: var(--color-yellow-hover);
 }
