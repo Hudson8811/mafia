@@ -1319,6 +1319,7 @@ ul.auth-services a.auth-link:hover {
 .newsContainer .items h2 {
   font-family: var(--main-font);
   font-size: 21px;
+  color: var(--color-dark);
   line-height: 1.71;
   font-weight: 700;
 }
