@@ -198,9 +198,12 @@ nav ul li a:hover .bloodyPrint {
 }
 
 #authorize-nav {
+  margin-left: -14px;
+  margin-right: -14px;
   height: auto;
   display: flex;
   justify-content: space-between;
+  width: auto;
 }
 
 #authorize-nav li {
