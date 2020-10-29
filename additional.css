@@ -44,6 +44,8 @@
   --color-yellow: #ffc600;
   --color-yellow-hover: #ffcc33;
   --color-red: #ff0000;
+
+  --color-turquoise: #00b2ff;
   --color-main: #718ba3;
   --color-dark: #001f35;
   --color-dark2: #0c021b;
@@ -202,7 +204,7 @@ nav ul li a:hover .bloodyPrint {
 #authorize-nav a.youMoney.gold {
   padding-left: 24px;
   font-family: var(--secondary-font);
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   font-weight: 700;
   background-size: 16px 16px;
@@ -220,7 +222,7 @@ nav ul li a:hover .bloodyPrint {
   vertical-align: top;
   padding-left: 44px;
   font-family: var(--secondary-font);
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   font-weight: 700;
   color: var(--color-dark);
@@ -249,7 +251,7 @@ nav ul li a:hover .bloodyPrint {
 #authorize-nav a.username,
 #authorize-nav .jsNotifyHref {
   font-family: var(--secondary-font);
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   font-weight: 700;
   color: var(--color-dark);
@@ -1445,6 +1447,7 @@ ul.auth-services a.auth-link:hover {
   display: flex;
   flex-wrap: wrap;
   margin-left: -24px;
+  margin-top: -24px;
 }
 
 .thingsListing .itemMarket {
@@ -1490,7 +1493,7 @@ ul.auth-services a.auth-link:hover {
   margin: 0 0 10px;
   padding: 0;
   font-family: var(--secondary-font);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
 }
 
@@ -1549,6 +1552,145 @@ ul.auth-services a.auth-link:hover {
 .thingsListing .itemMarket .gButtonLiteBrown:focus {
   background-color: var(--color-yellow-hover);
 }
+/* ЛИЧНЫЙ КАБИНЕТ */
+/* Профиль */
+
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+}
+
+.profileMenu {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+  overflow: visible;
+}
+
+.profileMenu ul {
+  display: flex;
+}
+
+.profileMenu ul li {
+  margin-right: 24px;
+}
+
+.profileMenu ul li a {
+  position: static;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.profileMenu ul li a:hover,
+.profileMenu ul li a:focus {
+  color: #001f35;
+  background-color: transparent;
+  text-shadow: 0px 0px 1px #001f35;
+}
+
+.profileMenu ul li.active a {
+  position: relative;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: var(--color-turquoise);
+  pointer-events: none;
+  cursor: text;
+}
+
+.profileMenu ul li.active div {
+  display: none;
+}
+
+.profileMenu li.active a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-turquoise);
+}
+.profileOwner {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 24px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+  order: -1;
+}
+
+.profileUserLeft {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+  order: -1;
+}
+
+.profileUserLeft .online {
+  width: 134px;
+  margin-top: 14px;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.profileUserRight {
+  width: 100%;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.profileUserRight .list-view > div {
+  width: 100% !important;
+}
+
+.profileAvatar {
+  width: 134px;
+  height: 134px;
+  margin: 0;
+  border: solid 4px var(--color-yellow);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profileAvatar a {
+  display: block;
+}
+
+.profileAvatar a:hover,
+.profileAvatar a:focus {
+  opacity: 0.7;
+}
+
+.profileAvatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.profileData {
+  width: calc(100% - 160px);
+}
 /* Модальное окно */
 #parent_popup {
   z-index: 111;
@@ -1590,6 +1732,7 @@ ul.auth-services a.auth-link:hover {
   background-color: var(--color-green);
   background-image: none;
 }
+
 .buttonLiteGreen span {
   display: none;
 }
