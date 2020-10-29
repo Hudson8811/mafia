@@ -1964,5 +1964,9 @@ display: inline-block;
     text-shadow: none;
     height: auto;
 }
+a.gButtonLiteBrown.active:hover, a.gButtonLiteBrown:hover, a.gButtonLiteGreen:hover{
+border: solid 1px #cdd5de;
+    background-color: #e9eff2;
+}
 a.gButtonLiteBrown:before, a.gButtonLiteBrown:after{display:none}
 
