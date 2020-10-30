@@ -2284,6 +2284,211 @@ p.rarr {
   background-color: #ffffff;
   order: 1;
 }
+/* Друзья */
+.profileContainer .pmSearch {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.profileContainer .friendsMenu {
+  width: 300px;
+  margin: 0 20px 0 0;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.profileContainer .friendsListing {
+  width: calc(100% - 320px);
+  margin: 0;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.profileContainer .pmSearch {
+  display: flex;
+}
+
+.profileContainer .pmSearch div:first-child {
+  flex-grow: 1;
+}
+
+.profileContainer .pmSearch #search {
+  width: 100%;
+}
+
+.profileContainer .pmSearch #search input:first-child {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-left: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+}
+
+.profileContainer .pmSearch #search .submit {
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 18px 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 250.3 250.3'%3e%3cpath fill='%23eaedef' d='M166.5 28.5c-38-38-100-38-138 0s-38 100 0 138c33.9 33.9 86.9 37.6 124.9 11l67.8 67.8c6.6 6.6 17.4 6.6 24.1 0 6.6-6.6 6.6-17.4 0-24.1l-67.8-67.8c26.6-38 23-90.9-11-124.9m-16 122c-29.2 29.2-76.7 29.2-105.9 0-29.2-29.2-29.2-76.7 0-105.9 29.2-29.2 76.7-29.2 105.9 0 29.2 29.2 29.2 76.7 0 105.9'/%3e%3c/svg%3e ");
+}
+
+.profileContainer .pmSearch .allUsers {
+  margin: 0 0 0 130px;
+}
+
+.profileContainer .pmSearch .allUsers a {
+  margin: 0;
+  padding: 13px 20px;
+  font-size: 14px;
+  line-height: 1;
+  color: #ffffff;
+  border: none;
+  background-color: var(--color-turquoise) !important;
+}
+
+.profileContainer .pmSearch .allUsers a:hover,
+.profileContainer .pmSearch .allUsers a:focus {
+  background-color: var(--color-turquoise-hover) !important;
+}
+
+.friendsMenu div {
+  width: 100%;
+  padding: 8px 5px;
+  border-bottom-color: #f6f9fb;
+}
+
+.friendsMenu div:first-child {
+  border-top-color: #f6f9fb;
+}
+
+.friendsMenu div.active {
+  background-color: transparent;
+  border-bottom-color: #f6f9fb;
+}
+
+.friendsMenu div.active a {
+  color: #00b2ff;
+  pointer-events: none;
+  cursor: text;
+}
+
+.friendsMenu div a:hover,
+.friendsMenu div a:focus {
+  color: #001f35;
+  background-color: transparent;
+  text-shadow: 0px 0px 1px #001f35;
+}
+
+.friendsListing .items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+
+.friendsListing .userCardContainer {
+  width: calc(50% - 24px);
+  height: auto;
+  margin: 24px 0 0 24px;
+  border-bottom: none;
+}
+
+.friendsListing .userCardContainer:hover {
+  background-color: #ffffff;
+}
+
+.friendsListing .userCardContainer .userCardAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: solid 3px var(--color-yellow);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.friendsListing .userCardContainer .userCardAvatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.friendsListing .userCardContainer .profileTitle a {
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-dark2);
+}
+
+.friendsListing .userCardContainer .profileTitle a:hover,
+.friendsListing .userCardContainer .profileTitle a:focus {
+  color: var(--color-main);
+}
+
+.friendsListing .userCardContainer .pm {
+  padding: 0;
+  background-image: none;
+}
+
+.friendsListing .userCardContainer .pm .data {
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+  margin-left: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-main);
+  border-radius: 10px;
+  border: solid 1px #eff3f7;
+  background-color: #f6f9fb;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+}
+
+.friendsListing .userCardContainer .pm .data:hover,
+.friendsListing .userCardContainer .pm .data:focus {
+  border: solid 1px #cdd5de;
+  background-color: #e9eff2;
+}
+
+.friendsListing .userCardContainer .ajax-fr {
+  display: flex;
+}
+
+.friendsListing .userCardContainer .ajax-fr a {
+  align-self: center;
+}
+
+.friendsListing .userCardContainer .ajax-fr .gButtonLiteBrown {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--color-green) !important;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+}
+
+.friendsListing .userCardContainer .ajax-fr .gButtonLiteBrown:hover,
+.friendsListing .userCardContainer .ajax-fr .gButtonLiteBrown:focus {
+  background-color: var(--color-green-hover) !important;
+}
+
 /* Модальное окно */
 #parent_popup {
   z-index: 111;
