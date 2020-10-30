@@ -2514,6 +2514,7 @@ p.rarr {
   border: none;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
+  background-image: none;
 }
 
 .profileContainer .pmFormTopBg p {
@@ -2524,7 +2525,7 @@ p.rarr {
 .pmInternalContainer {
   width: calc(100% - 260px) !important;
   margin: 0;
-  padding: 36px 50px 100px;
+  padding: 36px 50px !important;
   border-radius: 10px;
   border: none;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
@@ -2555,6 +2556,10 @@ p.rarr {
 
 .pmInternalContainer + form .buttonLiteBrown div {
   height: auto;
+}
+
+.pmInternalContainer + form .buttonLiteBrown span {
+  display: none;
 }
 
 .pmInternalContainer + form .buttonLiteBrown input {
