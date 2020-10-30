@@ -46,6 +46,7 @@
   --color-red: #ff0000;
 
   --color-turquoise: #00b2ff;
+  --color-turquoise-hover: #33c2ff;
   --color-main: #718ba3;
   --color-dark: #001f35;
   --color-dark2: #0c021b;
@@ -1949,6 +1950,7 @@ p.pNote2 {
   height: 3px;
   background-color: var(--color-turquoise);
 }
+
 .wallForm .textareaField {
   margin: 0;
   padding: 0;
@@ -1973,6 +1975,35 @@ p.pNote2 {
 .wallForm textarea::placeholder {
   opacity: 1;
   color: var(--color-main);
+}
+
+.wallForm .buttonLiteBrown span {
+  display: none;
+}
+
+.wallForm .buttonLiteBrown div {
+  height: auto;
+  background-image: none;
+}
+
+.wallForm .buttonLiteBrown input {
+  display: inline-block;
+  margin: 0;
+  padding: 14px 21px;
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: var(--color-turquoise);
+  background-image: none;
+}
+
+.wallForm .buttonLiteBrown input:hover,
+.wallForm .buttonLiteBrown input:focus {
+  background-color: var(--color-turquoise-hover);
 }
 
 .profileUserRight .list-view > div {
@@ -2175,7 +2206,7 @@ p.rarr {
   background-color: #ffffff;
 }
 
-.profileUserPersonInfo p:first-of-type {
+.profileUserPersonInfo > p:first-of-type {
   display: inline-block;
   margin: 0;
   padding: 14px 21px;
@@ -2190,7 +2221,7 @@ p.rarr {
   background-image: none;
 }
 
-.profileUserPersonInfo p:hover {
+.profileUserPersonInfo p:first-of-type:hover {
   background-color: var(--color-green-hover);
 }
 
@@ -2218,7 +2249,9 @@ p.rarr {
 .profileUserPersonInfo .buttonLiteBrown span {
   display: none;
 }
+
 .profileUserPersonInfo .buttonLiteBrown div {
+  height: auto;
   background-image: none;
 }
 
@@ -2236,6 +2269,7 @@ p.rarr {
   background-color: var(--color-green);
   background-image: none;
 }
+
 .profileUserPersonInfo .buttonLiteBrown input:hover,
 .profileUserPersonInfo .buttonLiteBrown input:focus {
   background-color: var(--color-green-hover);
