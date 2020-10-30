@@ -1705,17 +1705,14 @@ ul.auth-services a.auth-link:hover {
   grid-row-start: 2;
   grid-row-end: 5;
 
+  height: auto;
   margin-top: 0;
   background-image: none;
 }
 
-/*
-.yiiPager li {
-  min-width: 27px;
-  height: 30px;
-  margin: 0 6px;
-  flex-shrink: 0;
-}*/
+.property .scrollable {
+  height: 100px !important;
+}
 
 a.next.browse.right,
 a.prev.browse.left {
@@ -1730,6 +1727,7 @@ a.prev.browse.left {
 a.next.browse.right {
 }
 a.prev.browse.left {
+  transform: scale(-1, 1);
 }
 
 .profileUserLeft .online {
@@ -1933,6 +1931,9 @@ p.pNote2 {
   border-right: solid 1px var(--color-dark);
 }
 
+.profileData div:last-child {
+  border: none;
+}
 /* Модальное окно */
 #parent_popup {
   z-index: 111;
