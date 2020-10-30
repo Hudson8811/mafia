@@ -198,9 +198,15 @@ nav ul li a:hover .bloodyPrint {
 }
 
 #authorize-nav {
+  margin-left: -14px;
+  margin-right: -14px;
   height: auto;
   display: flex;
   justify-content: space-between;
+  width: auto;
+}
+#authorize-nav:after {
+  display: none;
 }
 
 #authorize-nav li {
@@ -1360,6 +1366,9 @@ ul.auth-services a.auth-link:hover {
   border-top: none;
   border-bottom: solid 1px #eff3f7;
 }
+.newsContainer .items div.newsLink:last-of-type {
+  border-bottom: 0;
+}
 
 .newsContainer .items div.newsLink > * {
   align-self: center;
@@ -1580,6 +1589,7 @@ ul.auth-services a.auth-link:hover {
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
+  overflow: visible;
 }
 
 .profileMenu {
@@ -1833,8 +1843,8 @@ p.pNote2 {
 }
 
 .profileUserRight {
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 36px 50px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
