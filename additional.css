@@ -2333,6 +2333,7 @@ p.rarr {
   padding-bottom: 10px;
   border-radius: 10px;
   border: solid 1px #d6dee5;
+  background-image: none;
 }
 
 .profileContainer .pmSearch #search input:first-child:hover,
