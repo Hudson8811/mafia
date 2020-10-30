@@ -2495,6 +2495,150 @@ p.rarr {
   background-color: var(--color-green-hover) !important;
 }
 
+/* Сообщения */
+.profileContainer #ajax-get-talk {
+  width: 100%;
+  margin: 0;
+  padding: 36px 50px 100px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.profileContainer .pmFormTopBg {
+  width: 240px;
+  padding: 24px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.profileContainer .pmFormTopBg p {
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.pmInternalContainer {
+  width: calc(100% - 260px) !important;
+  margin: 0;
+  padding: 36px 50px 100px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.pmInternalContainer + form {
+  width: calc(100% - 260px);
+  margin-top: 20px;
+  margin-left: auto;
+  padding: 36px 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.pmInternalContainer + form .pmForm {
+  padding: 0;
+  background-image: none;
+}
+
+.pmInternalContainer + form .textareaField {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
+.pmInternalContainer + form .buttonLiteBrown div {
+  height: auto;
+}
+
+.pmInternalContainer + form .buttonLiteBrown input {
+  padding: 11px 20px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  background-color: var(--color-turquoise);
+  border-radius: 10px;
+}
+
+.pmInternalContainer + form .buttonLiteBrown input:hover,
+.pmInternalContainer + form .buttonLiteBrown input:focus {
+  background-color: var(--color-turquoise-hover);
+}
+
+.pmInternalContainer + form textarea {
+  color: var(--color-dark2);
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+}
+
+.pmInternalContainer + form textarea:hover,
+.pmInternalContainer + form textarea:focus {
+  border-color: var(--color-main);
+}
+
+.pmInternalContainer + form textarea::placeholder {
+  opacity: 1;
+  color: var(--color-main);
+}
+
+.profileContainer .message-unit {
+  position: relative;
+  display: flex;
+  padding: 20px 0;
+  border-bottom-color: var(--color-bg);
+}
+
+.profileContainer .message-unit .userDate-pm {
+  top: 0;
+}
+
+.profileContainer .message-unit .ava-pm {
+  padding: 0;
+}
+
+.profileContainer .message-unit .text-pm {
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+
+.profileContainer .message-unit:hover {
+  background-color: transparent;
+}
+
+.profileContainer .message-unit:hover .del-pm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*display: none;*/
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 511.992 511.992' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M415.402 495.422l-159.406-159.41L96.59 495.422c-22.098 22.094-57.922 22.094-80.02 0-22.093-22.098-22.093-57.922 0-80.02l159.41-159.406L16.57 96.59c-22.093-22.098-22.093-57.922 0-80.02 22.098-22.093 57.922-22.093 80.02 0l159.406 159.41L415.402 16.57c22.098-22.093 57.922-22.093 80.02 0 22.094 22.098 22.094 57.922 0 80.02l-159.41 159.406 159.41 159.406c22.094 22.098 22.094 57.922 0 80.02-22.098 22.094-57.922 22.094-80.02 0zm0 0' fill='%23e76e54'/%3e%3c/svg%3e") !important;
+}
+
+.profileContainer .message-unit .del-pm:hover {
+  opacity: 0.7;
+}
+
+.profileContainer #ajax-get-talk + .portal_spacer {
+  margin-top: -80px;
+  margin-left: 50px;
+  padding: 0;
+}
+
 /* Модальное окно */
 #parent_popup {
   z-index: 111;
