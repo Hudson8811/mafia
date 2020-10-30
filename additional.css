@@ -2335,6 +2335,11 @@ p.rarr {
   border: solid 1px #d6dee5;
 }
 
+.profileContainer .pmSearch #search input:first-child:hover,
+.profileContainer .pmSearch #search input:first-child:focus {
+  border-color: var(--color-main);
+}
+
 .profileContainer .pmSearch #search .submit {
   width: 40px;
   height: 40px;
