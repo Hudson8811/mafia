@@ -1793,7 +1793,9 @@ a.prev.browse.left {
   background-image: none;
   pointer-events: none;
 }
-
+.profileMessage .gButtonLiteBrown ~ [type="file"] {
+  max-width: 100%;
+}
 .profileMessage .file_upload2:hover .gButtonLiteBrown {
   background-color: var(--color-green-hover);
 }
@@ -1952,8 +1954,12 @@ p.pNote2 {
 }
 
 .wallForm .textareaField {
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
+}
+
+.wallForm .textareaField + .fr {
+  float: left;
 }
 
 .wallForm textarea {
@@ -2004,6 +2010,12 @@ p.pNote2 {
 .wallForm .buttonLiteBrown input:hover,
 .wallForm .buttonLiteBrown input:focus {
   background-color: var(--color-turquoise-hover);
+}
+
+.profileUserRight .wall,
+.profileUserRight .wall .jspContainer,
+.profileUserRight .wall .jspContainer .jspPane {
+  width: 100% !important;
 }
 
 .profileUserRight .list-view > div {
