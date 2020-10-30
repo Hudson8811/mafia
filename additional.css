@@ -1896,6 +1896,10 @@ p.pNote2 {
   border-bottom-color: var(--color-bg);
 }
 
+.profileUserRight .newsFeedItem:first-child {
+  border-top-color: var(--color-bg);
+}
+
 .profileFeed {
 }
 
@@ -2138,6 +2142,12 @@ p.pNote2 {
   width: auto;
 }
 
+.profileStatShort .loss,
+.profileStatShort .win,
+.profileStatShort .break {
+  background-image: none;
+}
+
 .profileStatShort .statTableMini + p {
   display: none;
 }
@@ -2181,6 +2191,53 @@ p.rarr {
 }
 
 .profileUserPersonInfo p:hover {
+  background-color: var(--color-green-hover);
+}
+
+.profileUserPersonInfo textarea {
+  color: var(--color-dark2);
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+}
+
+.profileUserPersonInfo textarea:hover,
+.profileUserPersonInfo textarea:focus {
+  border-color: var(--color-main);
+}
+
+.profileUserPersonInfo textarea::placeholder {
+  opacity: 1;
+  color: var(--color-main);
+}
+
+.profileUserPersonInfo .buttonLiteBrown span {
+  display: none;
+}
+.profileUserPersonInfo .buttonLiteBrown div {
+  background-image: none;
+}
+
+.profileUserPersonInfo .buttonLiteBrown input {
+  display: inline-block;
+  margin: 0;
+  padding: 14px 21px;
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: var(--color-green);
+  background-image: none;
+}
+.profileUserPersonInfo .buttonLiteBrown input:hover,
+.profileUserPersonInfo .buttonLiteBrown input:focus {
   background-color: var(--color-green-hover);
 }
 
