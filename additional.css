@@ -1706,6 +1706,30 @@ ul.auth-services a.auth-link:hover {
   grid-row-end: 5;
 
   margin-top: 0;
+  background-image: none;
+}
+
+/*
+.yiiPager li {
+  min-width: 27px;
+  height: 30px;
+  margin: 0 6px;
+  flex-shrink: 0;
+}*/
+
+a.next.browse.right,
+a.prev.browse.left {
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+  background-size: 10px 10px;
+  background-position: 50% 50% !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 492.004 492.004'%3e%3cpath fill='%23718ba3' d='M382.678 226.804L163.73 7.86C158.666 2.792 151.906 0 144.698 0s-13.968 2.792-19.032 7.86l-16.124 16.12c-10.492 10.504-10.492 27.576 0 38.064L293.398 245.9l-184.06 184.06c-5.064 5.068-7.86 11.824-7.86 19.028 0 7.212 2.796 13.968 7.86 19.04l16.124 16.116c5.068 5.068 11.824 7.86 19.032 7.86s13.968-2.792 19.032-7.86L382.678 265c5.076-5.084 7.864-11.872 7.848-19.088.016-7.244-2.772-14.028-7.848-19.108z'/%3e%3c/svg%3e");
+}
+
+a.next.browse.right {
+}
+a.prev.browse.left {
 }
 
 .profileUserLeft .online {
@@ -1720,6 +1744,7 @@ ul.auth-services a.auth-link:hover {
   line-height: 1;
   color: var(--color-main);
   text-align: center;
+  background-image: none;
 }
 
 .profileMessage {
