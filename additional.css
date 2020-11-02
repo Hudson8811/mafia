@@ -3594,3 +3594,15 @@ a.gButtonLiteBrown:after {
 .newsContainer a.gButtonLiteBrown {
   background: #fff;
 }
+
+
+.rulesContainer{
+    padding: 36px 50px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+    background-color: #ffffff;
+}
+
+.resume{
+      background-color:transparent
+      }
