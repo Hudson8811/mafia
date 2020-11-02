@@ -2616,7 +2616,7 @@ p.rarr {
   position: relative;
   display: flex;
   padding: 20px 0;
-  border-bottom-color: var(--color-bg);
+  border-bottom-color: #d6dee5;
 }
 
 .profileContainer .message-unit .userDate-pm {
@@ -2746,8 +2746,8 @@ p.rarr {
   font-size: 16px;
   line-height: 1;
   border-left: none !important;
-  border-bottom: solid 1px var(--color-bg);
-  border-top: solid 1px var(--color-bg);
+  border-bottom: solid 1px #d6dee5;
+  border-top: solid 1px #d6dee5;
 }
 
 .profileContainer .statItems td:first-child {
@@ -2797,7 +2797,7 @@ table.items th {
   color: var(--color-main);
   text-align: left;
   border-left: none;
-  border-bottom: solid 1px var(--color-bg);
+  border-bottom: solid 1px #d6dee5;
   background-image: none;
   background-color: #fff;
 }
@@ -2820,8 +2820,8 @@ table.items td {
   line-height: 1;
   color: var(--color-dark);
   text-align: left !important;
-  border-top: solid 1px var(--color-bg);
-  border-bottom: solid 1px var(--color-bg);
+  border-top: solid 1px #d6dee5;
+  border-bottom: solid 1px #d6dee5;
 }
 
 /* Хранилище */
