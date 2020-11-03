@@ -536,12 +536,12 @@ input.enter-exit:focus {
   overflow: visible;
 }
 
-.nextGameContainer {
+.regGamesContainer .nextGameContainer {
   display: flex;
   padding: 0;
 }
 
-.nextGameContainer #nextGame {
+.regGamesContainer .nextGameContainer #nextGame {
   width: calc(100% - 260px);
   margin-right: 20px;
   padding: 36px 50px;
@@ -550,31 +550,31 @@ input.enter-exit:focus {
   background-color: #ffffff;
 }
 
-#nextGame .items {
+.regGamesContainer #nextGame .items {
   background: none;
 }
 
-#nextGame .items .dottedLine {
+.regGamesContainer #nextGame .items .dottedLine {
   width: 100%;
   background: none;
   height: auto;
   border-bottom: solid 1px #eff3f7;
 }
 
-#nextGame .items .nextGame {
+.regGamesContainer #nextGame .items .nextGame {
   display: flex;
   flex-wrap: wrap;
   background: none;
 }
 
-#nextGame .items .nextGame .nextGameUser {
+.regGamesContainer #nextGame .items .nextGame .nextGameUser {
   position: relative;
   width: calc(100% - 445px);
   padding-bottom: 20px;
 }
 
 @media all and (min-width: 1180px) {
-  #nextGame .items .nextGame .nextGameButton {
+  .regGamesContainer #nextGame .items .nextGame .nextGameButton {
     position: absolute;
     /*top: 50%;*/
     right: 0;
@@ -582,10 +582,10 @@ input.enter-exit:focus {
     width: auto;
     padding: 0;
   }
-  #nextGame .items .nextGame .nextGameUser {
+  .regGamesContainer #nextGame .items .nextGame .nextGameUser {
     padding-bottom: 0;
   }
-  #nextGame .items .nextGame > * {
+  .regGamesContainer #nextGame .items .nextGame > * {
     align-self: center;
   }
 }
@@ -3934,9 +3934,118 @@ table.items td {
 }
 
 /* ГЛАВНАЯ ЕСЛИ АВТОРИЗОВАН */
+#g_pagewrapInside.bigHeader #content,
+.adsUpListGame {
+  width: 100%;
+  max-width: 1150px;
+}
+
+.adsUpListGame {
+  display: flex;
+  margin: 0 auto 20px;
+}
+
+.adsUpListGame a {
+  width: 50%;
+}
+
+.adsUpListGame a:hover,
+.adsUpListGame a:focus {
+  opacity: 0.7;
+}
+
+.adsUpListGame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 section.cover #authorization,
 section.cover #authorization.static {
   height: 90px;
+}
+
+.day #g_pagewrapInside.bigHeader .second,
+.night #g_pagewrapInside.bigHeader .second,
+.day #g_pagewrapInside.bigHeader .third,
+.night #g_pagewrapInside.bigHeader .third {
+  background-image: none;
+  background-color: transparent;
+}
+
+.gamesContainer,
+#content2 {
+  width: 100%;
+  max-width: 1150px;
+  padding: 0;
+  overflow: visible;
+}
+
+#content2 .dubleRating {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 40px;
+  overflow: visible;
+}
+
+#content2 .dubleRating .topUser,
+#content2 .dubleRating .topClan {
+  width: calc(50% - 10px);
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.gamesContainer .nextGameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup {
+  display: flex;
+
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .abonement {
+  margin-right: auto;
+  order: -1;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat {
+  margin-right: 0;
+  order: 1;
+  overflow: visible;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat {
+  overflow: visible;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat a,
+.gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat a {
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.gamesContainer .nextGameContainer #nextGame {
+  width: calc(100% - 260px);
+  margin-right: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.gamesContainer .nextGameContainer .managementGames {
+  width: 100%;
 }
 
 /* Монетка */
