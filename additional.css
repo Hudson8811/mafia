@@ -3267,6 +3267,7 @@ table.items td {
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
+  background-image: none;
 }
 
 .profileContainer .clanLeftSide {
