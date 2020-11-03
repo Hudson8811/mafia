@@ -2421,6 +2421,12 @@ p.rarr {
   margin-left: -24px;
 }
 
+.friendsListing .items .empty {
+  display: inline-block;
+  padding-left: 24px;
+  padding-top: 24px;
+}
+
 .friendsListing .userCardContainer {
   width: calc(50% - 24px);
   height: auto;
