@@ -1037,16 +1037,16 @@ ul.auth-services a.auth-link:hover {
 .helpMenu div.helpMenuItem {
   width: 100%;
   padding: 8px 5px;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .helpMenu div.helpMenuItem:first-child {
-  border-top-color: #f6f9fb;
+  border-top-color: var(--color-grey);
 }
 
 .helpMenu div.helpMenuItem.active {
   background-color: transparent;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .helpMenu div.helpMenuItem.active a {
@@ -1436,7 +1436,7 @@ ul.auth-services a.auth-link:hover {
 .thingsMenu .purse2 {
   width: auto;
   padding: 8px 5px;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .thingsMenu .purse2 {
@@ -1448,12 +1448,12 @@ ul.auth-services a.auth-link:hover {
 }
 
 .thingsMenu .listMarket:first-child {
-  border-top-color: #f6f9fb;
+  border-top-color: var(--color-grey);
 }
 
 .thingsMenu .listMarket.active {
   background-color: transparent;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .thingsMenu a {
@@ -2390,16 +2390,16 @@ p.rarr {
 .friendsMenu div {
   width: 100%;
   padding: 8px 5px;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .friendsMenu div:first-child {
-  border-top-color: #f6f9fb;
+  border-top-color: var(--color-grey);
 }
 
 .friendsMenu div.active {
   background-color: transparent;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .friendsMenu div.active a {
@@ -2693,16 +2693,16 @@ p.rarr {
 .statMenu div {
   width: 100%;
   padding: 8px 5px;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .statMenu div:first-child {
-  border-top-color: #f6f9fb;
+  border-top-color: var(--color-grey);
 }
 
 .statMenu div.active {
   background-color: transparent;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .statMenu div.active a {
@@ -2854,16 +2854,16 @@ table.items td {
 .thingsMenu div {
   width: 100%;
   padding: 8px 5px;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .thingsMenu div:first-child {
-  border-top-color: #f6f9fb;
+  border-top-color: var(--color-grey);
 }
 
 .thingsMenu div.active {
   background-color: transparent;
-  border-bottom-color: #f6f9fb;
+  border-bottom-color: var(--color-grey);
 }
 
 .thingsMenu div.active a {
