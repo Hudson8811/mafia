@@ -359,6 +359,7 @@ a.enter-exit {
   font-size: 12px;
   line-height: 1;
   text-align: center;
+  color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
   background-color: var(--color-green);
@@ -2881,6 +2882,11 @@ table.items td {
 .thingsListing .menuSafe {
   margin-bottom: 40px;
   padding: 0;
+  overflow: visible;
+}
+
+.thingsListing .itemsSafe {
+  background-image: none;
 }
 
 .thingsListing .menuSafe ul {
@@ -2904,6 +2910,7 @@ table.items td {
   pointer-events: none;
   cursor: text;
   transform: translateY(3px);
+  background-image: none;
 }
 
 .thingsListing .menuSafe ul li.active a::before {
@@ -2978,6 +2985,11 @@ table.items td {
 
 .itemsSafe .itemProperty .viewSecond {
   display: flex;
+  background-image: none;
+}
+
+.itemsSafe .itemProperty .giftFrom {
+  background-image: none;
 }
 
 .itemsSafe .itemProperty .rside {
@@ -3023,7 +3035,8 @@ table.items td {
   color: var(--color-dark);
 }
 
-.thingsListing .purseRight {
+.thingsListing .purseRight ..editProfileField {
+  background-image: none;
 }
 
 .thingsListing .purseRight p {
@@ -3038,8 +3051,13 @@ table.items td {
 .thingsListing .purseRight a:focus {
   color: var(--color-turquoise-hover) !important;
 }
-
 .thingsListing .purseRight .buttonLiteBrown div {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: auto;
+}
+.thingsListing .purseRight .buttonLiteBrown div input {
   display: inline-block;
   vertical-align: top;
   width: auto;
@@ -3059,8 +3077,13 @@ table.items td {
   background-image: none;
 }
 
-.thingsListing .purseRight .buttonLiteBrown div:hover {
+.thingsListing .purseRight .buttonLiteBrown div input:hover,
+.thingsListing .purseRight .buttonLiteBrown div input:focus {
   background-color: var(--color-green-hover);
+}
+
+.thingsListing .purseRight .buttonLiteBrown div span {
+  display: none;
 }
 
 .purseRight .profileTitle + .spacer20 {
@@ -3249,6 +3272,7 @@ table.items td {
 .profileContainer .clanLeftSide {
   margin-top: 0;
   margin-right: 20px;
+  background-image: none;
 }
 
 .profileContainer .clanRightSide {
@@ -3375,6 +3399,11 @@ table.items td {
   background-color: var(--color-green-hover) !important;
 }
 
+.clanBalance .gButtonLiteGreen::before,
+.clanBalance .gButtonLiteGreen::after {
+  display: none;
+}
+
 .clanBalance .gButtonLiteGreen span.gold {
   padding-right: 20px;
   color: #ffffff;
@@ -3410,6 +3439,7 @@ table.items td {
   margin-left: -16px;
   margin-top: -16px;
   margin-bottom: 20px;
+  background-image: none;
 }
 
 .clanFamilyShort .clanItem10 {
@@ -3455,6 +3485,12 @@ table.items td {
 .clanStatShort,
 .statClanTableMini {
   width: 100%;
+}
+
+.statClanTableMini .loss,
+.statClanTableMini .win,
+.statClanTableMini .break {
+  background-image: none;
 }
 
 .clanRightSide p:first-of-type {
