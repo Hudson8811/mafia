@@ -4122,6 +4122,9 @@ a.gButtonLiteBrown:after {
   background: #fff;
 }
 
+.jspPane .rulesContainer{
+  box-shadow: none;
+}
 .rulesContainer {
   padding: 36px 50px;
   border-radius: 10px;
@@ -4173,4 +4176,18 @@ input.autorizationField{
 .autorizationFieldBlock{
   width: auto;
   margin-top: 20px;
+}
+
+.captcha input{
+  color: var(--color-dark2);
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 12px 16px;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+    border: solid 1px #d6dee5;
+    background-color: #ffffff;
+    margin-bottom: 10px;
 }
