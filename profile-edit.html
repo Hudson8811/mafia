@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+	<meta charset="utf-8">
+	<meta name="language" content="ru">
+
+	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css">
+<link rel="stylesheet" type="text/css" href="cusel.css">
+<link rel="stylesheet" type="text/css" href="datePicker.css">
+<link rel="stylesheet" type="text/css" href="cover.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="content.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="ru.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="main.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="chat.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="additional.css" media="screen, projection">
+<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/assets/3d0c81f4/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/3d0c81f4/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/jquery.jscrollpane.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/initScrollpane.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/cusel.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/initCusel.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/initPlaceholder.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/radioChange.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/initRadio.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/niceCheck.js"></script>
+<script type="text/javascript" src="/assets/3d0c81f4/jquery.yiiactiveform.js"></script>
+<script type="text/javascript" src="/client/js/vendor/socket.io-client/dist/socket.io.js"></script>
+<script type="text/javascript" src="/assets/66afb96c/userChannel.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/global.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/soundmanager2-nodebug-jsmin.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/music.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/popupWindow.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/panelAttach.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var language = 'ru';
+var user = {'name':'Dark_Dmake','id':'66','rating':'2000','moderator':true};
+var websocketData = {host: 'https://ws.mafii.net/'};
+var wsToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9tYWZpaS5uZXQiLCJhdWQiOiJodHRwOlwvXC9tYWZpaS5uZXQiLCJpYXQiOjE2MDQzODg5NzUsIm5iZiI6MTYwNDM4ODk3NSwiZXhwIjoxNjA0NDA3MDA1LCJzYnQiOiJpZF84MzM0NmI1ZDlmNmMxIn0.4t3oiqnj5KMZs7kSbxn\x2DmJ4f6f60r0BG9ljp7y3hJv8';
+var userChannelId = 'id_83346b5d9f6c1';
+var pathTheme = '\x2Fthemes\x2Fbootstrap';
+$.ajaxSetup({
+            data:{'YII_CSRF_TOKEN': 'SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg\x3D\x3D'},
+        });
+    var notifyList = [];
+    $(function() {
+        setTimeout(function(){
+            $.each(notifyList, function(i, e){
+                notify.add(e);
+            });                        
+        }, 0);
+    });
+/*]]>*/
+</script>
+<title>
+		Мафия → Редактирование профиля	</title>
+	<meta name="Description" content="Мафия   онлайн  - бесплатная карточная видео игра">
+	<meta name="keywords" content="Мафия   онлайн  - бесплатная карточная видео игра">
+	<meta property="og:image" content="/themes/bootstrap/static/img/share/logo1.png">
+	<meta property="og:description" content="Проект «Mafii.net - Дело ночи» - это уникальная возможность не только играть в популярную и любимую игру с любыми соперниками со всего мира, но и видеть и слышать всех других игроков в режиме онлайн, как если бы вы играли за одним столом!">
+	
+	<!-- html5.js for IE less than 9 -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
+<style>._3emE9--dark-theme .-S-tR--ff-downloader{background:rgba(30,30,30,.93);border:1px solid rgba(82,82,82,.54);box-shadow:0 4px 7px rgba(30,30,30,.55);color:#fff}._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn{background:#3d4b52}._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover{background:#131415}._3emE9--dark-theme .-S-tR--ff-downloader ._10vpG--footer{background:rgba(30,30,30,.93)}._2mDEx--white-theme .-S-tR--ff-downloader{background:#fff;border:1px solid rgba(82,82,82,.54);box-shadow:0 4px 7px rgba(30,30,30,.55);color:#314c75}._2mDEx--white-theme .-S-tR--ff-downloader ._6_Mtt--header{font-weight:700}._2mDEx--white-theme .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice{border:0;color:rgba(0,0,0,.88)}._2mDEx--white-theme .-S-tR--ff-downloader ._10vpG--footer{background:#fff}.-S-tR--ff-downloader{display:block;overflow:hidden;position:fixed;bottom:20px;right:7.1%;width:330px;height:180px;background:rgba(30,30,30,.93);border-radius:2px;color:#fff;z-index:99999999;border:1px solid rgba(82,82,82,.54);box-shadow:0 4px 7px rgba(30,30,30,.55);transition:.5s}.-S-tR--ff-downloader._3M7UQ--minimize{height:62px}.-S-tR--ff-downloader._3M7UQ--minimize .nxuu4--file-info,.-S-tR--ff-downloader._3M7UQ--minimize ._6_Mtt--header{display:none}.-S-tR--ff-downloader ._6_Mtt--header{padding:10px;font-size:17px;font-family:sans-serif}.-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn{float:right;background:#f1ecec;height:20px;width:20px;text-align:center;padding:2px;margin-top:-10px;cursor:pointer}.-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover{background:#e2dede}.-S-tR--ff-downloader ._13XQ2--error{color:red;padding:10px;font-size:12px;line-height:19px}.-S-tR--ff-downloader ._2dFLA--container{position:relative;height:100%}.-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info{padding:6px 15px 0;font-family:sans-serif}.-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info div{margin-bottom:5px;width:100%;overflow:hidden}.-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice{margin-top:21px;font-size:11px}.-S-tR--ff-downloader ._10vpG--footer{width:100%;bottom:0;position:absolute;font-weight:700}.-S-tR--ff-downloader ._10vpG--footer ._2V73d--loader{-webkit-animation:n0BD1--rotation 3.5s linear forwards;animation:n0BD1--rotation 3.5s linear forwards;position:absolute;top:-120px;left:calc(50% - 35px);border-radius:50%;border:5px solid #fff;border-top-color:#a29bfe;height:70px;width:70px;display:flex;justify-content:center;align-items:center}.-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar{width:100%;height:18px;background:#dfe6e9;border-radius:5px}.-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar ._1FVu9--progress-bar{height:100%;background:#8bc34a;border-radius:5px}.-S-tR--ff-downloader ._10vpG--footer ._2KztS--status{margin-top:10px}.-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1XilH--state{float:left;font-size:.9em;letter-spacing:1pt;text-transform:uppercase;width:100px;height:20px;position:relative}.-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1jiaj--percentage{float:right}</style><script type="text/javascript" async="" src="https://media.reformal.ru/widgets/v3/reformal.js"></script><style type="text/css" media="screen">#reformal_tab {display:block; font-size:0; background-color:#0C0706 !important; line-height: 0; cursor: pointer; z-index:100001;left:0;margin-top:-113.5px;position:fixed;top:50%;border:2px solid #452921;padding:10px 4px 10px 4px; border-left:0;   background: #0C0706 url(https://media.reformal.ru/widgets/v3/gl.png) 0 0 repeat-y;    -webkit-border-radius:0 10px 10px 0; -moz-border-radius:0 10px 10px 0; border-radius:0 10px 10px 0; -moz-box-shadow:1px 0 2px #170E0C;  -webkit-box-shadow:1px 0 2px #170E0C;  box-shadow:1px 0 2px #170E0C;}#reformal_tab:hover {padding-left:6px;}#reformal_tab img {border: none; padding:0; margin: 0;}</style></head>
+<body class="bodyClass day" style=""><a id="reformal_tab" href="http://mafiinet.reformal.ru" onclick="Reformal.widgetOpen();return false;" onmouseover="Reformal.widgetPreload();" onmouseout="Reformal.widgetAbortPreload();"><img src="https://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/4bfb34d91c8d7fb481972ca3c84aec38/left/0/tab.png" alt=""></a><script type="text/javascript" src="/assets/66afb96c/websocket.js"></script>
+
+
+	<!-- header & panel authorization -->
+		<!-- /header & panel authorization -->
+
+	
+	<div id="g_pagewrapInside" class="smallHeader">
+		<!-- Шапка для всех внутренних страниц -->
+<div id="pageTopInside">
+	<nav>
+		<!-- Меню главное, для пользователей -->
+<ul>
+	<!--<li class="zavitok-l"><span>&nbsp;</span></li>-->
+	<li><a href="/">Главная			<div class="bloodyPrint"></div>
+		</a></li>
+	<li>
+		<a href="/help/about">Как играть?			<div class="bloodyPrint"></div>
+		</a></li>
+	<li><a href="/site/rules">Правила поведения			<div class="bloodyPrint"></div>
+		</a></li>
+	<li><a href="/user/market/all">Чёрный рынок			<div class="bloodyPrint"></div>
+		</a></li>
+	<li><a href="/site/clans">Кланы мафии			<div class="bloodyPrint"></div>
+		</a></li>
+	<li>
+		<a href="/news">Новости игры <span class="point">●</span>			<div class="bloodyPrint"></div>
+		</a></li>
+	<!--<li class="zavitok-r"><span>&nbsp;</span></li>-->
+</ul>
+<!-- /Меню главное, для пользователей -->
+	</nav>
+	<header class="inside">
+		<hgroup>
+			<span><a id="logo" href="/" title="Мафия онлайн - видеоверсия популярной игры">Мафия онлайн - видеоверсия популярной игры</a></span>
+			<span><a id="description" href="/">Салонная командная психологическая пошаговая ролевая игра.</a></span>
+		</hgroup>
+
+		<!-- Реклама -->
+		<!--<a class="ungaInner" target="_blank"-->
+<!--	href="http://www.unga.ru/20.html"-->
+<!--	title="--><!--">-->
+<!--	--><!--	<img src="--><!--">-->
+<!--	--><!--	<img src="--><!--">-->
+<!--	--><!--</a>-->
+
+		<!-- /Реклама -->
+
+	</header>
+</div>
+<!-- /Шапка для всех внутренних страниц -->
+
+<!-- Панель авторизации -->
+<!--<div class="introBottom">-->
+<div id="authorization" class="">
+	<!-- ban message -->
+		
+	
+	
+	<!-- /ban message -->
+<!--	<div class="auth-bg-left"></div>-->
+<!--	<div class="auth-bg-right"></div>-->
+	<div class="auth-center">
+					<!-- Личная навигация  -->
+			<ul id="authorize-nav" class="clearfix">
+				<li><a class="youMoney gold" href="/user/things/purse">9579623					</a></li>
+				<!--					<li><a class="youMoney silver" href="/user/things/purse">0						</a></li>-->
+								<li><a class="txt kabinet" href="/user/profile/profile">Личный кабинет</a></li>
+				<li>
+											Доброе утро,																<a class="txt username" href="/user/profile/profile">
+							[dev]Dark_Dmake						</a>!
+									</li>
+				<!-- Блок уведомлений -->
+<li class="jsNotify">
+	<a href="#" class="jsNotifyHref">
+		Ваши уведомления<span class="notifyMore jsNotifyCount">0</span>
+	</a>
+	<div class="openNotify bottom up">
+		<div data-update-href="/notify/get" data-del-href="/notify/delete" class="jsNotifyList ovflY" style="overflow: hidden; padding: 0px; width: 0px;">
+		<div class="jspContainer" style="width: 0px; height: 0px;"><div class="jspPane" style="padding: 0px; top: 0px; left: 0px; width: 0px;"></div></div></div>
+		<p>[ <a href="/notify/clear" class="jsNotifyClear">Удалить все</a> ]</p>
+	</div>
+</li>
+<!-- /Блок уведомлений -->
+				<li>
+					<a class="jsComplain jaloba" href="">Отправить жалобу<br>на администрацию</a>
+				</li>
+				<li>
+					<a href="/user/actions/logout" class="enter-exit">Выход					</a>
+				</li>
+			</ul>
+
+			</div>
+</div>
+<div class="zaglushka" style="display: none;"></div>
+<!--</div>-->
+<!-- /Панель авторизации -->
+	
+		<!-- #content -->
+		<section class="second">
+			<div id="content">
+				
+
+<div class="profileContainer profileContainer--edit lineForm">    <!-- ----- Юзернейм ----- -->
+	<div class="profileOwner fl">
+		<p>
+
+			<span class="profileUserName"><span class="moderator" style="color:#2F4F4F">[dev]Dark_Dmake</span></span>
+
+			
+				&nbsp;<a href="/user/marketActions/checkRename" class="jsCheck edit">юзернейм</a>
+				&nbsp;<a href="/user/marketActions/checkBuyColor" class="jsCheck edit">цвет</a>
+			
+			&nbsp;→&nbsp;<em class="red">Ezio Auditore</em>
+							&nbsp;<a href="/user/marketActions/checkChangeRang" class="jsCheck edit">ранг</a>
+			
+			
+		</p>
+	</div>
+
+	
+	<div class="clr"></div>
+
+	<!-- ----- Меню профиля ----- -->
+<div class="profileMenu">
+	<ul>
+		<li class="active">
+			<a href="/users/Dark_Dmake">Профиль</a>
+
+			<div></div>
+		</li>
+		<li class=""><a href="/user/profile/friends/username/Dark_Dmake">
+				Друзья							</a>
+
+			<div></div>
+		</li>
+		
+		<li><a href="/user/pm/index">
+				Сообщения							</a>
+
+			<div></div>
+			</li>		<li>
+			<a href="/user/stats/games/username/Dark_Dmake">Статистика</a>
+
+			<div></div>
+		</li>
+		<li>
+			<a href="/user/things/safe/username/Dark_Dmake">Хранилище</a>
+
+			<div></div>
+		</li>
+					<li>
+				<a href="/clan/index">Клан</a>
+
+				<div></div>
+			</li>
+			</ul>
+</div>
+<!-- ----- /Меню профиля ----- -->
+
+	
+<!-- ----- Информация о пользователе ----- -->
+
+<!-- ----- Аватар ----- -->
+<div class="profileAvatar fl">
+	<!-- ----- Первая форма (№1) ----- -->
+	<form enctype="multipart/form-data" id="photo-form" action="/user/profile/uploadPhoto" method="post">
+<input type="hidden" value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg==" name="YII_CSRF_TOKEN">	<img src="https://mafii.net/uploads/avatars//middle/21Jan2013_16-38-28dark.png" alt="[dev]Dark_Dmake" title="[dev]Dark_Dmake">
+
+	<div class="file_upload">
+		Загрузить аватар		<input id="ytUsers_avatarName" type="hidden" value="" name="Users[avatarName]"><input onchange="$(this).parents(&quot;form&quot;).submit();" name="Users[avatarName]" id="Users_avatarName" type="file">	</div>
+			<a class="micro red" href="/user/profile/deleteimg/type/avatar" onclick="js:if(confirm('Вы уверены, что хотите удалить аватар?')) { return true } else { return false }">
+			Удалить аватар		</a>
+	</form></div>
+<!-- ----- /Первая форма ----- -->
+
+<div class="profileEditRight fl">
+	<!-- ----- Вторая форма (№2) ----- -->
+
+	<form id="edit-form" action="/user/profile/edit" method="post">
+<input type="hidden" value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg==" name="YII_CSRF_TOKEN">
+	<!-- ----- Данные о пользователе ----- -->
+	<div class="groupFields fl">
+		<div class="editProfileField">
+			<input class="text" placeholder="Как Вас зовут?" name="EditForm[fio]" id="EditForm_fio" type="text" value="Dark Dmake">			<div class="errorMessage" id="EditForm_fio_em_" style="display:none"></div>			<div class="fieldStatus"></div>
+		</div>
+		<div class="radioBox">
+			<input id="ytEditForm_pol" type="hidden" value="" name="EditForm[pol]"><span id="EditForm_pol"><span class="niceRadio radioChecked"><input type="radio" name="EditForm[pol]" id="EditForm_pol_0" checked="checked" tabindex="undefined" value="m"></span> <label for="EditForm_pol_0">Я мужчина</label>&nbsp; &nbsp; &nbsp;<span class="niceRadio"><input type="radio" name="EditForm[pol]" id="EditForm_pol_1" tabindex="undefined" value="f"></span> <label for="EditForm_pol_1">Я женщина</label></span>			<div class="errorMessage" id="EditForm_pol_em_" style="display:none"></div>			<div class="radioBoxStatus"></div>
+		</div>
+		<div class="editProfileField">
+			<input class="text hasDatepicker" placeholder="Дата рождения" id="EditForm_date" name="EditForm[date]" type="text" value="18.05.1984">			<div class="errorMessage" id="EditForm_date_em_" style="display:none"></div>			<div class="fieldStatus"></div>
+		</div>
+					<div class="editProfileField">
+								<div id="ajax-country"><div class="cusel   cuselScrollArrows" id="cuselFrame-country" style="width:225px" tabindex="0"><div class="cuselFrameRight"></div><div class="cuselText">Италия</div><div class="cusel-scroll-wrap" style="height: 286px; display: none; visibility: visible;"><div class="cusel-scroll-pane" id="cusel-scroll-country" style="height: 286px;">
+<span val="1">Bonaire, Sint Eustatius and Saba</span>
+<span val="250">CCCР</span>
+<span val="2">Curaçao</span>
+<span val="3">Guernsey</span>
+<span val="10">Австралия</span>
+<span val="11">Австрия</span>
+<span val="12">Азербайджан</span>
+<span val="13">Аландские острова</span>
+<span val="14">Албания</span>
+<span val="15">Алжир</span>
+<span val="16">Американские Виргинские острова</span>
+<span val="17">Американское Самоа</span>
+<span val="18">Ангилья</span>
+<span val="19">Ангола</span>
+<span val="20">Андорра</span>
+<span val="21">Антарктида</span>
+<span val="22">Антигуа и Барбуда</span>
+<span val="23">Аргентина</span>
+<span val="24">Армения</span>
+<span val="25">Аруба</span>
+<span val="26">Афганистан</span>
+<span val="27">Багамы</span>
+<span val="28">Бангладеш</span>
+<span val="29">Барбадос</span>
+<span val="30">Бахрейн</span>
+<span val="32">Беларусь</span>
+<span val="31">Белиз</span>
+<span val="33">Бельгия</span>
+<span val="34">Бенин</span>
+<span val="35">Бермуды</span>
+<span val="36">Болгария</span>
+<span val="37">Боливия</span>
+<span val="38">Босния и Герцеговина</span>
+<span val="39">Ботсвана</span>
+<span val="40">Бразилия</span>
+<span val="41">Британская территория в Индийском океане</span>
+<span val="42">Британские Виргинские острова</span>
+<span val="43">Бруней</span>
+<span val="44">Буркина Фасо</span>
+<span val="45">Бурунди</span>
+<span val="46">Бутан</span>
+<span val="47">Вануату</span>
+<span val="48">Ватикан</span>
+<span val="49">Великобритания</span>
+<span val="50">Венгрия</span>
+<span val="51">Венесуэла</span>
+<span val="52">Внешние малые острова (США)</span>
+<span val="53">Восточный Тимор</span>
+<span val="54">Вьетнам</span>
+<span val="55">Габон</span>
+<span val="56">Гаити</span>
+<span val="57">Гайана</span>
+<span val="58">Гамбия</span>
+<span val="59">Гана</span>
+<span val="60">Гваделупа</span>
+<span val="61">Гватемала</span>
+<span val="62">Гвинея</span>
+<span val="63">Гвинея-Бисау</span>
+<span val="64">Германия</span>
+<span val="65">Гибралтар</span>
+<span val="66">Гондурас</span>
+<span val="67">Гонконг</span>
+<span val="68">Гренада</span>
+<span val="69">Гренландия</span>
+<span val="70">Греция</span>
+<span val="71">Грузия</span>
+<span val="72">Гуам</span>
+<span val="73">Дания</span>
+<span val="74">Джибути</span>
+<span val="75">Доминика</span>
+<span val="76">Доминиканская Республика</span>
+<span val="77">ДР Конго</span>
+<span val="251">Еврозона</span>
+<span val="78">Египет</span>
+<span val="79">Замбия</span>
+<span val="80">Западная Сахара</span>
+<span val="81">Зимбабве</span>
+<span val="82">Израиль</span>
+<span val="83">Индия</span>
+<span val="84">Индонезия</span>
+<span val="85">Иордания</span>
+<span val="86">Ирак</span>
+<span val="87">Иран</span>
+<span val="88">Ирландия</span>
+<span val="89">Исландия</span>
+<span val="90">Испания</span>
+<span val="91" selected="selected" class="cuselActive">Италия</span>
+<span val="92">Йемен</span>
+<span val="93">Кабо-Верде</span>
+<span val="94">Казахстан</span>
+<span val="95">Каймановы острова</span>
+<span val="96">Камбоджа</span>
+<span val="97">Камерун</span>
+<span val="98">Канада</span>
+<span val="99">Катар</span>
+<span val="100">Кения</span>
+<span val="101">Кипр</span>
+<span val="102">Киргизия</span>
+<span val="103">Кирибати</span>
+<span val="104">Китайская Республика</span>
+<span val="105">КНДР</span>
+<span val="106">КНР</span>
+<span val="107">Кокосовые острова</span>
+<span val="108">Колумбия</span>
+<span val="109">Коморы</span>
+<span val="110">Коста-Рика</span>
+<span val="111">Кот-д’Ивуар</span>
+<span val="112">Куба</span>
+<span val="113">Кувейт</span>
+<span val="114">Лаос</span>
+<span val="115">Латвия</span>
+<span val="116">Лесото</span>
+<span val="117">Либерия</span>
+<span val="118">Ливан</span>
+<span val="119">Ливия</span>
+<span val="120">Литва</span>
+<span val="121">Лихтенштейн</span>
+<span val="122">Люксембург</span>
+<span val="123">Маврикий</span>
+<span val="124">Мавритания</span>
+<span val="125">Мадагаскар</span>
+<span val="126">Майотта</span>
+<span val="127">Макао</span>
+<span val="128">Македония</span>
+<span val="129">Малави</span>
+<span val="130">Малайзия</span>
+<span val="131">Мали</span>
+<span val="132">Мальдивы</span>
+<span val="133">Мальта</span>
+<span val="134">Марокко</span>
+<span val="135">Мартиника</span>
+<span val="136">Маршалловы Острова</span>
+<span val="137">Мексика</span>
+<span val="138">Микронезия</span>
+<span val="139">Мозамбик</span>
+<span val="140">Молдавия</span>
+<span val="141">Монако</span>
+<span val="142">Монголия</span>
+<span val="143">Монтсеррат</span>
+<span val="144">Мьянма</span>
+<span val="145">Намибия</span>
+<span val="146">Науру</span>
+<span val="147">Непал</span>
+<span val="148">Нигер</span>
+<span val="149">Нигерия</span>
+<span val="150">Нидерланды</span>
+<span val="151">Никарагуа</span>
+<span val="152">Ниуэ</span>
+<span val="153">Новая Зеландия</span>
+<span val="154">Новая Каледония</span>
+<span val="155">Норвегия</span>
+<span val="156">ОАЭ</span>
+<span val="157">Оман</span>
+<span val="158">Остров Буве</span>
+<span val="159">Остров Норфолк</span>
+<span val="160">Остров Рождества</span>
+<span val="161">Острова Кука</span>
+<span val="162">Острова Питкэрн</span>
+<span val="163">Острова Святой Елены, Вознесения и Тристан-да-Кунь</span>
+<span val="164">Пакистан</span>
+<span val="165">Палау</span>
+<span val="166">Палестина</span>
+<span val="167">Панама</span>
+<span val="168">Папуа — Новая Гвинея</span>
+<span val="169">Парагвай</span>
+<span val="170">Перу</span>
+<span val="171">Польша</span>
+<span val="172">Португалия</span>
+<span val="173">Пуэрто-Рико</span>
+<span val="174">Республика Конго</span>
+<span val="175">Республика Корея</span>
+<span val="176">Реюньон</span>
+<span val="177">Россия</span>
+<span val="178">Руанда</span>
+<span val="179">Румыния</span>
+<span val="180">Сальвадор</span>
+<span val="181">Самоа</span>
+<span val="182">Сан-Марино</span>
+<span val="183">Сан-Томе и Принсипи</span>
+<span val="184">Саудовская Аравия</span>
+<span val="185">Свазиленд</span>
+<span val="186">Северные Марианские острова</span>
+<span val="187">Сейшельские Острова</span>
+<span val="188">Сен-Пьер и Микелон</span>
+<span val="189">Сенегал</span>
+<span val="190">Сент-Винсент и Гренадины</span>
+<span val="191">Сент-Китс и Невис</span>
+<span val="192">Сент-Люсия</span>
+<span val="193">Сербия</span>
+<span val="194">Сингапур</span>
+<span val="195">Сирия</span>
+<span val="196">Словакия</span>
+<span val="197">Словения</span>
+<span val="198">Соломоновы Острова</span>
+<span val="199">Сомали</span>
+<span val="200">Судан</span>
+<span val="201">Суринам</span>
+<span val="202">США</span>
+<span val="203">Сьерра-Леоне</span>
+<span val="204">Таджикистан</span>
+<span val="205">Таиланд</span>
+<span val="206">Танзания</span>
+<span val="207">Тёркс и Кайкос</span>
+<span val="208">Того</span>
+<span val="209">Токелау</span>
+<span val="210">Тонга</span>
+<span val="211">Тринидад и Тобаго</span>
+<span val="212">Тувалу</span>
+<span val="213">Тунис</span>
+<span val="214">Туркмения</span>
+<span val="215">Турция</span>
+<span val="216">Уганда</span>
+<span val="217">Узбекистан</span>
+<span val="218">Украина</span>
+<span val="219">Уоллис и Футуна</span>
+<span val="220">Уругвай</span>
+<span val="221">Фарерские острова</span>
+<span val="222">Фиджи</span>
+<span val="223">Филиппины</span>
+<span val="224">Финляндия</span>
+<span val="225">Фолклендские острова</span>
+<span val="226">Франция</span>
+<span val="227">Французская Гвиана</span>
+<span val="228">Французская Полинезия</span>
+<span val="229">Французские Южные и Антарктические Территории</span>
+<span val="230">Херд и Макдональд</span>
+<span val="231">Хорватия</span>
+<span val="232">ЦАР</span>
+<span val="233">Чад</span>
+<span val="234">Черногория</span>
+<span val="235">Чехия</span>
+<span val="236">Чили</span>
+<span val="237">Швейцария</span>
+<span val="238">Швеция</span>
+<span val="239">Шпицберген и Ян-Майен</span>
+<span val="240">Шри-Ланка</span>
+<span val="241">Эквадор</span>
+<span val="242">Экваториальная Гвинея</span>
+<span val="243">Эритрея</span>
+<span val="244">Эстония</span>
+<span val="245">Эфиопия</span>
+<span val="246">ЮАР</span>
+<span val="247">Южная Георгия и Южные Сандвичевы острова</span>
+<span val="248">Ямайка</span>
+<span val="249">Япония</span>
+</div></div><input type="hidden" id="country" name="country" value="91"></div></div>
+
+									<div id="ajax-states"><div class="cusel   cuselScrollArrows" id="cuselFrame-state" style="width:225px" tabindex="0"><div class="cuselFrameRight"></div><div class="cuselText">Тоскана</div><div class="cusel-scroll-wrap" style="height: 286px; display: none; visibility: visible;"><div class="cusel-scroll-pane" id="cusel-scroll-state" style="height: 286px;">
+<span val="1787">Абруцци</span>
+<span val="1789">Апулия</span>
+<span val="1802">Венеция</span>
+<span val="277668">Италия</span>
+<span val="1806">Калабрия</span>
+<span val="1810">Кампания</span>
+<span val="1819">Лацио</span>
+<span val="1821">Лигурия</span>
+<span val="1826">Ломбардия</span>
+<span val="1838">Марке</span>
+<span val="2416357">о. Сан-Джорджо Маджоре</span>
+<span val="1841">О. Сардиния</span>
+<span val="1844">О. Сицилия</span>
+<span val="1858">Пьемонт</span>
+<span val="1864" selected="selected" class="cuselActive">Тоскана</span>
+<span val="1876">Трентино-Альто-Адидже</span>
+<span val="1879">Умбрия</span>
+<span val="1882">Фриули-Венеция-Джулия</span>
+<span val="1885">Эмилия-Романья</span>
+</div></div><input type="hidden" id="state" name="state" value="1864"></div></div>
+					<div id="ajax-cities"><div class="cusel   cuselScrollArrows" id="cuselFrame-city" style="width:225px" tabindex="0"><div class="cuselFrameRight"></div><div class="cuselText">Флоренция</div><div class="cusel-scroll-wrap" style="display: none; visibility: visible;"><div class="cusel-scroll-pane" id="cusel-scroll-city">
+<span val="1865">Ареццо</span>
+<span val="1866">Виареджио</span>
+<span val="1867">Гроссето</span>
+<span val="1868">Каррара</span>
+<span val="1869">Лючча</span>
+<span val="1870">Масса</span>
+<span val="1871">Пиза</span>
+<span val="1872">Пистойя</span>
+<span val="1873">Прато</span>
+<span val="1874">Сьена</span>
+<span val="1875" selected="selected" class="cuselActive">Флоренция</span>
+</div></div><input type="hidden" id="city" name="city" value="1875"></div></div>
+								<input ajax-link="/user/profile/getPlace" name="EditForm[city]" id="EditForm_city" type="hidden" value="1875">				<div class="errorMessage" id="EditForm_city_em_" style="display:none"></div>				<div class="fieldStatus"></div>
+			</div>
+				<div class="editProfileField">
+			<div class="cusel   cuselScrollArrows" id="cuselFrame-EditForm_language" style="width:225px" tabindex="0"><div class="cuselFrameRight"></div><div class="cuselText">Русский</div><div class="cusel-scroll-wrap" style="display: none; visibility: visible;"><div class="cusel-scroll-pane" id="cusel-scroll-EditForm_language">
+<span val="en">Английский</span>
+<span val="ru" selected="selected" class="cuselActive">Русский</span>
+</div></div><input type="hidden" id="EditForm_language" name="EditForm[language]" value="ru"></div>			<div class="errorMessage" id="EditForm_language_em_" style="display:none"></div>			<div class="fieldStatus"></div>
+		</div>
+		<div class="fieldSpacer"><p><span class="profileTitle">Добавить контакты?</span></p></div>
+		<div class="editProfileField">
+			<div class="icq"></div>
+			<input class="text" placeholder="Ваш номер icq" name="EditForm[icq]" id="EditForm_icq" type="text" value="">			<div class="errorMessage" id="EditForm_icq_em_" style="display:none"></div>			<div class="fieldStatus"></div>
+		</div>
+		<div class="editProfileField">
+			<div class="skype"></div>
+			<input class="text" placeholder="Ваш логин в skype" name="EditForm[skype]" id="EditForm_skype" type="text" value="Dark_Dmake">			<div class="errorMessage" id="EditForm_skype_em_" style="display:none"></div>			<div class="fieldStatus"></div>
+		</div>
+		<div class="editProfileField">
+			<div class="mail"></div>
+			<input class="text" placeholder="Ваш e-mail" disabled="disabled" name="EditForm[email]" id="EditForm_email" type="text" value="dark.dmake@gmail.com">			<div class="errorMessage" id="EditForm_email_em_" style="display:none"></div>			<div class="fieldStatus"></div>
+		</div>
+					<div class="fieldSpacer"><p><span class="profileTitle">Сменить пароль?</span></p></div>
+			<div class="editProfileField">
+				<div class="pasw"></div>
+				<input class="text" placeholder="Текущий пароль" name="EditForm[oldpassword]" id="EditForm_oldpassword" type="password">				<div class="errorMessage" id="EditForm_oldpassword_em_" style="display:none"></div>				<div class="fieldStatus"></div>
+			</div>
+			<div class="editProfileField">
+				<input class="text" placeholder="Новый пароль" name="EditForm[newpassword]" id="EditForm_newpassword" type="password">				<div class="errorMessage" id="EditForm_newpassword_em_" style="display:none"></div>				<div class="fieldStatus"></div>
+			</div>
+		
+	</div>
+
+	<!-- ----- Дополнительная информация, openID ----- -->
+	<div class="profileUserRight fr">
+		<div class="letterCheck">Осталось знаков: <span id="js-countAbout">350</span>
+		</div>
+		<div class="textareaField">
+			<textarea id="js-textareaAbout" placeholder="О себе..." maxlength="350" name="EditForm[about]"></textarea>		</div>
+
+
+
+		<div class="fl">
+			<p>
+				<span class="niceCheck" style="background-position: 0px -17px;"><input id="ytEditForm_sendnewsletter" type="hidden" value="0" name="EditForm[sendnewsletter]"><input name="EditForm[sendnewsletter]" id="EditForm_sendnewsletter" value="1" checked="checked" type="checkbox"></span>Получать уведомления на e-mail			</p>
+		</div>
+
+		<div class="fl" style="margin-left:20px">
+			<p>
+				<span class="niceCheck" style="background-position: 0px 0px;"><input id="ytEditForm_showemail" type="hidden" value="0" name="EditForm[showemail]"><input name="EditForm[showemail]" id="EditForm_showemail" value="1" type="checkbox"></span>Показывать e-mail			</p>
+			<!-- тут надо поправить model-->
+		</div>
+		<div class="clr">
+		</div>
+
+	</div>
+
+
+	<!-- Кнопка сохранения -->
+	<div class="clr" style="text-align:center;margin-left:-100px">
+		<div class="buttonLiteBrown">
+			<div>
+				<input type="submit" value="Сохранить изменения">
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	</form>	<!-- ----- /Вторая форма ----- -->
+	
+	<div style="position:absolute;top:360px;right:50px">
+		<p><span class="profileTitle">Прикрепите аккаунт к профилю</span></p>
+		<div class="services clearfix">
+	<ul class="auth-services clear">
+					
+			<li class="auth-service vkontakte">
+				<span class="auth-link vkontakte "><!-- добавляется класс active -->
+				<form action="/user/profile/oauth" method="post">
+<input type="hidden" value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg==" name="YII_CSRF_TOKEN">					<input type="hidden" value="add" name="action" id="action">					<input type="hidden" value="vkontakte" name="service" id="service">					<input class="auth-icon vkontakte" title="vkontakte" value="" type="submit">
+					<span class="auth-title">vkontakte</span>
+				</form>				</span>
+			</li>
+					
+			<li class="auth-service facebook">
+				<span class="auth-link facebook "><!-- добавляется класс active -->
+				<form action="/user/profile/oauth" method="post">
+<input type="hidden" value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg==" name="YII_CSRF_TOKEN">					<input type="hidden" value="add" name="action" id="action">					<input type="hidden" value="facebook" name="service" id="service">					<input class="auth-icon facebook" title="facebook" value="" type="submit">
+					<span class="auth-title">facebook</span>
+				</form>				</span>
+			</li>
+			</ul>
+</div>
+		<p class="oauthP">Это позволит вам использовать эти аккаунты для быстрого входа на сайт </p>
+	</div>
+</div>
+
+</div>
+
+			</div>
+		</section>
+		<!-- /#content -->
+
+		<!--<div class=" contentBorder"></div>-->
+	</div>
+
+
+<!-- footer -->
+
+<!-- /g_pagewrap2 -->
+<!-- footer2 (такой футер используется только для зарегистрированных) -->
+<footer id="g_footer2">
+<!--	<div class="contentBorder">-->
+    <div class="bottomInfo">
+        <div class="fl bottomMenu">
+            <ul>
+                <li><a href="/">Главная</a></li>
+					<li><a href="/help/about">Как играть?</a></li>
+					<li><a href="/site/rules">Правила поведения</a></li>
+					<li><a href="/user/market/all">Чёрный рынок</a></li>
+					<li><a href="/site/clans">Кланы мафии</a>
+					</li>
+					<li><a href="/news">Новости игры</a>
+					</li>
+					<!--<li><a href="/user/page/confidentiality">Конфиденциальность</a>
+					</li>-->
+            </ul>
+        </div>
+        <div class="fl bottomNews">
+
+			<ul>
+				<li><a href="/user/page/contract_offer">Договор-оферта</a>
+				</li>
+				<li><a href="/user/page/confidentiality">Конфиденциальность</a>
+				</li>
+			</ul>
+        </div>
+        <div class="fr bottomSeo">
+            <p>
+					Проект «Mafii.net - Дело ночи» - это уникальная возможность не только играть в популярную и любимую игру с любыми соперниками со всего мира, но и видеть и слышать всех других игроков в режиме онлайн, как если бы вы играли за одним столом!            </p>
+        </div>
+        <!-- copyright -->
+        <div class="footer">
+          <p>Mafii.net <a href="/page/info" ajax="true">ООО «ЭМИНИ»</a> © 2012 - 2020</p>
+          <div class="footer16plus"></div>
+				        </div>
+    </div>
+<!--	</div>-->
+	<div style="display:none">
+	<!--LiveInternet logo-->
+		<a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?26.5" title="LiveInternet: показано число посетителей за сегодня" alt="" border="0" width="88" height="15"></a><!--/LiveInternet-->
+	</div>
+</footer>
+<!-- /footer -->
+
+	<!-- Всплывающее окошко приглашения в игру -->
+	<div id="parent_popup" class="jsGameInvite" style="display:none;">
+		<div class="table">
+			<div class="cell">
+				<div class="popupGameInvite block">
+				<div class="xPopUp">
+					<div class="xButton jsInviteGameCancel"></div>
+				</div>
+				<h3>Приглашение в игру</h3>
+
+				<p>Пользователь <a class="bold jsInviteUser" href="#">username</a> приглашает вас в игру №					<span class="red jsInviteGameId">0</span></p>
+
+				<p>
+					<a class="gButtonLiteBrown jsInviteGameEnter" href="#">Присоединиться к игре</a><a class="cancel jsInviteGameCancel" href="#">Отклонить приглашение</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- Всплывающее информационное окно с блокировкой контента -->
+<div id="parent_popup" class="complainPopup" style="display: none;"><!-- Блокировка доступа к контенту страницы -->
+	<div class="table">
+		<div class="cell">
+			<div class="popupMarketActivity block jsComplainActivity">
+				<div class="xPopUp">
+					<div class="xButton jsComplainCancel"></div>
+					<div id="complainContent" style="display:none">
+						<h3>Пожаловаться на администрацию</h3>
+						<p>Изложите кратко суть проблемы</p>
+
+						<form id="admin-complain" action="site/adminComplain" method="post">
+<input type="hidden" value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg==" name="YII_CSRF_TOKEN">						<div class="errorMessage" id="AdminComplaints_message_em_" style="display:none"></div>						<div class="textareaField">
+							<textarea name="AdminComplaints[message]" id="AdminComplaints_message"></textarea>						</div>
+
+						<div class="buttonLiteGreen">
+							<div>
+								<input type="submit" name="yt0" value="Отправить" id="yt0">								<span></span>
+							</div>
+						</div>
+						</form>					</div>
+					<div id="complainSuccess" style="display:none">
+						<h3>Ваша жалоба принята</h3>
+						<p>Мы рассмотрим жалобу в ближайшее время</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	<script async="">
+		window.addEventListener("load", function (event) {
+			//live internet
+			new Image().src = "//counter.yadro.ru/hit?r" +
+			escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+			";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+				screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+			";" + Math.random();
+
+			//google analitycs
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-34589781-1', 'auto');
+			ga('send', 'pageview');
+
+			<!-- reformal code -->
+			window.reformalOptions = {
+				project_id: 88037,
+				project_host: "mafiinet.reformal.ru",
+				tab_orientation: "left",
+				tab_indent: "50%",
+				tab_bg_color: "#0C0706",
+				tab_border_color: "#452921",
+				tab_shadow_color: "#170E0C",
+				tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/4bfb34d91c8d7fb481972ca3c84aec38/left/0/tab.png",
+				tab_is_custom: false, /* Controls which css-styles will be used for tab.*/
+				tab_border_width: 2,
+				tab_border_radius: 10
+			};
+
+			(function () {
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.async = true;
+				script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+				document.getElementsByTagName('head')[0].appendChild(script);
+			})();
+
+			//yandex metrica
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function () {
+					try {
+						w.yaCounter18994912 = new Ya.Metrika({
+							id: 18994912,
+							webvisor: true,
+							clickmap: true,
+							trackLinks: true,
+							accurateTrackBounce: true
+						});
+					} catch (e) {
+					}
+				});
+
+				var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () {
+						n.parentNode.insertBefore(s, n);
+					};
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else {
+					f();
+				}
+			})(document, window, "yandex_metrika_callbacks");
+		});
+	</script>
+
+	<!-- reformal code -->
+	<noscript>
+		<a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png"/></a><a href="http://mafiinet.reformal.ru">Oтзывы и предложения для mafii.net</a>
+	</noscript>
+
+	<!-- Yandex.Metrika counter -->
+	<noscript>
+		<div><img src="//mc.yandex.ru/watch/18994912" style="position:absolute; left:-9999px;" alt=""/></div>
+	</noscript>
+
+<!-- Заметили ошибку? -->
+<!-- <form style="display:no0ne" id="portal-notify-form" class="portal-notify-form" action="">
+	<img src="/themes/bootstrap/static/img/tab_error.png" class="fl" />
+	<p>Введите ваше сообщение:</p>
+	<div class="errReport fl">
+		<div class="textareaField">
+			<textarea name="Wall[text]" id="jsWallTextArea" placeholder="Введите текст вашей записи..."></textarea>
+		</div>
+		<div class="fr">
+			<div class="buttonLiteBrown">
+				<div>
+					<input type="submit" value="Отправить" name="yt0">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</form> -->
+<!-- /Заметили ошибку? -->
+<script type="text/javascript" src="/themes/bootstrap/static/js/profile.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/static/js/edit.js"></script>
+<script type="text/javascript" src="/assets/3d0c81f4/jui/js/jquery-ui-i18n.min.js"></script>
+<script type="text/javascript" src="/assets/ec3aeb70/notify.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var profileUsername = 'Dark_Dmake';
+var profileId = '66';
+jQuery(function($) {
+jQuery('#EditForm_date').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['ru'],{'dateFormat':'dd.mm.yy','showAnim':'slideDown','changeMonth':true,'changeYear':true,'yearRange':'1930\x3A','maxDate':'\x2D16y'}));
+jQuery('#edit-form').yiiactiveform({'validateOnChange':true,'inputContainer':'div','attributes':[{'id':'EditForm_fio','inputID':'EditForm_fio','errorID':'EditForm_fio_em_','model':'EditForm','name':'fio','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041f\u043e\u043b\u0435 \u043d\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c \u043f\u0443\u0441\u0442\u044b\u043c");
+}
+
+}},{'id':'EditForm_pol','inputID':'EditForm_pol','errorID':'EditForm_pol_em_','model':'EditForm','name':'pol','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='' && jQuery.inArray(value, ["f","m"])<0) {
+	messages.push("Pol \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432 \u0441\u043f\u0438\u0441\u043a\u0435.");
+}
+
+}},{'id':'EditForm_date','inputID':'EditForm_date','errorID':'EditForm_date_em_','model':'EditForm','name':'date','enableAjaxValidation':true,'validateOnChange':false},{'id':'EditForm_city','inputID':'EditForm_city','errorID':'EditForm_city_em_','model':'EditForm','name':'city','enableAjaxValidation':true},{'id':'EditForm_language','inputID':'EditForm_language','errorID':'EditForm_language_em_','model':'EditForm','name':'language','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041f\u043e\u043b\u0435 \u043d\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c \u043f\u0443\u0441\u0442\u044b\u043c");
+}
+
+
+if(jQuery.trim(value)!='' && jQuery.inArray(value, ["ru","en"])<0) {
+	messages.push("Language \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432 \u0441\u043f\u0438\u0441\u043a\u0435.");
+}
+
+}},{'id':'EditForm_icq','inputID':'EditForm_icq','errorID':'EditForm_icq_em_','model':'EditForm','name':'icq','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='' && !value.match(/^[\-0-9]+$/i)) {
+	messages.push("\u041f\u043e\u043b\u0435 \u043d\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0431\u0443\u043a\u0432");
+}
+
+}},{'id':'EditForm_skype','inputID':'EditForm_skype','errorID':'EditForm_skype_em_','model':'EditForm','name':'skype','enableAjaxValidation':true},{'id':'EditForm_email','inputID':'EditForm_email','errorID':'EditForm_email_em_','model':'EditForm','name':'email','enableAjaxValidation':true},{'id':'EditForm_oldpassword','inputID':'EditForm_oldpassword','errorID':'EditForm_oldpassword_em_','model':'EditForm','name':'oldpassword','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='') {
+	
+if(value.length<6) {
+	messages.push("\u041f\u043e\u043b\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u043c\u0438\u043d\u0438\u043c\u0443\u043c 6 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432");
+}
+
+}
+
+}},{'id':'EditForm_newpassword','inputID':'EditForm_newpassword','errorID':'EditForm_newpassword_em_','model':'EditForm','name':'newpassword','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='') {
+	
+if(value.length<6) {
+	messages.push("\u041f\u043e\u043b\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u043c\u0438\u043d\u0438\u043c\u0443\u043c 6 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432");
+}
+
+}
+
+}}],'errorCss':'error'});
+
+
+	var $complainContent = $("#complainContent");
+	var $successContent = $("#complainSuccess");
+
+	var $form = $complainContent.find("#admin-complain");
+	var $block = $("#parent_popup.complainPopup");
+
+	$form.on("success", function(){
+		$complainContent.hide();
+		$successContent.show();
+	});
+
+	$(document).on("click", ".jsComplainCancel, html", function(){
+
+		$block.hide();
+		$complainContent.hide();
+		$successContent.hide();
+	});
+
+	$(document).on("click", ".jsComplainActivity", function(e){
+		e.stopPropagation();
+	});
+
+	$(".jsComplain").on("click", function(){
+		$block.find(".xPopUp").append($complainContent);
+		$block.show();
+		$complainContent.show();
+		$form.find("textarea").focus();
+		return false;
+	});
+jQuery('body').on('click','#yt0',function(){jQuery.ajax({'dataType':'json','success':function(data){
+										var $form = $("#admin-complain");
+										if (data.result){
+											$form.trigger("reset");
+											$form.trigger("success");
+										} else {
+											var settings = $.fn.yiiactiveform.getSettings($form);
+											$.each(settings.attributes, function () {
+												$.fn.yiiactiveform.updateInput(this, data, $form);
+											});
+										}
+									},'type':'POST','url':'site\x2FadminComplain','cache':false,'data':jQuery(this).parents("form").serialize()});return false;});
+jQuery('#admin-complain').yiiactiveform({'attributes':[{'id':'AdminComplaints_message','inputID':'AdminComplaints_message','errorID':'AdminComplaints_message_em_','model':'AdminComplaints','name':'message','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435");
+}
+
+
+if(value.length>255) {
+	messages.push("Message \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+}
+
+}}],'errorCss':'error'});
+});
+/*]]>*/
+</script>
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
