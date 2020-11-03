@@ -172,7 +172,7 @@ nav ul li:first-child a::before {
   width: 150px;
   height: 48px;
   background-size: cover;
-  background-image: url("logobn.png");
+  background-image: url("../img/logobn.png");
 }
 
 /*#pageTop */
@@ -946,7 +946,7 @@ ul.auth-services a.auth-link:hover {
   width: 205px;
   height: 85px;
   margin-right: 36px;
-  background-image: url("logobn.png");
+  background-image: url("../img/logobn.png");
 }
 
 #g_footer2 .bottomInfo .footer::after,
@@ -4131,4 +4131,46 @@ a.gButtonLiteBrown:after {
 
 .resume {
   background-color: transparent;
+}
+
+
+.lostPassContainer, .autorizationContainer, .confirmSuccess{
+  background: #fff;
+  border-radius: 10px;
+    box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+    margin-left: auto;
+    margin-right: auto;
+}
+.autorizationContainer ul.auth-services{
+  justify-content: center;
+}
+.autorizationContainer ul.auth-services li{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.autorizationBlock{
+  margin: 0;
+  background: transparent;
+}
+
+input.autorizationField{
+  color: var(--color-dark2);
+    width: 235px;
+    height: auto;
+    margin: 0 7px;
+    padding: 12px 16px;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+    border: solid 1px #d6dee5;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+.autorizationTitle{
+  margin-bottom: 20px;
+}
+
+.autorizationFieldBlock{
+  width: auto;
+  margin-top: 20px;
 }
