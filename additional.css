@@ -3933,6 +3933,12 @@ table.items td {
   color: var(--color-main);
 }
 
+/* ГЛАВНАЯ ЕСЛИ АВТОРИЗОВАН */
+section.cover #authorization,
+section.cover #authorization.static {
+  height: 90px;
+}
+
 /* Монетка */
 #authorize-nav a.youMoney.gold,
 .purseRight .editProfileField input.text,
