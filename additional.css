@@ -4588,6 +4588,7 @@ section.cover .chatViews {
 
 .chatContainer .chatViews .countUsersChat .chatPlayersSearch:hover,
 .chatContainer .chatViews .countUsersChat .chatPlayersSearch:focus {
+  border-color: var(--color-main);
 }
 
 .chatContainer .chatViews .countUsersChat .chatPlayersSearch::placeholder {
