@@ -4497,6 +4497,16 @@ span.green {
 }
 
 /* чат на главной */
+@media (max-device-height: 900px) {
+  section.cover .coverChatContainer {
+    height: calc(100% - 290px);
+  }
+}
+
+section.cover .coverChatContainer {
+  bottom: 120px;
+}
+
 .day section.cover,
 .night section.cover {
   background-color: transparent;
@@ -4504,7 +4514,6 @@ span.green {
 
 section.cover .coverChat {
   width: 1150px;
-  background-color: red;
 }
 
 section.cover .chatViews {
@@ -4515,15 +4524,6 @@ section.cover .chatViews {
   padding: 30px 50px;
   background-image: none;
   background-color: transparent;
-}
-
-/*.chatContainer .chatViews #chatText,*/
-.chatContainer .chatViews .chatUsers,
-.chatContainer .chatViews .chatSend {
-  /*padding: 24px !important;
-  border-radius: 10px;
-  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
-  background-color: #ffffff;*/
 }
 
 .chatContainer .chatViews #chatText {
@@ -4660,6 +4660,10 @@ section.cover .coverChatContainer {
   line-height: 1;
   background-color: transparent;
   background-image: none;
+}
+
+.chatContainer .chatViews #chat-form .buttonLiteBrown span {
+  display: none;
 }
 
 .chatContainer .chatViews #chat-form .buttonLiteBrown input {
