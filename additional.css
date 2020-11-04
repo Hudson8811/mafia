@@ -541,7 +541,8 @@ input.enter-exit:focus {
   padding: 0;
 }
 
-.regGamesContainer .nextGameContainer #nextGame {
+.regGamesContainer .nextGameContainer #nextGame,
+.gamesContainer .nextGameContainer #nextGame {
   width: calc(100% - 260px);
   margin-right: 20px;
   padding: 36px 50px;
@@ -550,44 +551,104 @@ input.enter-exit:focus {
   background-color: #ffffff;
 }
 
-.regGamesContainer #nextGame .items {
+.regGamesContainer #nextGame .items,
+.gamesContainer #nextGame .items {
   background: none;
 }
 
-.regGamesContainer #nextGame .items .dottedLine {
+.regGamesContainer #nextGame .items .dottedLine,
+.gamesContainer #nextGame .items .dottedLine {
   width: 100%;
   background: none;
   height: auto;
   border-bottom: solid 1px #eff3f7;
 }
 
-.regGamesContainer #nextGame .items .nextGame {
+.regGamesContainer #nextGame .items .nextGame,
+.gamesContainer #nextGame .items .nextGame {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 10px;
   background: none;
 }
 
-.regGamesContainer #nextGame .items .nextGame .nextGameUser {
-  position: relative;
-  width: calc(100% - 445px);
-  padding-bottom: 20px;
+.regGamesContainer #nextGame .items .nextGame .nextGameUser,
+.gamesContainer #nextGame .items .nextGame .nextGameUser {
+  width: calc(100% - 435px);
+  padding-bottom: 0;
+  padding-top: 0;
+  align-self: center;
+}
+
+#nextGame .nextGameUser p {
+  padding: 0 20px;
+}
+
+.regGamesContainer #nextGame .items .nextGame .restriction,
+.gamesContainer #nextGame .items .nextGame .restriction {
+  display: none;
+}
+
+.regGamesContainer #nextGame .items .nextGame .nextGameDescription,
+.gamesContainer #nextGame .items .nextGame .nextGameDescription,
+.regGamesContainer #nextGame .items .nextGame .nextGameTime,
+.gamesContainer #nextGame .items .nextGame .nextGameTime {
+  padding: 10px 0;
+}
+
+.regGamesContainer #nextGame .items .nextGame .avatar45a,
+.gamesContainer #nextGame .items .nextGame .avatar45a {
+  padding: 0;
 }
 
 @media all and (min-width: 1180px) {
-  .regGamesContainer #nextGame .items .nextGame .nextGameButton {
+  .regGamesContainer #nextGame .items .nextGame .nextGameButton,
+  .gamesContainer #nextGame .items .nextGame .nextGameButton {
     position: absolute;
-    /*top: 50%;*/
+    top: 50%;
     right: 0;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
     width: auto;
     padding: 0;
+    transform: translateY(-50%);
   }
+
+  #nextGame .nextGameButton a + a {
+    margin-top: 8px;
+  }
+
   .regGamesContainer #nextGame .items .nextGame .nextGameUser {
     padding-bottom: 0;
   }
+
   .regGamesContainer #nextGame .items .nextGame > * {
     align-self: center;
   }
+}
+
+#nextGame .nextGameButton a.play {
+  color: #ffffff;
+  border: none;
+  background-color: var(--color-green);
+}
+
+#nextGame .nextGameButton a.play:hover,
+#nextGame .nextGameButton a.play:focus {
+  background-color: var(--color-green-hover);
+}
+
+#nextGame .nextGameButton a.see {
+  color: #ffffff;
+  border: none;
+  background-color: var(--color-yellow);
+}
+
+#nextGame .nextGameButton a.see:hover,
+#nextGame .nextGameButton a.see:focus {
+  background-color: var(--color-yellow-hover);
 }
 
 .nextGameUser .viewers {
@@ -610,6 +671,7 @@ input.enter-exit:focus {
   border: solid 1px #eff3f7;
   background-color: #f6f9fb;
   background-image: none;
+  float: none;
 }
 
 .nextGameButton a:hover {
@@ -3989,15 +4051,6 @@ section.cover #authorization.static {
   overflow: visible;
 }
 
-#content2 .dubleRating .topUser,
-#content2 .dubleRating .topClan {
-  width: calc(50% - 10px);
-  padding: 36px 50px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
-  background-color: #ffffff;
-}
-
 .gamesContainer .nextGameContainer {
   display: flex;
   flex-wrap: wrap;
@@ -4009,15 +4062,92 @@ section.cover #authorization.static {
 
   width: 100%;
   margin-bottom: 20px;
-  padding: 36px 50px;
+  padding: 20px 50px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
 }
 
 .gamesContainer .nextGameContainer .buttonsGroup .abonement {
+  display: flex;
+  width: 100%;
+  max-width: 840px;
   margin-right: auto;
   order: -1;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .abonement .gButtonLiteGreen {
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  white-space: nowrap;
+  border: none;
+  background-color: var(--color-green) !important;
+}
+
+.gamesContainer
+  .nextGameContainer
+  .buttonsGroup
+  .abonement
+  .gButtonLiteGreen:hover,
+.gamesContainer
+  .nextGameContainer
+  .buttonsGroup
+  .abonement
+  .gButtonLiteGreen:focus {
+  background-color: var(--color-green-hover) !important;
+}
+
+.gamesContainer
+  .nextGameContainer
+  .buttonsGroup
+  .abonement
+  .gButtonLiteGreen::before,
+.gamesContainer
+  .nextGameContainer
+  .buttonsGroup
+  .abonement
+  .gButtonLiteGreen::after {
+  display: none;
+}
+
+.gamesContainer
+  .nextGameContainer
+  .buttonsGroup
+  .abonement
+  .gButtonLiteGreen
+  .gold {
+  padding-right: 22px;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 15px 15px;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .progressBar {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 70%;
+  border-left-color: var(--color-green);
+  border-top-color: var(--color-green);
+  border-bottom-color: var(--color-green);
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .progressBar::after {
+  border-right-color: var(--color-green);
+  border-top-color: var(--color-green);
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .progressTxt {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+em.green,
+span.green {
+  color: var(--color-green);
 }
 
 .gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat {
@@ -4028,12 +4158,47 @@ section.cover #authorization.static {
 
 .gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat {
   overflow: visible;
+  margin-left: 10px;
 }
 
 .gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat a,
 .gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat a {
   margin-right: 0;
   overflow: hidden;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat a {
+  font-size: 16px;
+  color: #ffffff;
+  white-space: nowrap;
+  border: none;
+  background-color: var(--color-green) !important;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat a:hover,
+.gamesContainer .nextGameContainer .buttonsGroup .createGameOnChat a:focus {
+  background-color: var(--color-green-hover) !important;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat a {
+  font-size: 16px;
+  color: #ffffff;
+  white-space: nowrap;
+  border: none;
+  background-color: var(--color-yellow) !important;
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat a span {
+  margin-right: 5px;
+  margin-left: -10px;
+  background-size: cover;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23ffffff' d='M256 0C143.36 0 51.2 92.16 51.2 204.8S143.36 409.6 256 409.6s204.8-92.16 204.8-204.8S368.64 0 256 0zm0 307.2c-56.32 0-102.4-46.08-102.4-102.4S199.68 102.4 256 102.4s102.4 46.08 102.4 102.4S312.32 307.2 256 307.2z'/%3e%3cpath fill='%23ffffff' d='M256 153.6c-5.12 0-10.24 0-12.8 2.56C256 179.2 227.84 204.8 207.36 192c-2.56 2.56-2.56 7.68-2.56 12.8 0 28.16 23.04 51.2 51.2 51.2s51.2-23.04 51.2-51.2c0-28.16-23.04-51.2-51.2-51.2zM394.24 422.4c-40.96 25.6-87.04 38.4-135.68 38.4-51.2 0-97.28-12.8-135.68-38.4l-43.52 71.68c-5.12 7.68 0 17.92 10.24 17.92h332.8c10.24 0 15.36-10.24 15.36-17.92l-43.52-71.68z'/%3e%3c/svg%3e");
+}
+
+.gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat a:hover,
+.gamesContainer .nextGameContainer .buttonsGroup .videochatOnChat a:focus {
+  width: 136px;
+  background-color: var(--color-yellow-hover) !important;
 }
 
 .gamesContainer .nextGameContainer #nextGame {
@@ -4049,6 +4214,468 @@ section.cover #authorization.static {
   width: 100%;
 }
 
+.quickStart a {
+  width: 100%;
+  height: auto;
+  padding: 12px 20px;
+  font-size: 24px;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-image: none;
+  background-color: var(--color-red);
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+}
+
+.quickStart a:hover,
+.quickStart a:focus {
+  background-color: var(--color-red-hover);
+  background-image: none;
+}
+
+.quickStart a::before {
+  content: "Быстрый старт";
+}
+
+.sortingMenu {
+  border: solid 1px var(--color-grey);
+  border-radius: 10px;
+}
+
+.sortingMenu a {
+  position: relative;
+  display: block;
+  width: 315px;
+  height: auto;
+  padding: 4px 0px;
+  font-size: 17px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--color-green);
+}
+
+.sortingMenu a:hover,
+.sortingMenu a:focus {
+  background-color: var(--color-green-hover);
+}
+
+.sortingMenu a span.gold {
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.sortingMenu a.action::after {
+  content: " Акция!";
+  position: absolute;
+  right: 6px;
+  top: -12px;
+  padding: 0 6px;
+  color: #ffffff;
+  line-height: 1;
+  border-radius: 6px;
+  background-color: var(--color-yellow);
+}
+
+.sortingMenu h4 {
+  font-family: var(--secondary-font);
+  color: var(--color-dark);
+}
+
+.sortingMenu > div.noGameSorting {
+}
+
+.sortingMenu > div.noGameSorting .noSorting {
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 511.992 511.992' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M415.402 495.422l-159.406-159.41L96.59 495.422c-22.098 22.094-57.922 22.094-80.02 0-22.093-22.098-22.093-57.922 0-80.02l159.41-159.406L16.57 96.59c-22.093-22.098-22.093-57.922 0-80.02 22.098-22.093 57.922-22.093 80.02 0l159.406 159.41L415.402 16.57c22.098-22.093 57.922-22.093 80.02 0 22.094 22.098 22.094 57.922 0 80.02l-159.41 159.406 159.41 159.406c22.094 22.098 22.094 57.922 0 80.02-22.098 22.094-57.922 22.094-80.02 0zm0 0' fill='%23e76e54'/%3e%3c/svg%3e") !important;
+}
+
+#content2 .dubleRating .topUser,
+#content2 .dubleRating .topClan {
+  width: calc(50% - 10px);
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+#content2 .dubleRating .shapka {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: var(--color-dark);
+  background-image: none;
+  background-color: transparent;
+}
+
+#content2 .dubleRating .shapka1,
+#content2 .dubleRating .shapka2,
+#content2 .dubleRating .shapka3 {
+  padding-top: 0;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: var(--color-dark);
+  text-align: left;
+}
+
+#content2 .dubleRating .shapka1 {
+  width: 70px;
+}
+#content2 .dubleRating .shapka2 {
+  width: auto;
+  margin-right: 20px;
+}
+
+#content2 .dubleRating .shapka3 {
+  width: 140px;
+  margin-left: auto;
+}
+
+#content2 .dubleRating .shapka .shapkaSprigs,
+#content2 .dubleRating .shapka .shapkaSprigsL,
+#content2 .dubleRating .shapka .shapkaSprigsR {
+  display: none;
+}
+
+.topUserList,
+.topClanList {
+  width: auto;
+}
+
+.topUserList > div,
+.topClanList > div {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  border-bottom: solid 1px var(--color-grey);
+  background-color: transparent;
+  background-image: none;
+}
+
+.topUserList > div > *,
+.topClanList > div > * {
+  align-self: center;
+}
+
+.topUserList .number,
+.topClanList .number {
+  width: 70px;
+  padding-top: 0;
+  text-align: left;
+}
+
+.topUserList .userTopRating,
+.topClanList .clantopRating {
+  width: 140px;
+  margin-left: auto;
+  padding-top: 0;
+  color: var(--color-dark);
+  text-align: left;
+}
+
+.topUserList .avatar45,
+.topClanList .avatar45 {
+  width: 47px;
+  height: 47px;
+  margin-right: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: solid 2px var(--color-yellow);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.topUserList .avatar45 a,
+.topClanList .avatar45 a {
+  display: block;
+  padding: 0;
+}
+
+.topUserList .avatar45 img,
+.topClanList .avatar45 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.topUserList .avatar45 a:hover,
+.topClanList .avatar45 a:hover,
+.topUserList .avatar45 a:focus,
+.topClanList .avatar45 a:focus {
+  opacity: 0.7;
+}
+
+.topUserList .usertop,
+.topClanList .clantop {
+  margin-right: 12px;
+  padding: 0;
+}
+
+.sortingTopUser,
+.sortingTopClan {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: -20px;
+}
+
+.linkUsersRating,
+.linkClanRating {
+  margin: 10px 0 0 auto;
+  padding: 0 0 0 27px;
+  background-image: none;
+  background-position: 0 50%;
+  background-size: 18px 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 192 192' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23718ba3' d='M16 176V40H0v144a8 8 0 008 8h184v-16z'/%3e%3cpath fill='%23718ba3' d='M72 112a8 8 0 00-8-8H40a8 8 0 00-8 8v56h40zM128 80a8 8 0 00-8-8H96a8 8 0 00-8 8v88h40zM184 48a8 8 0 00-8-8h-24a8 8 0 00-8 8v120h40z'/%3e%3c/svg%3e");
+}
+
+#content2 .dubleRating .topUser .topUserList + .linkUsersRating,
+#content2 .dubleRating .topClan .topClanList + .linkClanRating {
+  margin-top: 24px;
+}
+
+.sortingTopUser > div,
+.sortingTopClan > div,
+.sortingTopUser > div:first-child,
+.sortingTopClan > div:first-child {
+  margin: 0 0 0 20px;
+}
+
+.sortingTopUser div a,
+.sortingTopClan div a {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+}
+
+.sortingTopUser div a:hover,
+.sortingTopClan div a:focus,
+.sortingTopUser div a:hover,
+.sortingTopClan div a:focus {
+  color: #001f35;
+  background-color: transparent;
+  text-shadow: 0px 0px 1px #001f35;
+}
+
+.sortingTopUser div.active a,
+.sortingTopClan div.active a {
+  position: relative;
+  color: var(--color-turquoise);
+  background-color: transparent;
+  background-image: none;
+  pointer-events: none;
+}
+
+.sortingTopUser div.active a::before,
+.sortingTopClan div.active a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-turquoise);
+}
+
+.sortingTopUser div a + div,
+.sortingTopClan div a + div {
+  display: none;
+}
+
+/* чат на главной */
+.day section.cover,
+.night section.cover {
+  background-color: transparent;
+}
+
+section.cover .coverChat {
+  width: 1150px;
+  background-color: red;
+}
+
+section.cover .chatViews {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+  padding: 30px 50px;
+  background-image: none;
+  background-color: transparent;
+}
+
+/*.chatContainer .chatViews #chatText,*/
+.chatContainer .chatViews .chatUsers,
+.chatContainer .chatViews .chatSend {
+  /*padding: 24px !important;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;*/
+}
+
+.chatContainer .chatViews #chatText {
+  position: relative;
+  z-index: 0;
+  overflow: visible !important;
+  /*width: calc(100% - 300px) !important;*/
+  height: calc(100% - 120px);
+  /*padding: 24px !important;*/
+  margin: 0 68px 68px 0;
+}
+
+.chatContainer .chatViews #chatText::before,
+.chatContainer .chatViews .chatUsers::before,
+.chatContainer .chatViews .chatSend::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  z-index: -1;
+  width: calc(100% + 48px);
+  height: calc(100% + 48px);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+}
+
+.chatContainer .chatViews #chatText .jspContainer {
+  border: solid 1px var(--color-grey);
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.chatContainer .chatViews #chatText .jspPane {
+}
+
+.chatContainer .chatViews #chatText .jspTrack {
+  right: 3px;
+  bottom: 5px;
+}
+
+.chatContainer .chatViews .chatUsers {
+  position: relative;
+  z-index: 0;
+  width: 202px;
+  height: calc(100% - 120px);
+  margin: 0;
+}
+
+.chatContainer .chatViews .chatUsers .countUsersChat {
+  margin: 0 0 12px;
+}
+
+.chatContainer .chatViews .countUsersChat .chatPlayersSearch {
+  width: 100%;
+  padding: 12px 16px;
+  color: var(--color-dark);
+  border-radius: 10px;
+  border: solid 1px var(--color-grey);
+  background-color: #fff;
+}
+
+.chatContainer .chatViews .countUsersChat .chatPlayersSearch:hover,
+.chatContainer .chatViews .countUsersChat .chatPlayersSearch:focus {
+}
+
+.chatContainer .chatViews .countUsersChat .chatPlayersSearch::placeholder {
+}
+
+section.cover .coverChatContainer {
+  /*background-color: var(--color-bg);*/
+}
+
+.chatContainer .chatViews .chatSend {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  background-image: none;
+}
+
+.chatContainer .chatViews #chat-form {
+  display: flex;
+}
+
+.chatContainer .chatViews #chat-form .row {
+  width: calc(100% - 184px);
+  margin: 0;
+}
+
+.chatContainer .chatViews #chat-form .chat {
+  width: 100%;
+}
+
+.chatContainer .chatViews #chat-form #chat-message {
+  padding: 12px 48px 12px 16px;
+  color: var(--color-dark);
+  border-radius: 10px;
+  border: solid 1px var(--color-grey);
+}
+
+.chatContainer .chatViews #chat-form #chat-message:hover,
+.chatContainer .chatViews #chat-form #chat-message:focus {
+  border-color: var(--color-main);
+}
+
+.chatContainer .chatViews #chat-form .chatSmiles {
+  width: 32px;
+  height: 32px;
+  margin: 7px 0 0 -40px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3ccircle cx='256' cy='256' r='256' fill='%23ffca28'/%3e%3cg fill='%236d4c41'%3e%3ccircle cx='160' cy='192' r='32'/%3e%3ccircle cx='352' cy='192' r='32'/%3e%3cpath d='M256 416c-42.752 0-82.912-16.672-113.152-46.88-6.24-6.24-6.24-16.384 0-22.624s16.384-6.24 22.624 0c48.352 48.384 132.64 48.384 181.024 0 6.24-6.24 16.384-6.24 22.624 0s6.24 16.384 0 22.624C338.912 399.328 298.752 416 256 416z'/%3e%3c/g%3e%3c/svg%3e");
+}
+
+.chatContainer .chatViews #chat-form .chatSmiles:hover {
+  opacity: 0.7;
+}
+
+.chatContainer .chatViews #chat-form .chatSendButton {
+  width: 160px;
+  margin: 0 0 0 24px;
+}
+
+.chatContainer .chatViews #chat-form .buttonLiteBrown {
+  display: block;
+}
+
+.chatContainer .chatViews #chat-form .buttonLiteBrown div {
+  height: auto;
+  font-size: 16px;
+  line-height: 1;
+  background-color: transparent;
+  background-image: none;
+}
+
+.chatContainer .chatViews #chat-form .buttonLiteBrown input {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: var(--color-turquoise);
+}
+
+.chatContainer .chatViews #chat-form .buttonLiteBrown input:hover,
+.chatContainer .chatViews #chat-form .buttonLiteBrown input:focus {
+  background-color: var(--color-turquoise-hover);
+}
+
 /* Монетка */
 #authorize-nav a.youMoney.gold,
 .purseRight .editProfileField input.text,
@@ -4058,7 +4685,14 @@ section.cover #authorization.static {
 .operationMoney td:last-child::before,
 .clanBalance .gButtonLiteBrown span.gold,
 .clanBalance .gButtonLiteGreen span.gold,
-.clanBalance .fl .gold {
+.clanBalance .fl .gold,
+.gamesContainer
+  .nextGameContainer
+  .buttonsGroup
+  .abonement
+  .gButtonLiteGreen
+  .gold,
+.sortingMenu a span.gold {
   background-image: url("data:image/png;base64,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");
 }
 .contactsEmail,
@@ -4123,7 +4757,7 @@ a.gButtonLiteBrown:after {
   background: #fff;
 }
 
-.jspPane .rulesContainer{
+.jspPane .rulesContainer {
   box-shadow: none;
 }
 .rulesContainer {
@@ -4137,58 +4771,59 @@ a.gButtonLiteBrown:after {
   background-color: transparent;
 }
 
-
-.lostPassContainer, .autorizationContainer, .confirmSuccess{
+.lostPassContainer,
+.autorizationContainer,
+.confirmSuccess {
   background: #fff;
   border-radius: 10px;
-    box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
-    margin-left: auto;
-    margin-right: auto;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  margin-left: auto;
+  margin-right: auto;
 }
-.autorizationContainer ul.auth-services{
+.autorizationContainer ul.auth-services {
   justify-content: center;
 }
-.autorizationContainer ul.auth-services li{
+.autorizationContainer ul.auth-services li {
   margin-left: 10px;
   margin-right: 10px;
 }
-.autorizationBlock{
+.autorizationBlock {
   margin: 0;
   background: transparent;
 }
 
-input.autorizationField{
+input.autorizationField {
   color: var(--color-dark2);
-    width: 235px;
-    height: auto;
-    margin: 0 7px;
-    padding: 12px 16px;
-    font-size: 16px;
-    text-align: left;
-    border-radius: 10px;
-    border: solid 1px #d6dee5;
-    background-color: #ffffff;
-    margin-bottom: 10px;
+  width: 235px;
+  height: auto;
+  margin: 0 7px;
+  padding: 12px 16px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+  margin-bottom: 10px;
 }
-.autorizationTitle{
+.autorizationTitle {
   margin-bottom: 20px;
 }
 
-.autorizationFieldBlock{
+.autorizationFieldBlock {
   width: auto;
   margin-top: 20px;
 }
 
-.captcha input{
+.captcha input {
   color: var(--color-dark2);
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-    padding: 12px 16px;
-    font-size: 16px;
-    text-align: left;
-    border-radius: 10px;
-    border: solid 1px #d6dee5;
-    background-color: #ffffff;
-    margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+  margin-bottom: 10px;
 }
