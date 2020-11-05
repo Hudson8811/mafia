@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="language" content="ru">
+
+  <link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css">
+  <link rel="stylesheet" type="text/css" href="cusel.css">
+  <link rel="stylesheet" type="text/css" href="/assets/de1a45d/listview/styles.css">
+  <link rel="stylesheet" type="text/css" href="cover.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="content.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="ru.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="main.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="chat.css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="additional.css" media="screen, projection">
+  <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jui/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.jscrollpane.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initScrollpane.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/cusel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initCusel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.placeholder.min.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initPlaceholder.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/radioChange.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/initRadio.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/niceCheck.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jquery.yiiactiveform.js"></script>
+  <script type="text/javascript" src="/assets/3d0c81f4/jquery.ba-bbq.min.js"></script>
+  <script type="text/javascript" src="/client/js/vendor/socket.io-client/dist/socket.io.js"></script>
+  <script type="text/javascript" src="/assets/66afb96c/userChannel.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/global.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/soundmanager2-nodebug-jsmin.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/music.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/popupWindow.js"></script>
+  <script type="text/javascript" src="/themes/bootstrap/static/js/panelAttach.js"></script>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    var language = 'ru';
+    var user = { 'name': 'Pchol', 'id': '98', 'rating': '3008', 'moderator': true };
+    var websocketData = { host: 'https://ws.mafii.net/' };
+    var wsToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9tYWZpaS5uZXQiLCJhdWQiOiJodHRwOlwvXC9tYWZpaS5uZXQiLCJpYXQiOjE2MDQ1ODY0OTMsIm5iZiI6MTYwNDU4NjQ5MywiZXhwIjoxNjA0NjA0NTIzLCJzYnQiOiJpZF85NTAxNzk3YmJlZTg0In0.aVH\x2DQQInjKa7jwrqchklrGA8v0YNxgBeRtC9qQ4lztM';
+    var userChannelId = 'id_9501797bbee84';
+    var pathTheme = '\x2Fthemes\x2Fbootstrap';
+    $.ajaxSetup({
+      data: { 'YII_CSRF_TOKEN': 'SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg\x3D\x3D' },
+    });
+    var games_create = { titles: ['\u0420\u0430\u0437\u0431\u043E\u0440\u043A\u0438\x20\u0432\x20\u041A\u043E\u043D\u0434\u043E\u043F\u043E\u0433\u0435', '\u0417\u0430\u043C\u0435\u0441\x20\u043D\u0430\x20\u041F\u0440\u043E\u043B\u0435\u0442\u0430\u0440\u043A\u0435', '\u0428\u0442\u0443\u0440\u043C\x20\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\u043E\u043F\u043E\u043B\u044F', '\u041F\u0435\u0440\u0435\u043F\u0430\u043B\u043A\u0430\x20\u0432\x20\u0411\u0443\u0442\u043E\u0432\u043E', '\u0420\u0435\u0439\u0434\u0435\u0440\u0441\u043A\u0438\u0439\x20\u0437\u0430\u0445\u0432\u0430\u0442\x20\u043B\u0430\u0440\u044C\u043A\u0430', '\u0420\u0435\u0437\u043D\u044F\x20\u0432\x20\u041F\u043E\u0434\u043E\u043B\u044C\u0441\u043A\u0435', '\u041F\u043E\u0445\u0438\u0449\u0435\u043D\u0438\u0435\x20\u0432\x20\u041D\u0438\u043A\u043E\u043B\u0430\u0435\u0432\u0435', '\u041D\u0435\u0432\u0441\u043A\u043E\u0435\x20\u043F\u043E\u0431\u043E\u0438\u0449\u0435', '\u0420\u0430\u0437\u0431\u043E\u0440\u043A\u0430\x20\u041F\u0438\u0442\u0435\u0440\u0441\u043A\u0430\u044F'] };
+    var notifyList = [];
+    $(function () {
+      setTimeout(function () {
+        $.each(notifyList, function (i, e) {
+          notify.add(e);
+        });
+      }, 0);
+    });
+/*]]>*/
+  </script>
+  <title>
+    Мафия → Создать игру </title>
+  <meta name="Description" content="Мафия   онлайн  - бесплатная карточная видео игра">
+  <meta name="keywords" content="Мафия   онлайн  - бесплатная карточная видео игра">
+  <meta property="og:image" content="/themes/bootstrap/static/img/share/logo1.png">
+  <meta property="og:description"
+    content="Проект «Mafii.net - Дело ночи» - это уникальная возможность не только играть в популярную и любимую игру с любыми соперниками со всего мира, но и видеть и слышать всех других игроков в режиме онлайн, как если бы вы играли за одним столом!">
+
+  <!-- html5.js for IE less than 9 -->
+  <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  <!--[if lte IE 6]>
+	<link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
+  <style>
+    ._3emE9--dark-theme .-S-tR--ff-downloader {
+      background: rgba(30, 30, 30, .93);
+      border: 1px solid rgba(82, 82, 82, .54);
+      box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+      color: #fff
+    }
+
+    ._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn {
+      background: #3d4b52
+    }
+
+    ._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover {
+      background: #131415
+    }
+
+    ._3emE9--dark-theme .-S-tR--ff-downloader ._10vpG--footer {
+      background: rgba(30, 30, 30, .93)
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader {
+      background: #fff;
+      border: 1px solid rgba(82, 82, 82, .54);
+      box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+      color: #314c75
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader ._6_Mtt--header {
+      font-weight: 700
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice {
+      border: 0;
+      color: rgba(0, 0, 0, .88)
+    }
+
+    ._2mDEx--white-theme .-S-tR--ff-downloader ._10vpG--footer {
+      background: #fff
+    }
+
+    .-S-tR--ff-downloader {
+      display: block;
+      overflow: hidden;
+      position: fixed;
+      bottom: 20px;
+      right: 7.1%;
+      width: 330px;
+      height: 180px;
+      background: rgba(30, 30, 30, .93);
+      border-radius: 2px;
+      color: #fff;
+      z-index: 99999999;
+      border: 1px solid rgba(82, 82, 82, .54);
+      box-shadow: 0 4px 7px rgba(30, 30, 30, .55);
+      transition: .5s
+    }
+
+    .-S-tR--ff-downloader._3M7UQ--minimize {
+      height: 62px
+    }
+
+    .-S-tR--ff-downloader._3M7UQ--minimize .nxuu4--file-info,
+    .-S-tR--ff-downloader._3M7UQ--minimize ._6_Mtt--header {
+      display: none
+    }
+
+    .-S-tR--ff-downloader ._6_Mtt--header {
+      padding: 10px;
+      font-size: 17px;
+      font-family: sans-serif
+    }
+
+    .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn {
+      float: right;
+      background: #f1ecec;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      padding: 2px;
+      margin-top: -10px;
+      cursor: pointer
+    }
+
+    .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover {
+      background: #e2dede
+    }
+
+    .-S-tR--ff-downloader ._13XQ2--error {
+      color: red;
+      padding: 10px;
+      font-size: 12px;
+      line-height: 19px
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container {
+      position: relative;
+      height: 100%
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info {
+      padding: 6px 15px 0;
+      font-family: sans-serif
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info div {
+      margin-bottom: 5px;
+      width: 100%;
+      overflow: hidden
+    }
+
+    .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice {
+      margin-top: 21px;
+      font-size: 11px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      font-weight: 700
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2V73d--loader {
+      -webkit-animation: n0BD1--rotation 3.5s linear forwards;
+      animation: n0BD1--rotation 3.5s linear forwards;
+      position: absolute;
+      top: -120px;
+      left: calc(50% - 35px);
+      border-radius: 50%;
+      border: 5px solid #fff;
+      border-top-color: #a29bfe;
+      height: 70px;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar {
+      width: 100%;
+      height: 18px;
+      background: #dfe6e9;
+      border-radius: 5px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar ._1FVu9--progress-bar {
+      height: 100%;
+      background: #8bc34a;
+      border-radius: 5px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status {
+      margin-top: 10px
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1XilH--state {
+      float: left;
+      font-size: .9em;
+      letter-spacing: 1pt;
+      text-transform: uppercase;
+      width: 100px;
+      height: 20px;
+      position: relative
+    }
+
+    .-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1jiaj--percentage {
+      float: right
+    }
+  </style>
+  <script type="text/javascript" async="" src="https://media.reformal.ru/widgets/v3/reformal.js"></script>
+  <style type="text/css" media="screen">
+    #reformal_tab {
+      display: block;
+      font-size: 0;
+      background-color: #0C0706 !important;
+      line-height: 0;
+      cursor: pointer;
+      z-index: 100001;
+      left: 0;
+      margin-top: -113.5px;
+      position: fixed;
+      top: 50%;
+      border: 2px solid #452921;
+      padding: 10px 4px 10px 4px;
+      border-left: 0;
+      background: #0C0706 url(https://media.reformal.ru/widgets/v3/gl.png) 0 0 repeat-y;
+      -webkit-border-radius: 0 10px 10px 0;
+      -moz-border-radius: 0 10px 10px 0;
+      border-radius: 0 10px 10px 0;
+      -moz-box-shadow: 1px 0 2px #170E0C;
+      -webkit-box-shadow: 1px 0 2px #170E0C;
+      box-shadow: 1px 0 2px #170E0C;
+    }
+
+    #reformal_tab:hover {
+      padding-left: 6px;
+    }
+
+    #reformal_tab img {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="bodyClass day" style=""><a id="reformal_tab" href="http://mafiinet.reformal.ru"
+    onclick="Reformal.widgetOpen();return false;" onmouseover="Reformal.widgetPreload();"
+    onmouseout="Reformal.widgetAbortPreload();"><img
+      src="https://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/4bfb34d91c8d7fb481972ca3c84aec38/left/0/tab.png"
+      alt=""></a>
+  <script type="text/javascript" src="/assets/66afb96c/websocket.js"></script>
+
+
+  <!-- header & panel authorization -->
+  <!-- /header & panel authorization -->
+
+
+  <div id="g_pagewrapInside" class="smallHeader">
+    <!-- Шапка для всех внутренних страниц -->
+    <div id="pageTopInside">
+      <nav>
+        <!-- Меню главное, для пользователей -->
+        <ul>
+          <!--<li class="zavitok-l"><span>&nbsp;</span></li>-->
+          <li><a href="/">Главная <div class="bloodyPrint"></div>
+            </a></li>
+          <li>
+            <a href="/help/about">Как играть? <div class="bloodyPrint"></div>
+            </a></li>
+          <li><a href="/site/rules">Правила поведения <div class="bloodyPrint"></div>
+            </a></li>
+          <li><a href="/user/market/all">Чёрный рынок <div class="bloodyPrint"></div>
+            </a></li>
+          <li><a href="/site/clans">Кланы мафии <div class="bloodyPrint"></div>
+            </a></li>
+          <li>
+            <a href="/news">Новости игры <span class="point">●</span>
+              <div class="bloodyPrint"></div>
+            </a></li>
+          <!--<li class="zavitok-r"><span>&nbsp;</span></li>-->
+        </ul>
+        <!-- /Меню главное, для пользователей -->
+      </nav>
+      <header class="inside">
+        <hgroup>
+          <span><a id="logo" href="/" title="Мафия онлайн - видеоверсия популярной игры">Мафия онлайн - видеоверсия
+              популярной игры</a></span>
+          <span><a id="description" href="/">Салонная командная психологическая пошаговая ролевая игра.</a></span>
+        </hgroup>
+
+        <!-- Реклама -->
+        <!--<a class="ungaInner" target="_blank"-->
+        <!--	href="http://www.unga.ru/20.html"-->
+        <!--	title="-->
+        <!--">-->
+        <!--	-->
+        <!--	<img src="-->
+        <!--">-->
+        <!--	-->
+        <!--	<img src="-->
+        <!--">-->
+        <!--	-->
+        <!--</a>-->
+
+        <!-- /Реклама -->
+
+      </header>
+    </div>
+    <!-- /Шапка для всех внутренних страниц -->
+
+    <!-- Панель авторизации -->
+    <!--<div class="introBottom">-->
+    <div id="authorization" class="">
+      <!-- ban message -->
+      <div class="banMessageTop">
+        Срок выплаты займа истек. Возможность играть в игры ограничена.
+      </div>
+
+
+
+      <!-- /ban message -->
+      <!--	<div class="auth-bg-left"></div>-->
+      <!--	<div class="auth-bg-right"></div>-->
+      <div class="auth-center">
+        <!-- Личная навигация  -->
+        <ul id="authorize-nav" class="clearfix">
+          <li><a class="youMoney gold" href="/user/things/purse">1549 </a></li>
+          <!--					<li><a class="youMoney silver" href="/user/things/purse">0						</a></li>-->
+          <li><a class="txt kabinet" href="/user/profile/profile">Личный кабинет</a></li>
+          <li>
+            Добрый вечер, <a class="txt username" href="/user/profile/profile">
+              [dev]Pchol </a>!
+          </li>
+          <!-- Блок уведомлений -->
+          <li class="jsNotify">
+            <a href="#" class="jsNotifyHref">
+              Ваши уведомления<span class="notifyMore jsNotifyCount">0</span>
+            </a>
+            <div class="openNotify bottom up">
+              <div data-update-href="/notify/get" data-del-href="/notify/delete" class="jsNotifyList ovflY"
+                style="overflow: hidden; padding: 0px; width: 0px;">
+                <div class="jspContainer" style="width: 0px; height: 0px;">
+                  <div class="jspPane" style="padding: 0px; top: 0px; left: 0px; width: 0px;"></div>
+                </div>
+              </div>
+              <p>[ <a href="/notify/clear" class="jsNotifyClear">Удалить все</a> ]</p>
+            </div>
+          </li>
+          <!-- /Блок уведомлений -->
+          <li>
+            <a class="jsComplain jaloba" href="">Отправить жалобу<br>на администрацию</a>
+          </li>
+          <li>
+            <a href="/user/actions/logout" class="enter-exit">Выход </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="zaglushka"></div>
+    <!--</div>-->
+    <!-- /Панель авторизации -->
+
+    <!-- #content -->
+    <section class="second">
+      <div id="content">
+
+        <!-- Новый -->
+        <div class="createGameContainer lineForm  clearfix">
+          <h2>Создать игру</h2>
+
+          <p>&nbsp;</p>
+
+          <form id="games-form" action="/games/create/type/classic" method="post">
+            <input type="hidden"
+              value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg=="
+              name="YII_CSRF_TOKEN">
+            <!-- ----- Поля формы ----- -->
+            <div class="createGameGroupFields fl">
+
+              <div class="createGameField">
+                <div class="editGameName"></div>
+                <input class="text" placeholder="Название игры" name="Games[title]" id="Games_title" type="text"
+                  maxlength="100" value="Штурм Константинополя">
+                <div class="errorMessage" id="Games_title_em_" style="display:none"></div>
+                <div class="fieldHelp" id="jsLamp">
+                  <div class="promptL"><em>Автоподбор названия<i></i></em></div>
+                </div>
+              </div>
+              <div class="createGameField">
+                <div class="gamersAdd"></div>
+                <div class="cusel   cuselScrollArrows" id="cuselFrame-Games_count" style="width:225px" tabindex="0">
+                  <div class="cuselFrameRight"></div>
+                  <div class="cuselText">7</div>
+                  <div class="cusel-scroll-wrap" style="display: none; visibility: visible;">
+                    <div class="cusel-scroll-pane" id="cusel-scroll-Games_count">
+                      <span val="">Количество игроков</span>
+                      <span val="4">4</span>
+                      <span val="5">5</span>
+                      <span val="6">6</span>
+                      <span val="7" selected="selected" class="cuselActive">7</span>
+                    </div>
+                  </div><input type="hidden" id="Games_count" name="Games[count]" value="7">
+                </div>
+                <div class="errorMessage" id="Games_count_em_" style="display:none"></div>
+              </div>
+
+              <div class="show_role"></div>
+
+              <div class="createGameСheckBox">
+                <span class="niceCheck" id="jsTogglePassword">
+                  <input type="checkbox" name="private_game">
+                </span>
+                Приватная игра </div>
+              <div class="jsPassword" style="display: none;">
+                <div class="createGameField">
+                  <!-- Поле не показываем, если нет купленных игр  -->
+                  <div class="pasw"></div>
+                  <input class="text" placeholder="Пароль" name="Games[password]" id="Games_password" type="text"
+                    maxlength="64">
+                  <div class="errorMessage" id="Games_password_em_" style="display:none"></div>
+                </div>
+              </div>
+              <div class="createGameСheckBox">
+                <span class="niceCheck" id="jsToggleBetGame">
+                  <input type="checkbox" name="bet">
+                </span>
+                Игра со ставкой </div>
+              <div class="jsBet" style="display:none">
+                <div class="createGameField">
+                  <div class="betw"></div>
+                  <input class="text" placeholder="Ваша ставка" name="Games[bet]" id="Games_bet" type="text" value="0">
+                  <div class="errorMessage" id="Games_bet_em_" style="display:none"></div>
+                </div>
+              </div>
+              <div class="createGameField">
+                <div class="clock"></div>
+                <div class="cusel   cuselScrollArrows" id="cuselFrame-Games_time" style="width:225px" tabindex="0">
+                  <div class="cuselFrameRight"></div>
+                  <div class="cuselText">5 минут</div>
+                  <div class="cusel-scroll-wrap" style="display: none; visibility: visible;">
+                    <div class="cusel-scroll-pane" id="cusel-scroll-Games_time">
+                      <span val="">Начало через:</span>
+                      <span val="5" selected="selected" class="cuselActive">5 минут</span>
+                      <span val="15">15 минут</span>
+                      <span val="30">30 минут</span>
+                    </div>
+                  </div><input type="hidden" id="Games_time" name="Games[time]" value="5">
+                </div>
+                <div class="errorMessage" id="Games_time_em_" style="display:none"></div>
+              </div>
+
+              <!-- ----- Выбор рейтинга ----- -->
+              <div class="createGameRating">
+                <div class="minRating"></div>
+                <p>Минимальный рейтинг для игры:</p>
+
+                <div
+                  class="jsSliderRating rainbow ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                  <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;">
+                  </div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"
+                    style="left: 0%;"></span>
+                </div>
+                <p class="ratingsValue jsRatingsValue">0</p>
+              </div>
+
+              <input id="jsMinRating" name="Games[minRating]" type="hidden" value="0">
+              <div style="display: none;">
+                <input type="hidden" value="" name="invites" id="invites"> </div>
+
+              <div id="paid" class="hide paid">
+                <p class="pNote">Стоимость игры для вас: <span id="jsCostGame" class="gold">0</span></p>
+                <p>Способ оплаты:</p>
+                <input id="ytGames_has_sponsor" type="hidden" value="" name="Games[has_sponsor]"><span
+                  id="Games_has_sponsor" class="ui-buttonset"><input id="Games_has_sponsor_0" value="0"
+                    checked="checked" type="radio" name="Games[has_sponsor]" class="ui-helper-hidden-accessible"> <label
+                    for="Games_has_sponsor_0"
+                    class="ui-state-active ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left"
+                    role="button"><span class="ui-button-text">Платят все</span></label><input id="Games_has_sponsor_1"
+                    value="1" type="radio" name="Games[has_sponsor]" class="ui-helper-hidden-accessible"> <label
+                    for="Games_has_sponsor_1"
+                    class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button"><span
+                      class="ui-button-text">Оплачу сам</span></label></span>
+                <div class="errorMessage" id="Games_has_sponsor_em_" style="display:none"></div>
+              </div>
+              <input type="submit" class="bigButtonCreateGame" value="Создать игру">
+
+            </div>
+
+            <!-- ----- Опции игры ----- -->
+            <div class="createGameUser fl">
+
+              <!-- Тип игры -->
+              <div class="clr">
+                <a href="/games/create/type/classic" class="gButtonLiteBrown active">Классическая игра</a>
+                <a href="/games/create/type/hard" class="gButtonLiteBrown ">Сложная игра</a>
+                <a href="/games/create/type/sport" class="gButtonLiteBrown ">Спортивная игра</a>
+                <a href="/games/create" class="gButtonLiteBrown ">Своя игра</a>
+                <p class="pNote2">Данный тип игры подходит новичкам.</p>
+              </div>
+              <!-- /Тип игры -->
+              <div class="fl" style="width:220px">
+                <!-- Ведущий -->
+                <p class="gameOpt">Ведущий в игре:</p>
+
+                <div class="createGameСheckBox">
+                  <div class="hasLeading jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck ">
+                    <input id="ytGames_has_leading" type="hidden" value="0" name="Games[has_leading]"><input
+                      name="Games[has_leading]" id="Games_has_leading" value="1" type="checkbox"> </span>
+                  Создатель игры <div class="errorMessage" id="Games_has_leading_em_" style="display:none"></div>
+                </div>
+                <!-- /Ведущий -->
+
+                <p class="gameOpt">Роли в игре:</p>
+
+                <div class="createGameСheckBox">
+                  <div class="hasDoctor jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck niceDisabled">
+                    <input id="ytGames_has_doctor" type="hidden" value="0" name="Games[has_doctor]"><input
+                      class="disabled" name="Games[has_doctor]" id="Games_has_doctor" value="1" type="checkbox"> </span>
+                  Доктор <div class="errorMessage" id="Games_has_doctor_em_" style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="hasManiac jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck niceDisabled">
+                    <input id="ytGames_has_maniac" type="hidden" value="0" name="Games[has_maniac]"><input
+                      class="disabled" name="Games[has_maniac]" id="Games_has_maniac" value="1" type="checkbox"> </span>
+                  Маньяк <div class="errorMessage" id="Games_has_maniac_em_" style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="hasWhore jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck niceDisabled">
+                    <input id="ytGames_has_whore" type="hidden" value="0" name="Games[has_whore]"><input
+                      class="disabled" name="Games[has_whore]" id="Games_has_whore" value="1" type="checkbox"> </span>
+                  Любовница <div class="errorMessage" id="Games_has_whore_em_" style="display:none"></div>
+                </div>
+              </div>
+
+              <div class="fl">
+                <p class="gameOpt">Параметры игры:</p>
+
+                <div class="createGameСheckBox">
+                  <div class="showRolePrisoned jsCheck check"></div>
+                  <span class="niceCheck jsNiceCheck" style="background-position: 0px -17px;">
+                    <input id="ytGames_show_role_prisoned" type="hidden" value="0"
+                      name="Games[show_role_prisoned]"><input name="Games[show_role_prisoned]"
+                      id="Games_show_role_prisoned" value="1" checked="checked" type="checkbox"> </span>
+                  Не показывать роли посаженных <div class="errorMessage" id="Games_show_role_prisoned_em_"
+                    style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="showRole jsCheck check"></div>
+                  <span class="niceCheck jsNiceCheck" style="background-position: 0px -17px;">
+                    <input id="ytGames_show_role_killed" type="hidden" value="0" name="Games[show_role_killed]"><input
+                      name="Games[show_role_killed]" id="Games_show_role_killed" value="1" checked="checked"
+                      type="checkbox"> </span>
+                  Не показывать роли убитых <div class="errorMessage" id="Games_show_role_killed_em_"
+                    style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="showVote jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck">
+                    <input id="ytGames_show_vote" type="hidden" value="0" name="Games[show_vote]"><input
+                      name="Games[show_vote]" id="Games_show_vote" value="1" type="checkbox"> </span>
+                  Не показывать результаты голосования <div class="errorMessage" id="Games_show_vote_em_"
+                    style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="showCheckResult jsCheck check"></div>
+                  <span class="niceCheck jsNiceCheck" style="background-position: 0px -17px;">
+                    <input id="ytGames_show_check_result" type="hidden" value="0" name="Games[show_check_result]"><input
+                      name="Games[show_check_result]" id="Games_show_check_result" value="1" checked="checked"
+                      type="checkbox"> </span>
+                  Не показывать результаты ночных проверок <div class="errorMessage" id="Games_show_check_result_em_"
+                    style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="freeTalk jsCheck check"></div>
+                  <span class="niceCheck jsNiceCheck" style="background-position: 0px -17px;">
+                    <input id="ytGames_free_talk" type="hidden" value="0" name="Games[free_talk]"><input
+                      name="Games[free_talk]" id="Games_free_talk" value="1" checked="checked" type="checkbox"> </span>
+                  Без общего обсуждения <div class="errorMessage" id="Games_free_talk_em_" style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="onlyFirstNight jsCheck check"></div>
+                  <span class="niceCheck jsNiceCheck" style="background-position: 0px -17px;">
+                    <input id="ytGames_only_first_night" type="hidden" value="0" name="Games[only_first_night]"><input
+                      name="Games[only_first_night]" id="Games_only_first_night" value="1" checked="checked"
+                      type="checkbox"> </span>
+                  Мафия договаривается только в первую ночь <div class="errorMessage" id="Games_only_first_night_em_"
+                    style="display:none"></div>
+                </div>
+
+                <div class="createGameСheckBox">
+                  <div class="deadLastTalk jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck">
+                    <input id="ytGames_dead_last_talk" type="hidden" value="0" name="Games[dead_last_talk]"><input
+                      name="Games[dead_last_talk]" id="Games_dead_last_talk" value="1" type="checkbox"> </span>
+                  Не предоставлять слово убитому <div class="errorMessage" id="Games_dead_last_talk_em_"
+                    style="display:none"></div>
+                </div>
+                <div class="createGameСheckBox">
+                  <div class="classicVote jsCheck check"></div>
+                  <span class="niceCheck jsNiceCheck" style="background-position: 0px -17px;">
+                    <input id="ytGames_classic_vote" type="hidden" value="0" name="Games[classic_vote]"><input
+                      name="Games[classic_vote]" id="Games_classic_vote" value="1" checked="checked" type="checkbox">
+                  </span>
+                  Классическое голосование <div class="errorMessage" id="Games_classic_vote_em_" style="display:none">
+                  </div>
+                </div>
+                <div class="createGameСheckBox" style="display: none;">
+                  <div class="not_hard_clasic_vote jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck">
+                    <input id="ytGames_not_hard_classic_vote" type="hidden" value="0"
+                      name="Games[not_hard_classic_vote]"><input name="Games[not_hard_classic_vote]"
+                      id="Games_not_hard_classic_vote" value="1" type="checkbox"> </span>
+                  Автоматическое голосование <div class="errorMessage" id="Games_not_hard_classic_vote_em_"
+                    style="display:none"></div>
+                </div>
+                <div class="createGameСheckBox">
+                  <div class="mafiaMute jsCheck"></div>
+                  <span class="niceCheck jsNiceCheck">
+                    <input id="ytGames_mute" type="hidden" value="0" name="Games[mute]"><input name="Games[mute]"
+                      id="Games_mute" value="1" type="checkbox"> </span>
+                  Договорка без звука <div class="errorMessage" id="Games_mute_em_" style="display:none"></div>
+                </div>
+
+              </div>
+              <div class="clr portal_spacer"></div>
+              <!-- ----- /Конец Опции игры ----- -->
+
+            </div>
+
+          </form>
+          <div class="fr">
+            <!-- Список приглашённых -->
+            <p class="friendsAdd">Приглашено друзей: <span class="jsCountInvitedFriends">0</span>
+            </p>
+
+            <div style="overflow:hidden" class="jsInvitedFriends">
+              <div class="fl friendsItemAdd jsInvitedFriendExample" style="display: none;">
+                <a title="username" href="profileUrl">
+                  <img alt="username" src="" class="jsFriendAvatar">
+                </a>
+                <br>
+                <a href="profileUrl" class="jsFriendName">username</a>
+
+                <div class="fl friendsItemDel">
+                  <a title="Удалить" href="/" class="jsCancelInvite"></a></div>
+              </div>
+            </div>
+
+            <!-- ----- Список друзей ----- -->
+            <div class="friendOnlineSearch">
+              <div class="fl">
+                <form id="search" action="" method="get" class="jsFriendSearchForm">
+                  <input type="text" name="username" id="go-to" placeholder="Введите имя друга"
+                    class="input jsFriendSearchText">
+                  <input type="submit" class="submit">
+                </form>
+              </div>
+            </div>
+
+            <div class="friendOnlineContainer jsOnlineFriends">
+              <div id="ajaxListView" class="list-view">
+                <div class="items">
+                  <div class="fl friendOnlineCard jsFriendElement" friendid="123">
+                    <div class="fl friendOnlineAvatar">
+                      <a title="[FIIM]GarryStrauss" href="/users/GarryStrauss">
+                        <img src="https://mafii.net/uploads/avatars//small/20Dec2012_22-44-20garrystrauss.JPG" alt="" class="jsAvatar">
+                      </a>
+                    </div>
+                    <div class="fl friendOnlineData">
+                      <span class="profileTitle">
+                        <a href="/users/GarryStrauss" class="jsFriendUsername">
+                          <span class="administrator" style="color:#D60000">[FIIM]GarryStrauss</span> </a>
+                      </span>
+
+                      <p class="cardNotes">Рейтинг: 0</p>
+                    </div>
+                    <div class="clr invite ok jsInvited" style="display: none;">Приглашён. <a ajax="true" href=""
+                        class="jsCancelInvite">Отменить</a></div>
+                    <div class="clr invite jsInvite"><a href="" class="jsInviteButton">Пригласить в игру</a>
+                    </div>
+                  </div>
+                  <div class="fl friendOnlineCard jsFriendElement" friendid="71585">
+                    <div class="fl friendOnlineAvatar">
+                      <a title="[NSG]Keks" href="/users/Keks">
+                        <img src="https://mafii.net/uploads/avatars//small/09Jun2020_20-59-32keks.jpg" alt="" class="jsAvatar">
+                      </a>
+                    </div>
+                    <div class="fl friendOnlineData">
+                      <span class="profileTitle">
+                        <a href="/users/Keks" class="jsFriendUsername">
+                          <span class="" style="color:#33FF33">[NSG]Keks</span> </a>
+                      </span>
+
+                      <p class="cardNotes">Рейтинг: 105229</p>
+                    </div>
+                    <div class="clr invite ok jsInvited" style="display: none;">Приглашён. <a ajax="true" href=""
+                        class="jsCancelInvite">Отменить</a></div>
+                    <div class="clr invite jsInvite"><a href="" class="jsInviteButton">Пригласить в игру</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="keys" style="display:none" title="/games/create/type/classic">
+                  <span>229</span><span>107630</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clr">
+        </div>
+      </div>
+    </section>
+    <!-- /#content -->
+
+    <!--<div class=" contentBorder"></div>-->
+  </div>
+
+
+  <!-- footer -->
+
+  <!-- /g_pagewrap2 -->
+  <!-- footer2 (такой футер используется только для зарегистрированных) -->
+  <footer id="g_footer2">
+    <!--	<div class="contentBorder">-->
+    <div class="bottomInfo">
+      <div class="fl bottomMenu">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/help/about">Как играть?</a></li>
+          <li><a href="/site/rules">Правила поведения</a></li>
+          <li><a href="/user/market/all">Чёрный рынок</a></li>
+          <li><a href="/site/clans">Кланы мафии</a>
+          </li>
+          <li><a href="/news">Новости игры</a>
+          </li>
+          <!--<li><a href="/page/confidentiality">Конфиденциальность</a>
+					</li>-->
+        </ul>
+      </div>
+      <div class="fl bottomNews">
+        <ul>
+          <li><a href="/page/contract_offer">Договор-оферта</a>
+          </li>
+          <li><a href="/page/confidentiality">Конфиденциальность</a>
+          </li>
+        </ul>
+      </div>
+      <div class="fr bottomSeo">
+        <p>
+          Проект «Mafii.net - Дело ночи» - это уникальная возможность не только играть в популярную и любимую игру с
+          любыми соперниками со всего мира, но и видеть и слышать всех других игроков в режиме онлайн, как если бы вы
+          играли за одним столом! </p>
+      </div>
+      <!-- copyright -->
+      <div class="footer">
+        <p>Mafii.net <a href="/page/info" ajax="true">ООО «ЭМИНИ»</a> © 2012 - 2020</p>
+        <div class="footer16plus"></div>
+      </div>
+    </div>
+    <!--	</div>-->
+    <div style="display:none">
+      <!--LiveInternet logo-->
+      <a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?26.5"
+          title="LiveInternet: показано число посетителей за сегодня" alt="" border="0" width="88" height="15"></a>
+      <!--/LiveInternet-->
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!-- Всплывающее окошко приглашения в игру -->
+  <div id="parent_popup" class="jsGameInvite" style="display:none;">
+    <div class="table">
+      <div class="cell">
+        <div class="popupGameInvite block">
+          <div class="xPopUp">
+            <div class="xButton jsInviteGameCancel"></div>
+          </div>
+          <h3>Приглашение в игру</h3>
+
+          <p>Пользователь <a class="bold jsInviteUser" href="#">username</a> приглашает вас в игру № <span
+              class="red jsInviteGameId">0</span></p>
+
+          <p>
+            <a class="gButtonLiteBrown jsInviteGameEnter" href="#">Присоединиться к игре</a><a
+              class="cancel jsInviteGameCancel" href="#">Отклонить приглашение</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Всплывающее информационное окно с блокировкой контента -->
+  <div id="parent_popup" class="complainPopup">
+    <!-- Блокировка доступа к контенту страницы -->
+    <div class="table">
+      <div class="cell">
+        <div class="popupMarketActivity block jsComplainActivity">
+          <div class="xPopUp">
+            <div class="xButton jsComplainCancel"></div>
+            <div id="complainContent" style="display:none">
+              <h3>Пожаловаться на администрацию</h3>
+              <p>Изложите кратко суть проблемы</p>
+
+              <form id="admin-complain" action="site/adminComplain" method="post">
+                <input type="hidden"
+                  value="SVdhRkpzMDRnbTRybGc3bk1iZ1g1TVplTX5KWVQyenNU4TaDI0nIarTSl4VqMpYTPaq2dvQThHyaFIqsZ_gOkg=="
+                  name="YII_CSRF_TOKEN">
+                <div class="errorMessage" id="AdminComplaints_message_em_" style="display:none"></div>
+                <div class="textareaField">
+                  <textarea name="AdminComplaints[message]" id="AdminComplaints_message"></textarea> </div>
+
+                <div class="buttonLiteGreen">
+                  <div>
+                    <input type="submit" name="yt0" value="Отправить" id="yt0"> <span></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="complainSuccess" style="display:none">
+              <h3>Ваша жалоба принята</h3>
+              <p>Мы рассмотрим жалобу в ближайшее время</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script async="">
+    window.addEventListener("load", function (event) {
+      //live internet
+      new Image().src = "//counter.yadro.ru/hit?r" +
+        escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+          ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+            screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+        ";" + Math.random();
+
+      //google analitycs
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-34589781-1', 'auto');
+      ga('send', 'pageview');
+
+			< !--reformal code-- >
+        window.reformalOptions = {
+        project_id: 88037,
+          project_host: "mafiinet.reformal.ru",
+            tab_orientation: "left",
+              tab_indent: "50%",
+                tab_bg_color: "#0C0706",
+                  tab_border_color: "#452921",
+                    tab_shadow_color: "#170E0C",
+                      tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/4bfb34d91c8d7fb481972ca3c84aec38/left/0/tab.png",
+                        tab_is_custom: false, /* Controls which css-styles will be used for tab.*/
+                          tab_border_width: 2,
+                            tab_border_radius: 10
+      };
+
+      (function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      })();
+
+      //yandex metrica
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter18994912 = new Ya.Metrika({
+              id: 18994912,
+              webvisor: true,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true
+            });
+          } catch (e) {
+          }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "yandex_metrika_callbacks");
+    });
+  </script>
+
+  <!-- reformal code -->
+  <noscript>
+    <a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a
+      href="http://mafiinet.reformal.ru">Oтзывы и предложения для mafii.net</a>
+  </noscript>
+
+  <!-- Yandex.Metrika counter -->
+  <noscript>
+    <div><img src="//mc.yandex.ru/watch/18994912" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+
+  <!-- Заметили ошибку? -->
+  <!-- <form style="display:no0ne" id="portal-notify-form" class="portal-notify-form" action="">
+	<img src="/themes/bootstrap/static/img/tab_error.png" class="fl" />
+	<p>Введите ваше сообщение:</p>
+	<div class="errReport fl">
+		<div class="textareaField">
+			<textarea name="Wall[text]" id="jsWallTextArea" placeholder="Введите текст вашей записи..."></textarea>
+		</div>
+		<div class="fr">
+			<div class="buttonLiteBrown">
+				<div>
+					<input type="submit" value="Отправить" name="yt0">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</form> -->
+  <!-- /Заметили ошибку? -->
+  <script type="text/javascript" src="/themes/bootstrap/static/js/create.games.js"></script>
+  <script type="text/javascript" src="/assets/de1a45d/listview/jquery.yiilistview.js"></script>
+  <script type="text/javascript" src="/assets/ec3aeb70/notify.js"></script>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    jQuery(function ($) {
+      jQuery('#games-form').yiiactiveform({
+        'validationUrl': '\x2Fgames\x2FcreateValidation', 'validateOnSubmit': true, 'validateOnChange': true, 'afterValidateAttribute': function ($form, attribute, data, hasError) {
+          var settings = $.fn.yiiactiveform.getSettings($form);
+          $.each(settings.attributes, function (i, attribute) {
+            $.fn.yiiactiveform.updateInput(attribute, data, $form);
+          });
+          $(document).trigger("updateSettings", { cost: data.cost, show: data.show, bet: data.bet });
+        }, 'attributes': [{ 'id': 'Games_title', 'inputID': 'Games_title', 'errorID': 'Games_title_em_', 'model': 'Games', 'name': 'title', 'enableAjaxValidation': true }, { 'id': 'Games_count', 'inputID': 'Games_count', 'errorID': 'Games_count_em_', 'model': 'Games', 'name': 'count', 'enableAjaxValidation': true }, { 'id': 'Games_password', 'inputID': 'Games_password', 'errorID': 'Games_password_em_', 'model': 'Games', 'name': 'password', 'enableAjaxValidation': true }, { 'id': 'Games_bet', 'inputID': 'Games_bet', 'errorID': 'Games_bet_em_', 'model': 'Games', 'name': 'bet', 'enableAjaxValidation': true }, { 'id': 'Games_time', 'inputID': 'Games_time', 'errorID': 'Games_time_em_', 'model': 'Games', 'name': 'time', 'enableAjaxValidation': true }, { 'id': 'Games_has_sponsor', 'inputID': 'Games_has_sponsor', 'errorID': 'Games_has_sponsor_em_', 'model': 'Games', 'name': 'has_sponsor', 'enableAjaxValidation': true }, { 'id': 'Games_has_leading', 'inputID': 'Games_has_leading', 'errorID': 'Games_has_leading_em_', 'model': 'Games', 'name': 'has_leading', 'enableAjaxValidation': true }, { 'id': 'Games_has_doctor', 'inputID': 'Games_has_doctor', 'errorID': 'Games_has_doctor_em_', 'model': 'Games', 'name': 'has_doctor', 'enableAjaxValidation': true }, { 'id': 'Games_has_maniac', 'inputID': 'Games_has_maniac', 'errorID': 'Games_has_maniac_em_', 'model': 'Games', 'name': 'has_maniac', 'enableAjaxValidation': true }, { 'id': 'Games_has_whore', 'inputID': 'Games_has_whore', 'errorID': 'Games_has_whore_em_', 'model': 'Games', 'name': 'has_whore', 'enableAjaxValidation': true }, { 'id': 'Games_show_role_prisoned', 'inputID': 'Games_show_role_prisoned', 'errorID': 'Games_show_role_prisoned_em_', 'model': 'Games', 'name': 'show_role_prisoned', 'enableAjaxValidation': true }, { 'id': 'Games_show_role_killed', 'inputID': 'Games_show_role_killed', 'errorID': 'Games_show_role_killed_em_', 'model': 'Games', 'name': 'show_role_killed', 'enableAjaxValidation': true }, { 'id': 'Games_show_vote', 'inputID': 'Games_show_vote', 'errorID': 'Games_show_vote_em_', 'model': 'Games', 'name': 'show_vote', 'enableAjaxValidation': true }, { 'id': 'Games_show_check_result', 'inputID': 'Games_show_check_result', 'errorID': 'Games_show_check_result_em_', 'model': 'Games', 'name': 'show_check_result', 'enableAjaxValidation': true }, { 'id': 'Games_free_talk', 'inputID': 'Games_free_talk', 'errorID': 'Games_free_talk_em_', 'model': 'Games', 'name': 'free_talk', 'enableAjaxValidation': true }, { 'id': 'Games_only_first_night', 'inputID': 'Games_only_first_night', 'errorID': 'Games_only_first_night_em_', 'model': 'Games', 'name': 'only_first_night', 'enableAjaxValidation': true }, { 'id': 'Games_dead_last_talk', 'inputID': 'Games_dead_last_talk', 'errorID': 'Games_dead_last_talk_em_', 'model': 'Games', 'name': 'dead_last_talk', 'enableAjaxValidation': true }, { 'id': 'Games_classic_vote', 'inputID': 'Games_classic_vote', 'errorID': 'Games_classic_vote_em_', 'model': 'Games', 'name': 'classic_vote', 'enableAjaxValidation': true }, { 'id': 'Games_not_hard_classic_vote', 'inputID': 'Games_not_hard_classic_vote', 'errorID': 'Games_not_hard_classic_vote_em_', 'model': 'Games', 'name': 'not_hard_classic_vote', 'enableAjaxValidation': true }, { 'id': 'Games_mute', 'inputID': 'Games_mute', 'errorID': 'Games_mute_em_', 'model': 'Games', 'name': 'mute', 'enableAjaxValidation': true }], 'errorCss': 'error'
+      });
+      jQuery('#ajaxListView').yiiListView({ 'ajaxUpdate': ['friendsMenu', 'ajaxListView'], 'ajaxVar': 'ajax', 'pagerClass': 'pager\x20clr\x20portal_spacer', 'loadingClass': 'list\x2Dview\x2Dloading', 'sorterClass': 'sorter', 'enableHistory': false });
+
+
+      var $complainContent = $("#complainContent");
+      var $successContent = $("#complainSuccess");
+
+      var $form = $complainContent.find("#admin-complain");
+      var $block = $("#parent_popup.complainPopup");
+
+      $form.on("success", function () {
+        $complainContent.hide();
+        $successContent.show();
+      });
+
+      $(document).on("click", ".jsComplainCancel, html", function () {
+
+        $block.hide();
+        $complainContent.hide();
+        $successContent.hide();
+      });
+
+      $(document).on("click", ".jsComplainActivity", function (e) {
+        e.stopPropagation();
+      });
+
+      $(".jsComplain").on("click", function () {
+        $block.find(".xPopUp").append($complainContent);
+        $block.show();
+        $complainContent.show();
+        $form.find("textarea").focus();
+        return false;
+      });
+      jQuery('body').on('click', '#yt0', function () {
+        jQuery.ajax({
+          'dataType': 'json', 'success': function (data) {
+            var $form = $("#admin-complain");
+            if (data.result) {
+              $form.trigger("reset");
+              $form.trigger("success");
+            } else {
+              var settings = $.fn.yiiactiveform.getSettings($form);
+              $.each(settings.attributes, function () {
+                $.fn.yiiactiveform.updateInput(this, data, $form);
+              });
+            }
+          }, 'type': 'POST', 'url': 'site\x2FadminComplain', 'cache': false, 'data': jQuery(this).parents("form").serialize()
+        }); return false;
+      });
+      jQuery('#admin-complain').yiiactiveform({
+        'attributes': [{
+          'id': 'AdminComplaints_message', 'inputID': 'AdminComplaints_message', 'errorID': 'AdminComplaints_message_em_', 'model': 'AdminComplaints', 'name': 'message', 'enableAjaxValidation': false, 'clientValidation': function (value, messages, attribute) {
+
+            if (jQuery.trim(value) == '') {
+              messages.push("\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435");
+            }
+
+
+            if (value.length > 255) {
+              messages.push("Message \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+            }
+
+          }
+        }], 'errorCss': 'error'
+      });
+    });
+/*]]>*/
+  </script>
+
+
+</body>
+
+</html>
