@@ -4681,6 +4681,20 @@ section.cover .coverChatContainer {
   background-color: var(--color-turquoise-hover);
 }
 
+.wdt-emoji-popup {
+  border-radius: 10px;
+  border-color: var(--color-grey);
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: var(--color-bg);
+}
+
+#wdt-emoji-footer {
+  background-color: #ffffff;
+}
+#wdt-emoji-menu-header {
+  background-color: #ffffff;
+}
+
 /* Монетка */
 #authorize-nav a.youMoney.gold,
 .purseRight .editProfileField input.text,
