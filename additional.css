@@ -190,6 +190,10 @@ nav ul li a:hover .bloodyPrint {
   display: none;
 }
 
+section.cover #authorization {
+  position: static;
+}
+
 #authorization,
 #authorization.static {
   height: auto;
@@ -4503,21 +4507,33 @@ span.green {
 /* чат на главной */
 @media (max-device-height: 900px) {
   section.cover .coverChatContainer {
-    height: calc(100% - 290px);
+    /*height: calc(100% - 290px);*/
+    /*height: 500px;*/
+    height: auto;
   }
 }
 
 section.cover .coverChatContainer {
-  bottom: 120px;
+  position: static;
+  /*bottom: 120px;*/
+  margin-bottom: 16px;
 }
 
 .day section.cover,
 .night section.cover {
+  display: block;
+  height: auto;
   background-color: transparent;
+  background-position: 50% 76px;
 }
 
 section.cover .coverChat {
   width: 1150px;
+  overflow: visible;
+}
+
+section.cover .coverChat .chatContainer .separator {
+  display: none;
 }
 
 section.cover .chatViews {
@@ -4525,7 +4541,7 @@ section.cover .chatViews {
   display: flex;
   flex-wrap: wrap;
   margin-left: 0;
-  padding: 30px 50px;
+  padding: 30px 24px;
   background-image: none;
   background-color: transparent;
 }
@@ -4535,9 +4551,10 @@ section.cover .chatViews {
   z-index: 0;
   overflow: visible !important;
   /*width: calc(100% - 300px) !important;*/
-  height: calc(100% - 120px);
+  /*height: calc(100% - 96px);*/
+  height: 320px;
   /*padding: 24px !important;*/
-  margin: 0 68px 68px 0;
+  margin: 0 68px 68px 24px;
 }
 
 .chatContainer .chatViews #chatText::before,
@@ -4572,8 +4589,8 @@ section.cover .chatViews {
 .chatContainer .chatViews .chatUsers {
   position: relative;
   z-index: 0;
-  width: 202px;
-  height: calc(100% - 120px);
+  width: 228px;
+  height: 320px;
   margin: 0;
 }
 
@@ -5282,6 +5299,17 @@ p.friendsAdd {
 .invite a:focus {
   border: solid 1px #cdd5de;
   background-color: #e9eff2;
+}
+
+/* Сообщения администрации */
+.adminNotice {
+  width: 1050px;
+  margin: -54px auto 0;
+  padding: 16px 24px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
 }
 
 /**/
