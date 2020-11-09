@@ -3503,6 +3503,7 @@ table.items td {
 .clanAction {
   display: flex;
   height: auto;
+  line-height: 1;
 }
 
 .clanAction br {
@@ -3537,17 +3538,50 @@ table.items td {
 .clanAction a.inviteClan {
   display: block;
   margin-left: 10px;
-  padding: 13px 20px;
+  padding: 13px 16px;
   font-size: 0;
+  text-decoration: none;
   border-radius: 10px;
   background-color: var(--color-green);
-  background-image: none;
+  background-position: 60% 50%;
+  background-size: 14px auto;
+}
+
+.clanAction a.inviteClan:hover,
+.clanAction a.inviteClan:focus {
+  background-color: var(--color-green-hover);
 }
 
 .clanAction a.inviteClan::before {
   content: "+";
+  display: block;
   font-size: 18px;
   color: #ffffff;
+  margin-right: 16px;
+}
+
+.clanAction a.deleteClan {
+  display: block;
+  margin-left: 10px;
+  padding: 13px 20px;
+  font-size: 0;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--color-red);
+}
+
+.clanAction a.deleteClan::before {
+  content: "Удалить";
+  display: block;
+  font-size: 18px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.clanAction a.deleteClan:hover,
+.clanAction a.deleteClan:focus {
+  background-color: var(--color-red-hover);
 }
 
 .clanBalance {
@@ -5977,6 +6011,11 @@ p.pNoteRate span.rateLink {
 .gamersAdd {
   background-position: 50% 0;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 483.6 572'%3e%3cpath fill='%23718ba3' d='M0 557c1.3-9.2 2.4-18.4 3.9-27.5C20.2 434.7 95.1 357 189.1 337.1c131-27.7 257.3 53.2 286.1 183.9 3.7 16.6 3.9 34 5.7 51H-.1c.1-5 .1-10 .1-15zM251 0c7 1.3 14.1 2.3 21 4 61.4 14.7 103 70.2 101 134.5-1.9 61.1-48.1 113.9-108.9 124.6-74 13.1-143.4-36.6-154.8-110.7C97.9 78.2 151.3 8.9 226.2.9c1.3-.1 2.6-.6 3.8-.9h21z'/%3e%3c/svg%3e");
+}
+
+.white-person--,
+.clanAction a.inviteClan {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 483.6 572'%3e%3cpath fill='%23ffffff' d='M0 557c1.3-9.2 2.4-18.4 3.9-27.5C20.2 434.7 95.1 357 189.1 337.1c131-27.7 257.3 53.2 286.1 183.9 3.7 16.6 3.9 34 5.7 51H-.1c.1-5 .1-10 .1-15zM251 0c7 1.3 14.1 2.3 21 4 61.4 14.7 103 70.2 101 134.5-1.9 61.1-48.1 113.9-108.9 124.6-74 13.1-143.4-36.6-154.8-110.7C97.9 78.2 151.3 8.9 226.2.9c1.3-.1 2.6-.6 3.8-.9h21z'/%3e%3c/svg%3e");
 }
 
 .pencil--,
