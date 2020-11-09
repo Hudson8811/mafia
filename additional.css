@@ -2232,6 +2232,7 @@ p.pNote2 {
   margin: 0 10px 0 0;
   padding: 0 10px 0 0;
   font-size: 16px;
+  line-height: 1;
   color: var(--color-dark);
   border: none;
   border-right: solid 1px var(--color-dark);
@@ -2581,8 +2582,8 @@ p.rarr {
 .friendsListing .items {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -24px;
   margin-left: -24px;
+  margin-top: -24px;
 }
 
 .friendsListing .items .empty {
@@ -2595,6 +2596,7 @@ p.rarr {
   width: calc(50% - 24px);
   height: auto;
   margin: 24px 0 0 24px;
+  padding: 0;
   border-bottom: none;
 }
 
@@ -3811,6 +3813,63 @@ table.items td {
   height: 2px;
   background-color: var(--color-turquoise);
 }
+
+/* участники клана */
+.usersListing {
+  width: 100%;
+}
+
+.usersListing .list-view {
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.usersListing .items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -24px;
+}
+
+.usersListingCard {
+  width: calc(33.33% - 24px);
+  height: auto;
+  margin: 24px 0 0 24px;
+  padding: 0;
+  border-bottom: none;
+}
+
+.usersListing .userCardAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: solid 3px var(--color-yellow);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.usersListing .userCardAvatar a {
+  display: block;
+}
+
+.usersListing .userCardAvatar a:hover,
+.usersListing .userCardAvatar:focus {
+  opacity: 0.7;
+}
+
+.usersListing .userCardAvatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.usersListingCard:hover {
+  background-color: #ffffff;
+}
+
 /* редактировать клан */
 #createClan-form {
   width: 100%;
@@ -4158,6 +4217,32 @@ table.items td {
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
   background-color: var(--color-green);
   background-image: none;
+}
+
+#jsConfirmSell .gButtonLiteGreen {
+  margin: 0;
+  padding: 11px 21px;
+  font-family: var(--main-font);
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+  text-shadow: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: var(--color-green) !important;
+  background-image: none;
+}
+
+#jsConfirmSell .gButtonLiteGreen:hover,
+#jsConfirmSell .gButtonLiteGreen:focus {
+  background-color: var(--color-green-hover) !important;
+}
+
+#jsConfirmSell .gButtonLiteGreen::before,
+#jsConfirmSell .gButtonLiteGreen::after {
+  display: none;
 }
 
 .buttonLiteGreen span {
