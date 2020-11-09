@@ -2099,11 +2099,45 @@ p.pNote2 {
   width: auto !important;
 }
 
+.wallForm {
+  padding-left: 2px;
+}
+
 .wallItem:first-child {
   border-top-color: var(--color-grey);
 }
+
 .wallItem {
+  padding: 15px 0 25px 2px;
   border-bottom-color: var(--color-grey);
+}
+
+.wallItem > a,
+.wallForm .avatar {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 2px var(--color-yellow);
+  overflow: hidden;
+}
+
+.wallItem > a:hover,
+.wallItem > a:focus {
+  opacity: 0.7;
+}
+
+.wallItem > a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+}
+
+.wallItem:hover .delWallItem {
+  /*position: absolute;*/
 }
 
 .profileUserRight .list-view > div {
