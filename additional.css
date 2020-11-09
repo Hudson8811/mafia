@@ -2099,6 +2099,13 @@ p.pNote2 {
   width: auto !important;
 }
 
+.wallItem:first-child {
+  border-top-color: var(--color-grey);
+}
+.wallItem {
+  border-bottom-color: var(--color-grey);
+}
+
 .profileUserRight .list-view > div {
   width: 100% !important;
 }
