@@ -4212,6 +4212,14 @@ table.items td {
   color: var(--color-main);
 }
 
+.popupMarketActivity .rainbow.ui-widget-content {
+  padding: 0;
+  box-shadow: none;
+}
+.rainbow span.ui-state-default {
+  border: none !important;
+  background-color: transparent !important;
+}
 /* ГЛАВНАЯ ЕСЛИ АВТОРИЗОВАН */
 #g_pagewrapInside.bigHeader #content,
 .adsUpListGame {
@@ -5830,6 +5838,8 @@ p.friendsAdd {
   background-image: none;
 }
 
+.popupMarketActivity span.cancel:hover,
+.popupMarketActivity span.cancel:focus,
 #buy-premium-form span.cancel:hover,
 #buy-premium-form span.cancel:focus {
   background-color: var(--color-red-hover);
