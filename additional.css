@@ -1678,6 +1678,10 @@ ul.auth-services a.auth-link:hover {
   overflow: visible;
 }
 
+.profileContainer h2 {
+  align-self: center;
+}
+
 .profileMenu {
   width: 100%;
   height: auto;
@@ -1769,7 +1773,7 @@ ul.auth-services a.auth-link:hover {
   align-content: start;
   width: 100%;
   margin: 0;
-  padding: 36px 50px 56px;
+  padding: 36px 50px; /*56px;*/
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
@@ -1848,17 +1852,27 @@ a.prev.browse.left {
 }
 
 .profileMessage {
-  position: absolute;
+  /*position: absolute;
   top: 190px;
-  left: 50px;
+  left: 50px;*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
 
   display: flex;
+  width: 134px;
   flex-direction: column;
   padding: 0;
 }
 
 .profileMessage > * {
+  width: 100%;
   align-self: center;
+}
+
+.profileMessage > * + * {
+  margin-top: 4px;
 }
 
 .profileMessage .file_upload2 {
@@ -1866,12 +1880,11 @@ a.prev.browse.left {
 }
 
 .profileMessage .gButtonLiteBrown {
-  display: inline-block;
-  vertical-align: top;
-  width: auto;
+  display: block;
+  width: 100%;
   height: auto;
   margin: 0;
-  padding: 6px 21px;
+  padding: 6px 8px;
   font-family: var(--main-font);
   font-size: 12px;
   color: #ffffff;
@@ -1879,13 +1892,15 @@ a.prev.browse.left {
   text-align: center;
   text-shadow: none;
   border-radius: 10px;
+  border: none !important;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
   background-color: var(--color-green) !important;
   background-image: none;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 .profileMessageButtons .gButtonLiteBrown:hover {
+  border: none !important;
   background-color: var(--color-green-hover) !important;
 }
 
@@ -2646,17 +2661,15 @@ p.rarr {
   padding: 10px 20px;
   font-size: 14px;
   line-height: 1;
-  color: var(--color-main);
+  color: #ffffff;
   border-radius: 10px;
-  border: solid 1px #eff3f7;
-  background-color: #f6f9fb;
+  background-color: var(--color-green);
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
 }
 
 .friendsListing .userCardContainer .pm .data:hover,
 .friendsListing .userCardContainer .pm .data:focus {
-  border: solid 1px #cdd5de;
-  background-color: #e9eff2;
+  background-color: var(--color-green-hover);
 }
 
 .friendsListing .userCardContainer .ajax-fr:not(p.cardNotes) {
@@ -3870,6 +3883,49 @@ table.items td {
   background-color: #ffffff;
 }
 
+.usersListingCard .pm {
+  padding: 0;
+  background-image: none;
+}
+
+.usersListingCard .data {
+  display: inline-block;
+  vertical-align: top;
+  padding: 11px 20px;
+  font-size: 12px;
+  line-height: 1;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: var(--color-green);
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+}
+
+.usersListingCard .gButtonLiteBrown.jsInviteUser {
+  font-size: 12px;
+  color: #ffffff;
+  border: none;
+  background-color: var(--color-green) !important;
+}
+
+.usersListingCard .gButtonLiteBrown.jsInviteUser:hover,
+.usersListingCard .gButtonLiteBrown.jsInviteUser:focus,
+.usersListingCard .data:hover,
+.usersListingCard .data:focus {
+  background-color: var(--color-green-hover) !important;
+}
+
+.usersListingSearch + .usersListing {
+  margin-top: 20px;
+}
+
+.usersListingSearch {
+  margin: 0 0 0 auto;
+  padding: 20px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
 /* редактировать клан */
 #createClan-form {
   width: 100%;
@@ -3877,9 +3933,11 @@ table.items td {
 }
 
 .editClanField {
+  background-image: none;
 }
 
 .editClanField input {
+  width: 100%;
   margin: 0;
   padding: 12px 16px;
   font-size: 16px;
@@ -3893,6 +3951,103 @@ table.items td {
 .editClanField input:hover,
 .editClanField input:focus {
   border-color: var(--color-main);
+}
+
+.clanAction .clan_upload {
+  position: relative;
+  width: auto;
+  margin: 8px 0 0 0;
+  padding: 13px 20px;
+  font-size: 18px;
+  line-height: 1;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-yellow) !important;
+}
+
+.clanAction .clan_upload:hover,
+.clanAction .clan_upload:focus {
+  border: none;
+  background-color: var(--color-yellow-hover) !important;
+}
+
+.clanAction .clan_upload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rainbow.ui-widget-content {
+  margin-left: 0;
+  margin-bottom: 8px;
+  padding: 0;
+  box-shadow: none;
+}
+
+#createClan-form .textareaField {
+  margin: 0;
+  padding: 0;
+}
+
+.clanShortDiscription textarea,
+.clanDiscription textarea {
+  color: var(--color-dark2);
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+}
+
+.clanShortDiscription textarea:hover,
+.clanShortDiscription textarea:focus,
+.clanDiscription textarea:hover,
+.clanDiscription textarea:focus {
+  border-color: var(--color-main);
+}
+
+.clanDiscription {
+  height: 100%;
+}
+.clanDiscription textarea {
+  height: 100%;
+}
+
+#createClan-form .buttonLiteBrown {
+  height: auto;
+}
+
+#createClan-form .buttonLiteBrown div {
+  background-image: none;
+}
+
+#createClan-form .buttonLiteBrown input + span {
+  display: none;
+}
+
+#createClan-form .buttonLiteBrown input {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 13px 20px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  background-color: var(--color-green);
+  background-image: none;
+}
+#createClan-form .buttonLiteBrown input:hover,
+#createClan-form .buttonLiteBrown input:focus {
+  background-color: var(--color-green-hover);
 }
 
 /* Редактировать профиль */
@@ -4087,6 +4242,17 @@ table.items td {
   width: auto;
   margin: 0 32px 8px 0;
   padding: 0;
+  background-image: none;
+}
+
+.radioBox.success .radioBoxStatus,
+.editProfileField.success .fieldStatus {
+  top: 50%;
+  right: 8px;
+  left: auto;
+  transform: translateY(-50%);
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .profileContainer--edit #edit-form .editProfileField:nth-child(5),
@@ -4100,6 +4266,11 @@ table.items td {
   width: auto;
   height: 50px;
   margin-bottom: 8px;
+}
+
+#ajax-states,
+#ajax-cities {
+  background-image: none;
 }
 
 .profileContainer--edit #edit-form .editProfileField .icq,
@@ -4152,8 +4323,8 @@ table.items td {
 }
 
 .profileContainer--edit #edit-form .editProfileField .cuselText {
-  top: 12px;
-  left: 11px;
+  /*top: 12px;
+  left: 11px;*/
 }
 
 .profileContainer--edit #edit-form .editProfileField input:hover,
@@ -5062,7 +5233,8 @@ section.cover .coverChatContainer {
   width: 100%;
 }
 
-.globalRatingSearch #search input:first-child {
+.globalRatingSearch #search input:first-child,
+.usersListingSearch #search input:first-child {
   display: block;
   width: 100%;
   height: auto;
@@ -5075,11 +5247,14 @@ section.cover .coverChatContainer {
 }
 
 .globalRatingSearch #search input:first-child:hover,
-.globalRatingSearch #search input:first-child:focus {
+.globalRatingSearch #search input:first-child:focus,
+.usersListingSearch #search input:first-child:hover,
+.usersListingSearch #search input:first-child:focus {
   border-color: var(--color-main);
 }
 
-.globalRatingSearch #search .submit {
+.globalRatingSearch #search .submit,
+.usersListingSearch #search .submit {
   width: 40px;
   height: 40px;
   margin-left: -40px;
@@ -5090,7 +5265,9 @@ section.cover .coverChatContainer {
 }
 
 .globalRatingSearch #search .submit:hover,
-.globalRatingSearch #search .submit:focus {
+.globalRatingSearch #search .submit:focus,
+.usersListingSearch #search .submit:hover,
+.usersListingSearch #search .submit:focus {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 250.3 250.3'%3e%3cpath fill='%23718ba3' d='M166.5 28.5c-38-38-100-38-138 0s-38 100 0 138c33.9 33.9 86.9 37.6 124.9 11l67.8 67.8c6.6 6.6 17.4 6.6 24.1 0 6.6-6.6 6.6-17.4 0-24.1l-67.8-67.8c26.6-38 23-90.9-11-124.9m-16 122c-29.2 29.2-76.7 29.2-105.9 0-29.2-29.2-29.2-76.7 0-105.9 29.2-29.2 76.7-29.2 105.9 0 29.2 29.2 29.2 76.7 0 105.9'/%3e%3c/svg%3e ");
 }
 
@@ -5630,7 +5807,25 @@ p.friendsAdd {
   padding: 0;
   color: var(--color-green);
 }
-
+/* Страница 404 */
+.page404 {
+  width: 100%;
+  height: 600px;
+  padding: 36px 50px 100px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+  background-position: 50% 65%;
+}
+.page404 + p {
+  width: 100%;
+  margin-top: -65px;
+  padding: 0 !important;
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  color: var(--color-dark);
+  text-align: center;
+}
 /* Страница турнира */
 .tournamentMain {
   display: flex;
@@ -5992,6 +6187,22 @@ p.friendsAdd {
   background-position: 0 50%;
 }
 
+#rename-form .clearfix {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#rename-form .marketBuyField {
+  width: 100%;
+  margin: 0;
+}
+
+#rename-form .marketBuyField + .marketBuyField {
+  margin-top: 8px;
+}
+
 .popupMarketActivity .marketBuyField {
   width: auto;
   height: auto;
@@ -6219,6 +6430,11 @@ p.pNoteRate span.rateLink {
 .checked--,
 .niceCheck[style="background-position: 0px -17px;"]::after {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 515.556 515.556' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%2300b2ff' d='M0 274.226l176.549 176.886L515.556 112.44l-48.67-47.997-290.337 290L47.996 225.891z'/%3e%3c/svg%3e");
+}
+
+.radioBox.success .radioBoxStatus,
+.editProfileField.success .fieldStatus {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 515.556 515.556' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%2300d17a' d='M0 274.226l176.549 176.886L515.556 112.44l-48.67-47.997-290.337 290L47.996 225.891z'/%3e%3c/svg%3e");
 }
 
 .person--,
