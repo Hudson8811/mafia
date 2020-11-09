@@ -1944,6 +1944,12 @@ p.pNoteRate {
   font-size: 13px;
 }
 
+p.pNoteRate span.rateLink {
+  background-size: 14px 14px;
+  padding-left: 24px;
+  background-position: 8px 0;
+}
+
 p.pNoteRate a {
   display: inline-block;
   margin-right: 4px;
@@ -5882,7 +5888,8 @@ p.friendsAdd {
 
 .linkUsersRating,
 .linkClanRating,
-.minRating {
+.minRating,
+p.pNoteRate span.rateLink {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 192 192' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23718ba3' d='M16 176V40H0v144a8 8 0 008 8h184v-16z'/%3e%3cpath fill='%23718ba3' d='M72 112a8 8 0 00-8-8H40a8 8 0 00-8 8v56h40zM128 80a8 8 0 00-8-8H96a8 8 0 00-8 8v88h40zM184 48a8 8 0 00-8-8h-24a8 8 0 00-8 8v120h40z'/%3e%3c/svg%3e");
 }
 
