@@ -5409,13 +5409,18 @@ p.friendsAdd {
 /* Сообщения администрации */
 .adminNotice {
   width: 1050px;
-  margin: -54px auto 0;
-  padding: 16px 24px;
+  margin: -40px auto 0;
+  padding: 11px 24px;
   color: var(--color-main);
   border-radius: 10px;
   border: none;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
+}
+.adminNotice p {
+  width: auto;
+  padding: 0;
+  color: var(--color-green);
 }
 
 /* Страница турнира */
