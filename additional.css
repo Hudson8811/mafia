@@ -3136,6 +3136,19 @@ table.items td {
   background-image: none;
 }
 
+.thingsListing .purseRight #payForm {
+  max-width: 240px;
+  text-align: center;
+}
+
+.thingsListing .purseRight #payForm p,
+.thingsListing .purseRight #payForm a,
+.thingsListing .purseRight #payForm .buttonLiteGreen,
+.thingsListing .purseRight #payForm .buttonLiteBrown {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .thingsListing .purseRight p {
   color: var(--color-main) !important;
 }
@@ -3153,6 +3166,7 @@ table.items td {
   vertical-align: top;
   width: auto;
   height: auto;
+  background-image: none;
 }
 .thingsListing .purseRight .buttonLiteBrown div input {
   display: inline-block;
@@ -3192,6 +3206,7 @@ table.items td {
 }
 
 .purseRight .editProfileField input.text {
+  width: 100%;
   color: var(--color-dark2);
   margin: 0;
   padding: 14px 16px 15px 36px;
