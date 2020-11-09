@@ -1753,7 +1753,7 @@ ul.auth-services a.auth-link:hover {
   align-content: start;
   width: 100%;
   margin: 0;
-  padding: 36px 50px;
+  padding: 36px 50px 56px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
@@ -1818,7 +1818,7 @@ a.prev.browse.left {
 
 .profileUserLeft .online {
   position: absolute;
-  top: 180px;
+  top: 174px;
   left: 50px;
 
   width: 134px;
@@ -1833,10 +1833,16 @@ a.prev.browse.left {
 
 .profileMessage {
   position: absolute;
-  top: 200px;
+  top: 190px;
   left: 50px;
 
+  display: flex;
+  flex-direction: column;
   padding: 0;
+}
+
+.profileMessage > * {
+  align-self: center;
 }
 
 .profileMessage .file_upload2 {
@@ -1861,6 +1867,10 @@ a.prev.browse.left {
   background-color: var(--color-green) !important;
   background-image: none;
   pointer-events: none;
+}
+
+.profileMessageButtons .gButtonLiteBrown:hover {
+  background-color: var(--color-green-hover) !important;
 }
 
 .profileMessage .gButtonLiteBrown ~ [type="file"] {
@@ -5787,6 +5797,7 @@ p.friendsAdd {
   vertical-align: top;
   width: auto;
   height: auto;
+  margin-left: 8px;
   padding: 12px 21px;
   font-family: var(--main-font);
   font-size: 12px;
