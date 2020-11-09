@@ -1624,12 +1624,14 @@ ul.auth-services a.auth-link:hover {
 
 .thingsListing .itemMarket .gButtonLiteGreen {
   margin-right: 10px;
-  background-color: var(--color-green);
+  border: none;
+  background-color: var(--color-green) !important;
   background-image: none;
 }
 
 .thingsListing .itemMarket .gButtonLiteBrown {
-  background-color: var(--color-yellow);
+  border: none;
+  background-color: var(--color-yellow) !important;
   background-image: none;
 }
 
@@ -1644,12 +1646,12 @@ ul.auth-services a.auth-link:hover {
 
 .thingsListing .itemMarket .gButtonLiteGreen:hover,
 .thingsListing .itemMarket .gButtonLiteGreen:focus {
-  background-color: var(--color-green-hover);
+  background-color: var(--color-green-hover) !important;
 }
 
 .thingsListing .itemMarket .gButtonLiteBrown:hover,
 .thingsListing .itemMarket .gButtonLiteBrown:focus {
-  background-color: var(--color-yellow-hover);
+  background-color: var(--color-yellow-hover) !important;
 }
 /* ЛИЧНЫЙ КАБИНЕТ */
 /* Профиль */
