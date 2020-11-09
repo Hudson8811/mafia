@@ -2123,6 +2123,7 @@ p.pNote2 {
 }
 
 .wallItem > a,
+.newsFeedItem > a,
 .wallForm .avatar {
   display: block;
   width: 45px;
@@ -2134,12 +2135,20 @@ p.pNote2 {
   overflow: hidden;
 }
 
+.wallItem > a,
+.newsFeedItem > a {
+  float: left;
+}
+
 .wallItem > a:hover,
-.wallItem > a:focus {
+.wallItem > a:focus,
+.newsFeedItem > a:hover,
+.newsFeedItem > a:focus {
   opacity: 0.7;
 }
 
-.wallItem > a img {
+.wallItem > a img,
+.newsFeedItem > a img {
   display: block;
   width: 100%;
   height: auto;
@@ -2632,7 +2641,7 @@ p.rarr {
   background-color: #e9eff2;
 }
 
-.friendsListing .userCardContainer .ajax-fr {
+.friendsListing .userCardContainer .ajax-fr:not(p.cardNotes) {
   display: flex;
 }
 
