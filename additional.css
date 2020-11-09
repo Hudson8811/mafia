@@ -5856,6 +5856,35 @@ p.friendsAdd {
   background-position: 0 50%;
 }
 
+.popupMarketActivity .marketBuyField {
+  width: auto;
+  height: auto;
+  margin: 10px 0;
+  background-image: none;
+}
+
+.popupMarketActivity .marketBuyField.error {
+  margin-bottom: 12px;
+}
+
+.popupMarketActivity .marketBuyField input {
+  width: 100%;
+  color: var(--color-dark2);
+  margin: 0;
+  padding: 14px 16px 15px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  border: solid 1px #d6dee5;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+}
+
+.popupMarketActivity .marketBuyField input:hover,
+.popupMarketActivity .marketBuyField input:focus {
+  border-color: var(--color-main);
+}
+
 /* датапикер */
 .ui-datepicker {
   width: 300px;
