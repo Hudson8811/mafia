@@ -1374,6 +1374,7 @@ ul.auth-services a.auth-link:hover {
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
 }
+
 /*Новости*/
 .newsContainer {
   padding: 0;
@@ -1436,6 +1437,7 @@ ul.auth-services a.auth-link:hover {
   border-top: none;
   border-bottom: solid 1px #eff3f7;
 }
+
 .newsContainer .items div.newsLink:last-of-type {
   border-bottom: 0;
 }
@@ -1467,6 +1469,10 @@ ul.auth-services a.auth-link:hover {
 .newsContainer .newsLink a.fullStory:focus {
   border: solid 1px #cdd5de;
   background-color: #e9eff2;
+}
+
+.newsContainer .gButtonLiteBrown:last-child {
+  background-color: #ffffff !important;
 }
 /* Магазин */
 .marketContainer {
