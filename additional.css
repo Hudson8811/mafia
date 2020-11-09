@@ -2136,8 +2136,13 @@ p.pNote2 {
   margin-right: 0;
 }
 
+.wallItem .wallTime {
+  position: relative;
+}
 .wallItem:hover .delWallItem {
-  /*position: absolute;*/
+  position: absolute;
+  top: 100%;
+  right: 0;
 }
 
 .profileUserRight .list-view > div {
