@@ -4640,9 +4640,6 @@ section.cover .chatViews {
   padding: 0 20px;
 }
 
-.chatContainer .chatViews #chatText .jspPane {
-}
-
 .chatContainer .chatViews #chatText .jspTrack {
   right: 3px;
   bottom: 5px;
@@ -4776,6 +4773,16 @@ section.cover .coverChatContainer {
 }
 #wdt-emoji-menu-header {
   background-color: #ffffff;
+}
+
+#chatText p,
+#chatText span.txtMessage,
+#chatText b span {
+  color: var(--color-main);
+}
+
+.countUsersChat {
+  color: var(--color-green);
 }
 
 /* Страница рейтинга */
