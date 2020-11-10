@@ -375,6 +375,63 @@ a.enter-exit:focus {
   background-color: #00b25e;
 }
 
+.openNotify {
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 1px var(--color-grey);
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.15);
+  background-color: #ffffff;
+}
+
+.openNotify::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 13px !important;
+  height: 13px !important;
+  border: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 511.509 511.509' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23d6dee5' d='M498.675 493.845L265.16 5.568c-3.541-7.424-15.701-7.424-19.243 0L11.251 496.235c-1.579 3.307-1.344 7.189.597 10.283s5.355 4.992 9.024 4.992h469.76c5.888 0 10.667-4.779 10.667-10.667a10.6 10.6 0 00-2.624-6.998z'/%3e%3c/svg%3e");
+}
+
+.openNotify.bottom::before {
+  top: -13px;
+}
+
+.openNotify.top::before {
+  top: auto;
+  width: 16px;
+  height: 16px;
+  bottom: -16px;
+  transform: scale(1, -1);
+}
+
+.openNotify::after {
+  display: none;
+}
+.notifyItem {
+  border: solid 1px var(--color-grey);
+}
+
+.notifyItem a {
+  text-decoration: none;
+}
+
+.notifyItem:hover {
+  background-color: #ffffff;
+  border: solid 1px var(--color-main);
+}
+
+.notifyDelete {
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 511.992 511.992' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M415.402 495.422l-159.406-159.41L96.59 495.422c-22.098 22.094-57.922 22.094-80.02 0-22.093-22.098-22.093-57.922 0-80.02l159.41-159.406L16.57 96.59c-22.093-22.098-22.093-57.922 0-80.02 22.098-22.093 57.922-22.093 80.02 0l159.406 159.41L415.402 16.57c22.098-22.093 57.922-22.093 80.02 0 22.094 22.098 22.094 57.922 0 80.02l-159.41 159.406 159.41 159.406c22.094 22.098 22.094 57.922 0 80.02-22.098 22.094-57.922 22.094-80.02 0zm0 0' fill='%23e76e54'/%3e%3c/svg%3e") !important;
+}
+
 .auth-center {
   height: auto;
 }
@@ -1871,8 +1928,9 @@ a.prev.browse.left {
   align-self: center;
 }
 
-.profileMessage > * + * {
-  margin-top: 4px;
+.profileMessage > * + *,
+.profileMessage .gButtonLiteBrown + .gButtonLiteBrown {
+  margin-top: 2px;
 }
 
 .profileMessage .file_upload2 {
@@ -1899,9 +1957,18 @@ a.prev.browse.left {
   /*pointer-events: none;*/
 }
 
-.profileMessageButtons .gButtonLiteBrown:hover {
+.profileMessage .gButtonLiteBrown:hover {
   border: none !important;
   background-color: var(--color-green-hover) !important;
+}
+
+.profileMessage .gButtonLiteBrown.ajax-delete-friend {
+  background-color: var(--color-red) !important;
+}
+
+.profileMessage .gButtonLiteBrown.ajax-delete-friend:hover,
+.profileMessage .gButtonLiteBrown.ajax-delete-friend:focus {
+  background-color: var(--color-red-hover) !important;
 }
 
 .profileMessage .gButtonLiteBrown ~ [type="file"] {
@@ -1947,8 +2014,8 @@ a.prev.browse.left {
 }
 
 .xRatingWhyPopUp {
-  top: -150px;
-  height: 125px;
+  top: -170px;
+  height: 150px;
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
@@ -3036,6 +3103,11 @@ table.items td {
   background-color: #ffffff;
 }
 
+.profileContainer .thingsListing + .thingsListing {
+  width: 100%;
+  margin-top: 20px;
+}
+
 .thingsMenu div {
   width: 100%;
   padding: 8px 5px;
@@ -3465,6 +3537,132 @@ table.items td {
 
 .operationMoney td:last-child::after {
   display: none;
+}
+
+.thingsListing .textareaField {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.thingsListing .commentOption {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 26px;
+  background-position: 0 50%;
+  background-size: 20px 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 461.312 461.312'%3e%3cpath fill='%2300d17a' d='M230.656 156.416c-40.96 0-74.24 33.28-74.24 74.24s33.28 74.24 74.24 74.24 74.24-33.28 74.24-74.24-33.28-74.24-74.24-74.24zm-5.632 52.224c-9.216 0-16.896 7.68-16.896 16.896h-24.576c.512-23.04 18.944-41.472 41.472-41.472v24.576z'/%3e%3cpath fill='%2300d17a' d='M455.936 215.296c-25.088-31.232-114.688-133.12-225.28-133.12S30.464 184.064 5.376 215.296c-7.168 8.704-7.168 21.504 0 30.72 25.088 31.232 114.688 133.12 225.28 133.12s200.192-101.888 225.28-133.12c7.168-8.704 7.168-21.504 0-30.72zm-225.28 122.88c-59.392 0-107.52-48.128-107.52-107.52s48.128-107.52 107.52-107.52 107.52 48.128 107.52 107.52-48.128 107.52-107.52 107.52z'/%3e%3c/svg%3e");
+}
+
+.thingsListing .commentOption.privateOn {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 461.312 461.312'%3e%3cpath fill='%23ff0000' d='M230.656 156.416c-40.96 0-74.24 33.28-74.24 74.24s33.28 74.24 74.24 74.24 74.24-33.28 74.24-74.24-33.28-74.24-74.24-74.24zm-5.632 52.224c-9.216 0-16.896 7.68-16.896 16.896h-24.576c.512-23.04 18.944-41.472 41.472-41.472v24.576z'/%3e%3cpath fill='%23ff0000' d='M455.936 215.296c-25.088-31.232-114.688-133.12-225.28-133.12S30.464 184.064 5.376 215.296c-7.168 8.704-7.168 21.504 0 30.72 25.088 31.232 114.688 133.12 225.28 133.12s200.192-101.888 225.28-133.12c7.168-8.704 7.168-21.504 0-30.72zm-225.28 122.88c-59.392 0-107.52-48.128-107.52-107.52s48.128-107.52 107.52-107.52 107.52 48.128 107.52 107.52-48.128 107.52-107.52 107.52z'/%3e%3c/svg%3e");
+}
+
+.thingsListing .commentOption > * {
+  align-self: center;
+}
+
+.thingsListing .commentOption span.fr {
+  margin-left: auto;
+}
+
+.thingsListing .commentOption + .line {
+  border: none;
+  border-bottom: solid 1px var(--color-grey);
+}
+
+.thingsListing .choiceFrands {
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.giftFriend {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  width: calc(25% - 24px);
+  margin: 24px 0 0 24px;
+  padding: 0 0 0 2px;
+  border: none;
+}
+
+.giftFriend .profileTitle a {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-dark);
+}
+
+.giftFriend .profileTitle a:focus,
+.giftFriend .profileTitle a:hover {
+  color: var(--color-main);
+}
+
+.giftFriend > div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.giftFriend > div:nth-child(1) a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-yellow);
+  overflow: hidden;
+}
+
+.giftFriend > div:nth-child(1) a:hover,
+.giftFriend > div:nth-child(1) a:focus {
+  opacity: 0.7;
+}
+
+.giftFriend > div:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  margin-bottom: 4px;
+}
+
+.giftFriend > div:nth-child(3) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.giftFriend .gButtonLiteBrown {
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  background-color: var(--color-green) !important;
+}
+
+.giftFriend .gButtonLiteBrown:hover,
+.giftFriend .gButtonLiteBrown:focus {
+  border: none;
+  background-color: var(--color-green-hover) !important;
+}
+
+.giftFriend .gButtonLiteBrown span {
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px 0 0;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23ffffff' d='M478.609 99.726H441.34c4.916-7.78 8.16-16.513 9.085-25.749C453.38 44.46 437.835 18 411.37 6.269c-24.326-10.783-51.663-6.375-71.348 11.479l-47.06 42.65c-9.165-10.024-22.34-16.324-36.962-16.324-14.648 0-27.844 6.32-37.011 16.375l-47.12-42.706C152.152-.111 124.826-4.502 100.511 6.275 74.053 18.007 58.505 44.476 61.469 73.992c.927 9.229 4.169 17.958 9.084 25.734H33.391C14.949 99.726 0 114.676 0 133.117v50.087c0 9.22 7.475 16.696 16.696 16.696h478.609c9.22 0 16.696-7.475 16.696-16.696v-50.087c-.001-18.441-14.95-33.391-33.392-33.391zm-272.696-5.565v5.565H127.37c-20.752 0-37.084-19.346-31.901-40.952 2.283-9.515 9.151-17.626 18.034-21.732 12.198-5.638 25.71-3.828 35.955 5.445l56.469 51.182c-.003.165-.014.327-.014.492zm211.381-24.617c-1.244 17.353-16.919 30.184-34.316 30.184h-76.891v-5.565c0-.197-.012-.392-.014-.589l55.594-50.391c8.554-7.753 20.523-11.372 31.587-8.072 15.877 4.736 25.201 18.238 24.04 34.433zM33.391 233.291v244.87c0 18.442 14.949 33.391 33.391 33.391h155.826V233.291H33.391zM289.391 233.291v278.261h155.826c18.442 0 33.391-14.949 33.391-33.391v-244.87H289.391z'/%3e%3c/svg%3e");
+}
+.giftFriend:hover {
+  background-color: #ffffff;
 }
 
 /* Клан */
@@ -3993,7 +4191,8 @@ table.items td {
 }
 
 .clanShortDiscription textarea,
-.clanDiscription textarea {
+.clanDiscription textarea,
+.thingsListing textarea {
   color: var(--color-dark2);
   margin: 0;
   padding: 12px 16px;
@@ -4007,7 +4206,9 @@ table.items td {
 .clanShortDiscription textarea:hover,
 .clanShortDiscription textarea:focus,
 .clanDiscription textarea:hover,
-.clanDiscription textarea:focus {
+.clanDiscription textarea:focus,
+.thingsListing textarea:hover,
+.thingsListing textarea:focus {
   border-color: var(--color-main);
 }
 
@@ -5234,7 +5435,8 @@ section.cover .coverChatContainer {
 }
 
 .globalRatingSearch #search input:first-child,
-.usersListingSearch #search input:first-child {
+.usersListingSearch #search input:first-child,
+.thingsListing .choiceFrands + div #search input:first-child {
   display: block;
   width: 100%;
   height: auto;
@@ -5249,12 +5451,15 @@ section.cover .coverChatContainer {
 .globalRatingSearch #search input:first-child:hover,
 .globalRatingSearch #search input:first-child:focus,
 .usersListingSearch #search input:first-child:hover,
-.usersListingSearch #search input:first-child:focus {
+.usersListingSearch #search input:first-child:focus,
+.thingsListing .choiceFrands + div #search input:first-child:hover,
+.thingsListing .choiceFrands + div #search input:first-child:focus {
   border-color: var(--color-main);
 }
 
 .globalRatingSearch #search .submit,
-.usersListingSearch #search .submit {
+.usersListingSearch #search .submit,
+.thingsListing .choiceFrands + div #search .submit {
   width: 40px;
   height: 40px;
   margin-left: -40px;
@@ -5267,7 +5472,9 @@ section.cover .coverChatContainer {
 .globalRatingSearch #search .submit:hover,
 .globalRatingSearch #search .submit:focus,
 .usersListingSearch #search .submit:hover,
-.usersListingSearch #search .submit:focus {
+.usersListingSearch #search .submit:focus,
+.thingsListing .choiceFrands + div #search .submit:hover,
+.thingsListing .choiceFrands + div #search .submit:focus {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 250.3 250.3'%3e%3cpath fill='%23718ba3' d='M166.5 28.5c-38-38-100-38-138 0s-38 100 0 138c33.9 33.9 86.9 37.6 124.9 11l67.8 67.8c6.6 6.6 17.4 6.6 24.1 0 6.6-6.6 6.6-17.4 0-24.1l-67.8-67.8c26.6-38 23-90.9-11-124.9m-16 122c-29.2 29.2-76.7 29.2-105.9 0-29.2-29.2-29.2-76.7 0-105.9 29.2-29.2 76.7-29.2 105.9 0 29.2 29.2 29.2 76.7 0 105.9'/%3e%3c/svg%3e ");
 }
 
