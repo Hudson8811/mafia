@@ -2858,6 +2858,20 @@ p.rarr {
   background-image: none;
 }
 
+.pmForm .avatar {
+  width: 75px;
+  height: 75px;
+  margin: 3px 0 0 3px;
+  padding: 0;
+  box-shadow: 0 0 0 3px var(--color-yellow);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pmForm .avatar img {
+}
+
 .pmInternalContainer + form .textareaField {
   width: 100%;
   margin-top: 0;
@@ -2866,6 +2880,7 @@ p.rarr {
 
 .pmInternalContainer + form .buttonLiteBrown div {
   height: auto;
+  background-image: none;
 }
 
 .pmInternalContainer + form .buttonLiteBrown span {
