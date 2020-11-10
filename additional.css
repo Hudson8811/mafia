@@ -1560,6 +1560,15 @@ ul.auth-services a.auth-link:hover {
   background-color: #ffffff;
 }
 
+.marketContainer .thingsListing + .thingsListing {
+  width: 100%;
+  margin-top: 20px;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
 .thingsMenu .listMarket,
 .thingsMenu div,
 .thingsMenu .purse2 {
@@ -1723,6 +1732,40 @@ ul.auth-services a.auth-link:hover {
 .thingsListing .itemMarket .gButtonLiteBrown:hover,
 .thingsListing .itemMarket .gButtonLiteBrown:focus {
   background-color: var(--color-yellow-hover) !important;
+}
+
+.thingsListing .goods #jsBuyThing {
+  color: #ffffff;
+  border: none;
+  background-color: var(--color-green) !important;
+}
+
+.thingsListing .goods #jsBuyThing:hover,
+.thingsListing .goods #jsBuyThing:focus {
+  border: none;
+  background-color: var(--color-green-hover) !important;
+}
+
+.thingsListing .goods #jsBuyThing::before,
+.thingsListing .goods #jsBuyThing::after {
+  display: none;
+}
+
+.thingsListing .goods #jsGiftFriend {
+  color: #ffffff;
+  border: none;
+  background-color: var(--color-green) !important;
+}
+
+.thingsListing .goods #jsGiftFriend span {
+  width: 14px;
+  height: 14px;
+}
+
+.thingsListing .goods #jsGiftFriend:hover,
+.thingsListing .goods #jsGiftFriend:focus {
+  border: none;
+  background-color: var(--color-green-hover) !important;
 }
 /* ЛИЧНЫЙ КАБИНЕТ */
 /* Профиль */
@@ -3539,6 +3582,15 @@ table.items td {
   display: none;
 }
 
+/* Хранилище - подарить */
+.thingsListing .goods {
+  display: flex;
+}
+
+.thingsListing .goods > div:first-child {
+  flex-shrink: 0;
+}
+
 .thingsListing .textareaField {
   margin: 0 0 20px;
   padding: 0;
@@ -3577,6 +3629,11 @@ table.items td {
   line-height: 1;
   color: var(--color-dark);
   font-weight: 700;
+}
+
+#giftsFriend {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .giftFriend {
@@ -3650,7 +3707,8 @@ table.items td {
   background-color: var(--color-green-hover) !important;
 }
 
-.giftFriend .gButtonLiteBrown span {
+.giftFriend .gButtonLiteBrown span,
+.goods #jsGiftFriend span {
   display: inline-block;
   vertical-align: top;
   width: 12px;
