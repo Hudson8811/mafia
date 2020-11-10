@@ -4309,6 +4309,19 @@ table.items td {
   background-color: var(--color-green-hover);
 }
 
+/* Операции клана */
+.titleFoulTable + div:not([class]) {
+  width: 100%;
+}
+
+#clan-operations {
+  width: 100%;
+  padding: 36px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
 /* Редактировать профиль */
 .profileContainer--edit .profileOwner {
   margin: 0;
@@ -4649,9 +4662,10 @@ table.items td {
   background-image: none;
 }
 
-#jsConfirmSell .gButtonLiteGreen {
+#jsConfirmSell .gButtonLiteGreen,
+#jsConfirmBuy .gButtonLiteGreen {
   margin: 0;
-  padding: 11px 21px;
+  padding: 12px 20px;
   font-family: var(--main-font);
   font-size: 12px;
   color: #ffffff;
@@ -4666,12 +4680,16 @@ table.items td {
 }
 
 #jsConfirmSell .gButtonLiteGreen:hover,
-#jsConfirmSell .gButtonLiteGreen:focus {
+#jsConfirmSell .gButtonLiteGreen:focus,
+#jsConfirmBuy .gButtonLiteGreen:focus,
+#jsConfirmBuy .gButtonLiteGreen:hover {
   background-color: var(--color-green-hover) !important;
 }
 
 #jsConfirmSell .gButtonLiteGreen::before,
-#jsConfirmSell .gButtonLiteGreen::after {
+#jsConfirmSell .gButtonLiteGreen::after,
+#jsConfirmBuy .gButtonLiteGreen::before,
+#jsConfirmBuy .gButtonLiteGreen::after {
   display: none;
 }
 
@@ -4741,6 +4759,7 @@ table.items td {
   border: none !important;
   background-color: transparent !important;
 }
+
 /* ГЛАВНАЯ ЕСЛИ АВТОРИЗОВАН */
 #g_pagewrapInside.bigHeader #content,
 .adsUpListGame {
@@ -5581,15 +5600,21 @@ section.cover .coverChatContainer {
 .createGameContainer .createGameGroupFields {
   width: 400px;
   margin: 0 20px 0 0;
+  align-self: flex-start;
 }
 
 .createGameContainer .createGameUser {
   display: flex;
   flex-wrap: wrap;
+  align-self: flex-start;
   justify-content: space-between;
   width: calc(100% - 420px);
   margin: 0;
   background-image: none;
+}
+
+.createGameContainer .createGameUser > * {
+  align-self: flex-start;
 }
 
 .createGameContainer #games-form + div {
@@ -5602,6 +5627,10 @@ section.cover .coverChatContainer {
   margin: 0 0 16px 27px;
   padding-bottom: 0;
   background-image: none;
+}
+
+.createGameСheckBox {
+  display: block;
 }
 
 .createGameGroupFields > .createGameField:first-child {
@@ -5769,9 +5798,9 @@ a.bigButtonCreateGame:focus,
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  border: none;
+  border: none !important;
   border-radius: 0;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 #Games_has_sponsor label ~ label {
