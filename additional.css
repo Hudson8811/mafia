@@ -4144,7 +4144,8 @@ table.items td {
   background-image: none;
 }
 
-.usersListingCard .data {
+.usersListingCard .data,
+.usersListingCard .ajax-add-friend {
   display: inline-block;
   vertical-align: top;
   padding: 11px 20px;
@@ -4152,7 +4153,7 @@ table.items td {
   line-height: 1;
   color: #ffffff;
   border-radius: 10px;
-  background-color: var(--color-green);
+  background-color: var(--color-green) !important;
   box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
 }
 
@@ -4166,7 +4167,9 @@ table.items td {
 .usersListingCard .gButtonLiteBrown.jsInviteUser:hover,
 .usersListingCard .gButtonLiteBrown.jsInviteUser:focus,
 .usersListingCard .data:hover,
-.usersListingCard .data:focus {
+.usersListingCard .data:focus,
+.usersListingCard .ajax-add-friend:hover,
+.usersListingCard .ajax-add-friend:focus {
   background-color: var(--color-green-hover) !important;
 }
 
@@ -5474,10 +5477,41 @@ section.cover .coverChatContainer {
   color: var(--color-main);
 }
 
+#chatText p.toMe {
+  background-color: var(--color-bg);
+}
+
 .countUsersChat {
   color: var(--color-green);
 }
 
+.soundTrigger {
+}
+.soundTrigger.soundOn {
+}
+.soundTrigger.soundOff {
+}
+
+.chatScrollTrigger {
+}
+.chatScrollTrigger.chatScrollOn {
+}
+.chatScrollTrigger.chatScrollOff {
+}
+
+.chatBanTrigger {
+}
+.chatBanTrigger.chatBanOff {
+}
+.chatBanTrigger.chatBanOn {
+}
+
+.chatHistoryTrigger {
+}
+.chatHistoryTrigger.chatHistoryOff {
+}
+.chatHistoryTrigger.chatHistoryOn {
+}
 /* Страница рейтинга */
 .globalRatingContainer {
   width: 100%;
