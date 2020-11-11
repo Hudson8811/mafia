@@ -670,7 +670,7 @@ input.enter-exit:focus {
   width: 45px;
   height: 45px;
   padding: 0;
-  border: solid 2px var(--color-yellow);
+  border: solid 2px var(--color-grey);
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -2309,7 +2309,7 @@ p.pNote2 {
   margin-right: 10px;
   border-radius: 50%;
 
-  box-shadow: 0 0 0 2px var(--color-yellow);
+  box-shadow: 0 0 0 2px var(--color-grey);
   overflow: hidden;
 }
 
@@ -2452,7 +2452,7 @@ p.pNote2 {
   height: 80px;
   margin: 0 auto 8px;
   border-radius: 50%;
-  border: solid 2px var(--color-yellow);
+  border: solid 2px var(--color-grey);
   overflow: hidden;
 }
 
@@ -2770,7 +2770,7 @@ p.rarr {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: solid 3px var(--color-yellow);
+  border: solid 3px var(--color-grey);
   overflow: hidden;
   background-color: #ffffff;
 }
@@ -2900,7 +2900,7 @@ p.rarr {
   height: 75px;
   margin: 3px 0 0 3px;
   padding: 0;
-  box-shadow: 0 0 0 3px var(--color-yellow);
+  box-shadow: 0 0 0 3px var(--color-grey);
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -2980,7 +2980,7 @@ p.rarr {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: solid 2px var(--color-yellow);
+  border: solid 2px var(--color-grey);
 }
 
 .profileContainer .message-unit .text-pm {
@@ -3747,7 +3747,7 @@ table.items td {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px var(--color-yellow);
+  box-shadow: 0 0 0 2px var(--color-grey);
   overflow: hidden;
 }
 
@@ -3836,7 +3836,7 @@ table.items td {
   width: 110px;
   height: 110px;
   margin: 0 20px 0 0;
-  border: solid 3px var(--color-yellow);
+  border: solid 3px var(--color-grey);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -4068,7 +4068,7 @@ table.items td {
   height: 80px;
   margin: 0 auto 8px;
   border-radius: 50%;
-  border: solid 2px var(--color-yellow);
+  border: solid 2px var(--color-grey);
   overflow: hidden;
 }
 
@@ -4191,7 +4191,7 @@ table.items td {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: solid 3px var(--color-yellow);
+  border: solid 3px var(--color-grey);
   overflow: hidden;
   background-color: #ffffff;
 }
@@ -5309,7 +5309,7 @@ span.green {
   margin-right: 12px;
   padding: 0;
   border-radius: 50%;
-  border: solid 2px var(--color-yellow);
+  border: solid 2px var(--color-grey);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -6199,7 +6199,7 @@ p.friendsAdd {
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  border: solid 3px var(--color-yellow);
+  border: solid 3px var(--color-grey);
   flex-shrink: 0;
 }
 
@@ -6635,7 +6635,7 @@ p.friendsAdd {
   height: 45px;
   margin-right: 12px;
   border-radius: 50%;
-  border: solid 2px var(--color-yellow);
+  border: solid 2px var(--color-grey);
   overflow: hidden;
 }
 
