@@ -5318,6 +5318,10 @@ section.cover .coverChatContainer {
   margin-bottom: 16px;
 }
 
+.chatControl {
+  left: -29px;
+}
+
 .day section.cover,
 .night section.cover {
   display: block;
@@ -5353,7 +5357,7 @@ section.cover .chatViews {
   /*height: calc(100% - 96px);*/
   height: 320px;
   /*padding: 24px !important;*/
-  margin: 0 68px 68px 24px;
+  margin: 0 68px 68px 0;
 }
 
 .chatContainer .chatViews #chatText::before,
@@ -5385,7 +5389,7 @@ section.cover .chatViews {
 .chatContainer .chatViews .chatUsers {
   position: relative;
   z-index: 0;
-  width: 228px;
+  width: 252px;
   height: 320px;
   margin: 0;
 }
@@ -5519,7 +5523,7 @@ section.cover .coverChatContainer {
 }
 
 #chatText p.toMe {
-  background-color: var(--color-bg);
+  background-color: var(--color-grey);
 }
 
 .countUsersChat {
