@@ -6332,6 +6332,10 @@ section.cover .coverChatContainer {
   color: var(--color-green);
 }
 
+.chatUserLink a {
+  color: var(--color-main);
+}
+
 .soundTrigger {
 }
 .soundTrigger.soundOn {
