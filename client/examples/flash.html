@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <meta name="language" content="ru"/>
+    <title>test</title>
+    <style type="text/css" media="screen">
+        #publish {
+            width: 320px;
+            height: 240px;
+        }
+
+        #stream {
+            width: 320px;
+            height: 240px;
+        }
+
+    </style>
+    <script src="../js/vendor/swfobject/swfobject/swfobject.js"></script>
+    <script src="../js/vendor/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        serverUrl = 'localhost:1935/live';
+        streamName = 'sYZKjp6eQ5Sxr_w8AAAC';
+		
+        $(function () {
+		
+			swfobject.embedSWF("../as/publish/bin/publish.swf", 'publish', "100%", "100%", "11", false, {id:3, initCallback: function(){console.log('publish ok');}}, {}, {});
+
+            swfobject.embedSWF("../as/player/bin/player.swf", 'stream', "100%", "100%", "11", false, {initCallback: function(){console.log('player ok');}}, {}, {});
+
+            setTimeout(function () {
+                window.streamClient = swfobject.getObjectById("stream");
+                window.publishClient = swfobject.getObjectById("publish");
+            }, 1000);
+        });
+
+    </script>
+</head>
+<body>
+<div id="block">
+    <div  id="publish"></div>
+</div>
+
+<div id="streaming">
+    <h2>Публикация</h2>
+
+    <div>
+        <button onclick="publishClient.Connect(serverUrl, 'function(){console.log(\'connection complete\');}');">подключиться</button>
+        <button onclick="publishClient.Publish(streamName, 'function(){console.log(\'publish complete\');}');">опубликовать</button>
+        <button onclick="publishClient.Close();">close</button>
+		<button onclick="publishClient.PauseVideo();">выкл видео</button>
+        <button onclick="publishClient.PlayVideo();">вкл видео</button>
+        <button onclick="publishClient.PauseSound();">выкл аудио</button>
+        <button onclick="publishClient.PlaySound();">вкл аудио</button>
+	
+    </div>
+
+    <h2>Плеер</h2>
+
+    <div>
+	<button onclick="streamClient.Connect(serverUrl, 'function(){console.log(\'connection complete\');}');">Подключиться</button>
+        <button onclick="streamClient.Capture(streamName, 'function(){console.log(\'capture complete\');}');">получить видео</button>
+        <button onclick="streamClient.PlayVideo();">играть видео</button>
+        <button onclick="streamClient.PauseVideo();">пауза видео</button>
+        <button onclick="streamClient.PlaySound();">вкл. звук</button>
+        <button onclick="streamClient.PauseSound();">откл. звук</button>
+    </div>
+    <div  id="stream"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Мафия 3.0</title>
+
+	<link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html.js"></script>
+	<![endif]-->
+
+	<script data-main="js/init" src="../js/vendor/requirejs/require.js"></script>
+
+
+	<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/flipclock.css" type="text/css" media="screen"/>
+
+
+</head>
+<body class="day bgGreen">
+<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+<div class="wrapper">
+
+	<!-- Полоса загрузки игры -->
+	<div class="loadGame" id="loadGame" style="display: none">
+		<div class="loadGameTitle">Загрузка игры</div>
+		<div class="loadLine">
+			<div class="loadGreenLine" style="width:42%"></div>
+			<div class="percent"><span>0</span>%</div>
+			<div class="loadLineLeft"></div>
+			<div class="loadLineRight"></div>
+		</div>
+		<!--<div class="loadGameDesc">Загружаем элементы интерфейса ...</div>-->
+	</div>
+	<!-- /Полоса загрузки игры -->
+
+	<!--Окно видео в ожидании игры-->
+	<div class="gameStartVideoItem" id="meetingVideo" style="display: none">
+		<div class="num"></div>
+		<div class="userName"></div>
+	</div>
+	<!-- /Окно видео в ожидании игры-->
+
+	<!--Видео-->
+	<video id="video"></video>
+	<!---->
+
+	<!-- Окно ожидания  игры -->
+	<div class="gameStart" id="gameStart" style="display:none">
+		<div class="gameStartTop">
+			<div class="gameStartTitle">Ожидание игроков</div>
+			<div class="gameStartDesc">До начала игры:</div>
+
+			<!-- digital taimer -->
+			<div class="gameStartTimer">
+				<div></div>
+			</div>
+			<!-- /digital taimer -->
+
+			<div class="gameStartConect">Уже подключились:</div>
+
+			<!-- gamers -->
+			<div id="videoItems">
+
+			</div>
+
+
+			<!-- /gamers -->
+
+			<div class="buttons">
+				<a class="buttonRed" href="#">
+					<div class="cell">Выйти</div>
+				</a>
+			</div>
+		</div>
+		<div class="gameStartBottom"></div>
+	</div>
+	<!-- /Окно ожидания  игры -->
+	
+	<!-- Верхня панель -->
+	<div class="topPanel" id="panel" style="display: none">
+		<div class="brevnoBG">
+
+			<!-- Настройки -->
+			<div class="gameSetting"style="display: none">
+				<a class="config" href="#"></a>
+				<a class="gameControl" href="#"></a>
+				<div class="gameControlPopUp">
+					<p>Цвет фона</p>
+					<a href="#" class="greenBG on"></a><!-- Добавляемый класс: "on" -->
+					<a href="#" class="brownBG"></a>
+					<a href="#" class="blueBG"></a>
+					<div class="clr">
+						<a href="#" class="music"><span></span>Музыка</a><!-- Добавляемый класс: "off" -->
+					</div>
+					<div class="clr">
+						<a href="#" class="noice off"><span></span>Звуки игры</a><!-- Добавляемый класс: "off" -->
+						<div id="" class="slider"><div id="" class="knob"></div></div>
+					</div>
+					<div class="clr">
+						<a href="#" class="alert"><span></span>Оповещения</a><!-- Добавляемый класс: "off" -->
+						<div id="" class="slider"><div id="" class="knob"></div></div>
+					</div>
+				</div>
+			</div>
+			<!-- /Настройки -->
+
+			<!-- Аватарка -->
+			<div class="videoAvatar">
+				<video></video>
+				<div class="videoShadow"></div>
+				<div class="numberAvatar" style="display: none">12</div>
+			</div>
+			<!-- /Аватарка -->
+
+			<!-- Информация о игре -->
+			<div class="gameInfo">
+				<p>Название игры:</p>
+				<p class="gameTitle">Резня в Подольске</p>
+				<!-- Блок опций -->
+				<div class="gameOptionIcon">
+					<!-- изменяемые классы от опции: -->
+					<div class="optionItem hint--top hint--rounded" data-hint="" id="option_example" style="display: none"></div>
+				</div>
+				<!-- /Блок опций -->
+			</div>
+			<!-- /Информация о игре -->
+
+			<p class="dayStatus">Начало</p>
+
+			<!-- Часы -->
+			<div class="gameTimer">
+				<div></div>
+			</div>
+			<!-- /Часы -->
+
+			<p class="emceeTxt">Жители знакомятся</p><!-- Добавляемый класс: "green" для надписи типа "Вы говорите" -->
+
+			<!-- Кнопки под бревном (я всё сказал и др.) -->
+			<div class="longBiguttonContainer" style="display: none"><!-- Добавляемый класс: green или gray -->
+				<a href="#"><div class="cell">Я всё сказал</div></a><!-- Изменяемый текст -->
+				<div class="longBigButtonBG"></div>
+			</div>
+			<!-- /Кнопки под бревном (я всё сказал и др.) -->
+
+			<!-- Блок ролей -->
+			<div class="gameRoles">
+				<p>Роли в игре:</p>
+				<div class="roleItem hint--top hint--rounded" id="role_example" data-hint="" style="display: none"></div>
+			</div>
+			<!-- /Блок ролей -->
+
+			<a class="exit" href="#"><div class="cell">Выйти</div></a>
+		</div>
+	</div>
+	<!-- /Верхняя панель -->
+	
+		<!-- Блок видео окон -->
+		<div class="allVideoContainer">
+		
+			<!-- Одно видео окно -->
+			<div class="gamerVideoBlock"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">...</div><!-- Юзернейм пользователя -->
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a> <!-- Жалоба -->
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a> <!-- Кик -->
+					
+					<!-- Инфо о пользователе -->
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png"><!-- Аватар пользователя -->
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					<!-- /Инфо о пользователе -->
+					
+					<!-- Тексты в видео окне при соединении, ночные, сбежал -->
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст на ночном окне -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст при соединении -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<!-- /Тексты в видео окне при соединении, ночные, сбежал -->
+					
+					
+					<div class="soundLevel" style="width:80%"></div><!-- Индикатор уровня звука -->
+					<div class="gamerUserState">Мафия: Посажен в тюрьму</div><!-- Меняемый текст на плашке внизу окна -->
+					
+					<div class="gamerUserNumber">4</div><!-- Меняемый номер игрока под окном -->
+					
+					<!-- Круглые кнопки внизу окна -->
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<!-- /Круглые кнопки внизу окна -->
+					
+					<!-- Рамка видео блока -->
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'><!-- Временный видос -->
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					<!-- /Рамка видео блока -->
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			<!-- /Одно видео окно -->
+
+		</div>
+		<!-- /Блок видео окон -->
+
+	<!-- Блок диалоговых окон -->
+		<div class="popUpWindow" id="popUpWindow" style="display: none"><!-- Ставим класс "wide" для широкого окна -->
+			<div class="popUpInner">
+				<div class="windowContainer"><!-- error -->
+					<div class="popUpTitle">Заголовок</div><!-- Заголовок окна -->
+					<div class="borderT">
+						<div class="borderR">
+							<div class="borderB">
+								<div class="borderL">
+									<div class="popUpContent">
+									
+									</div>
+									<a class="button_86" href="#" style="display: none"><div class="cell">ОК</div></a>
+									<a class="button_bigRed" href="#" style="display: none"><div class="cell">Посадить всех</div></a>
+									<a class="button_green" href="#" style="display: none"><div class="cell">Помиловать всех</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="angleTL"></div>
+					<div class="angleTR"></div>
+					<div class="angleBR"></div>
+					<div class="angleBL"></div>
+				</div>
+			</div>
+		</div>
+	<!-- /Блок диалоговых окон -->
+
+</div>
+</body>
+</html>

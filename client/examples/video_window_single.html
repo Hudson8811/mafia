@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Мафия 3.0</title>
+
+        <link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html../js"></script>
+        <![endif]-->
+	<script src="../js/vendor/requi../js/requir../js"></script>
+
+
+	<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen" />
+
+
+
+</head>
+<body class="day bgGreen">
+	<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+	<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+	<div class="wrapper">
+
+		<!-- Блок видео окон -->
+		<div class="allVideoContainer" id="area" style="display: none">
+
+			<div class="gamerVideoBlock" id="area_window_example" style="display: none">
+				<!-- Добавляемые классы к gamerVideoBlock:
+				connecting(подключение), loading(загрузка), finish(успех загрузки),
+				info(инфо юзера),
+				red(красное окно), ban(забанен),
+				wantedStart(начало побега), wantedFinal(сбежал), jail(тюрьма), dead(умер),
+				videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью),
+				night(ночное затемнение),
+				vote(режим голосования), sex(для любовницы), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName"></div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Предупреждение" href="#" style="display: none"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#" style="display: none"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Имя не известно</p><!-- Меняемый текст -->
+						<p class="sex"><span class="sex">Неизвестно</span>, <span class="age">Неизвестно</span></p><!-- Меняемый текст -->
+						<p class="address">Местоположение неизвестно</p><!-- Меняемый текст -->
+						<p class="userRating">Рейтинг: <span>0</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep dummy-text">В этой игре ночное видео скрыто</div>
+					<div class="connect dummy-text">Соединяемся</div>
+					<div class="lossUser"></div><!-- Никнейм похищенного -->
+					<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+					<div class="gamerUserState"></div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">4</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL videoWindow">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+
+		</div>
+		<!-- /Блок видео окон -->
+			
+	</div>
+	<script language="JavaScript">
+		'use strict'
+
+		requi../js.config({
+			baseUrl:../js',
+			paths: {
+				jquery: './libs/jquery.min',
+				underscore: './libs/underscore',
+				clock: '/client/vendor/clock/compiled/flipclock'
+			},
+			shim: {
+				clock: ['jquery']
+			}
+		});
+
+		require([
+			'modules/render',
+			'modules/error',
+		], function (render, error) {
+			render.area.show();
+			var window1 = render.area.addWindow();
+			window1.setUsername('VaseninM');
+			window1.showModerFunction();
+//			window1.setStatus('prison', 'mafia');
+//			window1.setStatus('kicked');
+//			window1.setAction('knife');
+			window1.setDummy('connect');
+			setTimeout(function(){window1.setDummy()}, 3500);
+			$(window1).on('sound', function(e, elementEvent){
+				elementEvent.preventDefault();
+				this.toggleSound();
+			});
+			$(window1).on('video', function(e, elementEvent){
+				elementEvent.preventDefault();
+				this.toggleVideo();
+			});
+
+			var window2 = render.area.addWindow();
+			window2.setUsername('Pchol');
+			window2.setStatus('dead', 'commissar');
+			window2.setUserinfo({
+				name: 'Дима',
+				sex: 'М',
+				age: '15'
+			});
+			$(window2).on('info', function(e, elementEvent){
+				elementEvent.preventDefault();
+				this.toggleUserinfo();
+			});
+
+		});
+	</script>
+	
+</body>
+</html>

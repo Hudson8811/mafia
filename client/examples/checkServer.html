@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <meta name="language" content="ru"/>
+    <title>test</title>
+    <style type="text/css" media="screen">
+        #publish {
+            width: 320px;
+            height: 240px;
+        }
+
+        #stream {
+            width: 320px;
+            height: 240px;
+        }
+    </style>
+    <script src="../js/vendor/swfobject/swfobject/swfobject.js"></script>
+    <script src="../js/vendor/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        var publishClient;
+        var streamClient;
+	var serverUrl;
+        var streamName = 'sYZKjp6eQ5Sxr_w8AAA';
+
+        var init = function(url){
+
+            swfobject.embedSWF("../as/publish/bin/publish.swf", 'publish', "100%", "100%", "11", false, {initCallback: function(){console.log('publish ok');}}, {}, {});
+            swfobject.embedSWF("../as/player/bin/player.swf", 'stream', "100%", "100%", "11", false, {initCallback: function(){console.log('player ok');}}, {}, {});
+
+            serverUrl = url;
+            publishClient = swfobject.getObjectById("publish");
+            streamClient = swfobject.getObjectById("stream");
+        };
+
+        $(function () {
+            $('form').on('submit', function (e) {
+                $('#streaming').show();
+                $('#init').hide();
+                init($('.ip').val());
+                return false;
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="streaming" style="display:none">
+    <h2>Публикация</h2>
+
+    <div>
+        <button onclick="publishClient.Connect(serverUrl, 'function(){publishClient.Publish(streamName, \'function(){publishClient.PlayVideo(function(){}); publishClient.PlaySound(function(){});}\')}');">подключиться</button>
+    </div>
+
+    <div id="publish"></div>
+
+    <h2>Плеер</h2>
+
+
+    <div>
+	<button onclick="streamClient.Connect(serverUrl, 'function(){ streamClient.Capture(streamName, \'function(){streamClient.PlayVideo(function(){}); streamClient.PlaySound();}\'); }');">подключиться</button>
+   </div>
+    <div id="stream"></div>
+</div>
+
+<div id="init">
+    <p>Введите url сервера:</p>
+    <form action="">
+        <input class="ip" type="text"/>
+        <input type="submit"/>
+    </form>
+</div>
+
+</body>
+</html>

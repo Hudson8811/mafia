@@ -1,0 +1,1208 @@
+html { height:100%; }
+a{text-decoration:none}
+
+/***** BODY STYLE *****/
+body{height: 100%;margin: 0;padding: 0;text-align:center;font:16px/1.5em Arial, Helvetica, sans-serif; color: #f1f1f1;}
+/* GREEN */
+body.day.bgGreen{background: #141B0A url(../img/page_bg/bg_day_green.png) 50% 0;background-attachment: fixed}
+body.day.bgGreen .wrapper{background: url(../img/page_bg/bg_day_green_top.png) no-repeat 50% 55px;background-attachment: fixed}
+/* BLUE */
+body.day.bgBlue{background: url(../img/page_bg/bg_day_blue.png) 50% 0;background-attachment: fixed}
+body.day.bgBlue .wrapper{background: url(../img/page_bg/bg_day_blue_top.png) no-repeat 50% 55px;background-attachment: fixed}
+/* RED */
+body.day.bgBrown{background: url(../img/page_bg/bg_day_red.png) 50% 0;background-attachment: fixed}
+body.day.bgBrown .wrapper{background: url(../img/page_bg/bg_day_red_top.png) no-repeat 50% 55px;background-attachment: fixed}
+/* NIGHT */
+body.night{background: #0a0d14 url(../img/page_bg/bg_night_top.jpg) no-repeat 50% 0;background-attachment: fixed}
+/* PHOTO SET */
+body.day.photoSet_1{background: url(../img/page_bg/photoSet_1/euro.jpg) no-repeat fixed 50% 0 / cover;}
+body.day.photoSet_2{background: url(../img/page_bg/photoSet_2/town.jpg) no-repeat fixed 50% 0 / cover;}
+body.day.photoSet_3{background: url(../img/page_bg/photoSet_3/autumn.jpg) no-repeat fixed 50% 0 / cover;}
+
+
+/***** GENERAL LAYOUT *****/
+.atention, .atention2{display:none;}
+.atention, .atention2{position:absolute;width:300px;height:50px;top:50%;left:50%;margin:-25px 0 0 -150px;}
+.wrapper {min-height: 100%;height: 100%/*auto*//* !important;*/width:100%;margin: 0;padding: 0;position:relative;}
+
+
+/***** LOAD GAME ELEMENT *****/
+.loadGame{position:absolute;width:44%;margin-left:-22%;top:60%;left:50%;}
+.loadLine{height:26px;width:100%;margin:5% 0 3%;position:relative;}
+.loadLineLeft{height:26px;width:50%;position:absolute;top:0;left:-10px;padding-right:10px;background: url(../img/preloader/empty_line.png) no-repeat 0 0}
+.loadLineRight{height:26px;width:50%;position:absolute;top:0;right:-10px;padding-left:10px;background: url(../img/preloader/empty_line.png) no-repeat right center}
+.loadGreenLine{height:22px;position:absolute;top:2px;border-radius:12px;background: url(../img/preloader/green_line_bg.png) repeat-x}
+.loadGameTitle{color:#FAE1C5;font:italic 18px Georgia, Arial, Helvetica, sans-serif;}
+.percent{position:relative;color:#FAE1C5;font:italic 18px Georgia, Arial, Helvetica, sans-serif;text-shadow: 1px 1px 2px black}
+.loadGameDesc{color:#5A504B;}
+
+/***** POP-UP SERVER *****/
+.borderT, .borderR, .borderB, .borderL, .roleContainer{height:100%;width:100%;}
+.borderT{background: url(../img/mafia_dialog/border_top.png) repeat-x 0% 0%;}
+.borderL{background: url(../img/mafia_dialog/border_left.png) repeat-y 0% 0%;}
+.borderR{background: url(../img/mafia_dialog/border_right.png) repeat-y 100% 0%;}
+.borderB{background: url(../img/mafia_dialog/border_bottom.png) repeat-x 0% 100%;}
+.roleContainer{position:relative;background: url(../img/mafia_dialog/window_bg.png)}
+.angleTL, .angleTR, .angleBR, .angleBL{position:absolute;height:60px;width:60px;background: url(../img/mafia_dialog/angles.png) no-repeat;}
+.angleTL{top:-9px;left:-7px;background-position: 0% 0%;}
+.angleTR{top:-9px;right:-7px;background-position: 100% 0%}
+.angleBR{bottom:-5px;right:-7px;background-position: 100% 100%}
+.angleBL{bottom:-5px;left:-7px;background-position: 0% 100%}
+/*
+.popUpWindow{width: 400px;height: 500px;position:fixed;left:0; right:0;top:0; bottom:0;margin:auto;padding:20px;max-width:100%;max-height:100%;overflow:auto;z-index:930}
+.popUpInner{width: 400px;height: 500px;vertical-align:middle;display:table-cell;}
+.popUpWindow.wide{width: 700px;height: 530px;position:fixed;left:0; right:0;top:0; bottom:0;margin:auto;padding:20px;max-width:100%;max-height:100%;overflow:auto;z-index:930}
+.popUpWindow.wide .popUpInner{width: 700px;height: 530px;vertical-align:middle;display:table-cell;}
+*/
+.popUpWrapp{height: 100%;left: 0;overflow: auto;position: absolute;top: 0;width: 100%;z-index:930}
+.popUpWindow{display:table;height:100%;width:100%}
+.popUpInner{display:table-cell;text-align:center;vertical-align:middle}
+.windowContainer{display:inline-block;min-width:400px;max-width:760px}
+
+.windowContainer{position:relative;background: url(../img/mafia_dialog/window_bg.png)}
+.windowContainer.error{position:relative;background: #7F0101}
+.windowContainer.error p{color:#fff}
+.windowContainer.error .popUpContent a{color:#e4b379}
+.popUpContent{padding:40px 40px 30px 40px}
+.popUpContent{color:#946D56}
+.popUpContent p{color:#956E57;padding:10px 10px;}
+.popUpContent span{color:#F7E7C6;}
+span.green{color:#39CC00}
+.popUpContent video{display:block;width:320px;height:240px;}
+p.mySetting{padding-bottom:0}
+
+/* Заголовок окна */
+.popUpTitleContainer{display:block;position:absolute;height:60px;width:340px;top:-22px;left:50%;margin-left:-170px;color:#F7E7C6;font:20px Georgia, Arial, Helvetica, sans-serif;}
+.popUpTitle, .popUpTitle:before, .popUpTitle:after {background: url(../img/mafia_dialog/title_bg.png)}
+.popUpTitle {display: inline-block;position: relative;height: 49px;margin: 0 33px;background-position: 0 -60px;background-repeat: repeat-x;padding-top:11px;}
+.popUpTitle:before, .popUpTitle:after {content: "";position: absolute;top: 0;width: 33px;height: 60px;background-repeat: no-repeat}
+.popUpTitle:before {right: -33px;background-position: -33px 0}
+.popUpTitle:after {left: -33px;background-position: 0 0}
+
+/* Текст окна */
+.suspectItem{display:inline-block;width:200px;vertical-align:top;text-align:left;}
+.suspect{display:inline-block;vertical-align:middle;line-height:28px;width:200px;height:30px;background:#594234;color:#ff0000;margin:20px 0 5px 0;text-align:center}
+.popUpContent p.user{color:#F7E7C6;font-size:14px;padding:2px 0}
+.popUpContent p.numberVoters{color:#956E57;padding:0;border-bottom:1px dashed #956E57;margin-right:50px}
+
+/* Кнопки */
+.buttons{padding-bottom:20px}
+a.buttonRed .cell, a.buttonGreen .cell{height:48px}
+a.buttonRed, a.buttonRed:before, a.buttonRed:after {background: url(../img/buttons/button_red.png)}
+a.buttonGreen, a.buttonGreen:before, a.buttonGreen:after {background: url(../img/buttons/button_green.png)}
+
+a.buttonRed, a.buttonGreen {
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    margin: 0 36px;
+    background-position: 0 -48px;
+    background-repeat: repeat-x;
+	color:#E4B379;
+	text-transform:uppercase;
+	text-align:center;
+	font:16px Georgia, Arial, Helvetica, sans-serif;
+    text-decoration: none !important;
+}
+
+a.buttonRed:before, a.buttonRed:after, a.buttonGreen:before, a.buttonGreen:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 36px;
+    height: 48px;
+    background-repeat: no-repeat
+}
+
+a.buttonRed:before, a.buttonGreen:before {right: -36px;background-position: -36px 0}
+a.buttonRed:after, a.buttonGreen:after {left: -36px;background-position: 0 0}
+/**/
+a.buttonRed:hover, a.buttonGreen:hover {background-position: 0 -144px;}
+a.buttonRed:hover:before, a.buttonGreen:hover:before {background-position: -36px -96px}
+a.buttonRed:hover:after, a.buttonGreen:hover:after {background-position: 0 -96px}
+/**/
+a.buttonRed:active, a.buttonGreen:active {background-position: 0 -240px;}
+a.buttonRed:active:before, a.buttonGreen:active:before {background-position: -36px -192px}
+a.buttonRed:active:after, a.buttonGreen:active:after {background-position: 0 -192px}
+
+
+.checkCameraCenter video {margin: 0 auto}
+
+/* Покупка места в игре */
+.byPlaceItem{height:56px;width:200px;margin:0 0;padding-left:15px;display:inline-block;background: url(../img/brevno/game_control/bg_control_line.jpg) no-repeat}
+.byPlaceItem:hover{}
+.byFree .placeItem, .byLock .placeItem{width:37px;height:38px;margin:10px 5px 0 0;background: url(../img/brevno/game_control/control_bg.png) no-repeat}
+.byLock .placeItem		{background-position: 0 0;}
+.byFree .placeItem		{background-position: -37px 0;}
+.placeItem{color:#fae1c5;font-size:22px;font-weight:bold;line-height:39px;text-align:center}
+.byPlaceItem .placeItemText p.by{display:none}
+ .byPlaceItem.byFree:hover .placeItemText p.by{display:block;}
+ .byPlaceItem.byLock:hover .placeItemText p.by{display:none;}
+.placeItemText{padding:5px 0 0 10px}
+.placeItemText p{padding:12px 0 0 5px}
+ .byPlaceItem.byFree:hover .placeItemText p.price{display:none}
+.popUpContent span.bought {color:#956e57}
+.byFree .bought{display:none}
+.byLock .money{display:none}
+
+.byPlaceNow{position:absolute;top:200px;right:40px;width:20px;overflow:hidden;white-space:nowrap;padding:10px 5px 10px;background:#0c0706;border-radius:16px 0 0 16px;border:2px solid #452921;border-right:none;transition:width 0.5s ease 0s}
+.byPlaceNow:hover{width:150px;padding-right:10px;transition:width 0.5s ease 0s}
+.byPlaceNow .money{background-position:0 -3px}
+
+
+/***** РЕКЛАМА НОЧЬЮ *****/
+.addNight{position:absolute;width:1000px;left:50%;margin: 160px 0 0 -500px;}
+.addNight img{width:100%;float:left}
+.addImgContainer{min-height:120px;padding:7px 7px 1px;position: relative;}
+.slideImg{height:600px; width:677px;padding-right:9px;float:left;background: url(../img/mafia_dialog/border_right.png) repeat-y scroll 100% 0%;}
+.slideImg p.title{font:italic bold 18px Georgia,Arial,Helvetica,sans-serif;color:#FAE2C6;padding-bottom:15px}
+.slideImg p.title span{font:normal 15px Georgia,Arial,Helvetica,sans-serif;color:#956E57}
+.slideImg p{color:#956e57;}
+.bnsOnSlideImg{float:right;height:600px;width:300px;position:relative;z-index:1;}
+/* кнопка */
+.addImgContainer .buttons{position:absolute;bottom:60px;width:100%}
+a.gButtonLiteBrown, a.gButtonLiteBrown:before, a.gButtonLiteBrown:after {background: url(../img/buttons/button_brown.png)}
+a.gButtonLiteBrown {
+    display: inline-block;
+    position: relative;
+    height: 27px;
+    margin: 0 10px;
+    background-position: 0 -27px;
+    background-repeat: repeat-x;
+    color:#FAE1C5;
+	/*text-transform:uppercase;*/
+	text-align:center;
+	font-size:16px;
+	line-height: 24px;
+    text-decoration: none !important;
+    text-shadow: 0px -1px 0px #341E12
+}
+a.gButtonLiteBrown:before, a.gButtonLiteBrown:after {content: "";position: absolute;top: 0;width: 10px;height: 27px;background-repeat: no-repeat}
+a.gButtonLiteBrown:before {right: -10px;background-position: -5px -54px}
+a.gButtonLiteBrown:after {left: -10px;background-position: 0 0}
+
+/* кнопка 2 */
+a.gButtonLiteGreen, a.gButtonLiteGreen:before, a.gButtonLiteGreen:after {background: url(../img/buttons/g_button_green.png)}
+a.gButtonLiteGreen {
+    display: inline-block;
+    position: relative;
+    height: 27px;
+    margin: 0 10px;
+    background-position: 0 -27px;
+    background-repeat: repeat-x;
+	color:#FAE1C5;
+	text-align:center;
+	font-size:16px;
+    line-height: 24px;
+    text-decoration: none !important;
+    text-shadow: 0px -1px 0px #341E12
+}
+a.gButtonLiteGreen:before, a.gButtonLiteGreen:after {content: "";position: absolute;top: 0;width: 10px;height: 27px;background-repeat: no-repeat}
+a.gButtonLiteGreen:before {right: -10px;background-position: -5px -54px}
+
+a.gButtonLiteGreen:after {left: -10px;background-position: 0 0}
+
+
+/***** GAME START *****/
+.parent{height: 100%; left: 0px; overflow: auto; position: absolute; top: 0px; width: 100%;}
+.tablePosition{display:table;margin:0 auto;height:100%;overflow:hidden}
+.gameStart{display:table-cell;vertical-align:middle}
+.gameStartTop{position:relative;width:1010px;min-height:528px;background: url(../img/game_start/window_wait_top.png);}
+.gameStartBottom{width:1010px;height:61px;background: url(../img/game_start/window_wait_bottom.png) no-repeat center bottom;}
+.gameStartTitle{display:block;color:#fff;font:20px Georgia, Arial, Helvetica, sans-serif;padding:23px 0;}
+.gameStartDesc{display:block;color:#FAE1C5;font:bold 16px Georgia, Arial, Helvetica, sans-serif;}
+.gameStartTimer{display:block;width:324px;height:98px;padding:12px 0 0 16px;margin:10px auto 1% auto;background: url(../img/digital_timer/clock_big.png);}
+.gameStartConect{display:block;color:#956E57;font:italic bold 14px Georgia, Arial, Helvetica, sans-serif;height:20px}
+.gameStartFond {display:none;color:#956E57;font:italic bold 18px Georgia, Arial, Helvetica, sans-serif;height:20px; margin:15px 0;}
+.gameStartVideoItem {width: 106px;height: 81px;display: inline-block;margin:2%; z-index:2}
+.gameStartVideoItem .ramka{width: 106px;height: 78px;padding-top:3px;vertical-align: middle;position:relative;background: url(../img/game_start/empty.png) no-repeat;z-index:2}
+.gameStartVideoItem video{width: 100px;height: 75px;margin:0 0 0 3px;border-radius:8px;display:block;}
+.userName{color:#956E57;font-size:12px;padding-top:4px}
+.num1, .num2, .num3, .num4,
+.num5, .num6, .num7, .num8,
+.num9, .num10, .num11, .num12{width: 106px;height: 81px;border-radius:10px;background: url(../img/game_start/brown_number.png) no-repeat;}
+.num1 {background-position: 50% 0px}
+.num2 {background-position: 50% -60px}
+.num3 {background-position: 50% -120px}
+.num4 {background-position: 50% -180px}
+.num5 {background-position: 50% -240px}
+.num6 {background-position: 50% -300px}
+.num7 {background-position: 50% -360px}
+.num8 {background-position: 50% -420px}
+.num9 {background-position: 50% -480px}
+.num10{background-position: 50% -540px}
+.num11{background-position: 50% -600px}
+.num12{background-position: 50% -660px}
+video{}
+.gameStart .buttons{width:100%;padding:0;position:absolute;bottom:-35px;}
+.videoItems{padding:0 0 80px 0;}
+.videoLeadingItem{padding:0 0 0 0;}
+.leadingBlock{height:81px;width:106px;padding:0px;float:right;margin-top:-19px;}
+.dataLeading{position:absolute;width:18px;height:60%;right:-22px;top:0;}
+
+
+.sayOff{position:absolute !important;top:15px;left:15px;height:32px;width:32px;background:url(../img/video_windows/sound_off.png) no-repeat;z-index: 3}
+
+
+/***** ROLE WINDOW *****/
+.roleIcon{height:190px;width:auto;margin:-40px auto 0 auto;}
+.roleIcon.civilian	{background: url(../img/roles/civilian.png) no-repeat 50% 100%;}
+.roleIcon.commissar	{background: url(../img/roles/commissar.png) no-repeat 50% 100%;}
+.roleIcon.doctor	{background: url(../img/roles/doctor.png) no-repeat 50% 100%;}
+.roleIcon.mafia		{background: url(../img/roles/mafia.png) no-repeat 50% 100%;}
+.roleIcon.boss		{background: url(../img/roles/mafia_boss.png) no-repeat 50% 100%;}
+.roleIcon.maniac	{background: url(../img/roles/maniac.png) no-repeat 50% 100%;}
+.roleIcon.whore		{background: url(../img/roles/whore.png) no-repeat 50% 100%;}
+.roleIcon.viewer	{background: url(../img/roles/viewer.png) no-repeat 50% 100%;}
+.roleIcon.leading	{background: url(../img/roles/leading.png) no-repeat 50% 100%;}
+p.roleType{color:#FAE2C6;font-size:24px;padding:0 40px 10px 40px;}
+
+
+/***** BREVNO *****/
+.topPanel{width:1000px;position:absolute;top:0;left:50%;margin-left:-500px;}
+.brevnoBG{position:relative;height:140px;width:1000px;margin:0 auto;background: url(../img/brevno/brevno_bg.png) no-repeat 50% 0%;}
+.gameSetting{position:absolute;width:18px;height:60%;left:2%;top:14%;}
+.videoAvatar{position:absolute;width: 106px;height: 81px;top:24px;left:4%;background: url(../img/game_start/empty.png);z-index:20;}
+.videoAvatar.red{background: url(../img/brevno/empty_red.png);}
+.videoLeading{position:relative;height:81px;width:106px;background: url(../img/game_start/empty.png) no-repeat 50% 50%;z-index:22;}
+.leadingBlock.nightVideoHide{border-radius:10px;background: #10121e url(../img/video_windows/additional/sleep_2.png) no-repeat scroll 50% 50% / cover;}
+.leadingBlock.nightVideoHide video, .leadingBlock.wantedStart video, .leadingBlock.wantedFinal video {display:none;}
+.leadingBlock.wantedStart{border-radius:10px;background: url(../img/video_windows/additional/wanted_start_2.jpg) no-repeat scroll 50% 50% / cover  rgba(0, 0, 0, 0);}
+.leadingBlock.wantedFinal{border-radius:10px;background: url(../img/video_windows/additional/wanted_final_2.jpg) no-repeat scroll 50% 50% / cover  rgba(0, 0, 0, 0);}
+.videoAvatar video, .videoLeading video{width: 100px;height: 75px;border-radius:8px;display:block;position:relative;top:3px;left:3px;}
+.videoLeading video{}
+.viewerAvatar{position:absolute;width: 106px;height: 81px;top:24px;left:4%;background: url(../img/brevno/viewerAvatar.png);}
+.zoomIn{position:absolute;top:0;width: 106px;height: 81px;background: url(../img/brevno/buttons/zoom_in.png) no-repeat 50% 50%;cursor:pointer;display:none}
+.zoomOut{position:absolute;top:0;width: 106px;height: 81px;background: url(../img/brevno/buttons/zoom_out.png) no-repeat 50% 50%;cursor:pointer;display:none}
+.videoAvatar:hover .zoomIn, .videoAvatar:hover .zoomOut{display:block}
+.videoLeading:hover .zoomIn, .videoLeading:hover .zoomOut{display:block}
+.videoLeading:hover .zoomIn{z-index:22}
+.videoAvatarWide, .videoLeadingAvatarWide{position:absolute;height:188px;width:247px;padding:3px;background: url(../img/brevno/zoom_bg.png) no-repeat 50% 0%;border-radius:10px}
+.videoLeadingAvatarWide.wantedStart{position:absolute;height:188px;width:247px;padding:3px;border-radius:10px;background: url(../img/brevno/zoom_bg.png) no-repeat 50% 50%, url(../img/video_windows/additional/wanted_start_2.jpg) no-repeat scroll 50% 50% / cover}
+.videoLeadingAvatarWide.wantedFinal{position:absolute;height:188px;width:247px;padding:3px;border-radius:10px;background: url(../img/brevno/zoom_bg.png) no-repeat 50% 50%, url(../img/video_windows/additional/wanted_final_2.jpg) no-repeat scroll 50% 50% / cover}
+.videoLeadingAvatarWide.wantedStart video, .videoLeadingAvatarWide.wantedFinal video{display:none}
+/*.videoLeadingAvatarWide.wantedStart .lossUser{display:block}*/
+.videoAvatarWide{top:5%;left:5%;z-index:25;}
+.videoLeadingAvatarWide{top:5%;right:5%;z-index:27;}
+.videoAvatarWide video, .videoLeadingAvatarWide video{height:188px;width:247px;display:block;}
+.videoAvatarWide.red{position:absolute;height:188px;width:247px;padding:3px;background: url(../img/brevno/zoom_bg.png) no-repeat 50% 100%;}
+
+
+
+/*.videoShadow{position:absolute;top:0;width: 100px;height: 75px;margin:3px;border-radius:8px;
+-webkit-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,1);
+-moz-box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,1);
+box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,1);}*//* не используется с swf */
+.numberAvatar{position:absolute;height:28px;width:61px;padding-top:3px;bottom:-26px;left:50%;margin-left:-31px;color:#FADFC2;background: url(../img/brevno/user_number.png) no-repeat;font-weight:bold;}
+.gameInfo{position:absolute;height:70px;width:255px;top:26px;left:155px;text-align:left;}
+.gameInfo p{color:#956E57;font:italic 15px Georgia, Arial, Helvetica, sans-serif;}
+.gameOptionIcon{padding-top:2%;font:italic 15px Georgia, Arial, Helvetica, sans-serif;}
+.optionItem{position: relative;display: inline-block;width: 18px;height: 18px;margin:2px 6px 2px 0;cursor:pointer;opacity: 0.5;background: url(../img/brevno/icons_game_options.png) no-repeat}
+/*.optionItem:hover{opacity: 1;}*/
+.optionItem.yesTalk				{background-position: 0 0;}
+.optionItem.noTalk				{background-position: -18px 0;}
+.optionItem.yesShowVote			{background-position: 0 -18px;}
+.optionItem.noShowVote			{background-position: -18px -18px;}
+.optionItem.yesDeadLastTalk		{background-position: 0 -36px;}
+.optionItem.noDeadLastTalk		{background-position: -18px -36px;}
+.optionItem.yesShowCheckResult	{background-position: 0 -54px;}
+.optionItem.noShowCheckResult	{background-position: -18px -54px;}
+.optionItem.yesShowNightWindow	{background-position: 0 -72px;}
+.optionItem.noShowNightWindow	{background-position: -18px -72px;}
+.optionItem.yesOnlyFirstNight	{background-position: -18px -90px;}
+.optionItem.noOnlyFirstNight	{background-position: 0 -90px;}
+.optionItem.yesRolePrisoned		{background-position: 0 -108px;}
+.optionItem.noRolePrisoned		{background-position: -18px -108px;}
+.optionItem.yesShowRole			{background-position: 0 -126px;}
+.optionItem.noShowRole			{background-position: -18px -126px;}
+.optionItem.leading				{background-position: -36px -126px;}
+.optionItem.classicVote			{background-position: 0 -144px;}
+.optionItem.noClassicVote		{background-position: -18px -144px;}
+.optionItem.noMute				{background-position: 0 -162px;}
+.optionItem.mute				{background-position: -18px -162px;}
+
+p.gameTitle{color:#FAE2C6;padding-top:0.2%;font:bold 18px Georgia, Arial, Helvetica, sans-serif;}
+p.gameFond {display:none;}
+.config, .gameControl{display:block;width:16px;height:16px;margin:6px 0;background: url(../img/brevno/game_setting.png) no-repeat}
+.config				{background-position: 0 0;}
+.config:hover		{background-position: 0 -16px;}
+.config:active		{background-position: 0 -32px;}
+.gameControl		{background-position: -16px 0;}
+.gameControl:hover	{background-position: -16px -16px;}
+.gameControl:active	{background-position: -16px -32px;}
+
+.gameControlPopUp{position:absolute;left:-20px;top:42px;z-index:50;border:1px solid #69493B;border-top-color:#855F4D;border-bottom-color:#593F33;border-radius:10px;background: url(../img/brevno/game_control/popup_bg.jpg) repeat-x;
+-webkit-box-shadow: 	0px 0px 10px 10px rgba(0,0,0,0.3);
+-moz-box-shadow: 		0px 0px 10px 10px rgba(0,0,0,0.3);
+box-shadow: 			0px 0px 10px 10px rgba(0,0,0,0.3);
+}
+.gameControlPopUp{width:300px;}
+.gameControlPopUp .gameControlRight{display:none;}
+.gameControlPopUp.userGamer{width:600px;}
+.gameControlPopUp.userGamer .gameControlRight{display:block;}
+.gameControlPopUp:before{position:absolute;height:13px;width:26px;top:-13px;left:15px;content:"";background: url(../img/brevno/game_control/popup_triangle.png) no-repeat;}
+.gameControlLeft, .gameControlRight{text-align:left;}
+.gameControlLeft{width:285px;padding:10px 0 15px 15px;float:left} 
+.gameControlRight{width:277px;padding:10px 0 15px 23px;float:right}
+.gameControlPopUp p{color:#FAE2C6;padding:0;margin:0}
+.gameControlPopUp p.clr{padding-top:15px}
+.gameControlRight .videoHere{height:190px;width:253px;margin:10px 0;}
+.gameControlRight .videoHere video{height:190px;width:253px;}
+a.flashSettingButton{color:#5e463c;cursor:pointer;font:italic 15px Georgia, Arial, Helvetica, sans-serif;padding:5px 10px;border:1px solid #5e463c;border-radius:5px;box-shadow:0 0 20px rgba(29, 22, 18, 1) inset;}
+a.flashSettingButton:hover{color:#946d56;border:1px solid #946d56}
+.gameColorBg{height:56px;margin:10px 0 10px -15px;padding-left:15px;background: url(../img/brevno/game_control/bg_control_line.jpg) no-repeat}
+.settingVideoContainer{height:188px;width:247px;padding:3px;position:absolute;background: url(../img/brevno/zoom_bg.png) no-repeat;z-index:52}
+.settingVideoContainer video, .video55{height:188px;width:247px;/*margin:3px;*/display:block;}
+/*.controlBG{position:absolute;height:38px;left:30px;top:68px;}*/
+.greenBG, .blueBG, .brownBG{width:37px;height:38px;display:inline-block;margin:10px 5px 0 0;background: url(../img/brevno/game_control/control_bg.png?v=1) no-repeat}
+.brownBG		{background-position: 0 0;}
+.greenBG		{background-position: -37px 0;}
+.blueBG			{background-position: -74px 0;}
+.brownBG:hover	{background-position: 0 -38px;}
+.greenBG:hover	{background-position: -37px -38px;}
+.blueBG:hover	{background-position: -74px -38px;}
+.brownBG.on, .greenBG.on, .blueBG.on{cursor:default}
+.brownBG.on		{background-position: 0 -76px;}
+.greenBG.on		{background-position: -37px -76px;}
+.blueBG.on		{background-position: -74px -76px;}
+
+.photoSet1BG, .photoSet2BG, .photoSet3BG{width:37px;height:38px;display:inline-block;margin:10px 5px 0 0;background: url(../img/brevno/game_control/control_bg.png?v=1) no-repeat}
+.photoSet1BG		{background-position: -111px 0;}
+.photoSet2BG		{background-position: -148px 0;}
+.photoSet3BG		{background-position: -185px 0;}
+.photoSet1BG:hover	{background-position: -111px -38px;}
+.photoSet2BG:hover	{background-position: -148px -38px;}
+.photoSet3BG:hover	{background-position: -185px -38px;}
+.photoSet1BG.on, .photoSet2BG, .photoSet3BG.on{cursor:default}
+.photoSet1BG.on		{background-position: -111px -76px;}
+.photoSet2BG.on		{background-position: -148px -76px;}
+.photoSet3BG.on		{background-position: -185px -76px;}
+
+/*.dataLeadingPopUp{position:absolute;right:-20px;top:42px;z-index:50;border:1px solid #69493B;border-top-color:#855F4D;border-bottom-color:#593F33;border-radius:10px;background: url(../img/brevno/game_control/popup_bg.jpg) repeat-x;
+-webkit-box-shadow: 	0px 0px 10px 10px rgba(0,0,0,0.3);
+-moz-box-shadow: 		0px 0px 10px 10px rgba(0,0,0,0.3);
+box-shadow: 			0px 0px 10px 10px rgba(0,0,0,0.3);
+}
+.dataLeadingPopUp{width:280px;}
+.dataLeadingPopUp:before{position:absolute;height:13px;width:26px;top:-13px;right:15px;content:"";background: url(../img/brevno/game_control/popup_triangle.png) no-repeat;}
+.dataLeadingContent{padding:15px}
+.dataLeadingContent img{float:right;width:75px;height:75px;}
+.dataLeadingContent a {color:#fae1c5;font-weight:bold;text-decoration:underline;font-style:italic}
+.dataLeadingContent p{color:#FAE2C6;padding:0;margin:0;font:16px/1.5em Arial,Helvetica,sans-serif}*/
+
+
+.dayStatus{color:#956E57;padding:1.7% 0 0.2% 0;font: 15px Georgia, Arial, Helvetica, sans-serif;}
+.emceeTxt{color:#FAE2C6;padding-top:0.4%;font: 16px Georgia, Arial, Helvetica, sans-serif;}
+.emceeTxt.green{color:#00FC08;}
+.gameTimer{height:46px;width:145px;padding:4px 0 0 5px;margin:0 auto;background: url(../img/digital_timer/clock_small.png) no-repeat 50% 0%;}
+a.exit{position:absolute;height:50px;width:70px;padding:20px 0 0 6px;top:20%;right:3%;color:#E4B379;font:italic 16px Georgia, Arial, Helvetica, sans-serif;background: url(../img/brevno/exit.png) no-repeat 50% 0%;}
+a.exit div{height:50px;width:70px;}
+.gameRoles{position:absolute;/*height:60px;*/width:270px;top:20px;right:130px;color:#956E57;text-align:left;font:italic 15px Georgia, Arial, Helvetica, sans-serif;}
+.gameRoles p{padding-bottom:5px;}
+.roleItem{position: relative;display: inline-block;width: 18px;height: 18px;margin:0;cursor:pointer;opacity: 0.6;background: url(../img/brevno/icons_game_options.png) no-repeat}
+.roleItem:hover, .optionItem:hover{
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease-out;
+	-moz-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
+}
+.roleItem.civilian	{background-position: -36px 0;}
+.roleItem.boss		{background-position: -36px -18px;}
+.roleItem.mafia		{background-position: -36px -36px;}
+.roleItem.commissar	{background-position: -36px -54px;}
+.roleItem.doctor	{background-position: -36px -72px;}
+.roleItem.maniac	{background-position: -36px -90px;}
+.roleItem.whore		{background-position: -36px -108px;}
+.roleItem.leading	{background-position: -36px -126px;}
+
+/*.longBiguttonContainer{position:absolute;left:50%;margin-left:-110px;bottom:-30px;}
+.longBiguttonContainer.green .longBigButtonBG{height:55px;width:220px;background: url(../img/brevno/220.png) no-repeat 50% 0%;}
+.longBiguttonContainer.gray .longBigButtonBG{height:55px;width:220px;background: url(../img/brevno/220.png) no-repeat 50% -110px;}
+.longBiguttonContainer a{position:absolute;display:block;height:37px;width:172px;margin:0 24px;text-transform:uppercase;font: 16px Georgia, Arial, Helvetica, sans-serif;}
+.longBiguttonContainer.green a{color:#F7E7C6;}
+.longBiguttonContainer.gray a{color:#383838;}
+.longBiguttonContainer a div{width:174px;height:37px;}
+.longBiguttonContainer.green a:hover + .longBigButtonBG{background: url(../img/brevno/220.png) no-repeat 50% -55px;}
+.longBiguttonContainer.gray a:hover + .longBigButtonBG{background: url(../img/brevno/220.png) no-repeat 50% -165px;}*/
+
+.longBiguttonContainer{position:absolute;width:100%;/*height:38px;*/top:116px;text-align:center}
+
+.longBiguttonContainer a.green .leftButtonBg,
+.longBiguttonContainer a.green .rightButtonBg,
+.longBiguttonContainer a.red .leftButtonBg,
+.longBiguttonContainer a.red .rightButtonBg,
+.longBiguttonContainer a.gray .leftButtonBg,
+.longBiguttonContainer a.gray .rightButtonBg{height:40px;width:57px;display:inline-block;padding-top:10px}
+
+.longBiguttonContainer a.green .centerButtonBg,
+.longBiguttonContainer a.red .centerButtonBg,
+.longBiguttonContainer a.gray .centerButtonBg{height:40px;display:inline-block;padding-top:10px;/*box-shadow: 0 15px 15px -15px black;*/}
+
+.longBiguttonContainer a.green .leftButtonBg{background: url(../img/brevno/220.png) no-repeat 0% 0%;}
+.longBiguttonContainer a.green .rightButtonBg{background: url(../img/brevno/220.png) no-repeat 100% 0%;}
+.longBiguttonContainer a.green .centerButtonBg{background: url(../img/brevno/220.png) repeat-x 100% -55px;}
+.longBiguttonContainer a.red .leftButtonBg{background: url(../img/brevno/220.png) no-repeat 0% -440px;}
+.longBiguttonContainer a.red .rightButtonBg{background: url(../img/brevno/220.png) no-repeat 100% -440px;}
+.longBiguttonContainer a.red .centerButtonBg{background: url(../img/brevno/220.png) repeat-x 100% -495px;}
+.longBiguttonContainer a.gray .leftButtonBg{background: url(../img/brevno/220.png) no-repeat 0% -220px;}
+.longBiguttonContainer a.gray .rightButtonBg{background: url(../img/brevno/220.png) no-repeat 100% -220px;}
+.longBiguttonContainer a.gray .centerButtonBg{background: url(../img/brevno/220.png) repeat-x 100% -275px;}
+
+.longBiguttonContainer a.green:hover .leftButtonBg{background: url(../img/brevno/220.png) no-repeat 0% -110px;}
+.longBiguttonContainer a.green:hover .rightButtonBg{background: url(../img/brevno/220.png) no-repeat 100% -110px;}
+.longBiguttonContainer a.green:hover .centerButtonBg{background: url(../img/brevno/220.png) repeat-x 100% -165px;}
+.longBiguttonContainer a.red:hover .leftButtonBg{background: url(../img/brevno/220.png) no-repeat 0% -550px;}
+.longBiguttonContainer a.red:hover .rightButtonBg{background: url(../img/brevno/220.png) no-repeat 100% -550px;}
+.longBiguttonContainer a.red:hover .centerButtonBg{background: url(../img/brevno/220.png) repeat-x 100% -605px;}
+.longBiguttonContainer a.gray:hover .leftButtonBg{background: url(../img/brevno/220.png) no-repeat 0% -330px;}
+.longBiguttonContainer a.gray:hover .rightButtonBg{background: url(../img/brevno/220.png) no-repeat 100% -330px;}
+.longBiguttonContainer a.gray:hover .centerButtonBg{background: url(../img/brevno/220.png) repeat-x 100% -385px;}
+
+.longBiguttonContainer a{display:inline-block;text-transform:uppercase;font: 16px Georgia, Arial, Helvetica, sans-serif;}
+.centerButtonBg p{margin:0 -15px;position:relative}
+
+.longBiguttonContainer a.green {color:#F7E7C6;}
+.longBiguttonContainer a.red {color:#F7E7C6;}
+.longBiguttonContainer a.gray {color:#383838;}
+
+.longBiguttonContainer a.outcryButton{position:absolute;left:30px;color:#F7E7C6;background: url(../img/brevno/220.png) repeat-x 100% -495px;width:40px;height:28px;display:block;padding-top:8px;border-radius: 0 0 50% 50%;text-transform:none}
+.longBiguttonContainer a.outcryButton:hover{background: url(../img/brevno/220.png) repeat-x 100% -605px;}
+
+.checkbox{display:block;color:#946D56;margin:15px 0 0 0;font-size:14px;float:left}
+.checkbox span{display:inline-block;height:25px;width:25px;background: url(../img/brevno/game_control/check_box.png) no-repeat 0 -25px;vertical-align:top;margin-right:5px}
+.checkbox.off span{background-position: 0 0}
+
+.slider {
+background: url(../img/brevno/game_control/track.png) no-repeat 0 50%;
+width:132px;height:20px;float:right;margin:18px 30px 0 0;
+}
+/*.knob {
+position: relative;
+background: url(../img/brevno/game_control/slider.png) no-repeat;
+width:19px;height:20px;cursor:pointer; 
+}*/
+
+
+
+/***** GAME ELEMENT *****/
+.allVideoContainer{padding:160px 30px 0 30px;/*max-width:1700px;*/margin:0 auto}
+.gamerVideoBlock{height:/*191*/240px;width:/*253*/320px;display: inline-block;margin:12px/* 7px 12px 7px*/;vertical-align:middle;box-shadow:0 0 10px rgba(0,0,0,1)}
+.videoBorderT, .videoBorderR, .videoBorderB, .videoBorderL, .videoContainer{height:100%;width:100%;top:0;left:0}
+.videoBorderT, .videoBorderR, .videoBorderB, .videoBorderL{position:absolute}
+.videoContainer{position:relative; z-index:18;}
+.videoBorderT{background: url(../img/video_windows/border/border_top.png) repeat-x 0% 0%;}
+.videoBorderL{background: url(../img/video_windows/border/border_left.png) repeat-y 0% 0%;}
+.videoBorderR{background: url(../img/video_windows/border/border_right.png) repeat-y 100% 0%;}
+.videoBorderB{background: url(../img/video_windows/border/border_bottom.png) repeat-x 0% 100%;}
+
+/* Убитый, посаженный, сбежавший, бан */
+.gamerVideoBlock.jail .videoBorderT,
+.gamerVideoBlock.ban .videoBorderT,
+.gamerVideoBlock.wantedFinal .videoBorderT,
+.gamerVideoBlock.dead .videoBorderT{background: url(../img/video_windows/border/border_top_gray.png) repeat-x 0% 0%;}
+.gamerVideoBlock.jail .videoBorderL,
+.gamerVideoBlock.ban .videoBorderL,
+.gamerVideoBlock.wantedFinal .videoBorderL,
+.gamerVideoBlock.dead .videoBorderL{background: url(../img/video_windows/border/border_left_gray.png) repeat-y 0% 0%;}
+.gamerVideoBlock.jail .videoBorderR,
+.gamerVideoBlock.ban .videoBorderR,
+.gamerVideoBlock.wantedFinal .videoBorderR,
+.gamerVideoBlock.dead .videoBorderR{background: url(../img/video_windows/border/border_right_gray.png) repeat-y 100% 0%;}
+.gamerVideoBlock.jail .videoBorderB,
+.gamerVideoBlock.ban .videoBorderB,
+.gamerVideoBlock.wantedFinal .videoBorderB,
+.gamerVideoBlock.dead .videoBorderB{background: url(../img/video_windows/border/border_bottom_gray.png) repeat-x 0% 100%;}
+.gamerVideoBlock.jail .videoContainer .additional{display:block;cursor:default;background: url(../img/video_windows/additional/jail_2.png) no-repeat 50% 50% / cover;}
+.gamerVideoBlock.dead .videoContainer .additional{display:block;cursor:default;background: url(../img/video_windows/additional/dead.png) no-repeat 50% 50%;}
+
+/* red */
+.gamerVideoBlock.red .videoBorderT{background: url(../img/video_windows/border/border_top_red.png) repeat-x 0% 0%;}
+.gamerVideoBlock.red .videoBorderL{background: url(../img/video_windows/border/border_left_red.png) repeat-y 0% 0%;}
+.gamerVideoBlock.red .videoBorderR{background: url(../img/video_windows/border/border_right_red.png) repeat-y 100% 0%;}
+.gamerVideoBlock.red .videoBorderB{background: url(../img/video_windows/border/border_bottom_red.png) repeat-x 0% 100%;}
+
+/* Видео контейнер и углы */
+.videoContainer video{display:block;position:absolute}
+.videoAngleTL, .videoAngleTR, .videoAngleBR, .videoAngleBL{position:absolute;height:61px;width:61px;background: url(../img/video_windows/border/video_angles.png) no-repeat;/*z-index:12*/}
+.videoAngleTL{top:-11px;left:-10px;background-position: 0% 0%;}
+.videoAngleTR{top:-11px;right:-10px;background-position: 100% 0%}
+.videoAngleBR{bottom:-11px;right:-10px;background-position: 100% 100%}
+.videoAngleBL{bottom:-11px;left:-10px;background-position: 0% 100%}
+
+/* video */
+.gamerVideoBlock.ban video,
+/*.gamerVideoBlock.jail video,*/
+/*.gamerVideoBlock.dead video,*/
+/*.gamerVideoBlock.info video,
+.gamerVideoBlock.finish video,
+.gamerVideoBlock.loading video,*/
+.gamerVideoBlock.videoOff video,
+/*.gamerVideoBlock.connecting video,*/
+.gamerVideoBlock.wantedFinal video,
+.gamerVideoBlock.wantedStart video,
+.gamerVideoBlock.nightVideoHide video,
+.gamerVideoBlock.nightMafiaHide video{display:none}
+
+/* Видео Off */
+.gamerVideoBlock.videoOff .videoContainer{background: #000 url(../img/video_windows/additional/video_off.png) no-repeat 50% 50%;}
+
+/* Сбегающий днём */
+.gamerVideoBlock.wantedStart .videoContainer{background: url(../img/video_windows/additional/wanted_start_2.jpg) no-repeat 50% 50% / cover;box-shadow:0 0 20px rgba(0, 0, 0, 1) inset;}
+
+/* Сбегающий ночью */
+.gamerVideoBlock.nightVideoHide.wantedStart .videoContainer,
+.gamerVideoBlock.nightMafiaHide.wantedStart .videoContainer {background: url(../img/video_windows/additional/wanted_start_2.jpg) no-repeat 50% 50% / cover;box-shadow:0 0 20px rgba(0, 0, 0, 1) inset;}
+
+/* Ножи, лупы и пр. сверху */
+.gamerVideoBlock.nightVideoHide.sex.wantedStart .additional,
+.gamerVideoBlock.nightVideoHide.aim.wantedStart .additional,
+.gamerVideoBlock.nightVideoHide.heal.wantedStart .additional,
+.gamerVideoBlock.nightVideoHide.knife.wantedStart .additional,
+.gamerVideoBlock.nightVideoHide.loupe.wantedStart .additional,
+.gamerVideoBlock.nightMafiaHide.aim.wantedStart .additional {z-index:9}
+
+
+/* Потеря соединения днём */
+.gamerVideoBlock.wantedFinal .videoContainer,
+/* Потеря соединения ночью */
+.gamerVideoBlock.nightVideoHide.wantedFinal .videoContainer,
+.gamerVideoBlock.nightMafiaHide.wantedFinal .videoContainer {background: url(../img/video_windows/additional/wanted_final_2.jpg) no-repeat 50% 50% / cover;box-shadow:0 0 20px rgba(0, 0, 0, 1) inset;}
+
+/* Скрываем текстовую подпись у сбегающего и сбежавшего */
+.gamerVideoBlock.nightVideoHide.wantedStart .sleep,
+.gamerVideoBlock.nightMafiaHide.wantedStart .sleep,
+.gamerVideoBlock.nightVideoHide.wantedFinal .sleep,
+.gamerVideoBlock.nightMafiaHide.wantedFinal .sleep,
+/* Скрываем роль у сбежавшего */
+.gamerVideoBlock.nightVideoHide.wantedFinal .gamerUserRole,
+.gamerVideoBlock.nightMafiaHide.wantedFinal .gamerUserRole,
+/* Скрываем ножи, лупы, прицелы и пр. у сбежавшего */
+.gamerVideoBlock.nightVideoHide.sex.wantedFinal .videoContainer:hover .additional,
+.gamerVideoBlock.nightVideoHide.aim.wantedFinal .videoContainer:hover .additional,
+.gamerVideoBlock.nightVideoHide.heal.wantedFinal .videoContainer:hover .additional,
+.gamerVideoBlock.nightVideoHide.knife.wantedFinal .videoContainer:hover .additional,
+.gamerVideoBlock.nightVideoHide.loupe.wantedFinal .videoContainer:hover .additional,
+.gamerVideoBlock.nightVideoHide.wantedFinal .videoContainer:hover .additional,
+.gamerVideoBlock.nightMafiaHide.aim.wantedFinal .videoContainer:hover .additional{display:none}
+
+
+
+/* Ночное видео скрыто */
+.gamerVideoBlock.nightVideoHide .videoContainer{background: #10121e url(../img/video_windows/additional/sleep_2.png) no-repeat 50% 50%;box-shadow:0 0 20px rgba(0, 0, 0, 1) inset;}
+.sleep{display:none;position:absolute;color:#3C3C48;font-size:13px;bottom:25px;width:100%}
+.gamerVideoBlock.nightVideoHide .sleep,
+.gamerVideoBlock.nightMafiaHide .sleep{display:block}
+
+/* Ночное видео ведущего скрыто */
+.videoLeadingAvatarWide.nightVideoHide{border-radius:10px;background: url(../img/brevno/zoom_bg.png) no-repeat 50% 0, #10121e url(../img/video_windows/additional/sleep_2.png) no-repeat scroll 50% 50%;}
+.videoLeadingAvatarWide .sleep{display:none;position:absolute;color:#3C3C48;font-size:13px;bottom:30px;width:100%}
+.videoLeadingAvatarWide.nightVideoHide .sleep{display:block}
+/*.videoLeadingAvatarWide.nightVideoHide.info .sleep{display:none}*/
+
+/* Ночью мафия скрыта */
+.gamerVideoBlock.nightMafiaHide .videoContainer{background: #10121e url(../img/video_windows/additional/mafia_hide_2.png) no-repeat 50% 50%;box-shadow:0 0 20px rgba(0, 0, 0, 1) inset;}
+
+/* Бан */
+.gamerVideoBlock.ban .videoContainer{background: url(../img/video_windows/additional/tv_2.jpg) no-repeat 50% 50% / cover;box-shadow:0 0 20px rgba(0, 0, 0, 1) inset;}
+
+/* Инфо юзера */
+.videoLeadingAvatarWide .infoUser{display:none;position:absolute;text-align:left;width:100%;height:100%}
+.videoLeadingAvatarWide.info .infoUser{display:block;background:#000;height:188px;width:247px;border-radius:6px;text-align:left;}
+.videoLeadingAvatarWide.info video{display:none;}
+
+.gamerVideoBlock .infoUser{display:none;position:absolute;text-align:left;width:100%;height:100%}
+.infoUser p{margin:0 20px 0 115px;padding:5px 0;color:#956E57;font-size:13px;line-height:normal}
+.infoUser p.name {padding:15px 0 5px 0;border-bottom:1px dotted #51342C;}
+.infoUser p.sex {border-bottom:1px dotted #51342C;}
+.infoUser p.userRating{font-size:20px;margin:0 0 0 20px;clear:left}
+.infoUser p.userRating span{color:#39CC00}
+.infoUser img{width:75px;height:75px;float:left;padding:20px 20px 10px 20px}
+a.profile{width:16px;height:16px;right:22px;top:6px;position:absolute;background:transparent url(../img/video_windows/user.png) no-repeat 0 50%}
+.gamerVideoBlock.info .infoUser{display:block}
+.gamerVideoBlock.info .videoContainer{background:#000}
+
+/* игрок говорит - выделяем зеленым*/
+.gamerUserName.green{color:#00FC08;}
+
+/* игрок лишён голоса - выделяем красным*/
+.gamerUserName.red{color:#ff0000;}
+
+/* Игрок сфолил */
+.foulEl{color:#ff0000;position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:22px}
+
+/* Убитый, посаженный, бан, сбежал, red (Имя) */
+.gamerUserName{display:block}
+.gamerUserName{position:absolute;height:28px;width:208px;top:-3px;left:50%;margin-left:-104px;line-height:28px;z-index:10;color:#FAE1C5;font-size:14px;background: url(../img/video_windows/name_2.png) no-repeat 50% 0}
+.gamerVideoBlock.jail .gamerUserName,
+.gamerVideoBlock.ban .gamerUserName,
+.gamerVideoBlock.wantedFinal .gamerUserName,
+.gamerVideoBlock.dead .gamerUserName{background-position: 50% -31px;}
+.gamerVideoBlock.red .gamerUserName{background-position: 50% -62px;}
+
+/* Убитый, посаженный, бан, сбежал, red (Номер) */
+.gamerUserNumber{position:absolute;left:22px;font-weight:bold;color:#FAE1C5;width:20px;text-align:center}
+.gamerVideoBlock.jail .gamerUserNumber,
+.gamerVideoBlock.ban .gamerUserNumber,
+.gamerVideoBlock.wantedFinal .gamerUserNumber,
+.gamerVideoBlock.dead .gamerUserNumber{background-position: 50% -31px;}
+.gamerVideoBlock.red .gamerUserNumber{background-position: 50% -62px;}
+
+/* Убитый, посаженный, бан, red (Статус) */
+.gamerUserState{display:none;position:absolute;height:44px;width:198px;bottom:50%;left:50%;margin: 0 0 -22px -99px;line-height:43px;font-weight:bold;text-transform:uppercase;color:#fae1c5;font-size:17px;background: url(../img/video_windows/state.png) no-repeat}
+.gamerVideoBlock.jail .gamerUserState,
+.gamerVideoBlock.ban .gamerUserState,
+.gamerVideoBlock.wantedStart .gamerUserState,
+.gamerVideoBlock.wantedFinal .gamerUserState,
+.gamerVideoBlock.dead .gamerUserState{display:block;z-index:1}
+.gamerVideoBlock.red .gamerUserState{display:block;color:#ff0000;z-index:1}
+
+/* Убитый, посаженный, бан, red (Роль) */
+.gamerUserRole{display:none;position:relative;height:28px;width:208px;bottom:-2px;margin:0 auto;/*left:50%;margin-left:-104px;*/padding-top:3px;color:#fae1c5;font-size:14px;background: url(../img/video_windows/role.png) no-repeat}
+.gamerVideoBlock.jail .gamerUserRole,
+.gamerVideoBlock.ban .gamerUserRole,
+.gamerVideoBlock.wantedFinal .gamerUserRole,
+.gamerVideoBlock.dead .gamerUserRole{display:block;background-position: 50% -31px;z-index:1}
+.gamerVideoBlock.red .gamerUserRole{display:block;background-position: 50% 0;color:#ff0000;}
+
+/* Кик, Предупреждение, Фол и др. (Кнопки) */
+a.kick{display:none;}
+.ramka:hover a.kick.active{display:block;}
+.gamerVideoBlock.online:hover a.kick{display:block;}
+/*.gamerVideoBlock.ban:hover a.kick,
+.gamerVideoBlock.vote:hover a.kick,
+.gamerVideoBlock.dead:hover a.kick,
+.gamerVideoBlock.jail:hover a.kick,
+.gamerVideoBlock.night:hover a.kick,
+.gamerVideoBlock.wantedStart:hover a.kick,
+.gamerVideoBlock.wantedFinal:hover a.kick,
+.gamerVideoBlock.nightVideoHide:hover a.kick,
+.gamerVideoBlock.nightMafiaHide:hover a.kick{display:none;}*/
+a.kick{position:absolute;height:29px;width:29px;bottom:0px;right:0px;z-index:10;background: url(../img/video_windows/buttons/kick.png) no-repeat;}
+a.kick:hover{background-position: 0 -29px;}
+/* Предупреждение */
+a.warning{display:none;}
+.gamerVideoBlock.online:hover a.warning{display:block;}
+a.warning {position:absolute;height:29px;width:29px;bottom:0px;left:0px;z-index:10;background: url(../img/video_windows/buttons/complaint.png) no-repeat;}
+a.warning:hover{background-position: 0 -29px;}
+/* Фол */
+a.foul{display:none;}
+a.foul {position:absolute;height:29px;width:29px;bottom:45px;left:0px;z-index:10;background: url(../img/video_windows/buttons/foul.png) no-repeat;}
+a.foul:hover{background-position: 0 -29px;}
+.gamerVideoBlock.online:hover a.foul {display:block;}
+/* Снять фол */
+a.foulCancel {display:none}
+a.foulCancel {position:absolute;height:29px;width:29px;bottom:90px;left:0px;z-index:10;background: url(../img/video_windows/buttons/unfoul.png) no-repeat;}
+a.foulCancel:hover{background-position: 0 -29px;}
+.gamerVideoBlock.online:hover a.foulCancel {display:block;}
+/* Лишить голоса */
+a.silent {display:none}
+a.silent {position:absolute;height:29px;width:29px;bottom:45px;right:0px;z-index:10;background: url(../img/video_windows/buttons/silent.png) no-repeat;}
+a.silent:hover{background-position: 0 -29px;}
+.gamerVideoBlock.online:hover a.silent {display:block;}
+
+.additional{position:absolute;display:none;top:3px;left:3px;bottom:3px;right:3px;border-radius:9px}
+
+/* Соединение с сервером, получение видео */
+/*.gamerVideoBlock.connecting .videoContainer{background:#000 url(../img/video_windows/connecting/connecting.gif) no-repeat 50% 50%;}
+.gamerVideoBlock.loading .videoContainer{background:#000 url(../img/video_windows/connecting/loading.gif) no-repeat 50% 50%;}
+.gamerVideoBlock.finish .videoContainer{background:#000 url(../img/video_windows/connecting/finish.gif) no-repeat 50% 50%;}*/
+/*.connect{display:none;position:absolute;color:#3C3C48;font-size:13px;bottom:60px;width:100%}
+.gamerVideoBlock.connecting .connect,
+.gamerVideoBlock.loading .connect,
+.gamerVideoBlock.finish .connect{display:block}*/
+
+/* Круглые кнопки на видео */
+.bottomVideoContainer{position:absolute;bottom:0;width:100%}
+.roundButtons{display:none}
+.gamerVideoBlock.online:hover .roundButtons{display:block;}
+.videoLeadingAvatarWide.online:hover .roundButtons{display:block}
+/*.videoContainer:hover .roundButtons{display:block}*/
+.roundButtons{position:relative;bottom:-6px;width:76px;height:44px;z-index:2;margin:0 auto}
+
+.roundButtons .sound,
+.roundButtons .video{display:inline-block;width:38px;height:44px;}
+.roundButtons .sound{background: url(../img/video_windows/buttons/sound.png) no-repeat;}
+.roundButtons .video{background: url(../img/video_windows/buttons/video.png) no-repeat;}
+.roundButtons .sound:hover,
+.roundButtons .video:hover{background-position: 0 -44px;}
+
+.gamerVideoBlock.soundOff .roundButtons .sound{background: url(../img/video_windows/buttons/sound.png) no-repeat 0 -88px;}
+.soundOffIcon{display:none;position:absolute;left:20px;top:20px;height:32px;width:32px;background: url(../img/video_windows/sound_off.png) no-repeat;}
+.gamerVideoBlock.soundOff .soundOffIcon{display:block;}
+.gamerVideoBlock.videoOff .roundButtons .video{background: url(../img/video_windows/buttons/video.png) no-repeat 0 -88px;}
+.gamerVideoBlock.soundOff .roundButtons .sound:hover,
+.gamerVideoBlock.videoOff .roundButtons .video:hover{background-position: 0 -132px;}
+
+/* Круглые кнопки скрываем */
+/*.gamerVideoBlock.sex:hover .roundButtons,
+.gamerVideoBlock.aim:hover .roundButtons,
+.gamerVideoBlock.jail:hover .roundButtons,
+.gamerVideoBlock.dead:hover .roundButtons,
+.gamerVideoBlock.heal:hover .roundButtons,
+.gamerVideoBlock.vote:hover .roundButtons,
+.gamerVideoBlock.knife:hover .roundButtons,
+.gamerVideoBlock.loupe:hover .roundButtons,
+.gamerVideoBlock.finish:hover .roundButtons,*/
+/*.gamerVideoBlock.loading:hover .roundButtons,
+.gamerVideoBlock.connecting:hover .roundButtons,*/
+/*.gamerVideoBlock.night:hover .roundButtons,
+.gamerVideoBlock.nightVideoHide:hover .roundButtons,
+.gamerVideoBlock.nightMafiaHide:hover .roundButtons*/{/*display:none;*/}
+
+/* Скрываем звук и видео кнопки */
+/*.gamerVideoBlock.ban .roundButtons .sound,
+.gamerVideoBlock.ban .roundButtons .video,
+.gamerVideoBlock.jail .roundButtons .sound,
+.gamerVideoBlock.jail .roundButtons .video,
+.gamerVideoBlock.dead .roundButtons .sound,
+.gamerVideoBlock.dead .roundButtons .video,
+.gamerVideoBlock.vote .roundButtons .sound,
+.gamerVideoBlock.vote .roundButtons .video,
+.gamerVideoBlock.wantedFinal .roundButtons .sound,
+.gamerVideoBlock.wantedFinal .roundButtons .video,
+.gamerVideoBlock.nightVideoHide .roundButtons .sound,
+.gamerVideoBlock.nightVideoHide .roundButtons .video,
+.gamerVideoBlock.nightMafiaHide .roundButtons .sound,
+.gamerVideoBlock.nightMafiaHide .roundButtons .video{display:none}*/
+/**/
+
+/* кнопка отдельно */
+/*.gamerVideoBlock.vote .roundButtons,
+.gamerVideoBlock.nightVideoHide .roundButtons,
+.gamerVideoBlock.nightMafiaHide .roundButtons{left:50%;margin-left:-19px;width:38px;z-index:100}*/
+
+/* скрываем наручники */
+/*.gamerVideoBlock.vote .roundButtons:hover ~ .additional{display:none !important}*/
+
+/* Голосование */
+.gamerVideoBlock.vote .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/bracelet.png) no-repeat 50% 50%;z-index:9}
+.gamerVideoBlock.vote .videoContainer:hover .gamerUserState{/*display:none;*/z-index:8}
+.gamerVideoBlock.vote .roundButtons{z-index:10}
+
+/**/
+.gamerVideoBlock.voteUp .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/vote_up.png) no-repeat 50% 50%;z-index:9}
+
+/* Отмена голоса */
+.gamerVideoBlock.cancelVote .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/no_bracelet.png) no-repeat 50% 50%;z-index:9}
+.gamerVideoBlock.cancelVote.candidate .videoContainer:hover .videoBorderT{box-shadow: none;}
+.gamerVideoBlock.cancelVote.candidate .additional:active{box-shadow: inset 0 0 60px rgba(104,144,60,1);}
+
+/* Выставление, подсветка */
+.gamerVideoBlock.candidate .videoBorderT{box-shadow: inset 0 0 50px rgba(255,0,0,1);}
+.wrapper.candidate{box-shadow: inset 0 0 70px 10px rgba(255,0,0,1);}
+.gamerVideoBlock.voter .videoBorderT{box-shadow: inset 0 0 70px 10px rgba(255,0,0,1);}
+
+/* Выкрик, подсветка */
+.gamerVideoBlock.outcry .videoBorderT,
+.wrapper.outcry{box-shadow: inset 0 0 70px 10px rgba(0,255,255,1);}
+
+/* убираем не кликабельные области */
+/*.gamerVideoBlock.vote .bottomVideoContainer .kick:hover ~ .additional,
+.gamerVideoBlock.vote .bottomVideoContainer .warning:hover ~ .additional,
+.gamerVideoBlock.vote .bottomVideoContainer .roundButtons:hover ~ .additional,
+.gamerVideoBlock.vote .gamerUserNumber:hover ~ .additional{display:none;}*/
+.gamerVideoBlock.vote .gamerUserName:hover ~ .additional{display:none;}
+
+
+.gamerVideoBlock.night.sex .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.night.aim .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.night.heal .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.night.knife .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.night.loupe .videoContainer .gamerUserName:hover ~ .additional{background:rgba(0,0,0,.8);}
+
+.gamerVideoBlock.nightVideoHide.sex .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.nightVideoHide.aim .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.nightMafiaHide.aim .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.nightVideoHide.heal .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.nightVideoHide.knife .videoContainer .gamerUserName:hover ~ .additional,
+.gamerVideoBlock.nightVideoHide.loupe .videoContainer .gamerUserName:hover ~ .additional{display:none;}
+
+/* Виды окон ночью при наведении */
+/* Ночное окно */
+.gamerVideoBlock.night .additional{display:block;background:rgba(0,0,0,.8);cursor:default;}
+.gamerVideoBlock.sex .additional:active,
+.gamerVideoBlock.aim .additional:active,
+.gamerVideoBlock.vote .additional:active,
+.gamerVideoBlock.knife .additional:active{box-shadow: inset 0 0 50px rgba(255,0,0,1);}
+.gamerVideoBlock.heal .additional:active,
+.gamerVideoBlock.loupe .additional:active{box-shadow: inset 0 0 50px rgba(104,144,60,1);}
+
+/* Любовница */
+.gamerVideoBlock.sex .videoContainer:hover .additional{cursor:pointer;display:block;background:rgba(0,0,0,.8) url(../img/video_windows/additional/sex.png) no-repeat 50% 50%;}
+.gamerVideoBlock.nightVideoHide.sex .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/sex.png) no-repeat 50% 50%;}
+
+/* Прицел */
+.gamerVideoBlock.aim .videoContainer:hover .additional{cursor:pointer;display:block;background:rgba(0,0,0,.8) url(../img/video_windows/additional/aim_2.png) no-repeat 50% 50% / cover;}
+.gamerVideoBlock.nightVideoHide.aim .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/aim_2.png) no-repeat 50% 50% / cover;}
+.gamerVideoBlock.nightMafiaHide.aim .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/aim_2.png) no-repeat 50% 50% / cover;}
+
+/* Лечить */
+.gamerVideoBlock.heal .videoContainer:hover .additional{cursor:pointer;display:block;background:rgba(0,0,0,.8) url(../img/video_windows/additional/heal.png) no-repeat 50% 50%;}
+.gamerVideoBlock.nightVideoHide.heal .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/heal.png) no-repeat 50% 50%;}
+
+/* Зарезать */
+.gamerVideoBlock.knife .videoContainer:hover .additional{cursor:pointer;display:block;background:rgba(0,0,0,.8) url(../img/video_windows/additional/knife.png) no-repeat 50% 50%;}
+.gamerVideoBlock.nightVideoHide.knife .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/knife.png) no-repeat 50% 50%;}
+
+/* Искать */
+.gamerVideoBlock.loupe .videoContainer:hover .additional{cursor:pointer;display:block;background:rgba(0,0,0,.8) url(../img/video_windows/additional/loupe.png) no-repeat 50% 50%;}
+.gamerVideoBlock.nightVideoHide.loupe .videoContainer:hover .additional{display:block;background: url(../img/video_windows/additional/loupe.png) no-repeat 50% 50%;}
+
+/* Уровень звука */
+.soundLevel{position:absolute;bottom:3px;height:1px;background: url(../img/video_windows/sound_level.png) no-repeat}
+
+
+/***** ГАЗЕТА *****/
+.newspaper{position:fixed;width:1015px;height:680px;left:50%;top:50%;margin:-340px 0 0 -507px;background:transparent url(../img/newspaper/newspaper.png) no-repeat 50% 0;overflow:hidden;z-index:920}
+.roll{position:absolute;bottom:-10px;width:1015px;height:130px;background:transparent url(../img/newspaper/rool.png) no-repeat 50% 100%;}
+.roll .cell{width:1000px;height:120px;padding:10px 0 0 0;}
+.roll .cell a{color:#323232;font:bold italic 30px Georgia, Arial, Helvetica, sans-serif;}
+/*.newsText{width:547px;height:310px;padding:125px 20px 120px 0;margin:0 auto;color:#000;text-align:left}*/
+/*.firstNews, .lastNews{display:inline-block;}*/
+.firstNews{width:100%;background:transparent url(../img/newspaper/horizontal_line.png) no-repeat 50% 100%;}
+.firstNews.imgfr img{float:right;margin:10px 0px 20px 30px}
+.firstNews.imgfl img{float:left;margin:10px 30px 20px 0px}
+.lastNews{width:420px}
+/*.lastNews:nth-child(2n){padding-right:13px}
+.lastNews:nth-child(2n+1){padding-left:13px}
+.inl{display:inline-block}*/
+.lastNews.fl img{float:left;margin:10px 15px 0 0}
+.lastNews.fr img{float:right;margin:10px 0 0 15px}
+.newsText{width:900px;height:440px;padding:0 20px 0 0;margin:125px auto 0;color:#000;text-align:left}
+.newsText h1{font:bold 24px Georgia, Arial, Helvetica, sans-serif;/*margin-top:10px;*/padding:10px 0 0 0}
+.newsText p{padding:4px 0 20px 0;font:italic 16px Georgia, Arial, Helvetica, sans-serif;text-align:justify}
+
+/* test */
+/* .newspaper:target {height:0px;
+-webkit-transition: height 1s ease; 
+-moz-transition: height 1s ease; 
+-ms-transition: height 1s ease; 
+-o-transition: height 1s ease; 
+transition: height 1s ease;
+}*/
+/**/
+
+/***** GAME OVER *****/
+.gameOver{padding-top:30px;}
+.winner{width:820px;height:406px;margin:0 auto}
+.gameOver.mafWon .winner{background:transparent url(../img/game_end/mafia_won.png) no-repeat 50% 0;}
+.gameOver.civWon .winner{background:transparent url(../img/game_end/civil_won.png) no-repeat 50% 0;}
+.winner h1{color:#FAE1C5;font:bold 28px Georgia, Arial, Helvetica, sans-serif;}
+.winnerContainer{position:relative;background: url(../img/mafia_dialog/window_bg.png);width:960px;margin:-100px auto 0 auto}
+.wonTitle2{position:absolute;height:47px;width:210px;top:-22px;left:50%;margin-left:-105px;padding-top:13px;color:#F7E7C6;font:18px Georgia, Arial, Helvetica, sans-serif;background: url(../img/mafia_dialog/title_bg.png) no-repeat 50% 50%;}
+.userGame{width:260px;height:81px;display: inline-block;vertical-align: middle;margin:1%;text-align:left;z-index:2}
+.gameStopVideoItem {width: 106px;height: 81px;background: url(../img/game_start/empty.png);float:left;position:relative;z-index:2}
+.gameStopVideoItem video{width: 100px;height: 75px;margin:3px;border-radius:8px;display:block;z-index:1}
+.leadingContainer{padding:30px 0 0 0}
+.leadingContainer .userGame{position:relative}
+
+.leadingRate{position:absolute;top:10px;right:0;width: 24px;}
+.leadingRateUp{
+	color: #5cb03b;
+	background: #1b3917 none repeat scroll 0 0;
+    border: 2px solid #336716;
+    border-radius: 50%;
+    display:block;
+    font: 13px Arial;
+    height: 18px;
+    padding-top: 2px;
+    text-align: center;
+	margin-top:5px;
+    width: 20px;}
+.leadingRateUp:hover{color: #fff;background: #226904 none repeat scroll 0 0;border: 2px solid #3aa20c;}
+.leadingRateDown{
+	background: #451919 none repeat scroll 0 0;
+    border: 2px solid #a25555;
+    border-radius: 50%;
+    color: #e4b379;
+    display:block;
+    font: 13px Arial;
+    height: 18px;
+    padding-top: 2px;
+    text-align: center;
+	margin-top:5px;
+    width: 20px;}
+.leadingRateDown:hover{color: #fff;background: #8b0000 none repeat scroll 0 0;border: 2px solid #d60000;}
+
+.gamersContainer{padding:30px 0 20px 0}
+.gamersContainer .button_86{margin:1% auto 0 auto;}
+.userGame p{margin:0 0 0 114px;padding:5px 0;color:#956E57;font:14px Georgia, Arial, Helvetica, sans-serif;line-height:normal;overflow:hidden}
+.userNumber{border:2px solid #956e57;height:18px;width:20px;border-radius:50%;text-align:center;background:#451919;color:#e4b379;font: 12px Arial; padding-top:2px;display:inline-block}
+.leftTop{position:absolute;margin:-15px 0 0 -124px;z-index:4}
+p.role{color:#FAE1C5;font-size:12px}
+p.role.red{color:#FF0000;}
+p.role.green{color:#39CC00;}
+p.role.yellow{color:#dca208;}
+p.profit{padding-bottom:0;margin-left:110px}
+span.money, span.rate{color:#FAE1C5;font-size:16px;}
+span.money{background:transparent url(../img/game_end/money.png) no-repeat 0 -5px;padding:0 10px 0 25px;}
+span.rate{background:transparent url(../img/game_end/icon_statistic.png) no-repeat 0 0;padding:0 0 0 23px;}
+.xRateNow{padding:0 4px;background:#560000;border:1px solid #000;}
+.xRateNow span{font-size:10px;}
+
+/***** NOTIFY FORM *****/
+#game-notify-form{position:fixed;width:370px;left:-398px;top:50%;z-index: 21;padding:10px 42px 10px 15px;margin:-240px 0 0 0;background:#0C0706;border:2px solid #452921;border-radius:6px;transition:left .5s;-webkit-transition:left .5s;}
+#game-notify-form:hover{left:0;margin:-240px 0 0 0;transition:left 1s;-webkit-transition:left 1s;}
+
+input[type="text"], input[type="password"]{width:98%;padding:4px 6px;margin:5px 0 10px 0;background:#333;color:#fff;border:1px solid #666;border-radius:6px}
+input[type="submit"]{padding:0 5px 2px 5px;height:24px;border:1px solid #b2b2ac;color:#b2b2ac;background:#666;background-image:-moz-linear-gradient(top,#666,#333);background-image:-webkit-gradient(linear,left top,left bottom,from(#666),to(#333));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#666,endColorStr=#333);-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;white-space:nowrap;vertical-align:middle;cursor:pointer;overflow:visible;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
+input[type="submit"]:hover{border-color:#999;color:#555;background:#f3f3f3;background-image:-moz-linear-gradient(top,#ffffff,#ebebeb);background-image:-webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#ebebeb));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#ffffff,endColorStr=#ebebeb);outline:0;-moz-box-shadow:0 0 3px #999;-webkit-box-shadow:0 0 3px #999;box-shadow:0 0 3px #999;}
+
+.urgently{z-index: 21;position:fixed;top:0;left:50%;margin-left:-498px;margin-top:2px;padding-right:36px;width:960px;background:#480505;border:2px solid #714739;border-radius:6px;
+/*background-color: #0C0706;
+background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, #480505 35px, #480505 70px);*/
+    /*background-color: #480505;
+    background-image: linear-gradient(to left top, rgba(189, 107, 127, 0) 48.9%, #0C0706 51%, #0C0706 78%, rgba(189, 107, 127, 0) 80%);
+    background-origin: padding-box, padding-box;
+    background-position: 0 0%, 0 0;
+    background-repeat: repeat, repeat;
+    background-size: 2em 6em;*/
+/*background: repeating-linear-gradient(
+  to right,
+  #0C0706,
+  #0C0706 10px,
+  #480505 10px,
+  #480505 20px
+);*/}
+a.notifyClose{display:block;color:#ff0000;width:20px;height:20px;text-decoration:none;font-size:30px;position:absolute;top:6px;right:8px;}
+.notifyText a{color:#FAE1C5;}
+.notifyText a:hover{text-decoration:none}
+.notifyText{padding:5px 0 7px 0;margin:0}
+
+.povorot90 {width: 115px;position:absolute;right:-40px;top:45px;font-weight:bold;-moz-transform: rotate(-90deg); -o-transform: rotate(-90deg);-webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+
+
+/****** сообщить об ошибке ******/
+.copyBuffer{position:fixed;bottom:10px;right:10px;height:15px;width:15px;background:#7F0101;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;z-index:20}
+.copyBufferForm{display:none;}
+.copyBufferForm p{font-weight:bold;padding: 0 0 5px 0}
+.copyBuffer:hover .copyBufferForm{display:block;position:absolute;bottom:0;right:0;padding:5px 15px 10px 15px;text-align:left;background:#7F0101;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;z-index:20}
+.copyBufferForm textarea {border:1px solid #999;color: #5c4d46;height: 130px;padding: 5px 10px;resize: none;width: 250px;height:100px;margin-bottom:10px}
+
+
+
+/****** UI ******/
+.ui-helper-hidden {display: none}
+.ui-helper-hidden-accessible {border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px}
+.ui-helper-reset {margin: 0;padding: 0;border: 0;outline: 0;line-height: 1.3;text-decoration: none;font-size: 100%;list-style: none}
+
+.ui-helper-clearfix:before, 
+.ui-helper-clearfix:after {content: "";display: table;border-collapse: collapse}
+.ui-helper-clearfix:after {clear: both}
+.ui-helper-clearfix {min-height: 0}
+
+.ui-helper-zfix {width: 100%;height: 100%;top: 0;left: 0;position: absolute;opacity: 0;filter: Alpha(Opacity=0)}
+.ui-front {z-index: 100}
+.ui-state-disabled {cursor: default !important}
+.ui-icon {display: block;text-indent: -99999px;overflow: hidden;background-repeat: no-repeat}
+.ui-widget-overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%}
+
+.ui-slider {position: relative;text-align: left}
+.ui-slider .ui-slider-handle {position: absolute;z-index: 2;width: 20px;height: 20px;cursor: pointer;-ms-touch-action: none;touch-action: none}
+.ui-slider-handle{background: url(../img/brevno/game_control/slider.png) no-repeat;}
+.ui-slider .ui-slider-range {position: absolute;z-index: 1;font-size: .7em;display: block;border: 0;background-position: 0 0}
+
+.ui-slider.ui-state-disabled .ui-slider-handle, 
+.ui-slider.ui-state-disabled .ui-slider-range {filter: inherit}
+
+.ui-slider-horizontal {/*height: .8em*/}
+.ui-slider-horizontal .ui-slider-handle {/*top: -.3em;*/margin-left: -.6em}
+.ui-slider-horizontal .ui-slider-range {top: 0;height: 100%}
+.ui-slider-horizontal .ui-slider-range-min {left: 0}
+.ui-slider-horizontal .ui-slider-range-max {right: 0}
+
+.ui-slider-vertical {width: .8em;height: 100px}
+.ui-slider-vertical .ui-slider-handle {left: -.3em;margin-left: 0;margin-bottom: -.6em}
+.ui-slider-vertical .ui-slider-range {left: 0;width: 100%}
+.ui-slider-vertical .ui-slider-range-min {bottom: 0}
+.ui-slider-vertical .ui-slider-range-max {top: 0}
+
+/***** VIDEO CHAT *****/
+#buttons{position:relative;margin-top:20px}
+h1{padding:30px 0}
+.gameControlPopUp.video-chat{top:38px;left:50%;margin-left:-150px;padding:20px;width:320px}
+.video-here{height:240px;margin:20px 0}
+#main .allVideoContainer{padding-top:60px}
+#settings{margin-right:135px}
+
+	
+/***** OTHER STYLE *****/
+.cell {display: table-cell;text-align: center;vertical-align: middle;}
+.hide{display:none}
+.clr{clear:both}
+.center{margin: 0 auto}
+.fl{float:left}
+.fr{float:right}
+.inlb{display:inline-block}
+.inl{display:inline}
+
+.smallFlash {width:1px;height: 1px;}
+.flashHide{position:absolute;left: -1000px;}
+
+/***** CLEARFIX *****/
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0}
+.clearfix {display: block;zoom: 1}
+
+[data-z="1"] video{z-index:1}
+[data-z="17"] video{z-index:17}
+[data-z="19"] video{z-index:19}
+[data-z="20"] video{z-index:20}
+[data-z="21"] video{z-index:21}
+[data-z="22"] video{z-index:22}
+[data-z="24"] video{z-index:24}
+[data-z="26"] video{z-index:26}
+[data-z="51"] video{z-index:51}
+[data-z="100"] video {z-index:100}
+[data-z="931"] video{z-index:931}
+
+/**** ads *****/
+.addNight .ads-wrapper {
+    position:absolute;
+    width: 100%;
+    margin-top: 120px;
+}
+
+/**/
+.gameStartTimer .flip-clock-wrapper {
+    margin: 0
+}
+
+/**/
+.gameTimer .flip-clock-wrapper {
+    margin: 0
+}
+
+/**/
+.gameStartTimer .flip-clock-wrapper ul {
+    position: relative;
+    float: left;
+    margin: 5px 11px 5px 5px;
+    width: 54px;
+    height: 75px;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 75px;
+    border-radius: 6px;
+    background: #000;
+}
+
+/**/
+.gameTimer .flip-clock-wrapper ul {
+    position: relative;
+    float: left;
+    margin: 5px 3px 5px 5px;
+    width: 23px;
+    height: 33px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35px;
+    border-radius: 3px;
+    background: #000;
+}
+
+/**/
+.gameStartTimer .flip-clock-wrapper ul li {
+    line-height: 75px;
+}
+
+/**/
+.gameTimer .flip-clock-wrapper ul li {
+    line-height: 33px;
+}
+
+/**/
+.gameTimer .flip-clock-wrapper ul li a div.down {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/**/
+.gameTimer .flip-clock-wrapper ul li a div div.inn {
+    font-size: 30px;
+    color: #f1f1f1;
+    border-radius: 3px;
+}
+
+/**/
+.gameStartTimer .flip-clock-wrapper .flip {
+    box-shadow: none
+}
+
+/**/
+.gameTimer .flip-clock-wrapper .flip {
+    box-shadow: none
+}
+
+/**/
+.gameStartTimer .flip-clock-divider {
+    width: 35px;
+}
+
+/**/
+.gameTimer .flip-clock-divider {
+    width: 14px;
+    height: 33px;
+}
+
+/**/
+.gameStartTimer .flip-clock-divider .flip-clock-label {
+    display: none
+}
+
+/**/
+.gameTimer .flip-clock-divider .flip-clock-label {
+    display: none
+}
+
+/**/
+.gameStartTimer .flip-clock-dot.top {
+    display: none
+}
+
+/**/
+.gameTimer .flip-clock-dot.top {
+    display: none
+}
+
+/**/
+.gameStartTimer .flip-clock-dot.bottom {
+    display: none
+}
+
+/**/
+.gameTimer .flip-clock-dot.bottom {
+    display: none;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active {
+    animation: none !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+    animation: none !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+    animation: none !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+    background:none !important;;
+    animation: none !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+    background:none !important;;
+    animation: none !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+    background:none !important;;
+    animation: none !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+    background:none !important;;
+    animation: none !important;
+}

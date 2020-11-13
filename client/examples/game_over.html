@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Мафия 3.0</title>
+
+        <link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html.js"></script>
+        <![endif]-->
+
+		<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen" />
+
+		<script src="../js/vendor/requirejs/require.js"></script>
+
+
+</head>
+<body class="day bgGreen">
+	<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+	<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+	<div class="wrapper">
+	
+	<!-- Вспомогательное демо -->
+		<!--<div class="topPanel">
+			<div class="brevnoBG">
+				<div class="longBiguttonContainer green">
+					<a href="#"><div class="cell">Это демо</div></a>
+					<div class="longBigButtonBG"></div>
+				</div>
+			</div>
+		</div>-->
+	<!-- /Вспомогательное демо -->
+	
+
+		<!-- Конец игры -->
+		<div class="gameOver mafWon" id="gameOver" style="display:"><!-- mafWon, civWon-->
+			
+			<div class="winner"><h1>Игра окончена!</h1></div>
+			
+			<div class="winnerContainer">
+				<div class="popUpTitleContainer"><span class="popUpTitle wonTitle" style="display: ">Мафия победила!</span></div>
+				<div class="borderT">
+					<div class="borderR">
+						<div class="borderB">
+							<div class="borderL">
+							<!-- Ведущий -->
+							<div class="leadingContainer">
+								<div class="userGame">
+									<div class="gameStopVideoItem"></div>
+									<p class="name">username</p>
+									<p class="role yellow">Ведущий</p>
+									<p class="profit">
+										<span class="money">0</span>
+										<span class="rate">0</span>
+									</p>
+									<div class="leadingRate">
+									<a href="" class="leadingRateUp hint--right hint--rounded" data-hint="Хорошо вёл игру">+</a>
+									<a href="" class="leadingRateDown hint--right hint--rounded" data-hint="Плохо вёл игру">-</a>
+									</div>
+								</div>
+							</div>
+							<!-- /Ведущий -->
+							<div class="gamersContainer">
+								<!-- gamers -->
+								<div class="userGame">
+									<div class="gameStopVideoItem"></div>
+									<p class="name"><span class="userNumber leftTop">1</span>username</p>
+									<p class="role"><%= role %></p>
+									<p class="profit">
+										<span class="money">0</span>
+										<span class="rate">0 <span class="xRateNow"><span>x</span>2</span></span>
+									</p>
+								</div>
+								<div class="userGame">
+									<div class="gameStopVideoItem"></div>
+									<p class="name"><span class="userNumber leftTop">2</span>username</p>
+									<p class="role red"><%= role %></p>
+									<p class="profit">
+										<span class="money">0</span>
+										<span class="rate">0</span>
+									</p>
+								</div>
+								<div class="userGame">
+									<div class="gameStopVideoItem"></div>
+									<p class="name"><span class="userNumber leftTop">3</span>username</p>
+									<p class="role"><%= role %></p>
+									<p class="profit">
+										<span class="money">0</span>
+										<span class="rate">0</span>
+									</p>
+								</div>
+								<div class="userGame">
+									<div class="gameStopVideoItem"></div>
+									<p class="name"><span class="userNumber leftTop">4</span>username</p>
+									<p class="role green"><%= role %></p>
+									<p class="profit">
+										<span class="money">0</span>
+										<span class="rate">0</span>
+									</p>
+								</div>
+								<!-- /gamers -->
+								</div>
+								<div class="buttons"><a class="buttonRed" href="#"><div class="cell">Выйти</div></a><div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="angleTL"></div>
+				<div class="angleTR"></div>
+				<div class="angleBR"></div>
+				<div class="angleBL"></div>
+			</div>
+			
+		</div>
+		<!-- /Конец игры -->
+			
+	</div>
+
+	<div id="finish_window_example" style="display: none">
+		<div class="userGame">
+			<div class="gameStopVideoItem"></div>
+			<p class="name"><%= username %></p>
+			<p class="role"><%= role %></p>
+			<p class="profit">
+				<span class="money"><%= silver %></span>
+				<span class="rate"><%= rating %></span>
+			</p>
+		</div>
+	</div>
+
+	<script>
+
+		'use strict'
+
+		requirejs.config({
+			baseUrl: '../js',
+			paths: {
+				'jquery': './vendor/jquery/dist/jquery',
+				'jquery-ui': './vendor/jquery-ui/jquery-ui',
+				'underscore': './vendor/underscore/underscore',
+				'clock': './vendor/FlipClock/compiled/flipclock'
+			},
+			shim: {
+				clock: ['jquery']
+			}
+		});
+
+		require([
+			'modules/render',
+			'modules/error',
+		], function (render, error) {
+			render.finish.show('Мирные победили. Ура!', 'civWon');
+			render.finish.add({
+				username: 'VaseninM',
+				role: 'Мирный житель',
+				silver: 100,
+				rating: 200
+			});			render.finish.add({
+				username: 'VaseninM',
+				role: 'Мирный житель',
+				silver: 10,
+				rating: 20
+			});			render.finish.add({
+				username: 'VaseninM',
+				role: 'Мирный житель',
+				silver: 1,
+				rating: 2
+			});
+		});
+	</script>
+
+</body>
+</html>

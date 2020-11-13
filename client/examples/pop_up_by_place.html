@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Мафия 3.0</title>
+
+	<link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html../js"></script>
+	<![endif]-->
+
+	<script src="../js/vendor/requirejs/require.js"></script>
+
+
+	<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen"/>
+
+
+</head>
+<body class="day bgGreen">
+<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+<div class="wrapper">
+
+
+    <script type="text/template" id="buyPlaceTemplate">
+        <div class="clearfix" id="buyPlace">
+            <% for(var place in places) {
+                var item = places[place];	%>
+                <div class="byPlaceItem <% if (item.bought) { %>byLock<% } else { %>byFree<% } %>" data-item="<%= item.item %>">
+                    <div class="placeItem fl"><%= item.item %></div>
+                    <div class="placeItemText fl">
+                            <p class="price">Место <span class="bought">куплено</span><span class="money"><%= item.money %></span></p>
+                            <p class="by"><a href="" class="gButtonLiteGreen">Купить место</a></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </script>
+
+	<!-- Блок диалоговых окон -->
+    <script type="text/template" id="popup">
+    <div class="popUpWrapp" id="<%= id %>">
+        <div class="popUpWindow">
+            <div class="popUpInner">
+                <div class="windowContainer <%= classContainer %>"><!-- Добавить к "windowContainer" класс "error" для красного окна -->
+                    <% if (title){ %>
+                    <div class="popUpTitleContainer"><span class="popUpTitle"><%= title %></span></div>
+                    <% } %>
+                    <!-- Заголовок окна -->
+                    <div class="borderT">
+                        <div class="borderR">
+                            <div class="borderB">
+                                <div class="borderL">
+                                    <div class="popUpContent">
+                                        <%= content %>
+                                    </div>
+                                    <div class="buttons">
+                                        <% _.each(buttons, function(button){ %>
+                                        <a id="<%= button.id %>" class="<%= button.className %>" href="#">
+                                            <div class="cell"><%= button.title %></div>
+                                        </a>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="angleTL"></div>
+                    <div class="angleTR"></div>
+                    <div class="angleBR"></div>
+                    <div class="angleBL"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+    <!-- /Блок диалоговых окон -->
+
+<script>
+    'use strict';
+
+    requirejs.config({
+        baseUrl: '../js',
+        paths: {
+            'jquery': './vendor/jquery/dist/jquery',
+			'underscore': './vendor/underscore/underscore'
+        },
+        shim: {
+        }
+    });
+
+    require(['render/buyPlace', 'render/dialog'], function (buyPlace, dialog) {
+        $(function () {
+            buyPlace.init([1, 0, 0, 0], 2);
+            var data = buyPlace.getData();
+            dialog.create(data, {
+                buttons: [{
+                    title: 'close',
+                    className: 'buttonRed',
+                    onClick: function (e, dialog, id) {
+                        dialog.close(id);
+                    }
+		    	}]
+            }, true);
+            $(buyPlace).on('buy', function(e, data){
+                var item = data.item;
+                console.log(item);
+            });
+            buyPlace.setStatus(1, 0);
+
+        });
+    });
+</script>
+
+
+</div>
+</body>
+</html>

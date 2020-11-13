@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Мафия 3.0</title>
+
+        <link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html../js"></script>
+        <![endif]-->
+
+        <script src="../js/vendor/jquery/dist/jquery.js"></script>
+
+		<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen" />
+</head>
+<body class="day bgGreen">
+	<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+	<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+	<div class="wrapper">
+	
+	<!-- Вспомогательное демо -->
+		<div class="topPanel">
+			<div class="brevnoBG">
+				<div class="longBiguttonContainer green" style="display: no0ne"><!-- Добавляемый класс: green или gray -->
+					
+					<a href="#">
+						<span class="leftButtonBg">&nbsp;</span><span class="centerButtonBg">
+						<p>Это демо</p><!-- Изменяемый текст -->
+						</span><span class="rightButtonBg">&nbsp;</span>
+					</a>
+					
+					<!--<a href="#"><div class="cell">Я всё сказал</div></a>--><!-- Изменяемый текст -->
+					<!--<div class="longBigButtonBG"></div>-->
+				</div>
+			</div>
+		</div>
+	<!-- /Вспомогательное демо -->
+	
+
+		<!-- Блок видео окон -->
+		<div class="allVideoContainer">
+		
+			<div class="gamerVideoBlock connecting"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">connecting</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Мафия: Посажен в тюрьму</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">1</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock loading"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">loading</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Загружаем видео</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Мафия: Посажен в тюрьму</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">2</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock finish"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">finish</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect"></div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Мафия: Посажен в тюрьму</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">3</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">...</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="soundLevel" style="width:80%"></div><!-- Индикатор уровня звука -->
+					<div class="gamerUserState">Мафия: Посажен в тюрьму</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">4</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock jail"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">jail</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Мафия: Посажен в тюрьму</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">5</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock dead"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">dead</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Мирный житель: Мёртв</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">6</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock wantedStart"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">wantedStart</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Мирный житель: Мёртв</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">7</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock wantedFinal"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">wantedFinal</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Сбежал</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">8</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock videoOff"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">videoOff</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Сбежал</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">9</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для класса sound есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock nightVideoHide"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">nightVideoHide</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">В этой игре ночное видео скрыто</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Сбежал</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">10</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video off" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock nightMafiaHide"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">nightMafiaHide</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Сбежал</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">11</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock ban"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">ban</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">12</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock info"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">info</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">13</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock vote"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">vote</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">14</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock night sex"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">night sex</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">15</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock night aim"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">night aim</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">16</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock night heal"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">night heal</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">17</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock night knife"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">night knife</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">18</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock night loupe"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">night loupe</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Забанен модератором</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">19</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+			
+			<div class="gamerVideoBlock red"><!-- Добавляемые классы к gamerVideoBlock: red(красное окно), connecting(подключение), loading(загрузка), finish(успех загрузки), jail(тюрьма), dead(умер), wantedStart(начало побега), wantedFinal(сбежал), videoOff(видео отключено), nightVideoHide(ночное видео отключено), nightMafiaHide(мафия не видит ночью), ban(забанен), info(инфо юзера), vote(режим голосования), sex(для любовницы), night(ночное затемнение), aim(прицел), heal(лечить), knife(зарезать), loupe(искать) -->
+				<div class="videoContainer">
+				
+					<div class="gamerUserName">red</div>
+					
+					<a class="warning hint--top hint--rounded" data-hint="Жалоба" href="#"></a>
+					<a class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					
+					<div class="infoUser">
+						<img src="/uploads/avatars/middle/default.png">
+						<p class="name">Димон</p>
+						<p class="sex">Мужчина, 26</p>
+						<p>Местоположение неизвестно</p>
+						<p class="userRating">Рейтинг: <span>789456</span></p>
+						<a class="profile hint--top hint--rounded" data-hint="Откроется в новом окне" target="_blank" href="#">Профиль</a>
+					</div>
+					
+					<div class="sleep">Мафия себя не видит</div><!-- Меняемый текст -->
+					<div class="connect">Соединяемся</div><!-- Меняемый текст -->
+					<div class="lossUser">Gooos!</div><!-- Никнейм похищенного -->
+					<div class="gamerUserState">Пользователь предупреждён</div><!-- Меняемый текст -->
+					
+					<div class="gamerUserNumber">20</div><!-- Меняемый номер -->
+					
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<!-- Для классов sound и video есть добавочный off -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					
+					<div class="videoBorderT">
+						<div class="videoBorderR">
+							<div class="videoBorderB">
+								<div class="videoBorderL">
+									<video autoplay loop>
+										<source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="videoAngleTL"></div>
+					<div class="videoAngleTR"></div>
+					<div class="videoAngleBR"></div>
+					<div class="videoAngleBL"></div>
+					
+					<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+				</div>
+			</div>
+		</div>
+		<!-- /Блок видео окон -->
+			
+	</div>  
+    <div id="copy_buffer" class="copyBuffer">
+        <div class="copyBufferForm">
+            <p>Сообщить об ошибке:</p>
+            <form>
+                <textarea></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+	<script>
+		$(function(){
+
+		});
+	</script>
+	
+</body>
+</html>

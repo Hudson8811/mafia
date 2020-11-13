@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Мафия 3.0</title>
+
+	<link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html../js"></script>
+	<![endif]-->
+
+	<script src="../js/vendor/requirejs/require.js"></script>
+
+
+	<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen"/>
+
+
+</head>
+<body class="day bgGreen">
+<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+<div class="wrapper">
+
+	<!-- Блок диалоговых окон -->
+	<div class="popUpWrapp" id="popUpWindow">
+	<div class="popUpWindow"><!-- Ставим класс "wide" для широкого окна -->
+		<div class="popUpInner">
+			<div class="windowContainer">
+				<!-- Добавить к "windowContainer" класс "error" для красного окна -->
+				<div class="popUpTitleContainer"><span class="popUpTitle" style="display: n0one"></span></div>
+				<!-- Заголовок окна -->
+				<div class="borderT">
+					<div class="borderR">
+						<div class="borderB">
+							<div class="borderL">
+								<div class="popUpContent">
+									<div id="voteResults" style="display: n0one">
+
+									<div class="suspectItem">
+										<div class="suspect"><span class="userNumber">12</span> Vaseninm</div>
+										<p class="numberVoters">Проголосовало <span>2</span></p>
+										<p class="user"><span class="userNumber">1</span> Gooos</p>
+										<p class="user"><span class="userNumber">2</span> Gooos</p>
+									</div>
+									<div class="suspectItem">
+										<div class="suspect"><span class="userNumber">12</span> Vaseninm</div>
+										<p class="numberVoters">Проголосовало <span>3</span></p>
+										<p class="user"><span class="userNumber">3</span> Gooos</p>
+										<p class="user"><span class="userNumber">4</span> Gooos</p>
+										<p class="user"><span class="userNumber">5</span> Gooos</p>
+									</div>
+									<div class="suspectItem">
+										<div class="suspect"><span class="userNumber">12</span> Vaseninm</div>
+										<p class="numberVoters">Проголосовало <span>5</span></p>
+										<p class="user"><span class="userNumber">6</span> Gooos</p>
+										<p class="user"><span class="userNumber">7</span> Gooos</p>
+										<p class="user"><span class="userNumber">8</span> Gooos</p>
+										<p class="user"><span class="userNumber">9</span> Gooos</p>
+										<p class="user"><span class="userNumber">10</span> Gooos</p>
+									</div>
+									<div class="suspectItem">
+										<div class="suspect"><span class="userNumber">12</span> Vaseninm</div>
+										<p class="numberVoters">Проголосовало <span>2</span></p>
+										<p class="user"><span class="userNumber">11</span> Gooos</p>
+										<p class="user"><span class="userNumber">12</span> Gooos</p>
+									</div>
+
+								</div>
+								</div>
+								<div class="buttons"></div>
+								<a class="button_example" href="#" style="display: none"><div class="cell"></div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="angleTL"></div>
+				<div class="angleTR"></div>
+				<div class="angleBR"></div>
+				<div class="angleBL"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- /Блок диалоговых окон -->
+
+	<div id="voteResults" style="display: none">
+		<% _.each(suspectList, function(suspect) { %>
+		<div class="suspectItem">
+			<div class="suspect"><%= suspect.name %></div>
+			<p class="numberVoters"><span><%= suspect.voterList.length %></span> голоса:</p>
+
+			<% _.each(suspect.voterList, function(voter) { %>
+			<p class="user"><%= voter %></p>
+			<% }); %>
+		</div>
+		<% }); %>
+	</div>
+
+	<div id="role" style="display: none">
+		<div class="roleIcon <%= className %>"></div><!-- Добавляемые классы от роли: civilian, comissar, doctor, mafia, boss, maniac, whore, viewer -->
+		<p>Ваша роль:</p>
+		<p class="roleType"><%= title %></p><!-- Меняемый текст -->
+		<p>А сейчас горожане могут пообщаться и познакомиться друг с другом.</p>
+	</div>
+
+
+</div>
+
+<!-- Блок диалоговых окон -->
+<script type="text/template" id="popup">
+<div id="<%= id %>"  class="popUpWrapp">
+	<div class="popUpWindow <% if (className) print(className); %>"><!-- Ставим класс "wide" для широкого окна -->
+		<div class="popUpInner">
+			<div class="windowContainer <%= classContainer %>"><!-- Добавить к "windowContainer" класс "error" для красного окна -->
+				<% if (title){ %>
+					<div class="popUpTitleContainer"><span class="popUpTitle"><%= title %></span></div>
+				<% } %>
+				<!-- Заголовок окна -->
+				<div class="borderT">
+					<div class="borderR">
+						<div class="borderB">
+							<div class="borderL">
+								<div class="popUpContent">
+									<%= content %>
+								</div>
+								<div class="buttons">
+									<% _.each(buttons, function(button){ %>
+										<a class="<%= button.className %>" href="#" <% if (button.hide) print('style="display:none"'); %>>
+											<div class="cell"><%= button.title %></div>
+										</a>
+									<% }); %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="angleTL"></div>
+				<div class="angleTR"></div>
+				<div class="angleBR"></div>
+				<div class="angleBL"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
+<!-- /Блок диалоговых окон -->
+
+<script>
+	'use strict'
+
+	requirejs.config({
+		baseUrl: '../js',
+		paths: {
+			'jquery': './vendor/jquery/dist/jquery',
+			'underscore': './vendor/underscore/underscore',
+		}
+	});
+
+	require(['render/dialog'], function (dialog) {
+	    $(function(){
+    //		dialog.create('Hello world :)');
+   // 		dialog.create('<b>Hello world</b> :)');
+//    		dialog.create('Hello world :)', {
+//    			error: true
+//    		});
+//    		dialog.create('Hello world :)', {
+//    			wide: true
+//    		});
+//    		dialog.create('Hello world :)', {
+//    			title: 'Hi'
+//    		});
+//    		dialog.create('Hello world :)', {
+//    			title: '<b>Hi</b>'
+//    		});
+//    		dialog.create('Hello world :)', {
+//    			time: 3
+//    		});
+//    		dialog.create('Hello world :)', {
+//    			buttons: [{
+//    				title: 'Ок',
+//    				className: 'buttonRed',
+//    				onClick:  function(e, dialog) {dialog.close()}
+//    			}]
+//    		});
+//    		dialog.create('Hello world :)', {
+//    			buttons: [{
+//    				title: 'Длинное описание дейсвтия',
+//    				className: 'buttonRed',
+//    				onClick:  function(e, dialog) {dialog.close()}
+//    			}]
+//    		});
+    		dialog.create('Hello world :)', {
+    			buttons: [
+    					{
+    					title: 'Помиловать всех',
+    					className: 'buttonGreen',
+    					onClick:  function(e, dialog) {dialog.close()}
+    				},
+    				{
+    					title: 'Посадить всех',
+    					className: 'buttonRed',
+						hide: true,
+    					onClick:  function(e, dialog) {dialog.close()}
+    				}
+    			]
+    		});
+//    		dialog.create(render.content('#role', {className: 'civilian', title: 'Мирный житель'}), {
+//    			title: 'Ваша роль',
+//    			buttons: [{
+//    				title: 'Ок',
+//    				className: 'buttonRed',
+//    				onClick:  function(e, dialog) {dialog.close()}
+//    			}]
+//    		});
+//            render.dialog.create('hi', {error:true});
+//		    render.dialog.create(render.content('#voteResults', {
+//			    suspectList: [
+//				    {
+//					    name: 'vaseninm',
+//					    voterList: ['gooos', 'pchol']
+//				    },
+//				    {
+//					    name: 'gooos',
+//					    voterList: ['gita', 'zita', 'conchita']
+//				    }
+//			    ]
+//		    }), {
+//			    title: 'Результаты голосования',
+//			    wide: true,
+//			    buttons: [{
+//				    title: 'Ок',
+//				    className: 'buttonRed',
+//				    onClick:  function(e, dialog) {dialog.close()}
+//			    }]
+//		    });
+	    });
+	});
+</script>
+
+</body>
+</html>

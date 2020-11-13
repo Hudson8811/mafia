@@ -1,0 +1,166 @@
+@media only screen
+and (max-height : 800px) {
+	/***** ГАЗЕТА *****/
+	.newspaper{width:900px;height:600px;left:50%;top:50%;margin:-300px 0 0 -450px;background-size: 900px auto;}
+	.roll{position:absolute;bottom:-10px;width:900px;height:112px;background-size: 900px auto;}
+	.roll .cell{width:885px;height:103px;padding:10px 0 0 0;}
+	.roll .cell a{color:#323232;font:bold italic 26px Georgia, Arial, Helvetica, sans-serif;}
+	.newsText{width:780px;height:370px;padding:0 15px 0 0;margin:125px auto 0;color:#000;text-align:left}
+	.lastNews{width:48%}
+	.newsText h1{font:bold 20px Georgia, Arial, Helvetica, sans-serif;/*margin-top:8px*/}
+	.newsText p{padding:4px 0 20px 0;font:italic 16px Georgia, Arial, Helvetica, sans-serif;}
+}
+
+@media only screen
+and (max-width : 1024px) { 
+	/***** GAME START *****/
+	.gameStart{position:absolute;width:1000px;height:600px;top:50%;left:50%;margin:-300px 0 0 -500px;}
+	.gameStartTop{width:1000px;min-height:525px;background-size: 1000px auto;}
+	.gameStartBottom{width:1000px;height:54px;background-size: 1000px auto;}
+	.gameStartTitle{font:20px Georgia, Arial, Helvetica, sans-serif;padding:22px 0;}
+	.gameStartDesc{font:bold 16px Georgia, Arial, Helvetica, sans-serif;}
+	.gameStartVideoItem {margin:2%;}
+	.userName{font-size:8.8pt;margin:0 -30%;}
+
+}
+
+
+
+/* iPad (альбомный режим) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	/***** GAME START *****/
+	.gameStart{position:absolute;width:1000px;height:600px;top:50%;left:50%;margin:-300px 0 0 -500px;}
+	.gameStartTop{width:1000px;min-height:525px;background-size: 1000px auto;}
+	.gameStartBottom{width:1000px;height:54px;background-size: 1000px auto;}
+
+}
+
+@media only screen
+and (max-height : 600px) {
+	/***** ГАЗЕТА *****/
+	.newspaper{width:900px;height:580px;left:50%;top:50%;margin:-290px 0 0 -450px;background-size: 900px auto;}
+	.newsText h1{font:bold 18px Georgia, Arial, Helvetica, sans-serif;/*margin-top:8px*/}
+	.newsText p{padding:4px 0 20px 0;font:italic 14px Georgia, Arial, Helvetica, sans-serif;}
+}
+
+@media only screen
+and (max-width : 980px) {
+	/***** GAME START *****/
+	/*.gameStart{position:absolute;width:700px;height:408px;top:40%;left:50%;margin:-204px 0 0 -350px;}
+	.gameStartTop{width:700px;min-height:408px;background-size: 700px auto;}
+	.gameStartBottom{width:700px;height:42px;background-size: 700px auto;}
+	.gameStartTitle{font:15px Georgia, Arial, Helvetica, sans-serif;padding:15px 0;}
+	.gameStartDesc{font:bold 14px Georgia, Arial, Helvetica, sans-serif;}
+	.gameStartVideoItem {margin:2.5% 4%;}*/
+	/***** BREVNO *****/
+	/*.videoAvatar{top:14px;}
+	.dayStatus{color:#956E57;padding:1.8% 0 0.2% 0;font-size: 12px;}
+	.emceeTxt{color:#FAE2C6;padding-top:0.2%;font-size: 14px;}
+	.brevnoBG{width:900px;height:118px;background-size: 900px auto;}
+	a.exit{position:absolute;height:42px;width:68px;padding:24px 0 0 6px;top:20%;right:3%;font-size:15px;background-size: 72px auto;}
+	a.exit div{height:46px;width:68px;}
+	.gameRoles{height:60px;width:265px;top:20px;right:100px;font-size: 14px;}*/
+/*	
+	.atention2{display:block}
+	.atention{display:none}
+	.wrapper {display:none}
+*/
+}
+
+@media only screen
+and (max-width : 800px) {
+	/***** BREVNO *****/
+	/*.videoAvatar{top:8px;}
+	.config, .gameOptions{display:block;width:14px;height:14px;margin:3px 0;background-size: 28px auto;}
+	.config:hover{background-position: 0 -14px;}
+	.config:focus{background-position: 0 -28px;}
+	.gameOptions{background-position: -14px 0;}
+	.gameOptions:hover{background-position: -14px -14px;}
+	.gameOptions:focus{background-position: -14px -28px;}
+	.dayStatus{color:#956E57;padding:1.3% 0 0 0;font-size: 12px;}
+	.emceeTxt{color:#FAE2C6;padding-top:0.2%;font-size: 13px;}
+	.brevnoBG{width:780px;height:109px;background-size: 780px auto;}
+	.gameTimer{height:40px;width:120px;background-size: 120px auto;}
+	a.exit{position:absolute;height:38px;width:57px;padding:20px 0 0 6px;top:20%;right:3%;font-size:13px;background-size: 63px auto;}
+	a.exit div{height:38px;width:57px;}
+	.gameRoles{height:60px;width:218px;top:10px;right:85px;font-size: 14px;}
+	.roleItem{width: 16px;height: 16px;margin:0;background-size: 48px 128px;}
+	.roleItem.civilian	{background-position: -32px 0;}
+	.roleItem.boss		{background-position: -32px -16px;}
+	.roleItem.mafia		{background-position: -32px -32px;}
+	.roleItem.comissar	{background-position: -32px -48px;}
+	.roleItem.doctor	{background-position: -32px -64px;}
+	.roleItem.maniac	{background-position: -32px -81px;}
+	.roleItem.whore		{background-position: -32px -96px;}
+	.gameRoles p{padding-bottom:3px;}*/
+}
+
+/* iPad (портретный режим) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	/***** GAME START *****/
+	/*.gameStart{position:absolute;width:700px;height:408px;top:35%;left:50%;margin:-204px 0 0 -350px;}
+	.gameStartTop{width:700px;min-height:408px;background-size: 700px auto;}
+	.gameStartBottom{width:700px;height:42px;background-size: 700px auto;}*/
+}
+
+@media only screen
+and (max-width : 640px) {
+/*
+	.atention{display:block}
+	.atention2{display:none}
+	.wrapper {display:none}
+*/
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 1280px)
+and (orientation : portrait) {
+/*
+	.atention2{display:block}
+	.atention{display:none}
+	.wrapper {display:none}
+*/
+}
+
+@media only screen
+and (max-device-height : 1200px)
+and (max-device-width : 1920px){
+	.gamerVideoBlock{/*height:240px;width:320px;*/}
+}
+
+@media only screen
+and (max-device-height : 1080px)
+and (max-device-width : 1920px){
+	.gamerVideoBlock{/*height:225px;width:300px;*/}
+}
+
+@media only screen
+and (max-device-height : 1066px)
+and (max-device-width : 1936px){
+	.gamerVideoBlock{/*height:225px;width:300px;*/}
+}
+
+@media only screen
+and (max-device-height : 1050px)
+and (max-device-width : 1680px){
+	.gamerVideoBlock{/*height:px;width:px;*/}
+}
+
+@media only screen
+and (max-device-height : 900px)
+and (max-device-width : 1600px){
+	.gamerVideoBlock{/*height:px;width:px;*/}
+}
+
+@media only screen
+and (max-device-height : 900px)
+and (max-device-width : 1440px){
+	.gamerVideoBlock{/*height:px;width:px;*/}
+}

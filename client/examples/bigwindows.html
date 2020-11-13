@@ -1,0 +1,1130 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+
+    <title>MAFIA 3.0</title>
+
+	<link rel="shortcut icon" href="/client/static/img/game/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../static/css/flipclock.css" type="text/css" media="screen"/>
+
+	<script src="../js/vendor/requirejs/require.js"></script>
+</head>
+<body class="bgGreen day">
+<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p>
+</div>
+<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+
+<!-- панель с уведомлениями -->
+<form style="" id="game-notify-form" action="/clientGame/sendNotify">
+	<div class="povorot90">Сообщение</div>
+	<div>Введите ваше сообщение:</div>
+	<input name="message" autocomplete="off" type="text">
+	<input value="Отправить" type="submit">
+</form>
+
+<div style="display: none;" id="jsNotifyPanel" class="urgently hide">
+	<div id="jsNotifyText" class="notifyText"><a target="_blank" class="username" href="/users/reg1s">[OLD]reg1s</a>: ребята всем удачной игры, не шалите тут :)</div>
+	<a id="jsNotifyClose" class="notifyClose" href="#">×</a>
+</div>
+<!-- панель с уведомлениями -->
+
+<div class="wrapper">
+	<!-- Блок видео окон -->
+	<div class="allVideoContainer" id="area" style="">
+		<div class="gamerVideoBlock">
+			<div class="videoContainer">
+			
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="foulEl">&bull; &bull; &bull; &bull; &bull; </span><span class="gamerUserNumber">1</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>User_Name</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="foulCancel hint--top hint--rounded" data-hint="Снять фол" href="#"></a>
+					<a style="" class="foul hint--top hint--rounded" data-hint="Дать фол" href="#"></a>
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="silent hint--top hint--rounded" data-hint="Лишить слова" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="display: none;" class="gamerUserRole"></div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock jail">
+			<div class="videoContainer">
+					
+				<video loop="" autoplay="" id="video-window-5" style="background-color:black;"><source src=""></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">2</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>jail</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState">В тюрьме</div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock dead">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5" style="background-color:black;"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">3</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>dead</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState">Мёртв</div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock wantedStart">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">4</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>wantedStart</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState">Сбегает</div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="foulCancel hint--top hint--rounded" data-hint="Снять фол" href="#"></a>
+					<a style="" class="foul hint--top hint--rounded" data-hint="Дать фол" href="#"></a>
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="silent hint--top hint--rounded" data-hint="Лишить слова" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Маньяк</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock wantedFinal">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">5</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>wantedFinal</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState">Сбежал</div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Дон мафии</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock ban">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">6</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>ban</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState">Забанен</div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Маньяк</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock vote online">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">7</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>vote</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="foulCancel hint--top hint--rounded" data-hint="Снять фол" href="#"></a>
+					<a style="" class="foul hint--top hint--rounded" data-hint="Дать фол" href="#"></a>
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="silent hint--top hint--rounded" data-hint="Лишить слова" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock candidate online">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">7</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>vote candidate</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock wantedStart vote">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">8</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>wantedStart vote</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState">Сбегает</div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Маньяк</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock videoOff">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName green"><span class="gamerUserNumber">9</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>videoOff</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="display: none;" class="gamerUserRole"></div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightMafiaHide aim wantedStart">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">10</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightMafiaHide</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Мафия себя не видит</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="display: none;" class="gamerUserRole"></div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightVideoHide">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">11</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightVideoHide</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="display: none;" class="gamerUserRole"></div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightVideoHide sex">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">12</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightVideoHide sex</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightVideoHide aim">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">13</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightVideoHide aim</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightVideoHide heal">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">14</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightVideoHide heal</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightVideoHide knife">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">15</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightVideoHide knife</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock nightVideoHide loupe">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">16</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>nightVideoHide loupe</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock">
+			<div class="videoContainer">
+									
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">17</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>User_Name</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="display:block" class="gamerUserRole">Доктор</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock soundOff">
+			<div class="videoContainer">
+									
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">18</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>soundOff</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text"></div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div class="gamerUserRole" style="display:none"></div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL videoWindow"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock vote voteUp">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">19</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>night</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock night sex">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">20</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>night sex</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов --> 
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock night aim">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">21</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>night aim</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock night heal">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">22</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>night heal</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock night knife">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">23</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>night knife</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div><div class="gamerVideoBlock night loupe">
+			<div class="videoContainer">
+							
+				<video loop="" autoplay="" id="video-window-5"><source src="vidos.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+
+				<div class="gamerUserName"><span class="gamerUserNumber">24</span><a class="profile hint--left hint--rounded" data-hint="Откроется в новой вкладке" target="_blank" href="#"></a>night loupe</div>
+
+				<div class="soundLevel" style="width:0%"></div><!-- Индикатор уровня звука -->
+				<div class="soundOffIcon"></div><!-- Индикатор откл. звука -->
+				<div class="sleep dummy-text">Ночное видео скрыто</div><!-- Ночные тексты -->
+				<div class="gamerUserState"></div><!-- Статус -->
+				
+				<div class="bottomVideoContainer">
+					<a style="" class="warning hint--top hint--rounded" data-hint="Пожаловаться" href="#"></a>
+					<a style="" class="kick hint--top hint--rounded" data-hint="Кик" href="#"></a>
+					<div class="roundButtons">
+						<!-- Расположение ссылок именно такое, в одну строку, без пробелов -->
+						<a class="sound" href="#"></a><a class="info" href="#"></a><a class="video" href="#"></a>
+					</div>
+					<div style="" class="gamerUserRole">Мирный житель</div><!-- Роль -->
+				</div>
+
+				<div class="videoBorderT">
+					<div class="videoBorderR">
+						<div class="videoBorderB">
+							<div class="videoBorderL"></div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAngleTL"></div>
+				<div class="videoAngleTR"></div>
+				<div class="videoAngleBR"></div>
+				<div class="videoAngleBL"></div>
+
+				<a class="additional" href="#"></a><!-- Кликается при голосавании, убийстве, проверке, лечении, любовь, зарезать -->
+			</div>
+		</div>
+	</div>
+	<!-- /Блок видео окон -->
+
+	<!-- Полоса загрузки игры -->
+	<div style="display: none;" class="loadGame" id="loadGame">
+		<div class="loadGameTitle">Загрузка игры</div>
+		<div class="loadLine">
+			<div class="loadGreenLine" style="width: 100%;"></div>
+			<div class="percent"><span>100</span>%</div>
+			<div class="loadLineLeft"></div>
+			<div class="loadLineRight"></div>
+		</div>
+		<!--<div class="loadGameDesc">Загружаем элементы интерфейса ...</div>-->
+	</div>
+	<!-- /Полоса загрузки игры -->
+
+	<!--Окно видео в ожидании игры-->
+	<div class="gameStartVideoItem" id="meetingVideo" style="display:none">
+		<div class="num">
+			<div class="ramka" data-z="1">
+				<div style="display: none;" class="hint--top hint--rounded sayOff" data-hint="Нажмите пробел"></div>
+			</div>
+		</div>
+		<div class="userName"></div>
+	</div>
+	<!-- /Окно видео в ожидании игры-->
+
+	<!-- Таскаемое видео игрока -->
+	<div id="meVideoArea" style="display:none"></div>
+	<!-- Таскаемое видео ведущего -->
+	<div id="leadingVideoArea" style="display:none"></div>
+
+	<!-- Контейнер видео в настройках -->
+	<div id="settingVideoContainer" class="settingVideoContainer hide" data-z="51"></div>
+
+	<!-- Панель -->
+	<div class="topPanel" id="panel" style="">
+		<div class="brevnoBG">
+
+			<!-- Настройки -->
+			<div class="gameSetting">
+				<!--				<a class="config" href="#"></a>-->
+				<a class="gameControl" href="#"></a>
+
+				<div class="gameControlPopUp" style="display:none"><!-- добавочный класс для игрока: userGamer -->
+					<div class="gameControlLeft">
+						<p>Фон</p>
+
+						<div class="gameColorBg">
+							<a href="#" class="greenBG on"></a><!-- Добавляемый класс: "on" -->
+							<a href="#" class="brownBG"></a>
+							<a href="#" class="blueBG"></a>
+						</div>
+
+						<p>Звуки</p>
+
+						<div class="clr">
+							<a href="#" class="music checkbox on"><span></span>Музыка</a><!-- Добавляемый класс: "off" -->
+						</div>
+						<div class="clr">
+							<a href="#" class="noice checkbox on"><span></span>Звуки игры</a><!-- Добавляемый класс: "off" -->
+							<div id="noiceSlider" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+							<span style="left: 70%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+						</div>
+						<div class="clr">
+							<a href="#" class="alert checkbox on"><span></span>Оповещения</a><!-- Добавляемый класс: "off" -->
+							<div id="alertSlider" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+							<span style="left: 70%;" class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span></div>
+						</div>
+					</div>
+					<div class="gameControlRight">
+						<p>Видео</p>
+
+						<div class="videoHere"></div>
+						<p class="videoNote">Используйте настройки flash для выбора камеры, микрофона и для сохранения параметров.</p>
+					</div>
+				</div>
+			</div>
+			<!-- /Настройки -->
+
+			<!-- Аватарка -->
+			<div class="viewerAvatar"><span class="foulEl">&bull; &bull; &bull; &bull; &bull; </span></div>
+
+			<!-- Информация о игре -->
+			<div class="gameInfo">
+				<p></p>
+
+				<p class="gameTitle">АНТИКЛАССИКА</p>
+				<!-- Блок опций -->
+				<div class="gameOptionIcon">
+					<!-- изменяемые классы от опции: -->
+					<div class="optionItem hint--top hint--rounded" data-hint="" id="option_example" style="display: none"></div>
+				<div class="optionItem hint--top hint--rounded noRolePrisoned" data-hint="Не показывать роли посаженных" style=""></div><div class="optionItem hint--top hint--rounded noShowRole" data-hint="Не показывать роли убитых" style=""></div><div class="optionItem hint--top hint--rounded yesShowVote" data-hint="Показывать результаты голосования" style=""></div><div class="optionItem hint--top hint--rounded noTalk" data-hint="Без общего обсуждения" style=""></div><div class="optionItem hint--top hint--rounded noShowCheckResult" data-hint="Не показывать результаты ночных проверок" style=""></div><div class="optionItem hint--top hint--rounded yesOnlyFirstNight" data-hint="Мафия договаривается только в первую ночь" style=""></div><div class="optionItem hint--top hint--rounded yesDeadLastTalk" data-hint="Предоставлять слово убитому" style=""></div></div>
+				<!-- /Блок опций -->
+			</div>
+			<!-- /Информация о игре -->
+
+			<p class="dayStatus">День 1</p>
+
+			<!-- Часы -->
+			<div class="gameTimer">
+				<div class="flip-clock-wrapper"><span class="flip-clock-divider minutes"><span class="flip-clock-label">минут</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span><ul class="flip "><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">9</div></div><div class="down"><div class="shadow"></div><div class="inn">9</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li></ul><ul class="flip "><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">9</div></div><div class="down"><div class="shadow"></div><div class="inn">9</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li></ul><span class="flip-clock-divider seconds"><span class="flip-clock-label">секунд</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">5</div></div><div class="down"><div class="shadow"></div><div class="inn">5</div></div></a></li></ul><ul class="flip  play"><li class="flip-clock-before"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">1</div></div><div class="down"><div class="shadow"></div><div class="inn">1</div></div></a></li><li class="flip-clock-active"><a href="#"><div class="up"><div class="shadow"></div><div class="inn">0</div></div><div class="down"><div class="shadow"></div><div class="inn">0</div></div></a></li></ul></div>
+			</div>
+			<!-- /Часы -->
+
+			<p class="emceeTxt">Говорит житель Vacame</p>
+
+			<div class="longBiguttonContainer" style="display:none">
+				<a href="#"><!-- внимание: inline элементы, не разделять переносом на др. строку -->
+					<span class="leftButtonBg">&nbsp;</span><span class="centerButtonBg">
+			    <p></p>
+			    </span><span class="rightButtonBg">&nbsp;</span>
+				</a>
+			</div>
+			<!-- /Кнопки под бревном (я всё сказал и др.) -->
+
+			<!-- Блок ролей -->
+			<div class="gameRoles">
+				<p>Роли в игре:</p>
+
+				<!-- Роль ведущего -->
+				<div id="leadingVideoPanel" style="display:none"></div>
+				<!-- /Роль ведущего -->
+
+				<div class="roleItem hint--top hint--rounded" id="role_example" data-hint="" style="display: none"></div>
+			<div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный житель" style=""></div><div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный житель" style=""></div><div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный житель" style=""></div><div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный житель" style=""></div><div class="roleItem hint--top hint--rounded mafia" data-hint="Мафия" style=""></div><div class="roleItem hint--top hint--rounded mafia" data-hint="Мафия" style=""></div><div class="roleItem hint--top hint--rounded mafia" data-hint="Мафия" style=""></div><div class="roleItem hint--top hint--rounded boss" data-hint="Дон мафии" style=""></div><div class="roleItem hint--top hint--rounded commissar" data-hint="Комиссар" style=""></div><div class="roleItem hint--top hint--rounded doctor" data-hint="Доктор" style=""></div><div class="roleItem hint--top hint--rounded whore" data-hint="Любовница" style=""></div><div class="roleItem hint--top hint--rounded maniac" data-hint="Маньяк" style=""></div></div>
+			<!-- /Блок ролей -->
+
+			<a class="exit" href="/">
+				<div class="cell">Выйти</div>
+			</a>
+		</div>
+	</div>
+	<!-- /Панель -->
+
+</div>
+
+<div id="copy_buffer" class="copyBuffer" style="">
+	<div class="copyBufferForm">
+		<p>Сообщить об ошибке:</p>
+
+		<form>
+			<textarea></textarea>
+			<input value="Отправить" type="submit">
+		</form>
+	</div>
+</div>
+
+<script>
+    'use strict';
+
+    requirejs.config({
+        baseUrl: '../js',
+        paths: {
+            'jquery': './vendor/jquery/dist/jquery'
+        },
+        shim: {
+        }
+    });
+
+    require(['modules/windowResizer'], function (windowResizer) {
+        $(function () {
+        	$(window).on('resize', function(){
+				var windows = $('.gamerVideoBlock');
+				var size = windowResizer.getWindowSize(windows.length);
+				$.each(windows, function(e, w){
+					$(w).height(size.height).width(size.width);
+					$(w).find('video').height(size.height).width(size.width);
+				});
+			}).trigger('resize');
+        });
+    });
+</script>
+</body>
+</html>
+
+

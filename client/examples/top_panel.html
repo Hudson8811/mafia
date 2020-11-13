@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Мафия 3.0</title>
+
+        <link rel="shortcut icon" href="../static/img/game/favicon.ico" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html../js"></script>
+        <![endif]-->
+		<script src="../js/vendor/requi../js/requir../js"></script>
+
+
+		<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/hint.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/ie.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/responsive.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../static/css/flipclock.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		
+
+
+
+</head>
+<body class="day bgGreen">
+	<div class="atention"><p>Ваше устройство слишком мало, используйте мобильную версию игры.</p></div>
+	<div class="atention2"><p>Поверните ваше устройство в альбомную ориентацию.</p></div>
+	<!-- панель с уведомлениями -->
+<form style="" id="game-notify-form" action="/clientGame/sendNotify">
+	<div class="povorot90">Сообщение</div>
+	<div>Введите ваше сообщение:</div>
+	<input type="text" name="message" autocomplete="off"/>
+	<input type="submit" value="Отправить"/>
+</form>
+
+<div id../jsNotifyPanel" class="urgently hide">
+	<div id../jsNotifyText" class="notifyText"></div>
+	<a id../jsNotifyClose" class="notifyClose" href="#">&times;</a>
+</div>
+<!-- панель с уведомлениями -->
+	<div class="wrapper">
+
+		<div class="topPanel" id="panel" style="display: no0ne">
+			<div class="brevnoBG">
+
+				<!-- Настройки -->
+				<div class="gameSetting">
+					<!--<a class="config" href="#"></a>-->
+					<a class="gameControl" href="#"></a>
+					<div class="gameControlPopUp userGamer" style="display: none">
+						<div class="gameControlLeft">
+							<p>Цвет фона</p>
+							<div class="gameColorBg">
+								<a href="#" class="greenBG on"></a><!-- Добавляемый класс: "on" -->
+								<a href="#" class="brownBG"></a>
+								<a href="#" class="blueBG"></a>
+								<a href="#" class="photoSet1BG"></a>
+								<a href="#" class="photoSet2BG"></a>
+								<a href="#" class="photoSet3BG"></a>
+							</div>
+							<p>Звуковое сопровождение</p>
+							<div class="clr">
+								<a href="#" class="music checkbox"><span></span>Музыка</a><!-- Добавляемый класс: "off" -->
+							</div>
+							<div class="clr">
+								<a href="#" class="noice checkbox off"><span></span>Звуки игры</a><!-- Добавляемый класс: "off" -->
+								<div id="" class="slider"><div id="" class="knob"></div></div>
+							</div>
+							<div class="clr">
+								<a href="#" class="alert checkbox"><span></span>Оповещения</a><!-- Добавляемый класс: "off" -->
+								<div id="" class="slider"><div id="" class="knob"></div></div>
+							</div>
+						</div>
+						<div class="gameControlRight">
+							<p>Настройка видео</p>
+							<div class="videoHere"></div>
+							<a class="flashSettingButton" id="flashSettingButton">Показать настройки flash</a>
+						</div>
+					</div>
+				</div>
+				<!-- /Настройки -->
+
+				<!-- Аватарка -->
+				<div class="videoAvatar">
+					<video></video>
+					<div class="videoShadow"></div>
+					<div class="numberAvatar" style="display: no0ne">12</div>
+				</div>
+				<!-- /Аватарка -->
+
+				<!-- Информация о игре -->
+				<div class="gameInfo">
+					<!--<p>Название игры:</p>-->
+					<p class="gameTitle">Резня в Подольске</p>
+					<!-- Блок опций -->
+					<div class="gameOptionIcon">
+					<!-- изменяемые классы от опции: -->
+						<div class="optionItem hint--top hint--rounded" data-hint="" id="option_example" style="display: none"></div>
+						<div class="optionItem hint--top hint--rounded leading" data-hint="Ведущий"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesTalk" data-hint="С общим обсуждением"></div>-->
+						<div class="optionItem hint--top hint--rounded noTalk" data-hint="Без общего обсуждения"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesRolePrisoned" data-hint="Показывать роли посаженных"></div>-->
+						<div class="optionItem hint--top hint--rounded noRolePrisoned" data-hint="Не показывать роли посаженных"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesShowRole" data-hint="Показывать роли убитых"></div>-->
+						<div class="optionItem hint--top hint--rounded noShowRole" data-hint="Не показывать роли убитых"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesShowVote" data-hint="Показывать результаты голосования"></div>-->
+						<div class="optionItem hint--top hint--rounded noShowVote" data-hint="Не показывать результаты голосования"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesShowCheckResult" data-hint="Показывать результаты ночных проверок"></div>-->
+						<div class="optionItem hint--top hint--rounded noShowCheckResult" data-hint="Не показывать результаты ночных проверок"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesShowNightWindow" data-hint="Показывать окна ночью"></div>-->
+						<div class="optionItem hint--top hint--rounded noShowNightWindow" data-hint="Не показывать окна ночью"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesOnlyFirstNight" data-hint="Мафия договаривается только в первую ночь"></div>-->
+						<div class="optionItem hint--top hint--rounded noOnlyFirstNight" data-hint="Мафия договаривается каждую ночь"></div>
+						<!--<div class="optionItem hint--top hint--rounded yesDeadLastTalk" data-hint="Предоставлять слово убитому"></div>-->
+						<div class="optionItem hint--top hint--rounded noDeadLastTalk" data-hint="Не предоставлять слово убитому"></div>
+					</div>
+					<!-- /Блок опций -->
+				</div>
+				<!-- /Информация о игре -->
+
+				<!--<div>-->
+					<p class="dayStatus">Начало</p>
+
+					<!-- Часы -->
+					<div class="gameTimer">
+						<div></div>
+					</div>
+					<!-- /Часы -->
+				<!--</div>-->
+
+				<p class="emceeTxt">Жители знакомятся</p><!-- Добавляемый класс: "green" для надписи типа "Вы говорите" -->
+
+				<!-- Кнопки под бревном (я всё сказал и др.) -->
+				
+				<div class="longBiguttonContainer" style="display: no0ne"><!-- Добавляемый класс: green или gray -->
+					<a data-hint="Выкрик" href="#" class="outcryButton hint--right hint--rounded">
+						<p><i class="fa fa-bullhorn"></i></p>
+					</a>
+					<a href="#" class="green">
+						<span class="leftButtonBg">&nbsp;</span><span class="centerButtonBg">
+						<p>Я всё сказал</p><!-- Изменяемый текст -->
+						</span><span class="rightButtonBg">&nbsp;</span>
+					</a>
+					<a href="#" class="red">
+						<span class="leftButtonBg">&nbsp;</span><span class="centerButtonBg">
+						<p>Я всё сказал</p><!-- Изменяемый текст -->
+						</span><span class="rightButtonBg">&nbsp;</span>
+					</a>
+					
+					<!--<a href="#"><div class="cell">Я всё сказал</div></a>--><!-- Изменяемый текст -->
+					<!--<div class="longBigButtonBG"></div>-->
+				</div>
+				<!-- /Кнопки под бревном (я всё сказал и др.) -->
+
+				<!-- Блок ролей -->
+				<div class="gameRoles">
+					<p>Роли в игре:</p>
+					<div class="leadingBlock"><!-- Для сбегающего добавлять wantedStart, для сбежавшего wantedFinal -->
+						<div class="videoLeading" data-z="22">
+							<video></video>
+						</div>
+						<!--<div class="dataLeading">
+							<a href="#" class="gameControl"></a>
+							<div class="dataLeadingPopUp" style="display: no0ne">
+								<div class="dataLeadingContent">
+									<a rel="gallery" href="/uploads/avatars/full/15Mar2013_23-23-33gooos.jpg">
+										<img title="Gooos" alt="Gooos" src="http://mafii.net/uploads/avatars/middle/15Mar2013_23-23-33gooos.jpg">
+									</a>
+									<p>Инфо ведущего:</p>
+									<p><a href="/users/Gooos">Gooos</a></p>
+									<p>Мужик</p>
+									<p>Санкт-Петербург</p>
+									<p>Рейтинг</p>
+									<p>Добавить в друзья</p>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					<div class="roleItem hint--top hint--rounded" id="role_example" data-hint="" style="display: none"></div>
+					<div class="roleItem hint--top hint--rounded leading" data-hint="Ведущий"></div>
+					<div class="roleItem hint--top hint--rounded comissar" data-hint="Комиссар"></div>
+					<div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный"></div>
+					<div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный"></div>
+					<div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный"></div>
+					<div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный"></div>
+					<div class="roleItem hint--top hint--rounded civilian" data-hint="Мирный"></div>
+					<div class="roleItem hint--top hint--rounded boss" data-hint="Дон мафии"></div>
+					<div class="roleItem hint--top hint--rounded mafia" data-hint="Мафия"></div>
+					<div class="roleItem hint--top hint--rounded mafia" data-hint="Мафия"></div>
+					<div class="roleItem hint--top hint--rounded doctor" data-hint="Доктор"></div>
+					<div class="roleItem hint--top hint--rounded maniac" data-hint="Маньяк"></div>
+					<div class="roleItem hint--top hint--rounded whore" data-hint="Проститутка"></div>
+				</div>
+				<!-- /Блок ролей -->
+
+				<a class="exit" href="#"><div class="cell">Выйти</div></a>
+			</div>
+		</div>
+
+		<script language="JavaScript">
+			'use strict';
+
+			requi../js.config({
+				baseUrl:../js',
+				paths: {
+					jquery: './libs/jquery.min',
+					underscore: './libs/underscore',
+					clock: '/client/vendor/clock/compiled/flipclock'
+				},
+				shim: {
+					clock: ['jquery']
+				}
+			});
+
+			require([
+				'modules/render',
+				'modules/error',
+			], function (render, error) {
+				render.panel
+						.show()
+						.setTitle('Игра моя')
+						.setPeriod('Первый день')
+						.setAction('Знакомство', 45)
+						.setNumber(3)
+						.addOption('С общим обсуждением', 'yesTalk')
+						.addOption('С общим обсуждением2', 'noTalk')
+						.addRole('Комиссар', 'comissar')
+						.addRole('Мафия', 'mafia');
+				setTimeout(function(){
+					render.panel.showButton('Я все сказал', 'green', function(e) {
+						render.panel.hideButton();
+						render.panel.showButton('Я не все сказал', 'gray', function(e) {
+							render.panel.hideButton();
+						});
+					});
+				},1000);
+			});
+		</script>
+	</div> 
+<div id="copy_buffer" class="copyBuffer">
+	<div class="copyBufferForm">
+		<p>Сообщить об ошибке:</p>
+		<form>
+			<textarea></textarea>
+			<input type="submit" value="Отправить">
+		</form>
+	</div>
+</div>
+
+					<!--<div class="settingVideoContainer" style="left:784px;top:107px;"></div>
+					
+					<div class="video55" style="position:absolute;left:787px;top:110px;z-index:51">
+					<object id="" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" height="188px" width="247px">
+					<param name="src" value="http://shag-vpered.ru/images/header1.swf" />
+					<param name="wmode" value="transparent" /> 
+					<embed type="application/x-shockwave-flash" wmode="opaque" height="188px" width="247px" src="http://shag-vpered.ru/images/header1.swf"></embed>
+					</object>
+					</div>-->
+	
+</body>
+</html>
