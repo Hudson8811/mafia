@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "Calibri";
+  src: local("Calibri Regular"), local("Calibri-Regular"),
+    url("../../fonts/Calibri.woff2") format("woff2"),
+    url("../../fonts/Calibri.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: local("Calibri Bold"), local("Calibri-Bold"),
+    url("../../fonts/Calibri-Bold.woff2") format("woff2"),
+    url("../../fonts/Calibri-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ArialMT";
+  src: local("ArialMT Regular"), local("ArialMT-Regular"),
+    url("../../fonts/ArialMT.woff2") format("woff2"),
+    url("../../fonts/ArialMT.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ArialMT";
+  src: local("ArialMT Bold"), local("ArialMT-Bold"),
+    url("../../fonts/ArialMT-Bold.woff2") format("woff2"),
+    url("../../fonts/ArialMT-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-green: #00d17a;
+  --color-green-hover: #00b25e;
+  --color-yellow: #ffc600;
+  --color-yellow-hover: #ffcc33;
+  --color-red: #ff0000;
+  --color-red-hover: #f80000;
+
+  --color-turquoise: #00b2ff;
+  --color-turquoise-hover: #33c2ff;
+  --color-main: #718ba3;
+  --color-dark: #001f35;
+  --color-dark2: #0c021b;
+  --color-purple: #9063f1;
+  --color-bg: #f6f9fb;
+  --color-grey: #d6dee5;
+  --main-font: "Calibri", "Arial", sans-serif;
+  --secondary-font: "ArialMT", "Arial", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--color-main);
+  background-color: #f6f9fb;
+  min-width: 1180px;
+}
+
+body.day.bgGreen {
+  background-image: none;
+  background-color: var(--color-dark);
+  background-attachment: scroll;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--main-font);
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+p,
+a,
+a:visited {
+  color: var(--color-main);
+}
+
+body .wrapper {
+  background-repeat: no-repeat;
+  background-position: 50% 50% !important;
+  background-size: cover;
+  background-image: url("../img/new-design/bg.jpg") !important;
+}
+
+/* Ожидание игроков */
+.parent {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  min-height: 100%;
+}
+
+.tablePosition {
+  display: block;
+  width: 1190px;
+  height: auto;
+  align-self: center;
+}
+
+.gameStart {
+  display: block;
+  padding: 24px 48px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+
+  align-self: center;
+}
+
+.gameStartTop {
+  width: 100%;
+  background-image: none;
+}
+
+.gameStartBottom {
+  display: none;
+}
+
+.gameStartTitle,
+.gameStartConect {
+  height: auto;
+  margin-bottom: 32px;
+  padding: 0 0 20px 0;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-dark);
+  font-weight: 700;
+  font-style: normal;
+  border-bottom: solid 1px var(--color-grey);
+}
+
+.gameStartDesc {
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-main);
+  font-weight: 400;
+}
+
+.gameStartTimer {
+  display: flex;
+  width: 340px;
+  margin-bottom: 32px;
+}
+
+.videoItems {
+  counter-reset: videoItems;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-top: -16px;
+}
+
+.gameStartVideoItem {
+  counter-increment: videoItems;
+  width: 261px;
+  height: auto;
+  margin: 16px 0 0 16px;
+}
+
+.gameStartVideoItem .ramka {
+  width: auto;
+  height: 100%;
+  padding: 0;
+  border-radius: 10px;
+  background-image: none;
+  background-color: var(--color-bg);
+}
+
+.gameStartVideoItem .ramka::before {
+  content: counter(videoItems);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: var(--secondary-font);
+  font-size: 70px;
+  line-height: 1;
+  color: var(--color-main);
+  font-weight: 700;
+}
+
+.gameStartVideoItem .num {
+  width: 260px;
+  height: 199px;
+  border-radius: 10px;
+}
+
+.gameStartVideoItem video {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.gameStartVideoItem .userName {
+  font-family: var(--secondary-font);
+  font-size: 13px;
+  line-height: 1;
+  color: var(--color-main);
+  text-align: left;
+}
+
+.gameStart .buttons {
+}
