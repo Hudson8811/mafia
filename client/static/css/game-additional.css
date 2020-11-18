@@ -1003,6 +1003,7 @@ p.gameTitle {
   left: 55%;
   top: 60px;
   transform: translateX(-50%);
+  width: 360px;
   margin-left: 0;
   padding: 20px;
   border-radius: 10px;
