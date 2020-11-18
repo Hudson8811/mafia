@@ -489,6 +489,41 @@ a.exit .cell {
   transform: translateX(-50%);
 }
 
+#main .topPanel #buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+}
+
+#main .topPanel #buttons .gButtonLiteBrown {
+  margin: 0 10px;
+  height: auto;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-main);
+  text-shadow: none;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+  border: solid 1px #eff3f7;
+  background-color: var(--color-bg);
+  background-image: none;
+}
+
+#main .topPanel #buttons .gButtonLiteBrown:hover,
+#main .topPanel #buttons .gButtonLiteBrown:focus {
+  background-color: #e9eff2;
+  border-color: #cdd5de;
+}
+
+#main .topPanel #buttons .gButtonLiteBrown::before,
+#main .topPanel #buttons .gButtonLiteBrown::after {
+  display: none;
+}
+
 .brevnoBG {
   position: relative;
   display: grid;
@@ -957,6 +992,34 @@ p.gameTitle {
   border-radius: 10px;
   box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);
   background-color: #ffffff;
+}
+
+#main .allVideoContainer {
+  margin-top: 120px;
+  padding-top: 20px;
+}
+
+.gameControlPopUp.video-chat {
+  left: 55%;
+  top: 60px;
+  transform: translateX(-50%);
+  margin-left: 0;
+  padding: 20px;
+  border-radius: 10px;
+  border-color: var(--color-grey);
+  box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.gameControlPopUp.video-chat::before {
+  display: none;
+}
+
+.gameControlPopUp.video-chat p {
+  font-family: var(--secondary-font);
+  color: var(--color-dark);
+  font-weight: 700;
 }
 
 .gamerVideoBlock {
