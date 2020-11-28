@@ -1005,11 +1005,44 @@
 
 
     <!-- Газета -->
-    <div id="newspaper" class="newspaper" style="display:none">
-      <div class="newsText" style="overflow: hidden; padding: 0px; width: 795px;">
-        <div class="jspContainer" style="width: 795px; height: 370px;">
-          <div class="jspPane"
-            style="padding: 0px 15px 0px 0px; top: 0px; left: 0px; position: absolute; width: 780px;"></div>
+    <div id="newspaper" class="newspaper" style="display: block;">
+      <div class="newsText jspScrollable" style="overflow: hidden; padding: 0px; width: 780px;" tabindex="0">
+        <div class="jspContainer" style="width: 780px; height: 370px;">
+          <div class="jspPane" style="padding: 0px; top: 0px; left: 0px; position: absolute; width: 757px;">
+            <div class="firstNews clearfix imgfr"><img src="/client/static/img/newspaper/mafia_no_kill.jpg">
+              <h1>Мафия промахнулась этой ночью</h1>
+              <p>Ночью была замечена активность мафии, но ни один из жителей города не пострадал.</p>
+            </div>
+            <div class="firstNews clearfix imgfl"><img src="/client/static/img/newspaper/maniac_no_kill.jpg">
+              <h1>Маньяк не вышел на охоту</h1>
+              <p>Слухи, которые ходили, о ежедневных зверских убийствах, не подтвердились. Жертв маньяка обнаружено не было.
+              </p>
+            </div>
+            <div class="firstNews clearfix">
+              <h1>Доктор никого не спас</h1>
+              <p>В это ночное дежурство в городскую больницу поступил звонок с неизвестного номера, но вызов оказался
+                ложным.</p>
+            </div>
+            <div class="lastNews fl"><img src="/client/static/img/newspaper/no_found.png">
+              <h1>Комиссар не нашёл мафию</h1>
+              <p>В ходе ночного рейда участников преступной группировки обнаружить не удалось.</p>
+            </div>
+            <div class="lastNews fr"><img src="/client/static/img/newspaper/no_found.png">
+              <h1>Дон мафии не нашёл комиссара</h1>
+              <p>Успешная работа комиссара, под прикрытием, не позволила преступной группировке его обнаружить этой ночью.
+              </p>
+            </div>
+          </div>
+          <div class="jspVerticalBar">
+            <div class="jspCap jspCapTop"></div>
+            <div class="jspTrack" style="height: 370px;">
+              <div class="jspDrag" style="height: 20px;">
+                <div class="jspDragTop"></div>
+                <div class="jspDragBottom"></div>
+              </div>
+            </div>
+            <div class="jspCap jspCapBottom"></div>
+          </div>
         </div>
       </div>
       <div class="roll">
@@ -1018,7 +1051,7 @@
       </div>
     </div>
     <!-- /Газета -->
-    <div class="popUpWrapp" id="popUpWindow-14">
+    <div class="popUpWrapp" id="popUpWindow-14" style="display: none;">
       <div class="popUpWindow">
         <div class="popUpInner">
           <div class="windowContainer ">

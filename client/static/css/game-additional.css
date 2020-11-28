@@ -80,8 +80,13 @@ body {
 
 body.day.bgGreen {
   /*background-image: none;*/
-  background-color: var(--color-dark);
+  /*background-color: var(--color-dark);
   background-attachment: scroll;
+*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 h1,
@@ -999,22 +1004,60 @@ p.gameTitle {
   background-image: url("../img/new-design/conditions/no_mute.png");
 }
 
+.roleItem {
+  opacity: 1;
+}
 .roleItem.commissar {
   background-size: auto 18px;
   background-position: 50%;
   background-image: url("../img/new-design/role/commissar.svg");
 }
-
 .roleItem.boss {
   background-size: auto 18px;
   background-position: 50%;
   background-image: url("../img/new-design/role/boss.svg");
 }
-
 .roleItem.civilian {
   background-size: auto 18px;
   background-position: 50%;
   background-image: url("../img/new-design/role/civilian.svg");
+}
+.roleItem.mafia {
+  background-size: auto 18px;
+  background-position: 50%;
+  background-image: url("../img/new-design/role/mafia.svg");
+}
+.roleItem.doctor {
+  background-size: auto 18px;
+  background-position: 50%;
+  background-image: url("../img/new-design/role/doctor.svg");
+}
+.roleItem.maniac {
+  background-size: auto 18px;
+  background-position: 50%;
+  background-image: url("../img/new-design/role/maniac.svg");
+}
+.roleItem.whore {
+  background-size: auto 18px;
+  background-position: 50%;
+  background-image: url("../img/new-design/role/mistress.svg");
+}
+.roleItem.leading {
+  background-size: auto 18px;
+  background-position: 50%;
+  background-image: url("../img/new-design/role/civilian.svg");
+}
+
+.roleItem.civilian:hover,
+.roleItem.boss:hover,
+.roleItem.mafia:hover,
+.roleItem.commissar:hover,
+.roleItem.doctor:hover,
+.roleItem.maniac:hover,
+.roleItem.whore:hover,
+.roleItem.leading:hover {
+  opacity: 0.7;
+  background-position: 50% 50%;
 }
 
 .allVideoContainer {
@@ -1022,9 +1065,10 @@ p.gameTitle {
   position: relative;
   width: 1190px;
   margin: 200px auto 0;
-  padding: 20px 40px;
+  padding: 0 40px; /*20px 40px*/
   border-radius: 10px;
-  box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);
+  /*/border: solid 1px transparent;
+  box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);*/
   background-color: #ffffff;
 }
 
@@ -1059,6 +1103,8 @@ p.gameTitle {
 
 .gamerVideoBlock {
   counter-increment: videoBlocks;
+  margin-top: 32px;
+  margin-bottom: 32px;
   border-radius: 10px;
   border: solid 1px #eff3f7;
   background-color: var(--color-bg);
@@ -1590,6 +1636,103 @@ span.userNumber {
   font-weight: 700;
   border-color: var(--color-dark);
   background-color: #ffffff;
+}
+
+.newspaper {
+  background-image: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);
+  background-color: #ffffff;
+}
+
+.newspaper::before {
+  content: "Mafii.net City News";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-family: var(--secondary-font);
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.newspaper .roll {
+  height: 100px;
+  background-image: none;
+  border-top: solid 2px var(--color-grey);
+  bottom: 0;
+}
+.newspaper .roll .cell {
+  height: 100px;
+  padding: 0;
+}
+.newspaper .roll .cell a {
+  font-family: var(--secondary-font);
+  line-height: 1;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-dark);
+}
+
+.newspaper .roll .cell a:hover,
+.newspaper .roll .cell a:focus {
+  color: var(--color-main);
+}
+.newspaper .roll .cell a:active {
+  opacity: 0.7;
+}
+
+.newsText h1 {
+  font-family: var(--secondary-font);
+}
+.newsText p {
+  font-family: var(--main-font);
+  font-style: normal;
+  color: var(--color-main);
+}
+
+.firstNews {
+  background-image: none;
+  border-bottom: solid 2px var(--color-grey);
+}
+
+.lastNews.fl {
+  position: relative;
+}
+.lastNews.fl::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  right: -18px;
+  border-right: solid 2px var(--color-grey);
+}
+
+.jspTrack {
+  background-image: none;
+}
+.jspTrack::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-right: solid 3px var(--color-grey);
+}
+
+.jspDrag {
+  background-image: none;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+}
+
+.jspDrag:hover {
+  opacity: 0.7;
 }
 
 /**/
