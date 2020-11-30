@@ -1082,8 +1082,13 @@ p.gameTitle {
 .allVideoContainer {
   counter-reset: videoBlocks;
   position: relative;
-  width: 1190px;
+  /*width: 1190px;*/
   margin: 200px auto 0;
+  padding: 0;
+}
+.allVideoContainer-wrapper {
+  display: inline-block;
+  vertical-align: top;
   padding: 0 40px; /*20px 40px*/
   border-radius: 10px;
   /*/border: solid 1px transparent;
