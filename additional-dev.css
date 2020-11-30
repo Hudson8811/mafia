@@ -122,6 +122,10 @@ header hgroup {
   background: none;
 }
 
+.night #g_pagewrap.smallHeader .second {
+  background: none;
+}
+
 .day #g_pagewrapInside.smallHeader,
 .night #g_pagewrapInside.smallHeader {
   background: url(../img/inside_page_bg_day.png?2) no-repeat center 75px;
@@ -129,6 +133,10 @@ header hgroup {
 
 .day #g_pagewrap.smallHeader {
   background: url(../img/inside_page_bg_day.png?2) no-repeat center 75px;
+}
+
+.night #g_pagewrap.smallHeader {
+  background: url(../img/inside_page_bg_day.png?2) no-repeat center 39px;
 }
 .day #g_pagewrap.smallHeader .second {
   background: transparent;
