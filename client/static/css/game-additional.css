@@ -1134,6 +1134,7 @@ p.gameTitle {
   border: solid 1px #eff3f7;
   background-color: var(--color-bg);
   box-shadow: none;
+  overflow: visible;
 }
 .gamerVideoBlock:nth-child(n + 3) {
   margin-top: 0;
@@ -1327,7 +1328,16 @@ a.kick:focus {
 }
 
 .videoBorderT {
-  display: none;
+  background-image: none;
+}
+.videoBorderR{
+  background-image: none;
+}
+.videoBorderB{
+  background-image: none;
+}
+.videoBorderL{
+  background-image: none;
 }
 
 .videoAngleTL,
@@ -1772,4 +1782,34 @@ span.userNumber {
 .hint--top::before,
 .hint--top::after {
   left: 30%;
+}
+
+#game-notify-form{
+  border:0;
+  background:#fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(44, 57, 65, 0.12);
+  left:-338px;
+}
+#game-notify-form input[type="text"]{
+  background:#fff;
+  color:var(--color-dark);;
+  border-radius: 10px;
+  border: solid 1px var(--color-grey);
+}
+#game-notify-form input[type="submit"]{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 11px 21px;
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+    box-shadow: 0px 2px 3px 0 rgba(44, 57, 65, 0.08);
+    background-color: var(--color-green);
+    background-image: none;
 }
